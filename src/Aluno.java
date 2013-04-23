@@ -21,6 +21,4 @@ public class Aluno {
     private Turma turma;
     
     
-    int ola;
-    
 }
