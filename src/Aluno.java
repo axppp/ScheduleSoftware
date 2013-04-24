@@ -10,15 +10,25 @@ import java.util.Date;
  *
  * @author axppp
  */
-public class Aluno {
+public class Aluno extends Pessoa {
+   
     
-    // variaveis de instancia
     private int numeroAluno;
-    private String nome;
     private Date dataNasc;
     private int Telefone;
-    private String email;
     private Turma turma;
+
+    /**
+     * Construtor Professor
+     */
+    public Aluno(int numeroAluno, Date dataNasc, int Telefone, Turma turma, String nome, Horario horario, String email) {
+        super(nome,horario,email);
+        this.numeroAluno = numeroAluno;
+        this.dataNasc = dataNasc;
+        this.Telefone = Telefone;
+        this.turma = turma;
+    }
+    
     
     
 }

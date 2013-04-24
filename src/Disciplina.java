@@ -16,6 +16,12 @@ public class Disciplina {
     private int numHorasTeoricas;
     private int numHorasPraticas;
     private ArrayList<Professor> professores = new ArrayList<Professor>();
+
+    public Disciplina(String sigla, int numHorasTeoricas, int numHorasPraticas) {
+        this.sigla = sigla;
+        this.numHorasTeoricas = numHorasTeoricas;
+        this.numHorasPraticas = numHorasPraticas;
+    }
     
     
 }

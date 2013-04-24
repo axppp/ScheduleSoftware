@@ -11,14 +11,22 @@ import java.util.Date;
  *
  * @author Paulo Ponciano
  */
-public class Professor {
-    // variaveis de instancia
+public class Professor extends Pessoa {
+  
     
     private String sigla;
-    private String nome;
-    private String email;
     private Date datacontratacao;
     private ArrayList<Disciplina> listaDisciplinas = new ArrayList<Disciplina>();
+
+    
+    /**
+     * Construtor Professor
+     */
+    public Professor(String sigla, Date datacontratacao, String nome, Horario horario, String email) {
+        super(nome, horario, email);
+        this.sigla = sigla;
+        this.datacontratacao = datacontratacao;
+    }
     
     
 }
