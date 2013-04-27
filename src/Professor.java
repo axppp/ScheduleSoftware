@@ -27,6 +27,48 @@ public class Professor extends Pessoa {
         this.sigla = sigla;
         this.datacontratacao = datacontratacao;
     }
+
+    /**
+     * @return the sigla
+     */
+    public String getSigla() {
+        return sigla;
+    }
+
+    /**
+     * @param sigla the sigla to set
+     */
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    /**
+     * @return the datacontratacao
+     */
+    public Date getDatacontratacao() {
+        return datacontratacao;
+    }
+
+    /**
+     * @param datacontratacao the datacontratacao to set
+     */
+    public void setDatacontratacao(Date datacontratacao) {
+        this.datacontratacao = datacontratacao;
+    }
+
+    /**
+     * @return the listaDisciplinas
+     */
+    public ArrayList<Disciplina> getListaDisciplinas() {
+        return listaDisciplinas;
+    }
+
+    /**
+     * @param listaDisciplinas the listaDisciplinas to set
+     */
+    public void setListaDisciplinas(ArrayList<Disciplina> listaDisciplinas) {
+        this.listaDisciplinas = listaDisciplinas;
+    }
     
     
 }

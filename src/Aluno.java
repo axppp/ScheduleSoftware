@@ -28,6 +28,62 @@ public class Aluno extends Pessoa {
         this.Telefone = Telefone;
         this.turma = turma;
     }
+
+    /**
+     * @return the numeroAluno
+     */
+    public int getNumeroAluno() {
+        return numeroAluno;
+    }
+
+    /**
+     * @param numeroAluno the numeroAluno to set
+     */
+    public void setNumeroAluno(int numeroAluno) {
+        this.numeroAluno = numeroAluno;
+    }
+
+    /**
+     * @return the dataNasc
+     */
+    public Date getDataNasc() {
+        return dataNasc;
+    }
+
+    /**
+     * @param dataNasc the dataNasc to set
+     */
+    public void setDataNasc(Date dataNasc) {
+        this.dataNasc = dataNasc;
+    }
+
+    /**
+     * @return the Telefone
+     */
+    public int getTelefone() {
+        return Telefone;
+    }
+
+    /**
+     * @param Telefone the Telefone to set
+     */
+    public void setTelefone(int Telefone) {
+        this.Telefone = Telefone;
+    }
+
+    /**
+     * @return the turma
+     */
+    public Turma getTurma() {
+        return turma;
+    }
+
+    /**
+     * @param turma the turma to set
+     */
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }
     
     
     
