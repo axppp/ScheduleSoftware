@@ -20,9 +20,9 @@ public class Aluno extends Pessoa {
     private String turma;
 
     /**
-     * Construtor Professor
+     * Construtor Aluno
      */
-    public Aluno(int numeroAluno,int dia,int mes, int ano,int Telefone, String turma, String nome, String email) {
+    public Aluno(int numeroAluno,String nome,int dia,int mes, int ano,int Telefone,String email,String turma) {
         super(nome,email);
         this.numeroAluno = numeroAluno;
         this.dataNasc = new Data(dia,mes,ano);
