@@ -18,15 +18,17 @@ public class Professor extends Pessoa {
     private Date datacontratacao;
     private ArrayList<Disciplina> listaDisciplinas = new ArrayList<Disciplina>();
 
+
     
     /**
      * Construtor Professor
      */
-    public Professor(String sigla, Date datacontratacao, String nome, Horario horario, String email) {
-        super(nome, horario, email);
+    public Professor(String sigla, Date datacontratacao, String nome,String email){
+        super(nome, email);
         this.sigla = sigla;
         this.datacontratacao = datacontratacao;
     }
     
     
+   
 }

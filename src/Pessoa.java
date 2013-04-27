@@ -10,16 +10,50 @@
 public class Pessoa {
     
     private String nome;
-    private Horario horario;
+    
     private String email;
 
     /**
      * Construtor Pessoa
      */
-    public Pessoa(String nome, Horario horario, String email) {
+    public Pessoa(String nome, String email) {
         this.nome = nome;
-        this.horario = horario;
+       
         this.email = email;
+    }
+
+    /**
+     * getNome
+     */
+    public String getNome() {
+        return nome;
+    }
+    
+    
+    /**
+     * getEmail
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * setNome
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    /**
+     * setEmail
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", email=" + email + '}';
     }
 
     
