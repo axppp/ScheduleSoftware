@@ -53,7 +53,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" + "nome=" + nome + ", email=" + email + '}';
+        return "A pessoa com o nome "+ nome + ", tem o email: " + email;
     }
 
     

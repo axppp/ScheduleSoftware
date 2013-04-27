@@ -21,8 +21,9 @@ public class TesteGestao {
         
       
        
-       Aluno paulo = new Aluno(1100456,b,10,"paulo","a","paulo@gmail.com");
+       Aluno paulo = new Aluno(1100456,1,12,2002,911844375,"paulo","a","paulo@gmail.com");
          System.out.println(paulo.toString());
+         
     }
     
 }

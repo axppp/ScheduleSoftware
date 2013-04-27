@@ -1,4 +1,5 @@
 
+import data.Data;
 import java.util.Date;
 
 /*
@@ -14,17 +15,17 @@ public class Aluno extends Pessoa {
    
     
     private int numeroAluno;
-    private Date dataNasc;
+    private Data dataNasc;
     private int Telefone;
     private String turma;
 
     /**
      * Construtor Professor
      */
-    public Aluno(int numeroAluno, Date dataNasc, int Telefone, String turma, String nome, String email) {
+    public Aluno(int numeroAluno,int dia,int mes, int ano,int Telefone, String turma, String nome, String email) {
         super(nome,email);
         this.numeroAluno = numeroAluno;
-        this.dataNasc = dataNasc;
+        this.dataNasc = new Data(dia,mes,ano);
         this.Telefone = Telefone;
         this.turma = turma;
     }
@@ -34,7 +35,7 @@ public class Aluno extends Pessoa {
         return numeroAluno;
     }
 
-    public Date getDataNasc() {
+    public Data getDataNasc() {
         return dataNasc;
     }
 
@@ -50,7 +51,7 @@ public class Aluno extends Pessoa {
         this.numeroAluno = numeroAluno;
     }
 
-    public void setDataNasc(Date dataNasc) {
+    public void setDataNasc(Data dataNasc) {
         this.dataNasc = dataNasc;
     }
 
@@ -67,7 +68,7 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return "Aluno{" + "numeroAluno=" + numeroAluno + ", dataNasc=" + dataNasc + ", Telefone=" + Telefone + ", turma=" + turma + '}';
+        return super.toString() + " é aluno e o seu numero é " + numeroAluno + " e nasceu no dia " + dataNasc.getDia() +" no mes de "+ dataNasc.getMes() +" e no ano "+ dataNasc.getAno() + "\n O contacto telefonico é "+ Telefone + "e esta colocado na turma " + turma ;
     }
     
     
