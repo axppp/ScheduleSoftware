@@ -36,7 +36,10 @@ public class TesteGestao {
         professoresPL.add(aurtu);
         professoresPL.add(aurtu3);
         Disciplina amata = new Disciplina("AMA","analise matematica",2,6,"AJM",professoresPL);
+
         System.out.println(amata.toString());
+
+         System.out.println(amata.toString());
         
     }
     

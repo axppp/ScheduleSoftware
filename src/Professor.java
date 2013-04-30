@@ -64,54 +64,6 @@ public class Professor extends Pessoa {
     public void setDataContratacao(Data datacontratacao) {
         this.datacontratacao = datacontratacao;
     }
-
-    /**
-<<<<<<< HEAD
-     * @return the sigla
-     */
-    public String getSigla() {
-        return sigla;
-    }
-
-    /**
-     * @param sigla the sigla to set
-     */
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
-    }
-
-    /**
-     * @return the datacontratacao
-     */
-    public Date getDatacontratacao() {
-        return datacontratacao;
-    }
-
-    /**
-     * @param datacontratacao the datacontratacao to set
-     */
-    public void setDatacontratacao(Date datacontratacao) {
-        this.datacontratacao = datacontratacao;
-    }
-
-    /**
-     * @return the listaDisciplinas
-     */
-    public ArrayList<Disciplina> getListaDisciplinas() {
-        return listaDisciplinas;
-    }
-
-    /**
-     * @param listaDisciplinas the listaDisciplinas to set
-=======
-     * set setListaDisciplinas
->>>>>>> 02a0f0a854dd45cb6affabf69d33ead9ab2266bd
-     */
-    public void setListaDisciplinas(ArrayList<Disciplina> listaDisciplinas) {
-        this.listaDisciplinas = listaDisciplinas;
-    }
-<<<<<<< HEAD
-=======
     
     // temos que introduzir metodo para adicionar disciplinas a leccionar
 
@@ -124,7 +76,7 @@ public class Professor extends Pessoa {
     {
         return super.toString() + " é o professor que contem a sigla " + sigla + " e a data da sua contratacao foi "+ datacontratacao.getDia() + " do mes "+ datacontratacao.getMes()+" do ano de "+datacontratacao.getAno();
     }
->>>>>>> 02a0f0a854dd45cb6affabf69d33ead9ab2266bd
+
     
    
     

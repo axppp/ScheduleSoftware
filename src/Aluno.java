@@ -31,37 +31,8 @@ public class Aluno extends Pessoa {
     }
     // gets e sets
 
-    public int getNumeroAluno() {
-        return numeroAluno;
-    }
-
-    public Data getDataNasc() {
-        return dataNasc;
-    }
-
-    public int getTelefone() {
-        return Telefone;
-    }
-
-    public String getTurma() {
-        return turma;
-    }
-
-    public void setNumeroAluno(int numeroAluno) {
-        this.numeroAluno = numeroAluno;
-    }
-
-    public void setDataNasc(Data dataNasc) {
-        this.dataNasc = dataNasc;
-    }
-
-    public void setTelefone(int Telefone) {
-        this.Telefone = Telefone;
-    }
-
-    public void setTurma(String turma) {
-        this.turma = turma;
-    }
+    
+   
 
     /**
      * @return the numeroAluno
@@ -80,14 +51,14 @@ public class Aluno extends Pessoa {
     /**
      * @return the dataNasc
      */
-    public Date getDataNasc() {
+    public Data getDataNasc() {
         return dataNasc;
     }
 
     /**
      * @param dataNasc the dataNasc to set
      */
-    public void setDataNasc(Date dataNasc) {
+    public void setDataNasc(Data dataNasc) {
         this.dataNasc = dataNasc;
     }
 
@@ -103,20 +74,6 @@ public class Aluno extends Pessoa {
      */
     public void setTelefone(int Telefone) {
         this.Telefone = Telefone;
-    }
-
-    /**
-     * @return the turma
-     */
-    public Turma getTurma() {
-        return turma;
-    }
-
-    /**
-     * @param turma the turma to set
-     */
-    public void setTurma(Turma turma) {
-        this.turma = turma;
     }
     
     

@@ -14,7 +14,7 @@ public class SalaAula {
 
     public SalaAula(String codigo, String tipoSala, int capacidade) {
         this.codigo = codigo;
-        this.tipoSala = tipoSala;
+       // this.tipoSala = tipoSala;
         this.capacidade = capacidade;
     }   
     

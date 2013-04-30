@@ -19,9 +19,11 @@ public class Disciplina {
     private String sigla_prof_t;
     private ArrayList<Professor> professores = new ArrayList<Professor>();
 
+
      /**
      * Construtor Disciplina
      */
+
     public Disciplina(String sigla,String designacao, int numHorasTeoricas, int numHorasPraticas, String sigla_prof_t, ArrayList<Professor> professores) {
         this.sigla = sigla;
         this.designacao = designacao;
@@ -32,6 +34,7 @@ public class Disciplina {
             this.professores.add(professores.get(i));
         }
     }
+
 
      /**
      * get getSigla
@@ -115,6 +118,7 @@ public class Disciplina {
             this.professores.add(professores.get(i));
         }
     }
+
     @Override
     public String toString() {
         return "Disciplina com a sigla "+ sigla + " e a designacao de " + designacao + " , tem " + numHorasTeoricas + "horas teoricas e " + numHorasPraticas + " horas praticas.\n O professor que lecciona as aulas teorica é " + sigla_prof_t + " , e os  professores das aulas praticas sao "+ professores.toString();
