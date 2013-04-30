@@ -9,7 +9,7 @@
  */
 public class SalaAula {
     private String codigo;
-    private String tipoSala;
+    private Enum tipoSala; // Laboratorio/ anfitiatro
     private int capacidade;
     
     
