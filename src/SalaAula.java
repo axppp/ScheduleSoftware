@@ -9,8 +9,17 @@
  */
 public class SalaAula {
     private String codigo;
-    private String tipoSala;
+    public enum tipoSala {ANFITIATRO , LABORATORIO} // Laboratorio/ anfitiatro
     private int capacidade;
+
+    public SalaAula(String codigo, String tipoSala, int capacidade) {
+        this.codigo = codigo;
+        this.tipoSala = tipoSala;
+        this.capacidade = capacidade;
+    }   
+    
+    
+    
     
     
 }

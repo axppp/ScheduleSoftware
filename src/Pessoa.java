@@ -10,18 +10,48 @@
 public class Pessoa {
     
     private String nome;
-    private Horario horario;
+    
     private String email;
 
     /**
      * Construtor Pessoa
      */
-    public Pessoa(String nome, Horario horario, String email) {
+    public Pessoa(String nome, String email) {
         this.nome = nome;
-        this.horario = horario;
+       
         this.email = email;
     }
 
+    /**
+     * getNome
+     */
+    public String getNome() {
+        return nome;
+    }
+    
+    
+    /**
+     * getEmail
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * setNome
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    /**
+     * setEmail
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+<<<<<<< HEAD
     /**
      * @return the nome
      */
@@ -62,6 +92,11 @@ public class Pessoa {
      */
     public void setEmail(String email) {
         this.email = email;
+=======
+    @Override
+    public String toString() {
+        return "A pessoa com o nome "+ nome + ", tem o email: " + email;
+>>>>>>> 02a0f0a854dd45cb6affabf69d33ead9ab2266bd
     }
 
     
