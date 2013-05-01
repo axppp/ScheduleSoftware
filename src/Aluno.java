@@ -29,11 +29,7 @@ public class Aluno extends Pessoa {
         this.Telefone = Telefone;
         this.turma = turma;
     }
-    // gets e sets
-
     
-   
-
     /**
      * @return the numeroAluno
      */

@@ -14,7 +14,7 @@ import java.util.Date;
 public class TesteGestao {
      public static void main(String[] args) {
          
-        Horario a = new Horario();
+        
         Date b = new Date();
         
         //Pessoa x = new Pessoa("paulo",a,"paulo@gmail.com");
@@ -23,7 +23,13 @@ public class TesteGestao {
       
        
        Aluno paulo = new Aluno(1100456,"paulo",1,12,2002,911844375,"a","paulo@gmail.com");
-         System.out.println(paulo.toString());
+       Aluno vitor = new Aluno(110123,"vitor",22,10,2008,291183131,"s","vitor@gmail.com");
+      
+
+       ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+       alunos.add(vitor);
+       alunos.add(paulo);;
+       Turma d1 = new Turma("1DA",alunos);
          
        Professor aurtur = new Professor("ART","artur",2,5,1998,"artur@gmail.com");
        Professor aurtur1 = new Professor("ART2","art2ur",2,5,1998,"artur@gmail.com");
@@ -36,10 +42,12 @@ public class TesteGestao {
         professoresPL.add(aurtu);
         professoresPL.add(aurtu3);
         Disciplina amata = new Disciplina("AMA","analise matematica",2,6,"AJM",professoresPL);
-
-        System.out.println(amata.toString());
-
-         System.out.println(amata.toString());
+        SalaAula b102 = new SalaAula("b102",1,200);
+        
+        Horario a = new Horario(d1,amata,1,4,11,2,aurtur,b102);
+        
+         System.out.println(a.toString());
+        //public Horario(Turma turma, Disciplina disciplina, int tipo_aula, int dia_semana, int hora_inicio, int duracaoAula, Professor professor, SalaAula sala)
         
     }
     

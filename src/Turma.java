@@ -22,8 +22,25 @@ public class Turma {
         }   
     }
     
+    /**
+     * Get Designação
+     */
+    public String getDesignacao() {
+        return designacao;
+    }
+
+    /**
+     * Get Alunos
+     */
+    public ArrayList<Aluno> getAlunos() {
+        return alunos;
+    }
     
-    
-    
-    // to string da turma tem que ser a descricao
+    /**
+     * Adiciona Aluno
+     */
+    public void addAluno(Aluno aluno)
+    {
+        this.alunos.add(aluno);
+    }
 }
