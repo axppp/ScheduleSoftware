@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @author Ed
  */
 public class CSV {
+//codigo generico necessario ao funcionamento
 
     private ArrayList<SalaAula> x = new ArrayList<SalaAula>();
     private ArrayList<Aluno> x1 = new ArrayList<Aluno>();
@@ -20,23 +21,27 @@ public class CSV {
     private ArrayList<Turma> x3 = new ArrayList<Turma>();
     private ArrayList<Disciplina> x4 = new ArrayList<Disciplina>();
     private ArrayList<Horario> x5 = new ArrayList<Horario>();
-    SalaAula a = new SalaAula();
-    Aluno a1 = new Aluno();
-    Professor a2 = new Professor();
-    Turma a3 = new Turma();
-    Disciplina a4 = new Disciplina();
-    Horario a5 = new Horario();
 
+    //Codigo para testes..
+//    SalaAula a = new SalaAula();
+//    Aluno a1 = new Aluno();
+//    Professor a2 = new Professor();
+//    Turma a3 = new Turma();
+//    Disciplina a4 = new Disciplina();
+//    Horario a5 = new Horario();
+    //Main para testes
+    //Para testes na classe TesteGestao, tens de primeiro criar um objecto do tipo CSV
     public static void main(String[] args) throws Exception {
         CSV c = new CSV();
-//        c.Sala();
-//        c.Alunos();
-//        c.Professor();
-//        c.Turmas();
-//        c.Disciplinas();
+        c.Sala();
+        c.Alunos();
+        c.Professor();
+        c.Turmas();
+        c.Disciplinas();
         c.Horario();
     }
 
+    //codigo para leitura de salas a partir do ficheiro
     private void Sala() throws FileNotFoundException {
         Scanner fi = new Scanner(new File("ficheiros\\salas.txt"));
         String bb = fi.nextLine();
@@ -47,10 +52,11 @@ public class CSV {
         do {
             String b = fi.nextLine();
             c = b.split(";");
+            SalaAula a = new SalaAula();
             if (c[1].equals("anfiteatro")) {
-//                SalaAula a = new SalaAula(c[0], metodo_convert_String_to_enum("anfiteatro"), Integer.parseInt(c[2]));
+                a = new SalaAula(c[0], 1, Integer.parseInt(c[2]));
             } else {
-//            SalaAula a = new SalaAula(c[0], metodo_convert_String_to_enum("laboratorial"), Integer.parseInt(c[2]));
+                a = new SalaAula(c[0], 2, Integer.parseInt(c[2]));
             }
 //            System.out.println(fi.next());
 //            System.out.println(fi.nextLine());
@@ -58,6 +64,9 @@ public class CSV {
         } while (fi.hasNextLine());
     }
 
+    //codigo para leitura de alunos a partir do ficheiro
+    //nota: A o metodo de classe Aluno, nao precisa de turma como requesito de construcçao
+    //sendo que a turma do aluno é atribuida quando é lido ficheiro Turma.
     private void Alunos() throws FileNotFoundException {
         Scanner fi = new Scanner(new File("ficheiros\\alunos.txt"));
         String bb = fi.nextLine();
@@ -82,12 +91,11 @@ public class CSV {
         } while (fi.hasNextLine());
     }
 
+    //codigo para leitura de Professores a partir do ficheiro
     private void Professor() throws FileNotFoundException {
         Scanner fi = new Scanner(new File("ficheiros\\professores.txt"));
         String bb = fi.nextLine();
-//        String ax = fi.nextLine();
-//        System.out.println(a);
-// leitura de ficheiro linha-a-linha
+
         String[] c;
         String[] c1;
         do {
@@ -100,6 +108,7 @@ public class CSV {
         } while (fi.hasNextLine());
     }
 
+    //codigo para leitura de turmas a partir do ficheiro
     private void Turmas() throws FileNotFoundException {
         Scanner fi = new Scanner(new File("ficheiros\\turmas.txt"));
         String bb = fi.nextLine();
@@ -144,6 +153,8 @@ public class CSV {
         } while (fi.hasNextLine());
     }
 
+    //codigo para leitura de Disciplinas a partir do ficheiro
+    //nota: tambem atribui as Disciplinas aos Professores ja existentes se tiverem a sigla na lista
     private void Disciplinas() throws FileNotFoundException {
         Scanner fi = new Scanner(new File("ficheiros\\disciplinas.txt"));
         Scanner ji = new Scanner(new File("ficheiros\\disciplinas.txt"));
@@ -197,17 +208,55 @@ public class CSV {
         System.out.println(x2.get(2).toStringProfessor());
     }
 
+    //codigo para leitura de Horarios a partir do ficheiro
     private void Horario() throws FileNotFoundException {
         Scanner fi = new Scanner(new File("ficheiros\\horarios.txt"));
         String bb = fi.nextLine();
+
+        int tipo = 2;
+        Turma t = new Turma();
+        Disciplina d = new Disciplina();
+        Professor p = new Professor();
+        SalaAula s = new SalaAula();
+
 // leitura de ficheiro linha-a-linha
         String[] c;
         int j = 0;
         do {
             String b = fi.nextLine();
             c = b.split(";");
+            int i = 0;
+            do {
+                if (c[0].equalsIgnoreCase(x3.get(i).getDesignacao())) {
+                    t = x3.get(i);
+                }
+                i++;
+            } while (i < x3.size());
 
-            Horario a = new Horario(c[0], c[1], c[2], Integer.parseInt(c[3]), Integer.parseInt(c[4]), Integer.parseInt(c[5]), c[6], c[7]);
+            do {
+                if (c[1].equalsIgnoreCase(x4.get(i).getSigla())) {
+                    d = x4.get(i);
+                }
+                i++;
+            } while (i < x4.size());
+
+            do {
+                if (c[6].equalsIgnoreCase(x2.get(i).getSigla())) {
+                    p = x2.get(i);
+                }
+                i++;
+            } while (i < x2.size());
+            do {
+                if (c[7].equalsIgnoreCase(x.get(i).getCodigo())) {
+                    s = x.get(i);
+                }
+                i++;
+            } while (i < x.size());
+
+            if (c[2].equalsIgnoreCase("t")) {
+                tipo = 1;
+            }
+            Horario a = new Horario(t, d, tipo, Integer.parseInt(c[3]), Integer.parseInt(c[4]), Integer.parseInt(c[5]), p, s);
             x5.add(a);
             j++;
         } while (fi.hasNextLine());

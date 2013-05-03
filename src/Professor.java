@@ -29,6 +29,10 @@ public class Professor extends Pessoa {
         this.sigla = sigla;
         this.datacontratacao = new Data(dia, mes,ano);
     }
+
+    Professor() {
+        
+    }
     
     /**
      * get getSigla

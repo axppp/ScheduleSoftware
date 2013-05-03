@@ -22,6 +22,9 @@ public class Pessoa {
         this.email = email;
     }
 
+    public Pessoa() {
+    }
+
     /**
      * getNome
      */

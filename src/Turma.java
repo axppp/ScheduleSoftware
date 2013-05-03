@@ -21,6 +21,10 @@ public class Turma {
             this.alunos.add(aluno.get(i));
         }   
     }
+
+    Turma() {
+        
+    }
     
     /**
      * Get Designação

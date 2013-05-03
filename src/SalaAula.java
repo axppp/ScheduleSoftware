@@ -9,6 +9,10 @@
  */
 public class SalaAula {
     private String codigo;
+
+    SalaAula() {
+        
+    }
     public enum tipoSala {ANFITIATRO , LABORATORIO} 
     tipoSala a;
     

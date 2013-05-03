@@ -22,8 +22,8 @@ public class TesteGestao {
         
       
        
-       Aluno paulo = new Aluno(1100456,"paulo",1,12,2002,911844375,"a","paulo@gmail.com");
-       Aluno vitor = new Aluno(110123,"vitor",22,10,2008,291183131,"s","vitor@gmail.com");
+       Aluno paulo = new Aluno(1100456,"paulo",1,12,2002,911844375,"paulo@gmail.com");
+       Aluno vitor = new Aluno(110123,"vitor",22,10,2008,291183131,"vitor@gmail.com");
       
 
        ArrayList<Aluno> alunos = new ArrayList<Aluno>();

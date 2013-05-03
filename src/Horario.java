@@ -8,11 +8,18 @@
  * @author axppp
  */
 public class Horario {
+
     private String designacao;
     private String sigla_disciplina;
-    private enum tipo_aula {T,P};
+
+    Horario() {
+    }
+
+    private enum tipo_aula {
+
+        T, P
+    };
     tipo_aula aulas;
-    
     private int dia_semana;
     private int hora_inicio;
     private int duracaoAula;
@@ -22,43 +29,33 @@ public class Horario {
     public Horario(Turma turma, Disciplina disciplina, int tipo_aula, int dia_semana, int hora_inicio, int duracaoAula, Professor professor, SalaAula sala) {
         this.designacao = turma.getDesignacao();
         this.sigla_disciplina = disciplina.getSigla();
-        
-        if(tipo_aula == 1)
-        {
+
+        if (tipo_aula == 1) {
             this.aulas = aulas.T;
+        } else if (tipo_aula == 2) {
+            this.aulas = aulas.P;
         }
-        else if(tipo_aula==2)
-                {
-                    this.aulas=aulas.P;
-                }
         verificaDiaSemana(dia_semana);
         verificaHoraAula(hora_inicio);
         this.duracaoAula = duracaoAula;
         this.sigla_professor = professor.getSigla();
         this.codigo_sala = sala.getCodigo();
     }
-    
-   public void verificaDiaSemana(int dia_semana)
-   {
-       if(dia_semana >= 2 && dia_semana <= 6)
-       {
-           this.dia_semana = dia_semana;
-       }
-   }
-   
-    
-    public void verificaHoraAula(int horainicio)
-   {
-       if( horainicio > 8 || horainicio < 17)
-       {
-           this.hora_inicio = horainicio;
-       }
-       else
-       {
-           //deve mandar uma excepcao
-           System.out.println("aula nao pode ser lecionada");
-       }
-   }
+
+    public void verificaDiaSemana(int dia_semana) {
+        if (dia_semana >= 2 && dia_semana <= 6) {
+            this.dia_semana = dia_semana;
+        }
+    }
+
+    public void verificaHoraAula(int horainicio) {
+        if (horainicio > 8 || horainicio < 17) {
+            this.hora_inicio = horainicio;
+        } else {
+            //deve mandar uma excepcao
+            System.out.println("aula nao pode ser lecionada");
+        }
+    }
 
     public String getDesignacao() {
         return designacao;
@@ -123,10 +120,9 @@ public class Horario {
     public void setCodigo_sala(String codigo_sala) {
         this.codigo_sala = codigo_sala;
     }
-    
+
     @Override
     public String toString() {
         return "Horario{" + "designacao=" + designacao + ", sigla_disciplina=" + sigla_disciplina + ", aulas=" + aulas + ", dia_semana=" + dia_semana + ", hora_inicio=" + hora_inicio + ", duracaoAula=" + duracaoAula + ", sigla_professor=" + sigla_professor + ", codigo_sala=" + codigo_sala + '}';
     }
-    
 }
