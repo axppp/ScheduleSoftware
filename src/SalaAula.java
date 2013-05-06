@@ -11,7 +11,6 @@ public class SalaAula {
     private String codigo;
     public enum tipoSala {ANFITIATRO , LABORATORIO} 
     tipoSala a;
-    
     public String tipoSala;
     private int capacidade;
 
