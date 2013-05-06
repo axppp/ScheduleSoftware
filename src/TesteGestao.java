@@ -20,8 +20,14 @@ public class TesteGestao {
         
         
        
+<<<<<<< HEAD
        Aluno paulo = new Aluno(1100456,"paulo",1,12,2002,911844375,"a","paulo@gmail.com");
        Aluno vitor = new Aluno(110123,"vitor",22,10,2008,291183131,"s","vitor@gmail.com");
+=======
+       Aluno paulo = new Aluno(1100456,"paulo",1,12,2002,911844375,"paulo@gmail.com");
+       Aluno vitor = new Aluno(110123,"vitor",22,10,2008,291183131,"vitor@gmail.com");
+      
+>>>>>>> 5e7fb631f9beaec8d3499acd168ead27e1923b3d
 
        ArrayList<Aluno> alunos = new ArrayList<Aluno>();
        alunos.add(vitor);

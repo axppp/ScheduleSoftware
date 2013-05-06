@@ -22,12 +22,16 @@ public class Aluno extends Pessoa {
     /**
      * Construtor Aluno
      */
-    public Aluno(int numeroAluno,String nome,int dia,int mes, int ano,int Telefone,String email,String turma) {
+    public Aluno(int numeroAluno,String nome,int dia,int mes, int ano,int Telefone,String email) {
         super(nome,email);
         this.numeroAluno = numeroAluno;
         this.dataNasc = new Data(dia,mes,ano);
         this.Telefone = Telefone;
         this.turma = turma;
+    }
+
+    Aluno() {
+        
     }
     
     /**
@@ -77,7 +81,21 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + " é aluno e o seu numero é " + numeroAluno + " e nasceu no dia " + dataNasc.getDia() +" no mes de "+ dataNasc.getMes() +" e no ano "+ dataNasc.getAno() + "\n O contacto telefonico é "+ Telefone + "e esta colocado na turma " + turma ;
+        return super.toString() + " é aluno e o seu numero é " + numeroAluno + " e nasceu no dia " + dataNasc.getDia() +" no mes de "+ dataNasc.getMes() +" e no ano "+ dataNasc.getAno() + "\n O contacto telefonico é "+ Telefone + "e esta colocado na turma " + getTurma() ;
+    }
+
+    /**
+     * @return the turma
+     */
+    public String getTurma() {
+        return turma;
+    }
+
+    /**
+     * @param turma the turma to set
+     */
+    public void setTurma(String turma) {
+        this.turma = turma;
     }
     
     
