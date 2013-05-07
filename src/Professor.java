@@ -27,7 +27,7 @@ public class Professor extends Pessoa {
     public Professor(String sigla,String nome,int dia, int mes, int ano,String email){
         super(nome, email);
         this.sigla = sigla;
-        this.datacontratacao = new Data(dia, mes,ano);
+        this.datacontratacao = new Data(dia,mes,ano);
     }
 
     Professor() {

@@ -39,6 +39,18 @@ public class Turma {
     public ArrayList<Aluno> getAlunos() {
         return alunos;
     }
+
+    public void setDesignacao(String designacao) {
+        this.designacao = designacao;
+    }
+
+    public void setAlunos(ArrayList<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+    
+    
+    
+    
     
     /**
      * Adiciona Aluno
