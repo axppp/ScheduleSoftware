@@ -1,8 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+/*
+ * To change this template, choose Tools | Templates and open the template in
+ * the editor.
+ */
 /**
  *
  * @author axppp
@@ -11,9 +16,6 @@ public class Horario {
 
     private String designacao;
     private String sigla_disciplina;
-
-    Horario() {
-    }
 
     private enum tipo_aula {
 
@@ -25,6 +27,9 @@ public class Horario {
     private int duracaoAula;
     private String sigla_professor;
     private String codigo_sala;
+
+    public Horario() {
+    }
 
     public Horario(Turma turma, Disciplina disciplina, int tipo_aula, int dia_semana, int hora_inicio, int duracaoAula, Professor professor, SalaAula sala) {
         this.designacao = turma.getDesignacao();
@@ -40,6 +45,47 @@ public class Horario {
         this.duracaoAula = duracaoAula;
         this.sigla_professor = professor.getSigla();
         this.codigo_sala = sala.getCodigo();
+    }
+
+    public void listarHoraraioAluno(Aluno a) throws FileNotFoundException {
+        CSV ola = new CSV();
+        ArrayList<SalaAula> sala = ola.Sala();
+        ArrayList<Professor> professores = ola.Professor();
+        ArrayList<Aluno> alunos = ola.Alunos();
+        ArrayList<Turma> turmas = ola.Turmas();
+        ArrayList<Disciplina> disciplinas = ola.Disciplinas();
+        ArrayList<Horario> horario = ola.Horario();
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < alunos.size(); i++) {
+            if (a.getNumeroAluno() == alunos.get(i).getNumeroAluno()) {
+                t = alunos.get(i).getTurma();
+//                System.out.println(alunos);
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+            }
+        }
+
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.hora_inicio - p2.hora_inicio;
+            }
+//            System.out.println (h);
+//        System.out.println(h.get(0).getDesignacao());
+        });
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.dia_semana - p2.dia_semana;
+            }
+//            System.out.println (h);
+//        System.out.println(h.get(0).getDesignacao());
+        });
+        System.out.println(h);
     }
 
     public void verificaDiaSemana(int dia_semana) {

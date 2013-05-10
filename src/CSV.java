@@ -22,10 +22,9 @@ public class CSV {
     ArrayList<Disciplina> disciplina = new ArrayList<Disciplina>();
     ArrayList<Horario> horario = new ArrayList<Horario>();
 
-
     //codigo para leitura de salas a partir do ficheiro
     public ArrayList<SalaAula> Sala() throws FileNotFoundException {
-        
+
         Scanner fi = new Scanner(new File("./salas.txt"));
         String bb = fi.nextLine();
 
@@ -43,17 +42,16 @@ public class CSV {
 //            System.out.println(fi.nextLine());
             salaAula.add(a);
         } while (fi.hasNextLine());
-        
+
         return salaAula;
     }
-
 
     //codigo para leitura de alunos a partir do ficheiro
     //nota: A o metodo de classe Aluno, nao precisa de turma como requesito de construcçao
     //sendo que a turma do aluno é atribuida quando é lido ficheiro Turma.
     public ArrayList<Aluno> Alunos() throws FileNotFoundException {
-        
-        
+
+
         Scanner fi = new Scanner(new File("./alunos.txt"));
         String bb = fi.nextLine();
         String[] c;
@@ -70,8 +68,8 @@ public class CSV {
 
     //codigo para leitura de Professores a partir do ficheiro
     public ArrayList<Professor> Professor() throws FileNotFoundException {
-        
-        
+
+
         Scanner fi = new Scanner(new File("./professores.txt"));
         String bb = fi.nextLine();
 
@@ -90,16 +88,17 @@ public class CSV {
 
     //codigo para leitura de turmas a partir do ficheiro
     public ArrayList<Turma> Turmas() throws FileNotFoundException {
-        
+
         Scanner fi = new Scanner(new File("./turmas.txt"));
         String bb = fi.nextLine();
 
         String[] c;
 
-        ArrayList<Aluno> y = new ArrayList<Aluno>();
+
 
         int t = 0;
         do {
+            ArrayList<Aluno> y = new ArrayList<Aluno>();
             String b = fi.nextLine();
             c = b.split(";");
 
@@ -112,32 +111,33 @@ public class CSV {
                     int o = aluno.get(j).getNumeroAluno();
                     if (Integer.parseInt(c[i]) == o) {
                         y.add(aluno.get(j));
-                        turma.get(j).setDesignacao(c[0]);
+                        aluno.get(j).setTurma(c[0]);
+//                        System.out.println(aluno.get(j));
                         t++;
-                       // System.out.println(x1.get(j));
+                        // System.out.println(x1.get(j));
 //                        System.out.println(t);
 //                        System.out.println(j);
                     }
                     j++;
-                } while (turma.size() > j);
+                } while (aluno.size() > j);
                 //                System.out.println(c[0] + " " + c[i]);
                 i++;
             } while (i < c.length);
 //            System.out.println(c[1]);
             Turma a = new Turma(c[0], y);
-//            System.out.println(fi.next());
-//            System.out.println(fi.nextLine());
+
             turma.add(a);
+
 
         } while (fi.hasNextLine());
         return turma;
     }
-
     //codigo para leitura de Disciplinas a partir do ficheiro
     //nota: tambem atribui as Disciplinas aos Professores ja existentes se tiverem a sigla na lista
+
     public ArrayList<Disciplina> Disciplinas() throws FileNotFoundException {
-        
-        
+
+
         Scanner fi = new Scanner(new File("./disciplinas.txt"));
         Scanner ji = new Scanner(new File("./disciplinas.txt"));
         String bb = fi.nextLine();
@@ -204,47 +204,41 @@ public class CSV {
 
         // leitura de ficheiro linha-a-linha
         String[] c;
-       
         do {
-            
-        
+            tipo = 2;
             String b = fi.nextLine();
             c = b.split(";");
 
-           
-            for (int l = 0; l <turma.size(); l++) {
-               
+            for (int l = 0; l < turma.size(); l++) {
                 if (c[0].equalsIgnoreCase(turma.get(l).getDesignacao())) {
                     t = turma.get(l);
-                
+                }
             }
-
-           for(int q = 0; q < disciplina.size(); q++){                
+            for (int q = 0; q < disciplina.size(); q++) {
                 if (c[1].equalsIgnoreCase(disciplina.get(q).getSigla())) {
                     d = disciplina.get(q);
-                }                              
-            } 
-           
+                }
+            }
+
             for (int k = 0; k < professor.size(); k++) {
                 if (c[6].equalsIgnoreCase(professor.get(k).getSigla())) {
                     p = professor.get(k);
                 }
             }
-           
-            for ( int u = 0; u < c.length; u++) {
+
+            for (int u = 0; u < c.length; u++) {
                 if (c[7].equalsIgnoreCase(salaAula.get(u).getCodigo())) {
                     s = salaAula.get(u);
-                }              
+                }
             }
             if (c[2].equalsIgnoreCase("t")) {
                 tipo = 1;
             }
             Horario a = new Horario(t, d, tipo, Integer.parseInt(c[3]), Integer.parseInt(c[4]), Integer.parseInt(c[5]), p, s);
             horario.add(a);
-            
-        }} while (fi.hasNextLine());
-        
-        
+
+
+        } while (fi.hasNextLine());
         return horario;
     }
 }

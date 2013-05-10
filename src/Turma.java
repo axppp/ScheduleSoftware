@@ -2,30 +2,34 @@
 import java.util.ArrayList;
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * To change this template, choose Tools | Templates and open the template in
+ * the editor.
  */
-
 /**
  *
  * @author axppp
  */
 public class Turma {
-    
+
     private String designacao;
     private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
 
     public Turma(String designacao, ArrayList<Aluno> aluno) {
         this.designacao = designacao;
-        for (int i = 0; i < alunos.size(); i++) {
-            this.alunos.add(aluno.get(i));
-        }   
+//        for (int i = 0; i < alunos.size(); i++) {
+//            this.alunos.add(aluno.get(i));
+//        }   
+        this.alunos = aluno;
     }
 
     Turma() {
-        
     }
-    
+
+    @Override
+    public String toString() {
+        return "Turma{" + "designacao=" + designacao + ", alunos=" + alunos + '}';
+    }
+
     /**
      * Get Designação
      */
@@ -47,16 +51,11 @@ public class Turma {
     public void setAlunos(ArrayList<Aluno> alunos) {
         this.alunos = alunos;
     }
-    
-    
-    
-    
-    
+
     /**
      * Adiciona Aluno
      */
-    public void addAluno(Aluno aluno)
-    {
+    public void addAluno(Aluno aluno) {
         this.alunos.add(aluno);
     }
 }
