@@ -30,17 +30,55 @@ public class TesteGestao {
         disciplinas = ola.Disciplinas();
         turmas = ola.Turmas();
         horarios = ola.Horario();
-        
-        
+
+
 
 
         //System.out.println(horarios.toString());
+<<<<<<< HEAD
        // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
        // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
         //h.listarHoraraioAluno(a);
         //System.out.println(horarios);
         //horarios.get(1).alterarHorario(h);
         
+=======
+        Horario h = new Horario();
+        Aluno a = new Aluno();
+        SalaAula s = new SalaAula();
+        Disciplina d = new Disciplina();
+        ArrayList<SalaAula> sal = new ArrayList<>();
+//        Horario h = new Horario(turmas.get(2), disciplinas.get(2), 1, 2, 10, 2, professores.get(2), salas.get(2));
+        // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
+//        h.listarHorarioAluno(alunos, 1120845, horarios);
+//        h.listarHorarioProfessor(professores, "psr", horarios);
+//        h.listarHorarioTurma(turmas, "1de", horarios);
+//        h.listarHorarioDisciplina(disciplinas, "alg", horarios);
+//        h.listarHorarioSala(salas, "b210", horarios);
+//        a.listarAlunosCrescente(alunos);
+//        a.listarAlunosDecrescente(alunos);
+//        a.listarAlunosNomeCrescente(alunos);
+//        a.listarAlunosNomeDecrescente(alunos);
+//        h.CargaHorariaAluno(alunos, 1120845, horarios);
+//        h.CargaHorariaProfessor(professores, "psr", horarios);
+//        h.CargaHorariaTurma(turmas, "1de", horarios);
+//        h.CargaHorariaDisciplina(disciplinas, "alg", horarios);
+//        int i =h.CargaHorariaSala(salas, "b210", horarios);
+//        System.out.println(i);
+//        sal=s.ocupacaoSala(salas, 30, horarios);
+//        System.out.println(sal.toString());
+//        String g = d.ListarDisciplinaProfessor(turmas, disciplinas, "cdp", horarios);
+//        System.out.println(g);
+        String g = d.ListarDisciplinaSala(disciplinas, "b305", horarios);
+        System.out.println(g);
+
+        //System.out.println(horarios.get(1));
+//        System.out.println(horarios);
+//        horarios.get(1).alterarHorario(h);
+//        System.out.println(horarios.get(1));
+
+
+>>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
         //System.out.println(horarios.toString());
         //System.out.println(horarios.get(1));
         //horarios.get(1).apagarHorario(horarios,1);

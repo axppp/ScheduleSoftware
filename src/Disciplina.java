@@ -36,6 +36,46 @@ public class Disciplina {
     Disciplina() {
     }
 
+    public String ListarDisciplinaProfessor(ArrayList<Turma> turma, ArrayList<Disciplina> disciplina, String a, ArrayList<Horario> horario) {
+        ArrayList<Disciplina> h = new ArrayList<>();
+        ArrayList<Turma> t = new ArrayList<>();
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getSigla_professor().equalsIgnoreCase(a)) {
+                for (int j = 0; j < disciplina.size(); j++) {
+                    if (disciplina.get(j).getSigla().equalsIgnoreCase(horario.get(i).getSigla_disciplina()) && !h.contains(disciplina.get(j))) {
+                        h.add(disciplina.get(j));
+                        for (int k = 0; k < turma.size(); k++) {
+                            if (turma.get(k).getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao())) {
+                                t.add(turma.get(k));
+                            }
+                        }
+//                h.add(horario.get(i).getSigla_disciplina());
+                    }
+                }
+            }
+        }
+        return h.toString() + t.toString();
+
+
+    }
+
+    public String ListarDisciplinaSala(ArrayList<Disciplina> disciplina, String a, ArrayList<Horario> horario) {
+        ArrayList<Disciplina> h = new ArrayList<>();
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getCodigo_sala().equalsIgnoreCase(a)) {
+                for (int j = 0; j < disciplina.size(); j++) {
+                    if (disciplina.get(j).getSigla().equalsIgnoreCase(horario.get(i).getSigla_disciplina()) && !h.contains(disciplina.get(j))) {
+                        h.add(disciplina.get(j));
+//                h.add(horario.get(i).getSigla_disciplina());
+                    }
+                }
+            }
+        }
+        return h.toString();
+
+
+    }
+
     /**
      * get getSigla
      */
@@ -121,7 +161,7 @@ public class Disciplina {
     
     @Override
     public String toString() {
-        return "Disciplina com a sigla " + sigla + " e a designacao de " + designacao + " , tem " + numHorasTeoricas + "horas teoricas e " + numHorasPraticas + " horas praticas. O professor que lecciona as aulas teorica é " + sigla_prof_t + " , e os  professores das aulas praticas sao " + professores.toString() +"\n";
+        return "Disciplina com a sigla " + sigla + " e a designacao de " + designacao + " , tem " + numHorasTeoricas + "horas teoricas e " + numHorasPraticas + " horas praticas. O professor que lecciona as aulas teorica é " + sigla_prof_t + " , e os  professores das aulas praticas sao " + professores.toString() + "\n";
 
     }
 }

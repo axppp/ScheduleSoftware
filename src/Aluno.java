@@ -1,5 +1,8 @@
 
 import data.Data;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 /*
@@ -30,6 +33,53 @@ public class Aluno extends Pessoa {
 
     Aluno() {
     }
+
+    public void listarAlunosCrescente(ArrayList<Aluno> alunos) {
+        Collections.sort(alunos, new Comparator<Aluno>() {
+
+            public int compare(Aluno p1, Aluno p2) {
+                return p1.getNumeroAluno() - p2.getNumeroAluno();
+            }
+        });
+        System.out.println(alunos);
+    }
+
+    public void listarAlunosDecrescente(ArrayList<Aluno> alunos) {
+        Collections.sort(alunos, new Comparator<Aluno>() {
+
+            public int compare(Aluno p1, Aluno p2) {
+                return p2.getNumeroAluno() - p1.getNumeroAluno();
+            }
+        });
+        System.out.println(alunos);
+    }
+
+    public void listarAlunosNomeCrescente(ArrayList<Aluno> alunos) {
+
+        Collections.sort(alunos, new Comparator() {
+
+            public int compare(Object o1, Object o2) {
+                Aluno p1 = (Aluno) o1;
+                Aluno p2 = (Aluno) o2;
+                return p1.getNome().compareToIgnoreCase(p2.getNome());
+            }
+        });
+        System.out.println(alunos);
+    }
+
+    public void listarAlunosNomeDecrescente(ArrayList<Aluno> alunos) {
+
+        Collections.sort(alunos, new Comparator() {
+
+            public int compare(Object o1, Object o2) {
+                Aluno p1 = (Aluno) o1;
+                Aluno p2 = (Aluno) o2;
+                return p2.getNome().compareToIgnoreCase(p1.getNome());
+            }
+        });
+        System.out.println(alunos);
+    }
+    
 
     /**
      * @return the numeroAluno

@@ -18,6 +18,7 @@ public class Horario {
     private String sigla_disciplina;
 
     private enum tipo_aula {
+
         T, P
     };
     tipo_aula aulas;
@@ -41,14 +42,18 @@ public class Horario {
         setCodigo_sala(sala.getCodigo());
     }
 
+<<<<<<< HEAD
     public void listarHoraraioAluno(ArrayList<Aluno> alunos,Aluno a,ArrayList<Horario> horario) throws FileNotFoundException {
       
+=======
+    public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
+>>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
-            if (a.getNumeroAluno() == alunos.get(i).getNumeroAluno()) {
+            if (a == alunos.get(i).getNumeroAluno()) {
                 t = alunos.get(i).getTurma();
-//                System.out.println(alunos);
+
             }
         }
         for (int i = 0; i < horario.size(); i++) {
@@ -62,22 +67,217 @@ public class Horario {
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
-//            System.out.println (h);
-//        System.out.println(h.get(0).getDesignacao());
         });
         Collections.sort(h, new Comparator<Horario>() {
 
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
-//            System.out.println (h);
-//        System.out.println(h.get(0).getDesignacao());
         });
-        System.out.println(h);
+        return h;
     }
 
-    public void alterarHorario(Horario horarioNovo)
-    {
+    public ArrayList<Horario> listarHorarioProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < prof.size(); i++) {
+            if (a.equalsIgnoreCase(prof.get(i).getSigla())) {
+                t = prof.get(i).getSigla();
+//                System.out.println(alunos);
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getSigla_professor().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+            }
+        }
+
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.hora_inicio - p2.hora_inicio;
+            }
+        });
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.dia_semana - p2.dia_semana;
+            }
+        });
+        return h;
+    }
+
+    public ArrayList<Horario> listarHorarioTurma(ArrayList<Turma> prof, String t, ArrayList<Horario> horario) {
+        ArrayList<Horario> h = new ArrayList<>();
+
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+            }
+        }
+
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.hora_inicio - p2.hora_inicio;
+            }
+        });
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.dia_semana - p2.dia_semana;
+            }
+        });
+        return h;
+    }
+
+    public ArrayList<Horario> listarHorarioDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < disc.size(); i++) {
+            if (a.equalsIgnoreCase(disc.get(i).getSigla())) {
+                t = disc.get(i).getSigla();
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getSigla_disciplina().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+            }
+        }
+
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.hora_inicio - p2.hora_inicio;
+            }
+        });
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.dia_semana - p2.dia_semana;
+            }
+        });
+        return h;
+    }
+
+    public ArrayList<Horario> listarHorarioSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < sala.size(); i++) {
+            if (a.equalsIgnoreCase(sala.get(i).getCodigo())) {
+                t = sala.get(i).getCodigo();
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getCodigo_sala().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+            }
+        }
+
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.hora_inicio - p2.hora_inicio;
+            }
+        });
+        Collections.sort(h, new Comparator<Horario>() {
+
+            public int compare(Horario p1, Horario p2) {
+                return p1.dia_semana - p2.dia_semana;
+            }
+        });
+        return h;
+    }
+
+    public int CargaHorariaAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) {
+        int j = 0;
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < alunos.size(); i++) {
+            if (a == alunos.get(i).getNumeroAluno()) {
+                t = alunos.get(i).getTurma();
+
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+                j += horario.get(i).getDuracaoAula();
+            }
+        }
+        return j;
+    }
+
+    public int CargaHorariaProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
+        int j = 0;
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < prof.size(); i++) {
+            if (a.equalsIgnoreCase(prof.get(i).getSigla())) {
+                t = prof.get(i).getSigla();
+
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getSigla_professor().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+                j += horario.get(i).getDuracaoAula();
+            }
+        }
+        return j;
+    }
+
+    public int CargaHorariaTurma(ArrayList<Turma> Turma, String t, ArrayList<Horario> horario) {
+        int j = 0;
+        ArrayList<Horario> h = new ArrayList<>();
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+                j += horario.get(i).getDuracaoAula();
+            }
+        }
+        return j;
+    }
+
+    public int CargaHorariaDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
+        int j = 0;
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < disc.size(); i++) {
+            if (a.equalsIgnoreCase(disc.get(i).getSigla())) {
+                t = disc.get(i).getSigla();
+
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getSigla_disciplina().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+                j += horario.get(i).getDuracaoAula();
+            }
+        }
+        return j;
+    }
+
+    public int CargaHorariaSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
+        int j = 0;
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < sala.size(); i++) {
+            if (a.equalsIgnoreCase(sala.get(i).getCodigo())) {
+                t = sala.get(i).getCodigo();
+
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getCodigo_sala().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+                j += horario.get(i).getDuracaoAula();
+            }
+        }
+        return j;
+    }
+
+    public void alterarHorario(Horario horarioNovo) {
         this.setDesignacao(horarioNovo.getDesignacao());
         this.setSigla_disciplina(horarioNovo.getSigla_disciplina());
         this.setAulas(horarioNovo.getAulas());
@@ -85,15 +285,13 @@ public class Horario {
         this.setHora_inicio(horarioNovo.getHora_inicio());
         this.setDuracaoAula(horarioNovo.getDuracaoAula());
         this.setSigla_professor(horarioNovo.getSigla_professor());
-        this.setCodigo_sala(horarioNovo.getCodigo_sala());   
+        this.setCodigo_sala(horarioNovo.getCodigo_sala());
     }
-    
-    public void apagarHorario(ArrayList<Horario> horarios, int num)
-    {
+
+    public void apagarHorario(ArrayList<Horario> horarios, int num) {
         horarios.remove(num);
     }
-    
-    
+
     public void setDia_semana(int dia_semana) {
         if (dia_semana >= 2 && dia_semana <= 6) {
             this.dia_semana = dia_semana;
@@ -109,10 +307,10 @@ public class Horario {
     }
 
     public int getAulas() {
-        
+
         if (aulas.equals(aulas.T)) {
             return 1;
-        } else if (aulas.equals(aulas.P)) { 
+        } else if (aulas.equals(aulas.P)) {
             return 2;
         }
         return 0;
@@ -149,13 +347,13 @@ public class Horario {
     public void setAulas(int aula) {
         if (aula == 1) {
             this.aulas = aulas.T;
-        } else if (aula == 2) { 
+        } else if (aula == 2) {
             this.aulas = aulas.P;
         }
     }
 
     public void setHora_inicio(int hora_inicio) {
-         if (hora_inicio > 8 || hora_inicio < 17) {
+        if (hora_inicio > 8 || hora_inicio < 17) {
             this.hora_inicio = hora_inicio;
         } else {
             //deve mandar uma excepcao

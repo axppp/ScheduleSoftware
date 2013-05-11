@@ -254,12 +254,22 @@ public class CSV {
         return horario;
     }
 
+<<<<<<< HEAD
     public boolean validacaoSala(ArrayList<Horario> horario, Horario horarioADD) {
 
         for (int i = 0; i < horario.size(); i++) {
 
             if (horario.get(i).getCodigo_sala().equalsIgnoreCase(horarioADD.getCodigo_sala()) && horario.get(i).getDesignacao().equalsIgnoreCase(horarioADD.getDesignacao()) && (horario.get(i).getSigla_professor().equalsIgnoreCase(horarioADD.getSigla_professor()) || horario.get(i).getDia_semana() == horarioADD.getDia_semana() || horario.get(i).getHora_inicio() == horarioADD.getHora_inicio())) {
                 return true;
+=======
+    public void validacaoSala(ArrayList<Horario> horario) {
+        for (int j = 0; j < horario.size(); j++) {
+            for (int i = 0; i < horario.size(); i++) {
+                if (horario.get(j).getCodigo_sala().equalsIgnoreCase(horario.get(i).getCodigo_sala()) && horario.get(j).getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao()) && horario.get(j).getSigla_professor().equalsIgnoreCase(horario.get(i).getSigla_professor()) && horario.get(j).getDia_semana() == horario.get(i).getDia_semana() && horario.get(j).getHora_inicio() == horario.get(i).getHora_inicio()) {
+//                    System.out.println("a linha " + j+"e igual a " + i);
+                    //System.out.println(horario.get(i).getSigla_disciplina());
+                }
+>>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
             }
 
         }
