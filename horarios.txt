@@ -1,5 +1,6 @@
 designacao_turma;sigla_disciplina;tipo_aula(T,P);dia_semana(2,3,...,6);hora_inicio(8, 9, ..., 17);duracao_aula(1,2);professor;sala
 1DE;FIS;P;3;9;2;DMR;B305
+1DE;FIS;P;3;9;2;DMR;B305
 1DB;ALG;P;5;14;2;CDP;B305
 1DA;ING;T;3;11;1;MMP;B201
 1DA;ALG;P;3;9;2;CDP;B205
@@ -9,9 +10,11 @@ designacao_turma;sigla_disciplina;tipo_aula(T,P);dia_semana(2,3,...,6);hora_inic
 1DB;POO;T;3;11;1;SMS;B401
 1DC;FIS;P;6;10;2;FAN;B315
 1DD;ING;T;2;9;1;MMP;B301
+1DD;ING;T;2;9;1;MMP;B301
 1DB;FIS;P;2;16;2;FAN;B305
 1DA;MAT;T;4;8;1;RRP;B301
 1DE;ING;T;4;10;1;MMP;B301
+1DC;FIS;T;3;11;1;PSR;B301
 1DC;FIS;T;3;11;1;PSR;B301
 1DC;ALG;P;2;8;2;ACS;B310
 1DA;MAT;P;2;9;2;JLS;B205
@@ -20,7 +23,6 @@ designacao_turma;sigla_disciplina;tipo_aula(T,P);dia_semana(2,3,...,6);hora_inic
 1DC;FIS;P;3;8;2;FAN;B310
 1DB;ALG;P;6;14;2;CDP;B305
 1DC;POO;P;3;14;2;ACS;B315
-1DD;MAT;T;4;10;1;RRP;B201
 1DD;FIS;P;2;15;2;DET;B205
 1DE;MAT;P;4;14;2;AMG;B210
 1DC;POO;P;5;10;2;ACS;B310

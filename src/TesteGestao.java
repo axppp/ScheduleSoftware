@@ -30,21 +30,21 @@ public class TesteGestao {
         disciplinas = ola.Disciplinas();
         turmas = ola.Turmas();
         horarios = ola.Horario();
+        
+        
 
-//        System.out.println(salas.toString());
-//        System.out.println("\n\n");
-//        System.out.println(alunos.toString());
-//        System.out.println("\n\n");
-//        System.out.println(professores.toString());
-//        System.out.println("\n\n");
-//        System.out.println(disciplinas.toString());
-//        System.out.println("\n\n");
-//        System.out.println(turmas.toString());
-//        System.out.println("\n\n");
-//        System.out.println(horarios);
-        Horario h = new Horario();
-        Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
-        h.listarHoraraioAluno(a);
+
+        //System.out.println(horarios.toString());
+       // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
+       // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
+        //h.listarHoraraioAluno(a);
+        //System.out.println(horarios.get(1));
+        //horarios.get(1).alterarHorario(h);
+        
+        //System.out.println(horarios.toString());
+        //System.out.println(horarios.get(1));
+        //horarios.get(1).apagarHorario(horarios,1);
+        //System.out.println(horarios.toString());
 
     }
 }

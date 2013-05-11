@@ -18,7 +18,6 @@ public class Horario {
     private String sigla_disciplina;
 
     private enum tipo_aula {
-
         T, P
     };
     tipo_aula aulas;
@@ -32,29 +31,27 @@ public class Horario {
     }
 
     public Horario(Turma turma, Disciplina disciplina, int tipo_aula, int dia_semana, int hora_inicio, int duracaoAula, Professor professor, SalaAula sala) {
-        this.designacao = turma.getDesignacao();
-        this.sigla_disciplina = disciplina.getSigla();
-
-        if (tipo_aula == 1) {
-            this.aulas = aulas.T;
-        } else if (tipo_aula == 2) {
-            this.aulas = aulas.P;
-        }
-        verificaDiaSemana(dia_semana);
-        verificaHoraAula(hora_inicio);
-        this.duracaoAula = duracaoAula;
-        this.sigla_professor = professor.getSigla();
-        this.codigo_sala = sala.getCodigo();
+        setDesignacao(turma.getDesignacao());
+        setSigla_disciplina(disciplina.getSigla());
+        setAulas(tipo_aula);
+        setDia_semana(dia_semana);
+        setHora_inicio(hora_inicio);
+        setDuracaoAula(duracaoAula);
+        setSigla_professor(professor.getSigla());
+        setCodigo_sala(sala.getCodigo());
     }
 
-    public void listarHoraraioAluno(Aluno a) throws FileNotFoundException {
-        CSV ola = new CSV();
+    public void listarHoraraioAluno(ArrayList<Aluno> alunos,Aluno a,ArrayList<Horario> horario) throws FileNotFoundException {
+      
+        //PERGUNTAR AO EDGAR SE FUNCIONA ASSIM
+        
+        /*  CSV ola = new CSV();
         ArrayList<SalaAula> sala = ola.Sala();
         ArrayList<Professor> professores = ola.Professor();
         ArrayList<Aluno> alunos = ola.Alunos();
         ArrayList<Turma> turmas = ola.Turmas();
         ArrayList<Disciplina> disciplinas = ola.Disciplinas();
-        ArrayList<Horario> horario = ola.Horario();
+        ArrayList<Horario> horario = ola.Horario();*/
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
@@ -88,18 +85,27 @@ public class Horario {
         System.out.println(h);
     }
 
-    public void verificaDiaSemana(int dia_semana) {
+    public void alterarHorario(Horario horarioNovo)
+    {
+        this.setDesignacao(horarioNovo.getDesignacao());
+        this.setSigla_disciplina(horarioNovo.getSigla_disciplina());
+        this.setAulas(horarioNovo.getAulas());
+        this.setDia_semana(horarioNovo.getDia_semana());
+        this.setHora_inicio(horarioNovo.getHora_inicio());
+        this.setDuracaoAula(horarioNovo.getDuracaoAula());
+        this.setSigla_professor(horarioNovo.getSigla_professor());
+        this.setCodigo_sala(horarioNovo.getCodigo_sala());   
+    }
+    
+    public void apagarHorario(ArrayList<Horario> horarios, int num)
+    {
+        horarios.remove(num);
+    }
+    
+    
+    public void setDia_semana(int dia_semana) {
         if (dia_semana >= 2 && dia_semana <= 6) {
             this.dia_semana = dia_semana;
-        }
-    }
-
-    public void verificaHoraAula(int horainicio) {
-        if (horainicio > 8 || horainicio < 17) {
-            this.hora_inicio = horainicio;
-        } else {
-            //deve mandar uma excepcao
-            System.out.println("aula nao pode ser lecionada");
         }
     }
 
@@ -111,8 +117,14 @@ public class Horario {
         return sigla_disciplina;
     }
 
-    public tipo_aula getAulas() {
-        return aulas;
+    public int getAulas() {
+        
+        if (aulas.equals(aulas.T)) {
+            return 1;
+        } else if (aulas.equals(aulas.P)) { 
+            return 2;
+        }
+        return 0;
     }
 
     public int getDia_semana() {
@@ -143,16 +155,21 @@ public class Horario {
         this.sigla_disciplina = sigla_disciplina;
     }
 
-    public void setAulas(tipo_aula aulas) {
-        this.aulas = aulas;
-    }
-
-    public void setDia_semana(int dia_semana) {
-        this.dia_semana = dia_semana;
+    public void setAulas(int aula) {
+        if (aula == 1) {
+            this.aulas = aulas.T;
+        } else if (aula == 2) { 
+            this.aulas = aulas.P;
+        }
     }
 
     public void setHora_inicio(int hora_inicio) {
-        this.hora_inicio = hora_inicio;
+         if (hora_inicio > 8 || hora_inicio < 17) {
+            this.hora_inicio = hora_inicio;
+        } else {
+            //deve mandar uma excepcao
+            System.out.println("aula nao pode ser lecionada");
+        }
     }
 
     public void setDuracaoAula(int duracaoAula) {
