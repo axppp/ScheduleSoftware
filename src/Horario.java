@@ -42,7 +42,7 @@ public class Horario {
         setCodigo_sala(sala.getCodigo());
     }
 
-    public void listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
+    public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
@@ -69,14 +69,10 @@ public class Horario {
                 return p1.dia_semana - p2.dia_semana;
             }
         });
-        if (h.isEmpty()) {
-            System.out.println("Aluno nao existente ou sem aulas.");
-        } else {
-            System.out.println(h);
-        }
+        return h;
     }
 
-    public void listarHorarioProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
+    public ArrayList<Horario> listarHorarioProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < prof.size(); i++) {
@@ -103,14 +99,10 @@ public class Horario {
                 return p1.dia_semana - p2.dia_semana;
             }
         });
-        if (h.isEmpty()) {
-            System.out.println("Professor nao existente ou sem carga de Trabalho.");
-        } else {
-            System.out.println(h);
-        }
+        return h;
     }
 
-    public void listarHorarioTurma(ArrayList<Turma> prof, String t, ArrayList<Horario> horario) {
+    public ArrayList<Horario> listarHorarioTurma(ArrayList<Turma> prof, String t, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
 
         for (int i = 0; i < horario.size(); i++) {
@@ -131,14 +123,10 @@ public class Horario {
                 return p1.dia_semana - p2.dia_semana;
             }
         });
-        if (h.isEmpty()) {
-            System.out.println("Turma nao existente ou nao leccionada.");
-        } else {
-            System.out.println(h);
-        }
+        return h;
     }
 
-    public void listarHorarioDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
+    public ArrayList<Horario> listarHorarioDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < disc.size(); i++) {
@@ -164,14 +152,10 @@ public class Horario {
                 return p1.dia_semana - p2.dia_semana;
             }
         });
-        if (h.isEmpty()) {
-            System.out.println("Disciplina nao existente ou nao exercida.");
-        } else {
-            System.out.println(h);
-        }
+        return h;
     }
 
-    public void listarHorarioSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
+    public ArrayList<Horario> listarHorarioSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < sala.size(); i++) {
@@ -197,14 +181,10 @@ public class Horario {
                 return p1.dia_semana - p2.dia_semana;
             }
         });
-        if (h.isEmpty()) {
-            System.out.println("Sala nao existente ou nao ocupada.");
-        } else {
-            System.out.println(h);
-        }
+        return h;
     }
 
-    public void CargaHorariaAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) {
+    public int CargaHorariaAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
@@ -220,14 +200,10 @@ public class Horario {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        if (h.isEmpty()) {
-            System.out.println("Aluno nao existente ou sem aulas.");
-        } else {
-            System.out.println("O Aluno tem " + j + " horas de carga horaria por semana.");
-        }
+        return j;
     }
 
-    public void CargaHorariaProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
+    public int CargaHorariaProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
@@ -243,14 +219,10 @@ public class Horario {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        if (h.isEmpty()) {
-            System.out.println("Professor nao existente ou sem aulas.");
-        } else {
-            System.out.println("O Professor tem " + j + " horas de carga horaria por semana.");
-        }
+        return j;
     }
 
-    public void CargaHorariaTurma(ArrayList<Turma> Turma, String t, ArrayList<Horario> horario) {
+    public int CargaHorariaTurma(ArrayList<Turma> Turma, String t, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         for (int i = 0; i < horario.size(); i++) {
@@ -259,14 +231,10 @@ public class Horario {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        if (h.isEmpty()) {
-            System.out.println("Turma nao existente ou sem aulas.");
-        } else {
-            System.out.println("A Turma tem " + j + " horas de carga horaria por semana.");
-        }
+        return j;
     }
 
-    public void CargaHorariaDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
+    public int CargaHorariaDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
@@ -282,14 +250,10 @@ public class Horario {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        if (h.isEmpty()) {
-            System.out.println("Disciplina nao existente ou nao Leccionada.");
-        } else {
-            System.out.println("A Disciplina tem " + j + " horas de carga horaria por semana.");
-        }
+        return j;
     }
 
-    public void CargaHorariaSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
+    public int CargaHorariaSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
@@ -305,11 +269,7 @@ public class Horario {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        if (h.isEmpty()) {
-            System.out.println("Sala nao existente ou nao usada.");
-        } else {
-            System.out.println("A Sala tem " + j + " horas de carga horaria por semana.");
-        }
+        return j;
     }
 
     public void alterarHorario(Horario horarioNovo) {

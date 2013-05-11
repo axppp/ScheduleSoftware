@@ -27,7 +27,11 @@ public class Turma {
 
     @Override
     public String toString() {
-        return "Turma{" + "designacao=" + designacao + ", alunos=" + alunos + '}';
+        return "Turma{" + "designacao=" + designacao + ", tem " + alunos.size() + " Alunos " + '}';
+    }
+
+    public String toStringSigla() {
+        return designacao;
     }
 
     /**
