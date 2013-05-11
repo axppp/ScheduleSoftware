@@ -248,7 +248,7 @@ public class CSV {
         for (int j = 0; j < horario.size(); j++) {
             for (int i = 0; i < horario.size(); i++) {
                 if (horario.get(j).getCodigo_sala().equalsIgnoreCase(horario.get(i).getCodigo_sala()) && horario.get(j).getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao()) && horario.get(j).getSigla_professor().equalsIgnoreCase(horario.get(i).getSigla_professor()) && horario.get(j).getDia_semana() == horario.get(i).getDia_semana() && horario.get(j).getHora_inicio() == horario.get(i).getHora_inicio()) {
-                    System.out.println("a linha " + j+"e igual a " + i);
+//                    System.out.println("a linha " + j+"e igual a " + i);
                     //System.out.println(horario.get(i).getSigla_disciplina());
                 }
             }
