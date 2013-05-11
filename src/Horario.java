@@ -43,15 +43,6 @@ public class Horario {
 
     public void listarHoraraioAluno(ArrayList<Aluno> alunos,Aluno a,ArrayList<Horario> horario) throws FileNotFoundException {
       
-        //PERGUNTAR AO EDGAR SE FUNCIONA ASSIM
-        
-        /*  CSV ola = new CSV();
-        ArrayList<SalaAula> sala = ola.Sala();
-        ArrayList<Professor> professores = ola.Professor();
-        ArrayList<Aluno> alunos = ola.Alunos();
-        ArrayList<Turma> turmas = ola.Turmas();
-        ArrayList<Disciplina> disciplinas = ola.Disciplinas();
-        ArrayList<Horario> horario = ola.Horario();*/
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
