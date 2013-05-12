@@ -1,6 +1,5 @@
 designacao_turma;sigla_disciplina;tipo_aula(T,P);dia_semana(2,3,...,6);hora_inicio(8, 9, ..., 17);duracao_aula(1,2);professor;sala
 1DE;FIS;P;3;9;2;DMR;B305
-1DC;ALG;P;3;9;2;CDP;B305
 1DB;ALG;P;5;14;2;CDP;B305
 1DA;ING;T;3;11;1;MMP;B201
 1DA;ALG;P;3;9;2;CDP;B205
