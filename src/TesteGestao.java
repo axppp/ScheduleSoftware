@@ -36,10 +36,12 @@ public class TesteGestao {
 
         //System.out.println(horarios.toString());
         Horario h = new Horario();
+        Professor p = new Professor();
         Aluno a = new Aluno();
         SalaAula s = new SalaAula();
+        Turma t = new Turma();
         Disciplina d = new Disciplina();
-        ArrayList<SalaAula> sal = new ArrayList<>();
+//        ArrayList<SalaAula> sal = new ArrayList<>();
 //        Horario h = new Horario(turmas.get(2), disciplinas.get(2), 1, 2, 10, 2, professores.get(2), salas.get(2));
         // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
 //        h.listarHorarioAluno(alunos, 1120845, horarios);
@@ -60,9 +62,19 @@ public class TesteGestao {
 //        sal=s.ocupacaoSala(salas, 30, horarios);
 //        System.out.println(sal.toString());
 //        String g = d.ListarDisciplinaProfessor(turmas, disciplinas, "cdp", horarios);
+//        String g = d.ListarDisciplinaSala(disciplinas, "b305", horarios);
+//        String g = t.listarProfessorTurma(professores, "1de", horarios);
 //        System.out.println(g);
-        String g = d.ListarDisciplinaSala(disciplinas, "b305", horarios);
-        System.out.println(g);
+//        a = h.listarDadosAluno(1120845, alunos);
+//        System.out.println(a);
+//        p= h.listarDadosProfessor("psr", professores);
+//        System.out.println(p.toStringProfessor());
+//        s = h.listarDadosSala("b201", salas);
+//        System.out.println(s);
+//        t = h.listarDadosTurma("1de", turmas);
+//        System.out.println(t);
+//        d = h.listarDadosDisciplina("poo", disciplinas);
+//        System.out.println(d);
 
         //System.out.println(horarios.get(1));
 //        System.out.println(horarios);

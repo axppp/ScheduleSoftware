@@ -81,6 +81,7 @@ public class Horario {
 //                System.out.println(alunos);
             }
         }
+
         for (int i = 0; i < horario.size(); i++) {
             if (horario.get(i).getSigla_professor().equalsIgnoreCase(t)) {
                 h.add(horario.get(i));
@@ -182,6 +183,56 @@ public class Horario {
             }
         });
         return h;
+    }
+
+    public Aluno listarDadosAluno(int a, ArrayList<Aluno> alu) {
+        Aluno aluno = new Aluno();
+        for (int i = 0; i < alu.size(); i++) {
+            if (a == alu.get(i).getNumeroAluno()) {
+                aluno = alu.get(i);
+            }
+        }
+        return aluno;
+    }
+
+    public Professor listarDadosProfessor(String a, ArrayList<Professor> prof) {
+        Professor professor = new Professor();
+        for (int i = 0; i < prof.size(); i++) {
+            if (a.equalsIgnoreCase(prof.get(i).getSigla())) {
+                professor = prof.get(i);
+            }
+        }
+        return professor;
+    }
+
+    public SalaAula listarDadosSala(String a, ArrayList<SalaAula> Sala) {
+        SalaAula salaaula = new SalaAula();
+        for (int i = 0; i < Sala.size(); i++) {
+            if (a.equalsIgnoreCase(Sala.get(i).getCodigo())) {
+                salaaula = Sala.get(i);
+            }
+        }
+        return salaaula;
+    }
+
+    public Turma listarDadosTurma(String a, ArrayList<Turma> tur) {
+        Turma turma = new Turma();
+        for (int i = 0; i < tur.size(); i++) {
+            if (a.equalsIgnoreCase(tur.get(i).getDesignacao())) {
+                turma = tur.get(i);
+            }
+        }
+        return turma;
+    }
+
+    public Disciplina listarDadosDisciplina(String a, ArrayList<Disciplina> disc) {
+        Disciplina disciplina = new Disciplina();
+        for (int i = 0; i < disc.size(); i++) {
+            if (a.equalsIgnoreCase(disc.get(i).getSigla())) {
+                disciplina = disc.get(i);
+            }
+        }
+        return disciplina;
     }
 
     public int CargaHorariaAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) {

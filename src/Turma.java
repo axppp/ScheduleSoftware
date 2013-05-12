@@ -25,6 +25,23 @@ public class Turma {
     Turma() {
     }
 
+    public String listarProfessorTurma(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
+        ArrayList<Horario> h = new ArrayList<>();
+        ArrayList<Professor> p = new ArrayList<>();
+        for (int i = 0; i < horario.size(); i++) {
+            if (a.equalsIgnoreCase(horario.get(i).getDesignacao())) {
+                h.add(horario.get(i));
+                for (int j = 0; j < prof.size(); j++) {
+                    if (prof.get(j).getSigla().equalsIgnoreCase(horario.get(i).getSigla_professor()) && !p.contains(prof.get(j))) {
+                        p.add(prof.get(j));
+                    }
+
+                }
+            }
+        }
+        return p.toString() + h.toString();
+    }
+
     @Override
     public String toString() {
         return "Turma{" + "designacao=" + designacao + ", tem " + alunos.size() + " Alunos " + '}';
