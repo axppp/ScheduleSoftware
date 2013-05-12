@@ -42,12 +42,8 @@ public class Horario {
         setCodigo_sala(sala.getCodigo());
     }
 
-<<<<<<< HEAD
-    public void listarHoraraioAluno(ArrayList<Aluno> alunos,Aluno a,ArrayList<Horario> horario) throws FileNotFoundException {
-      
-=======
     public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
->>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
+
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
@@ -63,13 +59,11 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -94,13 +88,11 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -118,13 +110,11 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -147,13 +137,11 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -176,13 +164,11 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
-
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -328,15 +314,50 @@ public class Horario {
         return j;
     }
 
-    public void alterarHorario(Horario horarioNovo) {
-        this.setDesignacao(horarioNovo.getDesignacao());
-        this.setSigla_disciplina(horarioNovo.getSigla_disciplina());
-        this.setAulas(horarioNovo.getAulas());
-        this.setDia_semana(horarioNovo.getDia_semana());
-        this.setHora_inicio(horarioNovo.getHora_inicio());
-        this.setDuracaoAula(horarioNovo.getDuracaoAula());
-        this.setSigla_professor(horarioNovo.getSigla_professor());
-        this.setCodigo_sala(horarioNovo.getCodigo_sala());
+    public void alterarHorario(Horario horarioNovo, ArrayList<Horario> horarios) {
+
+        if (validaHorario(this, horarioNovo, horarios) == true) {
+            this.setDesignacao(horarioNovo.getDesignacao());
+            this.setSigla_disciplina(horarioNovo.getSigla_disciplina());
+            this.setAulas(horarioNovo.getAulas());
+            this.setDia_semana(horarioNovo.getDia_semana());
+            this.setHora_inicio(horarioNovo.getHora_inicio());
+            this.setDuracaoAula(horarioNovo.getDuracaoAula());
+            this.setSigla_professor(horarioNovo.getSigla_professor());
+            this.setCodigo_sala(horarioNovo.getCodigo_sala());
+
+        } else {
+            System.out.println("pumbaz");
+        }
+    }
+
+    public Boolean validaHorario(Horario horarioANT, Horario novo, ArrayList<Horario> horarios) {
+        
+        Boolean validacao=true;
+        int i=0;
+        do
+        {
+            System.out.println(i);
+            if (horarioANT.equals(novo)) {
+                System.out.println("1");
+                validacao = false;
+            } else if (novo.getCodigo_sala().equalsIgnoreCase(horarios.get(i).getCodigo_sala()) && (novo.getSigla_professor().equalsIgnoreCase(horarios.get(i).getSigla_professor()))) 
+            {
+                if(novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio() || novo.getDesignacao().equalsIgnoreCase(horarios.get(i).getDesignacao()))
+                {
+                System.out.println("2-estourou");
+                validacao = false;    
+                }
+            } else {
+                //System.out.println("3");
+                validacao = true;
+            }
+            i++;
+        }while(i < horarios.size() && validacao == true);
+        
+        return validacao;
+        
+
     }
 
     public void apagarHorario(ArrayList<Horario> horarios, int num) {
