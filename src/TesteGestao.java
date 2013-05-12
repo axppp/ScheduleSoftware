@@ -35,38 +35,27 @@ public class TesteGestao {
 
 
         //System.out.println(horarios.toString());
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-       // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
-       // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
-        //h.listarHoraraioAluno(a);
-        //System.out.println(horarios);
-        //horarios.get(1).alterarHorario(h);
-        
-=======
-=======
-=======
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
 
-       // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
-       // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
-        //h.listarHoraraioAluno(a);
-        //System.out.println(horarios);
-        //horarios.get(1).alterarHorario(h);
-        
-
-=======
         // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
         // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
         //h.listarHoraraioAluno(a);
         //System.out.println(horarios);
         //horarios.get(1).alterarHorario(h);
->>>>>>> 2bc9ef9b3b595b493a24642795bc7193f7b2e602
-<<<<<<< HEAD
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
-=======
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
+
+        // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
+        // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
+        //h.listarHoraraioAluno(a);
+        //System.out.println(horarios);
+        //horarios.get(1).alterarHorario(h);
+
+
+
+        // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
+        // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
+        //h.listarHoraraioAluno(a);
+        //System.out.println(horarios);
+        //horarios.get(1).alterarHorario(h);
+
         Horario h = new Horario();
         Professor p = new Professor();
         Aluno a = new Aluno();
@@ -114,40 +103,29 @@ public class TesteGestao {
 //        System.out.println(horarios.get(1));
 
 
->>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
         //System.out.println(horarios.toString());
         //System.out.println(horarios.get(1));
         //horarios.get(1).apagarHorario(horarios,1);
         //System.out.println(horarios.toString());
         //for (int i = 0; i < disciplinas.size(); i++) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
-            
-            
+
+        System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
+
+
         //}
-        
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
-           //System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
-        
-        Horario j = new Horario(turmas.get(1),disciplinas.get(1),1,5,14,2,professores.get(7),salas.get(5));
+
+        //System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
+
+        Horario j = new Horario(turmas.get(1), disciplinas.get(1), 1, 5, 14, 2, professores.get(7), salas.get(5));
         System.out.println(j);
-           System.out.println(horarios.get(1));
-           horarios.get(2).alterarHorario(j, horarios);
-           
-=======
+        System.out.println(horarios.get(1));
+        horarios.get(2).alterarHorario(j, horarios);
+
+
 //        System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
 
 
         //}
 
->>>>>>> 2bc9ef9b3b595b493a24642795bc7193f7b2e602
-<<<<<<< HEAD
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
-=======
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
     }
 }

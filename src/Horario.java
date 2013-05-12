@@ -42,25 +42,7 @@ public class Horario {
         setCodigo_sala(sala.getCodigo());
     }
 
-<<<<<<< HEAD
-    public void listarHoraraioAluno(ArrayList<Aluno> alunos,Aluno a,ArrayList<Horario> horario) throws FileNotFoundException {
-      
-=======
     public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 2bc9ef9b3b595b493a24642795bc7193f7b2e602
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
-=======
-
-=======
->>>>>>> 2bc9ef9b3b595b493a24642795bc7193f7b2e602
->>>>>>> ca180b997bf8240004159345db2a146a71e55cdb
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
