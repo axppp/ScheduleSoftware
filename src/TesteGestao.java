@@ -35,6 +35,14 @@ public class TesteGestao {
 
 
         //System.out.println(horarios.toString());
+<<<<<<< HEAD
+       // Horario h = new Horario(turmas.get(2),disciplinas.get(2),1,2,10,2,professores.get(2),salas.get(2));
+       // Aluno a = new Aluno(1120845, "FRANCISCO BARROS BARROSO", 04, 03, 1993, 918004570, "franciscobarros@esi.pt");
+        //h.listarHoraraioAluno(a);
+        //System.out.println(horarios);
+        //horarios.get(1).alterarHorario(h);
+        
+=======
         Horario h = new Horario();
         Professor p = new Professor();
         Aluno a = new Aluno();
@@ -82,10 +90,16 @@ public class TesteGestao {
 //        System.out.println(horarios.get(1));
 
 
+>>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
         //System.out.println(horarios.toString());
         //System.out.println(horarios.get(1));
         //horarios.get(1).apagarHorario(horarios,1);
         //System.out.println(horarios.toString());
-
+        //for (int i = 0; i < disciplinas.size(); i++) {
+            System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
+            
+            
+        //}
+        
     }
 }
