@@ -42,7 +42,12 @@ public class Horario {
         setCodigo_sala(sala.getCodigo());
     }
 
+<<<<<<< HEAD
+    public void listarHoraraioAluno(ArrayList<Aluno> alunos,Aluno a,ArrayList<Horario> horario) throws FileNotFoundException {
+      
+=======
     public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
+>>>>>>> 381affd772b07ee013ed9f3fe21c7a81c9d4738b
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
@@ -422,9 +427,5 @@ public class Horario {
     @Override
     public String toString() {
         return "Horario{" + "designacao=" + designacao + ", sigla_disciplina=" + sigla_disciplina + ", aulas=" + aulas + ", dia_semana=" + dia_semana + ", hora_inicio=" + hora_inicio + ", duracaoAula=" + duracaoAula + ", sigla_professor=" + sigla_professor + ", codigo_sala=" + codigo_sala + "\n";
-    }
-
-    public String toStringAulaExtra() {
-        return "Sala esta acessivel das " + hora_inicio + " ate as " + (hora_inicio + duracaoAula);
     }
 }
