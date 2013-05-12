@@ -58,11 +58,13 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -87,11 +89,13 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -109,11 +113,13 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -136,11 +142,13 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -163,11 +171,13 @@ public class Horario {
         }
 
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.hora_inicio - p2.hora_inicio;
             }
         });
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.dia_semana - p2.dia_semana;
             }
@@ -331,31 +341,28 @@ public class Horario {
     }
 
     public Boolean validaHorario(Horario horarioANT, Horario novo, ArrayList<Horario> horarios) {
-        
-        Boolean validacao=true;
-        int i=0;
-        do
-        {
+
+        Boolean validacao = true;
+        int i = 0;
+        do {
             System.out.println(i);
             if (horarioANT.equals(novo)) {
                 System.out.println("1");
                 validacao = false;
-            } else if (novo.getCodigo_sala().equalsIgnoreCase(horarios.get(i).getCodigo_sala()) && (novo.getSigla_professor().equalsIgnoreCase(horarios.get(i).getSigla_professor()))) 
-            {
-                if(novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio() || novo.getDesignacao().equalsIgnoreCase(horarios.get(i).getDesignacao()))
-                {
-                System.out.println("2-estourou");
-                validacao = false;    
+            } else if (novo.getCodigo_sala().equalsIgnoreCase(horarios.get(i).getCodigo_sala()) && (novo.getSigla_professor().equalsIgnoreCase(horarios.get(i).getSigla_professor()))) {
+                if (novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio() || novo.getDesignacao().equalsIgnoreCase(horarios.get(i).getDesignacao())) {
+                    System.out.println("2-estourou");
+                    validacao = false;
                 }
             } else {
                 //System.out.println("3");
                 validacao = true;
             }
             i++;
-        }while(i < horarios.size() && validacao == true);
-        
+        } while (i < horarios.size() && validacao == true);
+
         return validacao;
-        
+
 
     }
 
@@ -447,5 +454,9 @@ public class Horario {
     @Override
     public String toString() {
         return "Horario{" + "designacao=" + designacao + ", sigla_disciplina=" + sigla_disciplina + ", aulas=" + aulas + ", dia_semana=" + dia_semana + ", hora_inicio=" + hora_inicio + ", duracaoAula=" + duracaoAula + ", sigla_professor=" + sigla_professor + ", codigo_sala=" + codigo_sala + "\n";
+    }
+
+    public String toStringAulaExtra() {
+        return "Sala esta acessivel das " + hora_inicio + " ate as " + (hora_inicio + duracaoAula);
     }
 }

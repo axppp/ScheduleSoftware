@@ -96,6 +96,9 @@ public class TesteGestao {
 //        System.out.println(t);
 //        d = h.listarDadosDisciplina("poo", disciplinas);
 //        System.out.println(d);
+        String g = s.SalaAulaExtra(2, "b203", 8, salas, horarios);
+        System.out.println(g);
+
 
         //System.out.println(horarios.get(1));
 //        System.out.println(horarios);
