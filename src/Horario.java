@@ -43,7 +43,10 @@ public class Horario {
     }
 
     public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2bc9ef9b3b595b493a24642795bc7193f7b2e602
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
@@ -448,5 +451,9 @@ public class Horario {
     @Override
     public String toString() {
         return "Horario{" + "designacao=" + designacao + ", sigla_disciplina=" + sigla_disciplina + ", aulas=" + aulas + ", dia_semana=" + dia_semana + ", hora_inicio=" + hora_inicio + ", duracaoAula=" + duracaoAula + ", sigla_professor=" + sigla_professor + ", codigo_sala=" + codigo_sala + "\n";
+    }
+
+    public String toStringAulaExtra() {
+        return "Sala esta acessivel das " + hora_inicio + " ate as " + (hora_inicio + duracaoAula);
     }
 }

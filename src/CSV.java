@@ -239,8 +239,55 @@ public class CSV {
 
             Horario a = new Horario(t, d, tipo, Integer.parseInt(c[3]), Integer.parseInt(c[4]), Integer.parseInt(c[5]), p, s);
             horario.add(a);
+<<<<<<< HEAD
             
         } while (fi.hasNextLine());
         return horario;
     }
+=======
+            //System.out.println(valida);
+            /*
+             * if (valida == false) {
+             *
+             * } else if (valida == true) { System.out.println("pumbaz numa
+             * vista"); //String ola = fi.nextLine(); //valida = false; }
+             */
+
+            //System.out.println("estou no fim.");
+        } while (fi.hasNextLine());
+        return horario;
+    }
+
+    public boolean validacaoSala(ArrayList<Horario> horario, Horario horarioADD) {
+
+        for (int i = 0; i < horario.size(); i++) {
+
+            if (horario.get(i).getCodigo_sala().equalsIgnoreCase(horarioADD.getCodigo_sala()) && horario.get(i).getDesignacao().equalsIgnoreCase(horarioADD.getDesignacao()) && (horario.get(i).getSigla_professor().equalsIgnoreCase(horarioADD.getSigla_professor()) || horario.get(i).getDia_semana() == horarioADD.getDia_semana() || horario.get(i).getHora_inicio() == horarioADD.getHora_inicio())) {
+                return true;
+            } else if (valida == true) {
+                System.out.println("pumbaz numa vista");
+                //String ola = fi.nextLine();
+                //valida = false;
+            }
+              
+                    //System.out.println("estou no fim.");
+        }
+        while (fi.hasNextLine());
+        return horario;
+    }
+
+    public void validacaoSala(ArrayList<Horario> horario) {
+        for (int j = 0; j < horario.size(); j++) {
+            for (int i = 0; i < horario.size(); i++) {
+                if (horario.get(j).getCodigo_sala().equalsIgnoreCase(horario.get(i).getCodigo_sala()) && horario.get(j).getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao()) && horario.get(j).getSigla_professor().equalsIgnoreCase(horario.get(i).getSigla_professor()) && horario.get(j).getDia_semana() == horario.get(i).getDia_semana() && horario.get(j).getHora_inicio() == horario.get(i).getHora_inicio()) {
+//                    System.out.println("a linha " + j+"e igual a " + i);
+                    //System.out.println(horario.get(i).getSigla_disciplina());
+                }
+
+            }
+
+        }
+        return false;
+    }
+>>>>>>> 2bc9ef9b3b595b493a24642795bc7193f7b2e602
 }
