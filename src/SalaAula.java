@@ -143,30 +143,30 @@ public class SalaAula {
         return "Sala nao disponivel.";
     }
 
-    public String[] disciplinasSala(String sala, ArrayList<Horario> horarios, ArrayList<Disciplina> disciplinas) {
-        String vector[] = new String[disciplinas.size()];
-        int count = 0;
-        for (int i = 0; i < horarios.size(); i++) {
-
-            if (horarios.get(i).getCodigo_sala().equalsIgnoreCase(sala)) {
-                if (horarios.get(i).getSigla_disciplina().contains(vector[i])) {
-                    System.out.println("hey");
-                }
-                vector[count] = horarios.get(i).getSigla_disciplina();
-                count++;
-                /*
-                 * if(i>0) { for (int j = 0; j < i; j++) {
-                 * if(vector[j].equalsIgnoreCase(horarios.get(j).getSigla_disciplina()))
-                 * { System.out.println("boda"); }
-                 *
-                 * }
-                 */
-            }
-            //}
-
-        }
-        return vector;
-    }
+//    public String[] disciplinasSala(String sala, ArrayList<Horario> horarios, ArrayList<Disciplina> disciplinas) {
+//        String vector[] = new String[disciplinas.size()];
+//        int count = 0;
+//        for (int i = 0; i < horarios.size(); i++) {
+//
+//            if (horarios.get(i).getCodigo_sala().equalsIgnoreCase(sala)) {
+//                if (horarios.get(i).getSigla_disciplina().contains(vector[i])) {
+//                    System.out.println("hey");
+//                }
+//                vector[count] = horarios.get(i).getSigla_disciplina();
+//                count++;
+//                /*
+//                 * if(i>0) { for (int j = 0; j < i; j++) {
+//                 * if(vector[j].equalsIgnoreCase(horarios.get(j).getSigla_disciplina()))
+//                 * { System.out.println("boda"); }
+//                 *
+//                 * }
+//                 */
+//            }
+//            //}
+//
+//        }
+//        return vector;
+//    }
 
     @Override
     public String toString() {

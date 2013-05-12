@@ -83,9 +83,8 @@ public class TesteGestao {
 //        sal=s.ocupacaoSala(salas, 30, horarios);
 //        System.out.println(sal.toString());
 //        String g = d.ListarDisciplinaProfessor(turmas, disciplinas, "cdp", horarios);
-//        String g = d.ListarDisciplinaSala(disciplinas, "b305", horarios);
+        String g = d.ListarDisciplinaSala(disciplinas, "b305", horarios);
 //        String g = t.listarProfessorTurma(professores, "1de", horarios);
-//        System.out.println(g);
 //        a = h.listarDadosAluno(1120845, alunos);
 //        System.out.println(a);
 //        p= h.listarDadosProfessor("psr", professores);
@@ -96,7 +95,7 @@ public class TesteGestao {
 //        System.out.println(t);
 //        d = h.listarDadosDisciplina("poo", disciplinas);
 //        System.out.println(d);
-        String g = s.SalaAulaExtra(2, "b203", 8, salas, horarios);
+//        String g = s.SalaAulaExtra(2, "b203", 8, salas, horarios);
         System.out.println(g);
 
 
@@ -112,7 +111,7 @@ public class TesteGestao {
         //System.out.println(horarios.toString());
         //for (int i = 0; i < disciplinas.size(); i++) {
 
-        System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
+//        System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
 
 
         //}
@@ -120,9 +119,9 @@ public class TesteGestao {
         //System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
 
         Horario j = new Horario(turmas.get(1), disciplinas.get(1), 1, 5, 14, 2, professores.get(7), salas.get(5));
-        System.out.println(j);
-        System.out.println(horarios.get(1));
-        horarios.get(2).alterarHorario(j, horarios);
+//        System.out.println(j);
+//        System.out.println(horarios.get(1));
+//        horarios.get(2).alterarHorario(j, horarios);
 
 
 //        System.out.println(salas.get(0).disciplinasSala(salas.get(0).getCodigo(), horarios, disciplinas));
