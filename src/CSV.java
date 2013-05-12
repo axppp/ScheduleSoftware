@@ -238,8 +238,13 @@ public class CSV {
             }
 
             Horario a = new Horario(t, d, tipo, Integer.parseInt(c[3]), Integer.parseInt(c[4]), Integer.parseInt(c[5]), p, s);
-            //valida = validacaoSala(horario, a);
             horario.add(a);
+<<<<<<< HEAD
+            
+        } while (fi.hasNextLine());
+        return horario;
+    }
+=======
             //System.out.println(valida);
             /*if (valida == false) {
 
@@ -275,4 +280,5 @@ public class CSV {
         }
         return false;
     }
+>>>>>>> 2bc9ef9b3b595b493a24642795bc7193f7b2e602
 }
