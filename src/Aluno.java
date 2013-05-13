@@ -27,21 +27,18 @@ public class Aluno extends Pessoa {
      * variavel que guarda o contacto telefonico
      */
     private int Telefone;
-    
     private String turma;
-            
 
-   /**
-    * 
-    * @param numeroAluno
-    * @param nome
-    * @param dia
-    * @param mes
-    * @param ano
-    * @param Telefone
-    * @param email 
-    * Construtor Pessoa
-    */
+    /**
+     *
+     * @param numeroAluno
+     * @param nome
+     * @param dia
+     * @param mes
+     * @param ano
+     * @param Telefone
+     * @param email Construtor Pessoa
+     */
     public Aluno(int numeroAluno, String nome, int dia, int mes, int ano, int Telefone, String email) {
         super(nome, email);
         this.numeroAluno = numeroAluno;
@@ -55,83 +52,113 @@ public class Aluno extends Pessoa {
     public Aluno() {
     }
 
+//    /**
+//     *
+//     * @param alunos Metodo para listar alunos de forma crescente
+//     */
+//    public void listarAlunosCrescente(ArrayList<Aluno> alunos) {
+//        Collections.sort(alunos, new Comparator<Aluno>() {
+//
+//            public int compare(Aluno p1, Aluno p2) {
+//                return p1.getNumeroAluno() - p2.getNumeroAluno();
+//            }
+//        });
+//        System.out.println(alunos + "\n");
+//    }
     /**
-     * 
-     * @param alunos 
-     * Metodo para listar alunos de forma crescente
-     */
-    public void listarAlunosCrescente(ArrayList<Aluno> alunos) {
-        Collections.sort(alunos, new Comparator<Aluno>() {
-
-            public int compare(Aluno p1, Aluno p2) {
-                return p1.getNumeroAluno() - p2.getNumeroAluno();
-            }
-        });
-        System.out.println(alunos);
-    }
-
-    /**
-     * 
-     * @param alunos 
-     * metodo para listar aluno de forma decrescente
-     */
-    public void listarAlunosDecrescente(ArrayList<Aluno> alunos) {
-        Collections.sort(alunos, new Comparator<Aluno>() {
-
-            public int compare(Aluno p1, Aluno p2) {
-                return p2.getNumeroAluno() - p1.getNumeroAluno();
-            }
-        });
-        System.out.println(alunos);
-    }
-
-    /**
-     * 
+     *
      * @param alunos
-     * metodo para listar alunos por nome crescente
+     * @param horario
+     * @return arraylist do tipo de horarios Metodo para Listar o Horario de um
+     * determinado aluno que retorna um
      */
-    public void listarAlunosNomeCrescente(ArrayList<Aluno> alunos) {
+    public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, ArrayList<Horario> horario) {
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
 
-        Collections.sort(alunos, new Comparator() {
+        for (int i = 0; i < alunos.size(); i++) {
+            if (numeroAluno == alunos.get(i).getNumeroAluno()) {
+                t = alunos.get(i).getTurma();
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+            }
+        }
 
-            public int compare(Object o1, Object o2) {
-                Aluno p1 = (Aluno) o1;
-                Aluno p2 = (Aluno) o2;
-                return p1.getNome().compareToIgnoreCase(p2.getNome());
+        Collections.sort(h, new Comparator<Horario>() {
+            public int compare(Horario p1, Horario p2) {
+                return p1.getHora_inicio() - p2.getHora_inicio();
             }
         });
-        System.out.println(alunos);
+        
+        Collections.sort(h, new Comparator<Horario>() {
+            public int compare(Horario p1, Horario p2) {
+                return p1.getDia_semana() - p2.getDia_semana();
+            }
+        });
+        System.out.println(h + "\n");
+        return h;
     }
 
     /**
-     * 
-     * @param alunos 
-     * Metodo para listar alunos por nome decrescente
+     *
+     * @param alunos
+     * @return objecto aluno Metodo para listar dados de um determinado aluno
      */
-    public void listarAlunosNomeDecrescente(ArrayList<Aluno> alunos) {
-
-        Collections.sort(alunos, new Comparator() {
-
-            public int compare(Object o1, Object o2) {
-                Aluno p1 = (Aluno) o1;
-                Aluno p2 = (Aluno) o2;
-                return p2.getNome().compareToIgnoreCase(p1.getNome());
+    public Aluno listarDadosAluno(ArrayList<Aluno> alunos) {
+        Aluno aluno = new Aluno();
+        boolean flag = false;
+        for (int i = 0; i < alunos.size(); i++) {
+            if (numeroAluno == alunos.get(i).getNumeroAluno()) {
+                aluno = alunos.get(i);
+                flag = true;
             }
-        });
-        System.out.println(alunos);
+        }
+        if (flag == false) {
+            System.out.println("Aluno nao encontrado." + "\n");
+        }
+        System.out.println(aluno);
+        return aluno;
     }
-    
 
     /**
-     * @return  numeroAluno
+     *
+     * @param alunos
+     * @param horario
+     * @return numero de horas que um aluno tem durante a semana Metodo para
+     * calcular a carga horaria de um determinado aluno
+     */
+    public int CargaHorariaAluno(ArrayList<Aluno> alunos, ArrayList<Horario> horario) {
+        int j = 0;
+        ArrayList<Horario> h = new ArrayList<>();
+        String t = null;
+        for (int i = 0; i < alunos.size(); i++) {
+            if (numeroAluno == alunos.get(i).getNumeroAluno()) {
+                t = alunos.get(i).getTurma();
+
+            }
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+                h.add(horario.get(i));
+                j += horario.get(i).getDuracaoAula();
+            }
+        }
+        System.out.println("O Aluno " + super.getNome() + " tem " + j + " horas de carga horaria semanal." + "\n");
+        return j;
+    }
+
+    /**
+     * @return numeroAluno
      */
     public int getNumeroAluno() {
         return numeroAluno;
     }
 
     /**
-     * @param numeroAluno 
-     * Metodo para definir o numero de aluno
+     * @param numeroAluno Metodo para definir o numero de aluno
      */
     public void setNumeroAluno(int numeroAluno) {
         this.numeroAluno = numeroAluno;
@@ -145,23 +172,21 @@ public class Aluno extends Pessoa {
     }
 
     /**
-     * @param dataNasc the dataNasc to set
-     *Metodo para definir a data de nascimento
+     * @param dataNasc the dataNasc to set Metodo para definir a data de
+     * nascimento
      */
     public void setDataNasc(Data dataNasc) {
         this.dataNasc = dataNasc;
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public String getTurma() {
         return turma;
     }
 
-    
-    
     /**
      * @return the Telefone
      */
@@ -170,34 +195,31 @@ public class Aluno extends Pessoa {
     }
 
     /**
-     * @param Telefone the Telefone to set
-     * Metodo para definir a contacto telefonico
+     * @param Telefone the Telefone to set Metodo para definir a contacto
+     * telefonico
      */
     public void setTelefone(int Telefone) {
         this.Telefone = Telefone;
     }
 
     /**
-     * 
-     * @param turma 
-     * Metodo para definir a turma
+     *
+     * @param turma Metodo para definir a turma
      */
     public void setTurma(String turma) {
         this.turma = turma;
     }
 
-    
-    
     @Override
     /**
      * Metodo toString
      */
     public String toString() {
-        return super.toString() + " é aluno e o seu numero é " + numeroAluno + " e nasceu no dia " + dataNasc.getDia() + " no mes de " + dataNasc.getMes() + " e no ano " + dataNasc.getAno() + "\n O contacto telefonico é " + Telefone + "\n";
+        return super.toString() + " o seu numero é " + numeroAluno + " e nasceu no dia " + dataNasc.getDia() + " no mes de " + dataNasc.getMes() + " e no ano " + dataNasc.getAno() + "\n O contacto telefonico é " + Telefone + " e encontrasse colocado na turma " + turma + "." + " \n";
     }
 
     /**
-     * 
+     *
      * @return toStrig super
      */
     public String toStringNome() {

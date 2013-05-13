@@ -22,6 +22,7 @@ public class Horario {
      * sigla da disciplina
      */
     private String sigla_disciplina;
+
     /**
      * tipo de aulas "ANFITIATRO" ou "LABORATORIO"
      */
@@ -50,8 +51,7 @@ public class Horario {
      * variavel que guarda o codigo da sala
      */
     private String codigo_sala;
-    
-    
+
     /**
      * construtor vazio
      */
@@ -59,7 +59,7 @@ public class Horario {
     }
 
     /**
-     * 
+     *
      * @param turma
      * @param disciplina
      * @param tipo_aula
@@ -67,8 +67,8 @@ public class Horario {
      * @param hora_inicio
      * @param duracaoAula
      * @param professor
-     * @param sala 
-     * 
+     * @param sala
+     *
      * Construtor Horario
      */
     public Horario(Turma turma, Disciplina disciplina, int tipo_aula, int dia_semana, int hora_inicio, int duracaoAula, Professor professor, SalaAula sala) {
@@ -83,412 +83,16 @@ public class Horario {
     }
 
     /**
-     * 
-     * @param alunos
-     * @param numeroAluno
-     * @param horario
-     * @return arraylist do tipo de horarios
-     * Metodo para Listar o Horario de um determinado aluno que retorna um 
-     */
-    public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int numeroAluno, ArrayList<Horario> horario)  {
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < alunos.size(); i++) {
-            if (numeroAluno == alunos.get(i).getNumeroAluno()) {
-                t = alunos.get(i).getTurma();
-
-            }
-        }
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-            }
-        }
-
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.hora_inicio - p2.hora_inicio;
-            }
-        });
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.dia_semana - p2.dia_semana;
-            }
-        });
-        return h;
-    }
-
-    /**
-     * 
-     * @param prof
-     * @param siglaProf
-     * @param horario
-     * @return arraylist do tipo de horarios
-     * Metodo para Listar o Horario de um determinado professor
-     */
-    public ArrayList<Horario> listarHorarioProfessor(ArrayList<Professor> prof, String siglaProf, ArrayList<Horario> horario) {
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < prof.size(); i++) {
-            if (siglaProf.equalsIgnoreCase(prof.get(i).getSigla())) {
-                t = prof.get(i).getSigla();
-//                System.out.println(alunos);
-            }
-        }
-
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getSigla_professor().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-            }
-        }
-
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.hora_inicio - p2.hora_inicio;
-            }
-        });
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.dia_semana - p2.dia_semana;
-            }
-        });
-        return h;
-    }
-
-    /**
-     * 
-     * @param prof
-     * @param turma
-     * @param horario
-     * @return arraylist de horarios
-     * Metodo para Listar o Horario de uma determinada turma
-     */
-    public ArrayList<Horario> listarHorarioTurma(ArrayList<Turma> prof, String turma, ArrayList<Horario> horario) {
-        ArrayList<Horario> h = new ArrayList<>();
-
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getDesignacao().equalsIgnoreCase(turma)) {
-                h.add(horario.get(i));
-            }
-        }
-
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.hora_inicio - p2.hora_inicio;
-            }
-        });
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.dia_semana - p2.dia_semana;
-            }
-        });
-        return h;
-    }
-
-    /**
-     * 
-     * @param disc
-     * @param siglaDis
-     * @param horario
-     * @return arraylist de horarios
-     * Metodo para listar o horario de uma determinada disciplina
-     */
-    public ArrayList<Horario> listarHorarioDisciplina(ArrayList<Disciplina> disc, String siglaDis, ArrayList<Horario> horario) {
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < disc.size(); i++) {
-            if (siglaDis.equalsIgnoreCase(disc.get(i).getSigla())) {
-                t = disc.get(i).getSigla();
-            }
-        }
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getSigla_disciplina().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-            }
-        }
-
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.hora_inicio - p2.hora_inicio;
-            }
-        });
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.dia_semana - p2.dia_semana;
-            }
-        });
-        return h;
-    }
-
-    /**
-     * 
-     * @param sala
-     * @param cod_sala
-     * @param horario
-     * @return arraylist de horarios
-     * Metodo para listar o horario de uma determinada sala
-     */
-    public ArrayList<Horario> listarHorarioSala(ArrayList<SalaAula> sala, String cod_sala, ArrayList<Horario> horario) {
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < sala.size(); i++) {
-            if (cod_sala.equalsIgnoreCase(sala.get(i).getCodigo())) {
-                t = sala.get(i).getCodigo();
-            }
-        }
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getCodigo_sala().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-            }
-        }
-
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.hora_inicio - p2.hora_inicio;
-            }
-        });
-        Collections.sort(h, new Comparator<Horario>() {
-
-            public int compare(Horario p1, Horario p2) {
-                return p1.dia_semana - p2.dia_semana;
-            }
-        });
-        return h;
-    }
-
-    /**
-     * 
-     * @param numAluno
-     * @param alunos
-     * @return objecto aluno
-     * Metodo para listar dados de um determinado aluno
-     */
-    public Aluno listarDadosAluno(int numAluno, ArrayList<Aluno> alunos) {
-        Aluno aluno = new Aluno();
-        for (int i = 0; i < alunos.size(); i++) {
-            if (numAluno == alunos.get(i).getNumeroAluno()) {
-                aluno = alunos.get(i);
-            }
-        }
-        return aluno;
-    }
-
-    /**
-     * 
-     * @param siglaProf
-     * @param prof
-     * @return objecto professor
-     * Metodo para listar dados de um dado professor
-     */
-    public Professor listarDadosProfessor(String siglaProf, ArrayList<Professor> professores) {
-        Professor professor = new Professor();
-        for (int i = 0; i < professores.size(); i++) {
-            if (siglaProf.equalsIgnoreCase(professores.get(i).getSigla())) {
-                professor = professores.get(i);
-            }
-        }
-        return professor;
-    }
-
-    
-    /**
-     * 
-     * @param codSala
-     * @param Salas
-     * @return objecto sala de aula
-     * Metodo para listar dados de uma determinada sala de aula
-     */
-    public SalaAula listarDadosSala(String codSala, ArrayList<SalaAula> Salas) {
-        SalaAula salaAula = new SalaAula();
-        for (int i = 0; i < Salas.size(); i++) {
-            if (codSala.equalsIgnoreCase(Salas.get(i).getCodigo())) {
-                salaAula = Salas.get(i);
-            }
-        }
-        return salaAula;
-    }
-
-    
-    /**
-     * 
-     * @param codTurma
-     * @param turmas
-     * @return objecto turma
-     * Metodo para listar os dados de uma dada turma
-     */
-    public Turma listarDadosTurma(String codTurma, ArrayList<Turma> turmas) {
-        Turma turma = new Turma();
-        for (int i = 0; i < turmas.size(); i++) {
-            if (codTurma.equalsIgnoreCase(turmas.get(i).getDesignacao())) {
-                turma = turmas.get(i);
-            }
-        }
-        return turma;
-    }
-
-    /**
-     * 
-     * @param siglaDisc
-     * @param disciplinas
-     * @return objecto disciplina
-     * Metodo para listar os dados de uma dada disciplina
-     */
-    public Disciplina listarDadosDisciplina(String siglaDisc, ArrayList<Disciplina> disciplinas) {
-        Disciplina disciplina = new Disciplina();
-        for (int i = 0; i < disciplinas.size(); i++) {
-            if (siglaDisc.equalsIgnoreCase(disciplinas.get(i).getSigla())) {
-                disciplina = disciplinas.get(i);
-            }
-        }
-        return disciplina;
-    }
-
-    /**
-     * 
-     * @param alunos
-     * @param numAluno
-     * @param horario
-     * @return numero de horas que um aluno tem durante a semana
-     * Metodo para calcular a carga horaria de um determinado aluno
-     */
-    public int CargaHorariaAluno(ArrayList<Aluno> alunos, int numAluno, ArrayList<Horario> horario) {
-        int j = 0;
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < alunos.size(); i++) {
-            if (numAluno == alunos.get(i).getNumeroAluno()) {
-                t = alunos.get(i).getTurma();
-
-            }
-        }
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-                j += horario.get(i).getDuracaoAula();
-            }
-        }
-        return j;
-    }
-
-    /**
-     * 
-     * @param prof
-     * @param siglaProf
-     * @param horario
-     * @return numero de horas que um professor tem durante a semana
-     * Metodo para calcular a carga horaria de um determinado professor
-     */
-    public int CargaHorariaProfessor(ArrayList<Professor> prof, String siglaProf, ArrayList<Horario> horario) {
-        int j = 0;
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < prof.size(); i++) {
-            if (siglaProf.equalsIgnoreCase(prof.get(i).getSigla())) {
-                t = prof.get(i).getSigla();
-
-            }
-        }
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getSigla_professor().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-                j += horario.get(i).getDuracaoAula();
-            }
-        }
-        return j;
-    }
-
-    /**
-     * 
-     * @param Turma
-     * @param siglaTurma
-     * @param horario
-     * @return numero de horas que uma turma tem durante a semana
-     * Metodo para calcular a carga horario de uma determinada turma
-     */
-    public int CargaHorariaTurma(ArrayList<Turma> Turma, String siglaTurma, ArrayList<Horario> horario) {
-        int j = 0;
-        ArrayList<Horario> h = new ArrayList<>();
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getDesignacao().equalsIgnoreCase(siglaTurma)) {
-                h.add(horario.get(i));
-                j += horario.get(i).getDuracaoAula();
-            }
-        }
-        return j;
-    }
-
-    /**
-     * 
-     * @param disc
-     * @param siglaDisc
-     * @param horario
-     * @return numero de horas que uma disciplina tem durante a semana
-     * Metodo para calcular a carga horaria de uma determinada disciplina
-     */
-    public int CargaHorariaDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
-        int j = 0;
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < disc.size(); i++) {
-            if (a.equalsIgnoreCase(disc.get(i).getSigla())) {
-                t = disc.get(i).getSigla();
-
-            }
-        }
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getSigla_disciplina().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-                j += horario.get(i).getDuracaoAula();
-            }
-        }
-        return j;
-    }
-
-    /**
-     * 
-     * @param sala
-     * @param codSala
-     * @param horario
-     * @return numero de horas que uma sala tem durante a semana
-     * Metodo para calcular a carga horaria de uma determinada sala
-     */
-    public int CargaHorariaSala(ArrayList<SalaAula> sala, String codSala, ArrayList<Horario> horario) {
-        int j = 0;
-        ArrayList<Horario> h = new ArrayList<>();
-        String t = null;
-        for (int i = 0; i < sala.size(); i++) {
-            if (codSala.equalsIgnoreCase(sala.get(i).getCodigo())) {
-                t = sala.get(i).getCodigo();
-
-            }
-        }
-        for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getCodigo_sala().equalsIgnoreCase(t)) {
-                h.add(horario.get(i));
-                j += horario.get(i).getDuracaoAula();
-            }
-        }
-        return j;
-    }
-
-    /**
-     * 
+     *
      * @param horarioNovo
-     * @param horarios 
-     * Metodo para alterar um horario
+     * @param horarios
+     * @param sala
+     * @param disc
+     * @return Metodo para alterar um horario
      */
-    public void alterarHorario(Horario horarioNovo, ArrayList<Horario> horarios) {
+    public void alterarHorario(Horario horarioNovo, ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
 
-        if (validaHorario(this, horarioNovo, horarios) == true) {
+        if (validaHorario(this, horarioNovo, horarios, sala, disc) == true) {
             this.setDesignacao(horarioNovo.getDesignacao());
             this.setSigla_disciplina(horarioNovo.getSigla_disciplina());
             this.setAulas(horarioNovo.getAulas());
@@ -497,37 +101,101 @@ public class Horario {
             this.setDuracaoAula(horarioNovo.getDuracaoAula());
             this.setSigla_professor(horarioNovo.getSigla_professor());
             this.setCodigo_sala(horarioNovo.getCodigo_sala());
-
+            System.out.println("Horario alterado com sucesso!\n");
         } else {
-            System.out.println("Impossivel alterar horario, porque o horario nao é valido!!!");
+            System.out.println("Impossivel alterar horario, porque o horario nao é valido!!!" + "\n");
         }
     }
 
     /**
-     * 
+     *
+     * @param horarioNovo
+     * @param horarios
+     * @param sala
+     * @param disc
+     * @return Metodo para adicionar um horario com validaçao
+     */
+    public ArrayList<Horario> addHorario(ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
+        if (validaHorarioNovo(horarios, sala, disc) == true) {
+            horarios.add(this);
+            System.out.println("O horario foi aprovado!\n");
+        } else {
+            System.out.println("Impossivel criar horario, porque o horario nao é valido!!!" + "\n");
+        }
+        return horarios;
+    }
+
+    /**
+     *
      * @param horarioANT
      * @param novo
      * @param horarios
-     * @return uma boolean que é o resultado da validacao da sala
-     * Metodo que verifica se uma sala é usada em simultaneo por 2 turmas,professores, disciplinas 
+     * @param sala
+     * @param disc
+     * @return uma boolean que é o resultado da validacao da sala Metodo que
+     * verifica se uma sala é usada em simultaneo por 2 turmas,professores,
+     * disciplinas
      */
-    public Boolean validaHorario(Horario horarioANT, Horario novo, ArrayList<Horario> horarios) {
+    public Boolean validaHorario(Horario horarioANT, Horario novo, ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
 
-        Boolean validacao = true;
+        Boolean validacao = true, nome = false;
         int i = 0;
-        do {
-            System.out.println(i);
-            if (horarioANT.equals(novo)) {
-                System.out.println("1");
-                validacao = false;
-            } else if (novo.getCodigo_sala().equalsIgnoreCase(horarios.get(i).getCodigo_sala()) && (novo.getSigla_professor().equalsIgnoreCase(horarios.get(i).getSigla_professor()))) {
-                if (novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio() || novo.getDesignacao().equalsIgnoreCase(horarios.get(i).getDesignacao())) {
-                    System.out.println("2-estourou");
+
+        String tsala = null;
+        int cont = 0;
+        for (int j = 0; j < sala.size(); j++) {
+            if (novo.getCodigo_sala().equalsIgnoreCase(sala.get(j).getCodigo())) {
+                tsala = sala.get(j).getTipoSala();
+            }
+        }
+        for (int t = 0; t < disc.size(); t++) {
+            if (novo.getSigla_professor().equalsIgnoreCase(disc.get(t).getSigla_prof_t())) {
+                if (tsala.equalsIgnoreCase("ANFITIATRO")) {
+                    nome = true;
+                } else {
+                    System.out.println("Este Professor so da Aulas teoricas nesta disciplina.");
                     validacao = false;
                 }
+            }
+            for (int j = 0; j < disc.get(t).getProfessores().size(); j++) {
+                if (novo.getSigla_professor().equalsIgnoreCase(disc.get(t).getProfessores().get(j).getSigla()) && novo.getSigla_disciplina().equalsIgnoreCase(disc.get(i).getSigla())) {
+                    nome = true;
+                }
+            }
+        }
+        if (nome == false) {
+            validacao = false;
+            System.out.println("Esse Professor não exerce essa disciplina.");
+        }
+        if (tsala.equalsIgnoreCase("ANFITIATRO")) {
+            cont = 1;
+        } else {
+            cont = 2;
+        }
+        do {
+            if (horarioANT.equals(novo)) {
+                validacao = false;
+                System.out.println("Esse horario é igual ao que quer alterar.");
             } else {
-                //System.out.println("3");
-                validacao = true;
+                if (novo.getCodigo_sala().equalsIgnoreCase(horarios.get(i).getCodigo_sala()) && novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio()) {
+                    validacao = false;
+                    System.out.println("A sala ja ta a ser ocupada.");
+                } else {
+                    if (novo.getDesignacao().equalsIgnoreCase(horarios.get(i).getDesignacao()) && novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio()) {
+                        validacao = false;
+                        System.out.println("A turma ja tem aula.");
+                    } else {
+                        if (novo.getSigla_professor().equalsIgnoreCase(horarios.get(i).getSigla_professor()) && novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio()) {
+                            validacao = false;
+                            System.out.println("O professor ja ta a dar aula.");
+                        } else {
+                            if (novo.getAulas() != cont) {
+                                System.out.println("A sala não é propria para " + tsala);
+                                validacao = false;
+                            }
+                        }
+                    }
+                }
             }
             i++;
         } while (i < horarios.size() && validacao == true);
@@ -538,19 +206,94 @@ public class Horario {
     }
 
     /**
-     * 
-     * @param horarios
-     * @param num
-     * Metodo que apaga um determinado horario
+     *
+     * @param horarioNovo
+     * @param Horario
+     * @param sala
+     * @param disc
+     * @return um Metodo boolean, o resultado da validacao da sala Metodo que
+     * verifica se uma sala é usada em simultaneo por 2 turmas,professores,
+     * disciplinas, mas para inserçao de horarios
      */
-    public void apagarHorario(ArrayList<Horario> horarios, int num) {
-        horarios.remove(num);
+    public boolean validaHorarioNovo(ArrayList<Horario> horario, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
+        boolean flag = true, nome = false;
+//        System.out.println(horario.size());
+//        System.out.println(horario.get(0));
+        String tsala = null;
+        int cont = 0;
+        for (int i = 0; i < sala.size(); i++) {
+            if (this.getCodigo_sala().equalsIgnoreCase(sala.get(i).getCodigo())) {
+                tsala = sala.get(i).getTipoSala();
+            }
+        }
+        for (int i = 0; i < disc.size(); i++) {
+            if (this.getSigla_professor().equalsIgnoreCase(disc.get(i).getSigla_prof_t())) {
+                if (tsala.equalsIgnoreCase("ANFITIATRO")) {
+                    nome = true;
+                } else {
+                    flag = false;
+                    System.out.println("Esse Professor só da teoricas.");
+                }
+            }
+            for (int j = 0; j < disc.get(i).getProfessores().size(); j++) {
+                if (this.getSigla_professor().equalsIgnoreCase(disc.get(i).getProfessores().get(j).getSigla()) && this.getSigla_disciplina().equalsIgnoreCase(disc.get(i).getSigla())) {
+                    nome = true;
+                }
+            }
+        }
+        if (nome == false) {
+            flag = false;
+            System.out.println("Esse Professor não exerce essa disciplina.");
+        }
+        if (tsala.equalsIgnoreCase("ANFITIATRO")) {
+            cont = 1;
+        } else {
+            cont = 2;
+        }
+        for (int i = 0; i < horario.size(); i++) {
+            if (this.getCodigo_sala().equalsIgnoreCase(horario.get(i).getCodigo_sala()) && this.getDia_semana() == horario.get(i).getDia_semana() && this.getHora_inicio() == horario.get(i).getHora_inicio()) {
+                flag = false;
+                System.out.println("A sala ja ta a ser ocupada.");
+            } else {
+                if (this.getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao()) && this.getDia_semana() == horario.get(i).getDia_semana() && this.getHora_inicio() == horario.get(i).getHora_inicio()) {
+                    flag = false;
+                    System.out.println("A turma ja tem aula.");
+                } else {
+                    if (this.getSigla_professor().equalsIgnoreCase(horario.get(i).getSigla_professor()) && this.getDia_semana() == horario.get(i).getDia_semana() && this.getHora_inicio() == horario.get(i).getHora_inicio()) {
+                        flag = false;
+                        System.out.println("O professor ja ta a dar aula.");
+                    } else {
+                        if (this.getAulas() != cont) {
+                            flag = false;
+                            System.out.println("A sala não é propria para " + tsala);
+                        }
+                    }
+                }
+            }
+        }
+        return flag;
     }
 
     /**
-     * 
-     * @param dia_semana 
-     * Metodo para definir o dia da semana
+     *
+     * @param horarios
+     * @param num
+     * @return Metodo que apaga um determinado horario
+     */
+    public void apagarHorario(ArrayList<Horario> horarios) {
+        for (int i = 0; i < horarios.size(); i++) {
+            if (horarios.get(i).equals(this)) {
+                System.out.println(horarios.get(i) + " apagado com sucesso!\n");
+                horarios.remove(i);
+
+            }
+        }
+
+    }
+
+    /**
+     *
+     * @param dia_semana Metodo para definir o dia da semana
      */
     public void setDia_semana(int dia_semana) {
         if (dia_semana >= 2 && dia_semana <= 6) {
@@ -559,7 +302,7 @@ public class Horario {
     }
 
     /**
-     * 
+     *
      * @return a designaçao da turam
      */
     public String getDesignacao() {
@@ -567,7 +310,7 @@ public class Horario {
     }
 
     /**
-     * 
+     *
      * @return sigla da disciplina
      */
     public String getSigla_disciplina() {
@@ -575,7 +318,7 @@ public class Horario {
     }
 
     /**
-     * 
+     *
      * @return inteiro que caracteriza o tipo de sala 1-Teorica 2-Pratica
      */
     public int getAulas() {
@@ -589,7 +332,7 @@ public class Horario {
     }
 
     /**
-     * 
+     *
      * @return o dia da semana
      */
     public int getDia_semana() {
@@ -597,7 +340,7 @@ public class Horario {
     }
 
     /**
-     * 
+     *
      * @return a hora de inicio da aula
      */
     public int getHora_inicio() {
@@ -605,23 +348,23 @@ public class Horario {
     }
 
     /**
-     * 
-     * @return durancao da aula 
+     *
+     * @return durancao da aula
      */
     public int getDuracaoAula() {
         return duracaoAula;
     }
 
     /**
-     * 
-     * @return sigla do professor 
+     *
+     * @return sigla do professor
      */
     public String getSigla_professor() {
         return sigla_professor;
     }
 
     /**
-     * 
+     *
      * @return codigo da sala
      */
     public String getCodigo_sala() {
@@ -629,27 +372,24 @@ public class Horario {
     }
 
     /**
-     * 
-     * @param designacao 
-     * Metodo para definir a designaçao da turma
+     *
+     * @param designacao Metodo para definir a designaçao da turma
      */
     public void setDesignacao(String designacao) {
         this.designacao = designacao;
     }
 
     /**
-     * 
-     * @param sigla_disciplina 
-     * Metodo para definir a sigla da disciplina
+     *
+     * @param sigla_disciplina Metodo para definir a sigla da disciplina
      */
     public void setSigla_disciplina(String sigla_disciplina) {
         this.sigla_disciplina = sigla_disciplina;
     }
 
     /**
-     * 
-     * @param aula 
-     * Metodo para definir o tipo de aula
+     *
+     * @param aula Metodo para definir o tipo de aula
      */
     public void setAulas(int aula) {
         if (aula == 1) {
@@ -660,41 +400,37 @@ public class Horario {
     }
 
     /**
-     * 
-     * @param hora_inicio 
-     * Metodo para definir a hora de inicio da aula
+     *
+     * @param hora_inicio Metodo para definir a hora de inicio da aula
      */
     public void setHora_inicio(int hora_inicio) {
         if (hora_inicio > 8 || hora_inicio < 17) {
             this.hora_inicio = hora_inicio;
         } else {
             //deve mandar uma excepcao
-            System.out.println("aula nao pode ser lecionada");
+            System.out.println("aula nao pode ser lecionada" + "\n");
         }
     }
 
     /**
-     * 
-     * @param duracaoAula 
-     * Metodo para definir a duracao da aula
+     *
+     * @param duracaoAula Metodo para definir a duracao da aula
      */
     public void setDuracaoAula(int duracaoAula) {
         this.duracaoAula = duracaoAula;
     }
 
     /**
-     * 
-     * @param sigla_professor 
-     * Metodo para definir a sigla do professor
+     *
+     * @param sigla_professor Metodo para definir a sigla do professor
      */
     public void setSigla_professor(String sigla_professor) {
         this.sigla_professor = sigla_professor;
     }
 
     /**
-     * 
-     * @param codigo_sala 
-     * Metodo para definir o codigo da sala
+     *
+     * @param codigo_sala Metodo para definir o codigo da sala
      */
     public void setCodigo_sala(String codigo_sala) {
         this.codigo_sala = codigo_sala;
@@ -709,9 +445,8 @@ public class Horario {
     }
 
     /**
-     * 
-     * @return 
-     * Metodo toString para uma aula extra
+     *
+     * @return Metodo toString para uma aula extra
      */
     public String toStringAulaExtra() {
         return "Sala esta acessivel das " + hora_inicio + " ate as " + (hora_inicio + duracaoAula);
