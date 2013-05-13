@@ -52,19 +52,6 @@ public class Aluno extends Pessoa {
     public Aluno() {
     }
 
-//    /**
-//     *
-//     * @param alunos Metodo para listar alunos de forma crescente
-//     */
-//    public void listarAlunosCrescente(ArrayList<Aluno> alunos) {
-//        Collections.sort(alunos, new Comparator<Aluno>() {
-//
-//            public int compare(Aluno p1, Aluno p2) {
-//                return p1.getNumeroAluno() - p2.getNumeroAluno();
-//            }
-//        });
-//        System.out.println(alunos + "\n");
-//    }
     /**
      *
      * @param alunos
