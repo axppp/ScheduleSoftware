@@ -14,23 +14,63 @@ import java.util.Comparator;
  */
 public class Horario {
 
+    /**
+     * variavel que guarda o nome da turma
+     */
     private String designacao;
+    /**
+     * sigla da disciplina
+     */
     private String sigla_disciplina;
-
+    /**
+     * tipo de aulas "ANFITIATRO" ou "LABORATORIO"
+     */
     private enum tipo_aula {
 
         T, P
     };
     tipo_aula aulas;
+    /**
+     * variavel que guarda o dia da semana do horario
+     */
     private int dia_semana;
+    /**
+     * variavel que guarda a hora de inicio do horario
+     */
     private int hora_inicio;
+    /**
+     * variavel que guarda a durançao da aula
+     */
     private int duracaoAula;
+    /**
+     * variavel que guarda a sigla do professor
+     */
     private String sigla_professor;
+    /**
+     * variavel que guarda o codigo da sala
+     */
     private String codigo_sala;
-
+    
+    
+    /**
+     * construtor vazio
+     */
     public Horario() {
     }
 
+    /**
+     * 
+     * @param turma
+     * @param disciplina
+     * @param tipo_aula
+     * @param dia_semana
+     * @param hora_inicio
+     * @param duracaoAula
+     * @param professor
+     * @param sala 
+     * 
+     * Construtor Horario
+     */
     public Horario(Turma turma, Disciplina disciplina, int tipo_aula, int dia_semana, int hora_inicio, int duracaoAula, Professor professor, SalaAula sala) {
         setDesignacao(turma.getDesignacao());
         setSigla_disciplina(disciplina.getSigla());
@@ -42,11 +82,19 @@ public class Horario {
         setCodigo_sala(sala.getCodigo());
     }
 
-    public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) throws FileNotFoundException {
+    /**
+     * 
+     * @param alunos
+     * @param numeroAluno
+     * @param horario
+     * @return arraylist do tipo de horarios
+     * Metodo para Listar o Horario de um determinado aluno que retorna um 
+     */
+    public ArrayList<Horario> listarHorarioAluno(ArrayList<Aluno> alunos, int numeroAluno, ArrayList<Horario> horario)  {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
-            if (a == alunos.get(i).getNumeroAluno()) {
+            if (numeroAluno == alunos.get(i).getNumeroAluno()) {
                 t = alunos.get(i).getTurma();
 
             }
@@ -72,11 +120,19 @@ public class Horario {
         return h;
     }
 
-    public ArrayList<Horario> listarHorarioProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param prof
+     * @param siglaProf
+     * @param horario
+     * @return arraylist do tipo de horarios
+     * Metodo para Listar o Horario de um determinado professor
+     */
+    public ArrayList<Horario> listarHorarioProfessor(ArrayList<Professor> prof, String siglaProf, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < prof.size(); i++) {
-            if (a.equalsIgnoreCase(prof.get(i).getSigla())) {
+            if (siglaProf.equalsIgnoreCase(prof.get(i).getSigla())) {
                 t = prof.get(i).getSigla();
 //                System.out.println(alunos);
             }
@@ -103,11 +159,19 @@ public class Horario {
         return h;
     }
 
-    public ArrayList<Horario> listarHorarioTurma(ArrayList<Turma> prof, String t, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param prof
+     * @param turma
+     * @param horario
+     * @return arraylist de horarios
+     * Metodo para Listar o Horario de uma determinada turma
+     */
+    public ArrayList<Horario> listarHorarioTurma(ArrayList<Turma> prof, String turma, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
 
         for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(turma)) {
                 h.add(horario.get(i));
             }
         }
@@ -127,11 +191,19 @@ public class Horario {
         return h;
     }
 
-    public ArrayList<Horario> listarHorarioDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param disc
+     * @param siglaDis
+     * @param horario
+     * @return arraylist de horarios
+     * Metodo para listar o horario de uma determinada disciplina
+     */
+    public ArrayList<Horario> listarHorarioDisciplina(ArrayList<Disciplina> disc, String siglaDis, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < disc.size(); i++) {
-            if (a.equalsIgnoreCase(disc.get(i).getSigla())) {
+            if (siglaDis.equalsIgnoreCase(disc.get(i).getSigla())) {
                 t = disc.get(i).getSigla();
             }
         }
@@ -156,11 +228,19 @@ public class Horario {
         return h;
     }
 
-    public ArrayList<Horario> listarHorarioSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param sala
+     * @param cod_sala
+     * @param horario
+     * @return arraylist de horarios
+     * Metodo para listar o horario de uma determinada sala
+     */
+    public ArrayList<Horario> listarHorarioSala(ArrayList<SalaAula> sala, String cod_sala, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < sala.size(); i++) {
-            if (a.equalsIgnoreCase(sala.get(i).getCodigo())) {
+            if (cod_sala.equalsIgnoreCase(sala.get(i).getCodigo())) {
                 t = sala.get(i).getCodigo();
             }
         }
@@ -185,62 +265,107 @@ public class Horario {
         return h;
     }
 
-    public Aluno listarDadosAluno(int a, ArrayList<Aluno> alu) {
+    /**
+     * 
+     * @param numAluno
+     * @param alunos
+     * @return objecto aluno
+     * Metodo para listar dados de um determinado aluno
+     */
+    public Aluno listarDadosAluno(int numAluno, ArrayList<Aluno> alunos) {
         Aluno aluno = new Aluno();
-        for (int i = 0; i < alu.size(); i++) {
-            if (a == alu.get(i).getNumeroAluno()) {
-                aluno = alu.get(i);
+        for (int i = 0; i < alunos.size(); i++) {
+            if (numAluno == alunos.get(i).getNumeroAluno()) {
+                aluno = alunos.get(i);
             }
         }
         return aluno;
     }
 
-    public Professor listarDadosProfessor(String a, ArrayList<Professor> prof) {
+    /**
+     * 
+     * @param siglaProf
+     * @param prof
+     * @return objecto professor
+     * Metodo para listar dados de um dado professor
+     */
+    public Professor listarDadosProfessor(String siglaProf, ArrayList<Professor> professores) {
         Professor professor = new Professor();
-        for (int i = 0; i < prof.size(); i++) {
-            if (a.equalsIgnoreCase(prof.get(i).getSigla())) {
-                professor = prof.get(i);
+        for (int i = 0; i < professores.size(); i++) {
+            if (siglaProf.equalsIgnoreCase(professores.get(i).getSigla())) {
+                professor = professores.get(i);
             }
         }
         return professor;
     }
 
-    public SalaAula listarDadosSala(String a, ArrayList<SalaAula> Sala) {
-        SalaAula salaaula = new SalaAula();
-        for (int i = 0; i < Sala.size(); i++) {
-            if (a.equalsIgnoreCase(Sala.get(i).getCodigo())) {
-                salaaula = Sala.get(i);
+    
+    /**
+     * 
+     * @param codSala
+     * @param Salas
+     * @return objecto sala de aula
+     * Metodo para listar dados de uma determinada sala de aula
+     */
+    public SalaAula listarDadosSala(String codSala, ArrayList<SalaAula> Salas) {
+        SalaAula salaAula = new SalaAula();
+        for (int i = 0; i < Salas.size(); i++) {
+            if (codSala.equalsIgnoreCase(Salas.get(i).getCodigo())) {
+                salaAula = Salas.get(i);
             }
         }
-        return salaaula;
+        return salaAula;
     }
 
-    public Turma listarDadosTurma(String a, ArrayList<Turma> tur) {
+    
+    /**
+     * 
+     * @param codTurma
+     * @param turmas
+     * @return objecto turma
+     * Metodo para listar os dados de uma dada turma
+     */
+    public Turma listarDadosTurma(String codTurma, ArrayList<Turma> turmas) {
         Turma turma = new Turma();
-        for (int i = 0; i < tur.size(); i++) {
-            if (a.equalsIgnoreCase(tur.get(i).getDesignacao())) {
-                turma = tur.get(i);
+        for (int i = 0; i < turmas.size(); i++) {
+            if (codTurma.equalsIgnoreCase(turmas.get(i).getDesignacao())) {
+                turma = turmas.get(i);
             }
         }
         return turma;
     }
 
-    public Disciplina listarDadosDisciplina(String a, ArrayList<Disciplina> disc) {
+    /**
+     * 
+     * @param siglaDisc
+     * @param disciplinas
+     * @return objecto disciplina
+     * Metodo para listar os dados de uma dada disciplina
+     */
+    public Disciplina listarDadosDisciplina(String siglaDisc, ArrayList<Disciplina> disciplinas) {
         Disciplina disciplina = new Disciplina();
-        for (int i = 0; i < disc.size(); i++) {
-            if (a.equalsIgnoreCase(disc.get(i).getSigla())) {
-                disciplina = disc.get(i);
+        for (int i = 0; i < disciplinas.size(); i++) {
+            if (siglaDisc.equalsIgnoreCase(disciplinas.get(i).getSigla())) {
+                disciplina = disciplinas.get(i);
             }
         }
         return disciplina;
     }
 
-    public int CargaHorariaAluno(ArrayList<Aluno> alunos, int a, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param alunos
+     * @param numAluno
+     * @param horario
+     * @return numero de horas que um aluno tem durante a semana
+     * Metodo para calcular a carga horaria de um determinado aluno
+     */
+    public int CargaHorariaAluno(ArrayList<Aluno> alunos, int numAluno, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < alunos.size(); i++) {
-            if (a == alunos.get(i).getNumeroAluno()) {
+            if (numAluno == alunos.get(i).getNumeroAluno()) {
                 t = alunos.get(i).getTurma();
 
             }
@@ -254,12 +379,20 @@ public class Horario {
         return j;
     }
 
-    public int CargaHorariaProfessor(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param prof
+     * @param siglaProf
+     * @param horario
+     * @return numero de horas que um professor tem durante a semana
+     * Metodo para calcular a carga horaria de um determinado professor
+     */
+    public int CargaHorariaProfessor(ArrayList<Professor> prof, String siglaProf, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < prof.size(); i++) {
-            if (a.equalsIgnoreCase(prof.get(i).getSigla())) {
+            if (siglaProf.equalsIgnoreCase(prof.get(i).getSigla())) {
                 t = prof.get(i).getSigla();
 
             }
@@ -273,11 +406,19 @@ public class Horario {
         return j;
     }
 
-    public int CargaHorariaTurma(ArrayList<Turma> Turma, String t, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param Turma
+     * @param siglaTurma
+     * @param horario
+     * @return numero de horas que uma turma tem durante a semana
+     * Metodo para calcular a carga horario de uma determinada turma
+     */
+    public int CargaHorariaTurma(ArrayList<Turma> Turma, String siglaTurma, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         for (int i = 0; i < horario.size(); i++) {
-            if (horario.get(i).getDesignacao().equalsIgnoreCase(t)) {
+            if (horario.get(i).getDesignacao().equalsIgnoreCase(siglaTurma)) {
                 h.add(horario.get(i));
                 j += horario.get(i).getDuracaoAula();
             }
@@ -285,6 +426,14 @@ public class Horario {
         return j;
     }
 
+    /**
+     * 
+     * @param disc
+     * @param siglaDisc
+     * @param horario
+     * @return numero de horas que uma disciplina tem durante a semana
+     * Metodo para calcular a carga horaria de uma determinada disciplina
+     */
     public int CargaHorariaDisciplina(ArrayList<Disciplina> disc, String a, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
@@ -304,12 +453,20 @@ public class Horario {
         return j;
     }
 
-    public int CargaHorariaSala(ArrayList<SalaAula> sala, String a, ArrayList<Horario> horario) {
+    /**
+     * 
+     * @param sala
+     * @param codSala
+     * @param horario
+     * @return numero de horas que uma sala tem durante a semana
+     * Metodo para calcular a carga horaria de uma determinada sala
+     */
+    public int CargaHorariaSala(ArrayList<SalaAula> sala, String codSala, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
         for (int i = 0; i < sala.size(); i++) {
-            if (a.equalsIgnoreCase(sala.get(i).getCodigo())) {
+            if (codSala.equalsIgnoreCase(sala.get(i).getCodigo())) {
                 t = sala.get(i).getCodigo();
 
             }
@@ -323,6 +480,12 @@ public class Horario {
         return j;
     }
 
+    /**
+     * 
+     * @param horarioNovo
+     * @param horarios 
+     * Metodo para alterar um horario
+     */
     public void alterarHorario(Horario horarioNovo, ArrayList<Horario> horarios) {
 
         if (validaHorario(this, horarioNovo, horarios) == true) {
@@ -336,10 +499,18 @@ public class Horario {
             this.setCodigo_sala(horarioNovo.getCodigo_sala());
 
         } else {
-            System.out.println("pumbaz");
+            System.out.println("Impossivel alterar horario, porque o horario nao é valido!!!");
         }
     }
 
+    /**
+     * 
+     * @param horarioANT
+     * @param novo
+     * @param horarios
+     * @return uma boolean que é o resultado da validacao da sala
+     * Metodo que verifica se uma sala é usada em simultaneo por 2 turmas,professores, disciplinas 
+     */
     public Boolean validaHorario(Horario horarioANT, Horario novo, ArrayList<Horario> horarios) {
 
         Boolean validacao = true;
@@ -366,24 +537,47 @@ public class Horario {
 
     }
 
+    /**
+     * 
+     * @param horarios
+     * @param num
+     * Metodo que apaga um determinado horario
+     */
     public void apagarHorario(ArrayList<Horario> horarios, int num) {
         horarios.remove(num);
     }
 
+    /**
+     * 
+     * @param dia_semana 
+     * Metodo para definir o dia da semana
+     */
     public void setDia_semana(int dia_semana) {
         if (dia_semana >= 2 && dia_semana <= 6) {
             this.dia_semana = dia_semana;
         }
     }
 
+    /**
+     * 
+     * @return a designaçao da turam
+     */
     public String getDesignacao() {
         return designacao;
     }
 
+    /**
+     * 
+     * @return sigla da disciplina
+     */
     public String getSigla_disciplina() {
         return sigla_disciplina;
     }
 
+    /**
+     * 
+     * @return inteiro que caracteriza o tipo de sala 1-Teorica 2-Pratica
+     */
     public int getAulas() {
 
         if (aulas.equals(aulas.T)) {
@@ -394,34 +588,69 @@ public class Horario {
         return 0;
     }
 
+    /**
+     * 
+     * @return o dia da semana
+     */
     public int getDia_semana() {
         return dia_semana;
     }
 
+    /**
+     * 
+     * @return a hora de inicio da aula
+     */
     public int getHora_inicio() {
         return hora_inicio;
     }
 
+    /**
+     * 
+     * @return durancao da aula 
+     */
     public int getDuracaoAula() {
         return duracaoAula;
     }
 
+    /**
+     * 
+     * @return sigla do professor 
+     */
     public String getSigla_professor() {
         return sigla_professor;
     }
 
+    /**
+     * 
+     * @return codigo da sala
+     */
     public String getCodigo_sala() {
         return codigo_sala;
     }
 
+    /**
+     * 
+     * @param designacao 
+     * Metodo para definir a designaçao da turma
+     */
     public void setDesignacao(String designacao) {
         this.designacao = designacao;
     }
 
+    /**
+     * 
+     * @param sigla_disciplina 
+     * Metodo para definir a sigla da disciplina
+     */
     public void setSigla_disciplina(String sigla_disciplina) {
         this.sigla_disciplina = sigla_disciplina;
     }
 
+    /**
+     * 
+     * @param aula 
+     * Metodo para definir o tipo de aula
+     */
     public void setAulas(int aula) {
         if (aula == 1) {
             this.aulas = aulas.T;
@@ -430,6 +659,11 @@ public class Horario {
         }
     }
 
+    /**
+     * 
+     * @param hora_inicio 
+     * Metodo para definir a hora de inicio da aula
+     */
     public void setHora_inicio(int hora_inicio) {
         if (hora_inicio > 8 || hora_inicio < 17) {
             this.hora_inicio = hora_inicio;
@@ -439,23 +673,46 @@ public class Horario {
         }
     }
 
+    /**
+     * 
+     * @param duracaoAula 
+     * Metodo para definir a duracao da aula
+     */
     public void setDuracaoAula(int duracaoAula) {
         this.duracaoAula = duracaoAula;
     }
 
+    /**
+     * 
+     * @param sigla_professor 
+     * Metodo para definir a sigla do professor
+     */
     public void setSigla_professor(String sigla_professor) {
         this.sigla_professor = sigla_professor;
     }
 
+    /**
+     * 
+     * @param codigo_sala 
+     * Metodo para definir o codigo da sala
+     */
     public void setCodigo_sala(String codigo_sala) {
         this.codigo_sala = codigo_sala;
     }
 
     @Override
+    /**
+     * Metodo toString
+     */
     public String toString() {
         return "Horario{" + "designacao=" + designacao + ", sigla_disciplina=" + sigla_disciplina + ", aulas=" + aulas + ", dia_semana=" + dia_semana + ", hora_inicio=" + hora_inicio + ", duracaoAula=" + duracaoAula + ", sigla_professor=" + sigla_professor + ", codigo_sala=" + codigo_sala + "\n";
     }
 
+    /**
+     * 
+     * @return 
+     * Metodo toString para uma aula extra
+     */
     public String toStringAulaExtra() {
         return "Sala esta acessivel das " + hora_inicio + " ate as " + (hora_inicio + duracaoAula);
     }

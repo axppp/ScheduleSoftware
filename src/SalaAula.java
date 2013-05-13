@@ -13,25 +13,53 @@ import java.util.Comparator;
  */
 public class SalaAula {
 
+    /**
+     * variavel que vai guardar o codigo da sala
+     */
     private String codigo;
 
-    SalaAula() {
-    }
-
+    
+    /**
+     * variavel enum que vai guarda o tipo de sala
+     */
     public enum tipoSala {
 
         ANFITIATRO, LABORATORIO
     }
     tipoSala a;
     public String tipoSala;
+    /**
+     * variavel que guarda a capacidade
+     */
     private int capacidade;
 
+    /**
+     * 
+     * @param codigo
+     * @param tipoSala
+     * @param capacidade 
+     * Construtor SalaAula
+     */
     public SalaAula(String codigo, int tipoSala, int capacidade) {
         this.codigo = codigo;
         verificaTipoSala(tipoSala);
         this.capacidade = capacidade;
     }
 
+    /**
+     * Construtor SalaAula vazio
+     */
+    public SalaAula() {
+    }
+    
+    /**
+     * 
+     * @param sala
+     * @param x
+     * @param horario
+     * @return arraylist com salas ocupadas
+     * 
+     */
     public ArrayList<SalaAula> ocupacaoSala(ArrayList<SalaAula> sala, int x, ArrayList<Horario> horario) {
         Horario h = new Horario();
         ArrayList<SalaAula> s = new ArrayList<>();
@@ -48,6 +76,11 @@ public class SalaAula {
         return s;
     }
 
+    /**
+     * 
+     * @param tipoSala 
+     * Metodo que verifica o tipo de sala
+     */
     public void verificaTipoSala(int tipoSala) {
         if (tipoSala == 1) {
             this.tipoSala = a.ANFITIATRO.name();
@@ -56,22 +89,47 @@ public class SalaAula {
         }
     }
 
+    /**
+     * 
+     * @return 
+     */
     public String getCodigo() {
         return codigo;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public int getCapacidade() {
         return capacidade;
     }
 
+    /**
+     * 
+     * @param codigo 
+     */
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
+    /**
+     * 
+     * @param capacidade 
+     */
     public void setCapacidade(int capacidade) {
         this.capacidade = capacidade;
     }
 
+    /**
+     * 
+     * @param a
+     * @param s
+     * @param b
+     * @param sala
+     * @param horario
+     * @return 
+     */
     public String SalaAulaExtra(int a, String s, int b, ArrayList<SalaAula> sala, ArrayList<Horario> horario) {
         SalaAula salaaula = new SalaAula();
         Turma tur = new Turma();

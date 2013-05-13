@@ -15,14 +15,38 @@ import java.util.Scanner;
 public class CSV {
 //codigo generico necessario ao funcionamento
 
+    /**
+     * Arraylist temporarios do tipo SalaAula
+     */
     ArrayList<SalaAula> salaAula = new ArrayList<SalaAula>();
+    /**
+     * Arraylist temporarios do tipo Aluno
+     */
     ArrayList<Aluno> aluno = new ArrayList<Aluno>();
+    /**
+     * Arraylist temporarios do tipo Professor
+     */
     ArrayList<Professor> professor = new ArrayList<Professor>();
+    /**
+     * Arraylist temporarios do tipo Turma
+     */
     ArrayList<Turma> turma = new ArrayList<Turma>();
+    /**
+     * Arraylist temporarios do tipo Disciplina
+     */
     ArrayList<Disciplina> disciplina = new ArrayList<Disciplina>();
+    /**
+     * Arraylist temporarios do tipo Horario
+     */
     ArrayList<Horario> horario = new ArrayList<Horario>();
 
     //codigo para leitura de salas a partir do ficheiro
+    /**
+     * 
+     * @return arraylist de salas
+     * @throws FileNotFoundException 
+     * Metodo para ler do ficheiro salas.txt
+     */
     public ArrayList<SalaAula> Sala() throws FileNotFoundException {
 
         Scanner fi = new Scanner(new File("./salas.txt"));
@@ -49,6 +73,14 @@ public class CSV {
     //codigo para leitura de alunos a partir do ficheiro
     //nota: A o metodo de classe Aluno, nao precisa de turma como requesito de construcçao
     //sendo que a turma do aluno é atribuida quando é lido ficheiro Turma.
+    
+    
+    /**
+     * 
+     * @return
+     * @throws FileNotFoundException
+     * Metodo para ler do ficheiro alunos.txt
+     */
     public ArrayList<Aluno> Alunos() throws FileNotFoundException {
 
 
@@ -67,6 +99,12 @@ public class CSV {
     }
 
     //codigo para leitura de Professores a partir do ficheiro
+    /**
+     * 
+     * @return
+     * @throws FileNotFoundException 
+     * Metodo para ler do ficheiro professores.txt
+     */
     public ArrayList<Professor> Professor() throws FileNotFoundException {
 
 
@@ -87,6 +125,13 @@ public class CSV {
     }
 
     //codigo para leitura de turmas a partir do ficheiro
+    
+    /**
+     * 
+     * @return
+     * @throws FileNotFoundException 
+     * Metodo para ler do ficheiro turmas.txt
+     */
     public ArrayList<Turma> Turmas() throws FileNotFoundException {
 
         Scanner fi = new Scanner(new File("./turmas.txt"));
@@ -135,6 +180,12 @@ public class CSV {
     //codigo para leitura de Disciplinas a partir do ficheiro
     //nota: tambem atribui as Disciplinas aos Professores ja existentes se tiverem a sigla na lista
 
+   /**
+    * 
+    * @return
+    * @throws FileNotFoundException 
+    * Metodo para ler do ficheiro disciplinas.txt
+    */
     public ArrayList<Disciplina> Disciplinas() throws FileNotFoundException {
 
 
@@ -192,6 +243,12 @@ public class CSV {
     }
 
     //codigo para leitura de Horarios a partir do ficheiro
+    /**
+     * 
+     * @return
+     * @throws FileNotFoundException
+     * Metodo para ler do ficheiro horarios.txt
+     */
     public ArrayList<Horario> Horario() throws FileNotFoundException {
         Scanner fi = new Scanner(new File("./horarios.txt"));
         String bb = fi.nextLine();
@@ -242,35 +299,5 @@ public class CSV {
         } while (fi.hasNextLine());
         return horario;
     }
-    //System.out.println(valida);
-            /*
-     * if (valida == false) {
-     *
-     * } else if (valida == true) { System.out.println("pumbaz numa vista");
-     * //String ola = fi.nextLine(); //valida = false; }
-     */
-    //System.out.println("estou no fim.");
-//}
-//while (fi.hasNextLine());
-//        return horario;
-//    }
-
-//    public boolean validacaoSala(ArrayList<Horario> horario, Horario horarioADD) {
-//
-//        for (int i = 0; i < horario.size(); i++) {
-//
-//            if (horario.get(i).getCodigo_sala().equalsIgnoreCase(horarioADD.getCodigo_sala()) && horario.get(i).getDesignacao().equalsIgnoreCase(horarioADD.getDesignacao()) && (horario.get(i).getSigla_professor().equalsIgnoreCase(horarioADD.getSigla_professor()) || horario.get(i).getDia_semana() == horarioADD.getDia_semana() || horario.get(i).getHora_inicio() == horarioADD.getHora_inicio())) {
-//                return true;
-    public void validacaoSala(ArrayList<Horario> horario) {
-        for (int j = 0; j < horario.size(); j++) {
-            for (int i = 0; i < horario.size(); i++) {
-                if (horario.get(j).getCodigo_sala().equalsIgnoreCase(horario.get(i).getCodigo_sala()) && horario.get(j).getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao()) && horario.get(j).getSigla_professor().equalsIgnoreCase(horario.get(i).getSigla_professor()) && horario.get(j).getDia_semana() == horario.get(i).getDia_semana() && horario.get(j).getHora_inicio() == horario.get(i).getHora_inicio()) {
-//                    System.out.println("a linha " + j+"e igual a " + i);
-                    //System.out.println(horario.get(i).getSigla_disciplina());
-                }
-            }
-
-        }
-//        return false;
     }
-}
+

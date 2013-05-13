@@ -14,6 +14,9 @@ public class Pessoa {
     private String email;
 
     /**
+     * 
+     * @param nome
+     * @param email 
      * Construtor Pessoa
      */
     public Pessoa(String nome, String email) {
@@ -22,11 +25,15 @@ public class Pessoa {
         this.email = email;
     }
 
+    /**
+     * Construtor vazio
+     */
     public Pessoa() {
     }
 
     /**
-     * getNome
+     * 
+     * @return nome
      */
     public String getNome() {
         return nome;
@@ -34,28 +41,36 @@ public class Pessoa {
     
     
     /**
-     * getEmail
+     * 
+     * @return email 
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * setNome
+     * 
+     * @param nome 
+     * Metodo para definir o nome
      */
     public void setNome(String nome) {
         this.nome = nome;
     }
     
-    /**
-     * setEmail
-     */
+   /**
+    * 
+    * @param email 
+    * Metodo para definir o email
+    */
     public void setEmail(String email) {
         this.email = email;
     }
 
    
     @Override
+    /**
+     * Metodo toString
+     */
     public String toString() {
         return "A pessoa com o nome "+ nome + ", tem o email: " + email;
 
