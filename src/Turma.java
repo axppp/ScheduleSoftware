@@ -14,6 +14,11 @@ public class Turma {
     private String designacao;
     private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
 
+    /**
+     * 
+     * @param designacao
+     * @param aluno 
+     */
     public Turma(String designacao, ArrayList<Aluno> aluno) {
         this.designacao = designacao;
 //        for (int i = 0; i < alunos.size(); i++) {
@@ -22,9 +27,19 @@ public class Turma {
         this.alunos = aluno;
     }
 
-    Turma() {
+    /**
+     * Construtor Turma vazio
+     */
+    public Turma() {
     }
 
+    /**
+     * 
+     * @param prof
+     * @param a
+     * @param horario
+     * @return 
+     */
     public String listarProfessorTurma(ArrayList<Professor> prof, String a, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
         ArrayList<Professor> p = new ArrayList<>();
@@ -47,34 +62,49 @@ public class Turma {
         return "Turma{" + "designacao=" + designacao + ", tem " + alunos.size() + " Alunos " + '}';
     }
 
+    /**
+     * 
+     * @return sigla 
+     */
     public String toStringSigla() {
         return designacao;
     }
 
     /**
-     * Get Designação
+     * 
+     * @return 
      */
     public String getDesignacao() {
         return designacao;
     }
 
-    /**
-     * Get Alunos
-     */
+   /**
+    * 
+    * @return 
+    */
     public ArrayList<Aluno> getAlunos() {
         return alunos;
     }
 
+    /**
+     * 
+     * @param designacao 
+     */
     public void setDesignacao(String designacao) {
         this.designacao = designacao;
     }
 
+    /**
+     * 
+     * @param alunos 
+     */
     public void setAlunos(ArrayList<Aluno> alunos) {
         this.alunos = alunos;
     }
 
     /**
-     * Adiciona Aluno
+     * 
+     * @param aluno 
      */
     public void addAluno(Aluno aluno) {
         this.alunos.add(aluno);
