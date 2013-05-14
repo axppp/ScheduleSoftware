@@ -36,7 +36,7 @@ public class TesteGestao {
 //Edição de uma célula do horário
 //        Horario j = new Horario(turmas.get(1), disciplinas.get(1), 1, 4, 11, 2, professores.get(11), salas.get(1));
         //Adicionas Novo Horario
-//        horarios = j.addHorario(horarios, salas, disciplinas);
+//        j.addHorario(horarios, salas, disciplinas);
         //Alterar Horario
 //        horarios.get(93).alterarHorario(j, horarios, salas, disciplinas);
         //Apagar Horario

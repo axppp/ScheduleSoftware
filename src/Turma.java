@@ -39,7 +39,7 @@ public class Turma {
      *
      * @param alunos Metodo para listar alunos de forma crescente
      */
-    public void listarAlunosCrescenteNR() {
+    public ArrayList<Aluno> listarAlunosCrescenteNR() {
         Collections.sort(alunos, new Comparator<Aluno>() {
 
             public int compare(Aluno p1, Aluno p2) {
@@ -47,13 +47,14 @@ public class Turma {
             }
         });
         System.out.println(alunos + "\n");
+        return alunos;
     }
 
     /**
      *
      * @param alunos metodo para listar aluno de forma decrescente
      */
-    public void listarAlunosDecrescenteNR() {
+    public ArrayList<Aluno> listarAlunosDecrescenteNR() {
         Collections.sort(alunos, new Comparator<Aluno>() {
 
             public int compare(Aluno p1, Aluno p2) {
@@ -61,13 +62,14 @@ public class Turma {
             }
         });
         System.out.println(alunos + "\n");
+        return alunos;
     }
 
     /**
      *
      * @param alunos metodo para listar alunos por nome crescente
      */
-    public void listarAlunosNomeCrescente() {
+    public ArrayList<Aluno> listarAlunosNomeCrescente() {
 
         Collections.sort(alunos, new Comparator() {
 
@@ -78,13 +80,14 @@ public class Turma {
             }
         });
         System.out.println(alunos + "\n");
+        return alunos;
     }
 
     /**
      *
      * @param alunos Metodo para listar alunos por nome decrescente
      */
-    public void listarAlunosNomeDecrescente() {
+    public ArrayList<Aluno> listarAlunosNomeDecrescente() {
 
         Collections.sort(alunos, new Comparator() {
 
@@ -95,6 +98,7 @@ public class Turma {
             }
         });
         System.out.println(alunos + "\n");
+        return alunos;
     }
 
     /**

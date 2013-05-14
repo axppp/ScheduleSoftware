@@ -115,14 +115,14 @@ public class Horario {
      * @param disc
      * @return Metodo para adicionar um horario com validaçao
      */
-    public ArrayList<Horario> addHorario(ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
+    public void addHorario(ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
         if (validaHorarioNovo(horarios, sala, disc) == true) {
             horarios.add(this);
             System.out.println("O horario foi aprovado!\n");
         } else {
             System.out.println("Impossivel criar horario, porque o horario nao é valido!!!" + "\n");
         }
-        return horarios;
+//        return horarios;
     }
 
     /**
