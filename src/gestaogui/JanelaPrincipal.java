@@ -32,11 +32,9 @@ public class JanelaPrincipal extends JFrame {
 	private AppConfig appconfig;
 
 	public JanelaPrincipal() throws URISyntaxException {
-
 		super("Gestão Horarios");
 		addButtons();
 		setProperties(640, 480, 0, true);
-
 	}
 
 	/**
