@@ -103,7 +103,7 @@ public class TesteGestao {
 
 
 //Listar os dados de um determinado
-        //Aluno
+//        Aluno
 //        alunos.get(2).listarDadosAluno(alunos);
         //Professor
 //        professores.get(3).listarDadosProfessor(professores);
