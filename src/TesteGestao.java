@@ -24,13 +24,27 @@ public class TesteGestao {
         //  System.out.println("ola");
 
 //Inserção dos ficheiros de alunos, professores, disciplinas, salas, turmas, e horários.
+
         CSV ola = new CSV();
-        salas = ola.Sala();
-        alunos = ola.Alunos();
-        professores = ola.Professor();
-        disciplinas = ola.Disciplinas();
-        turmas = ola.Turmas();
-        horarios = ola.Horario();
+        ola.LerMemoriaFicheiro();
+        if (!ola.aluno.isEmpty()) {
+            salas = ola.salaAula;
+            alunos = ola.aluno;
+            professores = ola.professor;
+            disciplinas = ola.disciplina;
+            turmas = ola.turma;
+            horarios = ola.horario;
+            System.out.println("Ficheiros guardados da utilização anterior.");
+        } else {
+            salas = ola.Sala();
+            alunos = ola.Alunos();
+            professores = ola.Professor();
+            disciplinas = ola.Disciplinas();
+            turmas = ola.Turmas();
+            horarios = ola.Horario();
+            System.out.println("Novo.");
+        }
+        ola.GravarMemoriaFicheiro();
 
 
 //Edição de uma célula do horário

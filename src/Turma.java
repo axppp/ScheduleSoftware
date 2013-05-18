@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -11,7 +12,7 @@ import java.util.Comparator;
  *
  * @author axppp
  */
-public class Turma {
+public class Turma implements Serializable{
 
     private String designacao;
     private ArrayList<Aluno> alunos = new ArrayList<Aluno>();

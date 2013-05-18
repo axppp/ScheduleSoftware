@@ -1,5 +1,6 @@
 
 import data.Data;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -13,7 +14,7 @@ import java.util.Comparator;
  *
  * @author Paulo Ponciano
  */
-public class Professor extends Pessoa {
+public class Professor extends Pessoa implements Serializable{
 
     /**
      * variavel que guarda a sigla do professor

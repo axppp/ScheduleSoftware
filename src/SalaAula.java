@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -11,7 +12,7 @@ import java.util.Comparator;
  *
  * @author axppp
  */
-public class SalaAula {
+public class SalaAula implements Serializable{
 
     /**
      * variavel que vai guardar o codigo da sala

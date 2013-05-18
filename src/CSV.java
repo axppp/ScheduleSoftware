@@ -1,6 +1,5 @@
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -42,14 +41,13 @@ public class CSV {
 
     //codigo para leitura de salas a partir do ficheiro
     /**
-     * 
+     *
      * @return arraylist de salas
-     * @throws FileNotFoundException 
-     * Metodo para ler do ficheiro salas.txt
+     * @throws FileNotFoundException Metodo para ler do ficheiro salas.txt
      */
     public ArrayList<SalaAula> Sala() throws FileNotFoundException {
 
-        Scanner fi = new Scanner(new File("./salas.txt"));
+        Scanner fi = new Scanner(new File("./Ficheiros/salas.txt"));
         String bb = fi.nextLine();
 
         String[] c;
@@ -73,18 +71,15 @@ public class CSV {
     //codigo para leitura de alunos a partir do ficheiro
     //nota: A o metodo de classe Aluno, nao precisa de turma como requesito de construcçao
     //sendo que a turma do aluno é atribuida quando é lido ficheiro Turma.
-    
-    
     /**
-     * 
-     * @return
-     * @throws FileNotFoundException
-     * Metodo para ler do ficheiro alunos.txt
+     *
+     * @return @throws FileNotFoundException Metodo para ler do ficheiro
+     * alunos.txt
      */
     public ArrayList<Aluno> Alunos() throws FileNotFoundException {
 
 
-        Scanner fi = new Scanner(new File("./alunos.txt"));
+        Scanner fi = new Scanner(new File("./Ficheiros/alunos.txt"));
         String bb = fi.nextLine();
         String[] c;
         String[] c1;
@@ -100,15 +95,14 @@ public class CSV {
 
     //codigo para leitura de Professores a partir do ficheiro
     /**
-     * 
-     * @return
-     * @throws FileNotFoundException 
-     * Metodo para ler do ficheiro professores.txt
+     *
+     * @return @throws FileNotFoundException Metodo para ler do ficheiro
+     * professores.txt
      */
     public ArrayList<Professor> Professor() throws FileNotFoundException {
 
 
-        Scanner fi = new Scanner(new File("./professores.txt"));
+        Scanner fi = new Scanner(new File("./Ficheiros/professores.txt"));
         String bb = fi.nextLine();
 
         String[] c;
@@ -125,16 +119,14 @@ public class CSV {
     }
 
     //codigo para leitura de turmas a partir do ficheiro
-    
     /**
-     * 
-     * @return
-     * @throws FileNotFoundException 
-     * Metodo para ler do ficheiro turmas.txt
+     *
+     * @return @throws FileNotFoundException Metodo para ler do ficheiro
+     * turmas.txt
      */
     public ArrayList<Turma> Turmas() throws FileNotFoundException {
 
-        Scanner fi = new Scanner(new File("./turmas.txt"));
+        Scanner fi = new Scanner(new File("./Ficheiros/turmas.txt"));
         String bb = fi.nextLine();
 
         String[] c;
@@ -180,17 +172,16 @@ public class CSV {
     //codigo para leitura de Disciplinas a partir do ficheiro
     //nota: tambem atribui as Disciplinas aos Professores ja existentes se tiverem a sigla na lista
 
-   /**
-    * 
-    * @return
-    * @throws FileNotFoundException 
-    * Metodo para ler do ficheiro disciplinas.txt
-    */
+    /**
+     *
+     * @return @throws FileNotFoundException Metodo para ler do ficheiro
+     * disciplinas.txt
+     */
     public ArrayList<Disciplina> Disciplinas() throws FileNotFoundException {
 
 
-        Scanner fi = new Scanner(new File("./disciplinas.txt"));
-        Scanner ji = new Scanner(new File("./disciplinas.txt"));
+        Scanner fi = new Scanner(new File("./Ficheiros/disciplinas.txt"));
+        Scanner ji = new Scanner(new File("./Ficheiros/disciplinas.txt"));
         String bb = fi.nextLine();
         String bbb = ji.nextLine();
 // leitura de ficheiro linha-a-linha
@@ -244,13 +235,12 @@ public class CSV {
 
     //codigo para leitura de Horarios a partir do ficheiro
     /**
-     * 
-     * @return
-     * @throws FileNotFoundException
-     * Metodo para ler do ficheiro horarios.txt
+     *
+     * @return @throws FileNotFoundException Metodo para ler do ficheiro
+     * horarios.txt
      */
     public ArrayList<Horario> Horario() throws FileNotFoundException {
-        Scanner fi = new Scanner(new File("./horarios.txt"));
+        Scanner fi = new Scanner(new File("./Ficheiros/horarios.txt"));
         String bb = fi.nextLine();
 
         int tipo = 2;
@@ -299,5 +289,78 @@ public class CSV {
         } while (fi.hasNextLine());
         return horario;
     }
+
+    public void GravarMemoriaFicheiro() throws IOException {
+        File h = new File("Ficheiros/Horario");
+        FileOutputStream ho = new FileOutputStream(h);
+        ObjectOutputStream hoo = new ObjectOutputStream(ho);
+        hoo.writeObject(horario);
+        ho.close();
+
+        File a = new File("Ficheiros/Aluno");
+        FileOutputStream al = new FileOutputStream(a);
+        ObjectOutputStream alu = new ObjectOutputStream(al);
+        alu.writeObject(aluno);
+        al.close();
+
+        File p = new File("Ficheiros/Professor");
+        FileOutputStream pr = new FileOutputStream(p);
+        ObjectOutputStream pro = new ObjectOutputStream(pr);
+        pro.writeObject(professor);
+        pr.close();
+
+        File d = new File("Ficheiros/Disciplina");
+        FileOutputStream di = new FileOutputStream(d);
+        ObjectOutputStream dis = new ObjectOutputStream(di);
+        dis.writeObject(disciplina);
+        di.close();
+
+        File s = new File("Ficheiros/Salas");
+        FileOutputStream sa = new FileOutputStream(s);
+        ObjectOutputStream sal = new ObjectOutputStream(sa);
+        sal.writeObject(salaAula);
+        sa.close();
+
+        File t = new File("Ficheiros/Turma");
+        FileOutputStream tu = new FileOutputStream(t);
+        ObjectOutputStream tur = new ObjectOutputStream(tu);
+        tur.writeObject(turma);
+        tu.close();
     }
 
+    public void LerMemoriaFicheiro() throws IOException, ClassNotFoundException {
+        try {
+            FileInputStream h = new FileInputStream("Ficheiros/Horario");
+            ObjectInputStream ho = new ObjectInputStream(h);
+            this.horario = (ArrayList<Horario>) ho.readObject();
+            h.close();
+
+            FileInputStream a = new FileInputStream("Ficheiros/Aluno");
+            ObjectInputStream al = new ObjectInputStream(a);
+            this.aluno = (ArrayList<Aluno>) al.readObject();
+            a.close();
+
+            FileInputStream p = new FileInputStream("Ficheiros/Professor");
+            ObjectInputStream po = new ObjectInputStream(p);
+            this.professor = (ArrayList<Professor>) po.readObject();
+            p.close();
+
+            FileInputStream s = new FileInputStream("Ficheiros/Salas");
+            ObjectInputStream sa = new ObjectInputStream(s);
+            this.salaAula = (ArrayList<SalaAula>) sa.readObject();
+            s.close();
+
+            FileInputStream d = new FileInputStream("Ficheiros/Disciplina");
+            ObjectInputStream di = new ObjectInputStream(d);
+            this.disciplina = (ArrayList<Disciplina>) di.readObject();
+            d.close();
+
+            FileInputStream t = new FileInputStream("Ficheiros/Turma");
+            ObjectInputStream tu = new ObjectInputStream(t);
+            this.turma = (ArrayList<Turma>) tu.readObject();
+            t.close();
+        } catch (IOException e) {
+            System.out.println("Ficheiro não encontrado.");
+        }
+    }
+}

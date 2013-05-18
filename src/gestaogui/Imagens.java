@@ -57,7 +57,7 @@ public class Imagens {
 	/**
 	 * Image used in the splash screen
 	 */
-	String splash = ("src/Imagens/splash.png");
+	String splash = ("src/Imagens/splash_1.png");
 
 	// buttons
 
@@ -65,33 +65,33 @@ public class Imagens {
 	 * Image used in the button <code>Application Config</code> from the main
 	 * menu
 	 */
-	String appconfig = ("src/Imagens/appconfig.png");
+	String appconfig = ("src/Imagens/appconfig_1.png");
 
 	/**
 	 * Image used in the button <code>Application Config</code> from the main
 	 * menu
 	 */
-	String appconfig_o = ("src/Imagens/appconfigOver.png");
+	String appconfig_o = ("src/Imagens/appconfigOver_1.png");
 
 	/**
 	 * Image used in the button <code>Exit Application</code> from the main menu
 	 */
-	String exitapp = ("src/Imagens/exitM.png");
+	String exitapp = ("src/Imagens/exitM_1.png");
 
 	/**
 	 * Image used in the button <code>Exit Application</code> from the main menu
 	 */
-	String exitapp_o = ("src/Imagens/exitMOver.png");
+	String exitapp_o = ("src/Imagens/exitMOver_1.png");
 
 	/**
 	 * Image used in the button <code>About</code> from the main menu
 	 */
-	String about = ("src/Imagens/about.png");
+	String about = ("src/Imagens/about_1.png");
 
 	/**
 	 * Image used in the button <code>About</code> from the main menu
 	 */
-	String about_o = ("src/Imagens/aboutOver.png");
+	String about_o = ("src/Imagens/aboutOver_1.png");
 
 	// exports
 

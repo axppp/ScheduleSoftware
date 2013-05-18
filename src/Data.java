@@ -4,8 +4,10 @@
  */
 package data;
 
+import java.io.Serializable;
 
-public class Data {
+
+public class Data implements Serializable{
 
     // -- variaveis de classe ------------------------------------------------------------
     

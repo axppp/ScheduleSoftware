@@ -24,7 +24,7 @@ public class About extends JDialog {
 	 */
 	@SuppressWarnings("unused")
 	public About(JFrame parent) throws URISyntaxException {
-		super(parent, "About M&M", true);
+		super(parent, "Acerca de Gestão Horários", true);
 
 		final Imagens img = new Imagens();
 		final Font font = new Font("Arial", Font.PLAIN, 9);

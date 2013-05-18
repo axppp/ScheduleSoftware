@@ -127,7 +127,7 @@ public class AppConfig extends JFrame {
 	 */
 	public AppConfig() {
 
-		setTitle("Application Configuration");
+		setTitle("Gerir Horário");
 
 		addPaineis();
 		addTabs();

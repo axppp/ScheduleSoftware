@@ -1,5 +1,6 @@
 
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -12,7 +13,7 @@ import java.util.Comparator;
  *
  * @author axppp
  */
-public class Horario {
+public class Horario implements Serializable {
 
     /**
      * variavel que guarda o nome da turma
