@@ -1,5 +1,9 @@
+package gestaologica;
 
-import data.Data;
+
+
+
+import gestaologica.Data;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;

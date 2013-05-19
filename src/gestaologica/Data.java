@@ -1,8 +1,10 @@
+package gestaologica;
+
 /**
  *
  * @author axppp
  */
-package data;
+
 
 import java.io.Serializable;
 

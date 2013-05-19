@@ -1,3 +1,4 @@
+package gestaologica;
 
 import java.util.ArrayList;
 
@@ -27,13 +28,13 @@ public class TesteGestao {
 
         CSV ola = new CSV();
         ola.LerMemoriaFicheiro();
-        if (!ola.aluno.isEmpty()) {
-            salas = ola.salaAula;
-            alunos = ola.aluno;
-            professores = ola.professor;
-            disciplinas = ola.disciplina;
-            turmas = ola.turma;
-            horarios = ola.horario;
+        if (!ola.getAluno().isEmpty()) {
+            salas = ola.getSalaAula();
+            alunos = ola.getAluno();
+            professores = ola.getProfessor();
+            disciplinas = ola.getDisciplina();
+            turmas = ola.getTurma();
+            horarios = ola.getHorario();
             System.out.println("Ficheiros guardados da utilização anterior.");
         } else {
             salas = ola.Sala();
@@ -45,11 +46,12 @@ public class TesteGestao {
             System.out.println("Novo.");
         }
         ola.GravarMemoriaFicheiro();
+        ola.test();
 
 
 //Edição de uma célula do horário
 //        Horario j = new Horario(turmas.get(1), disciplinas.get(1), 1, 4, 11, 2, professores.get(11), salas.get(1));
-        //Adicionas Novo Horario
+        //Adicionar Novo Horario
 //        j.addHorario(horarios, salas, disciplinas);
         //Alterar Horario
 //        horarios.get(93).alterarHorario(j, horarios, salas, disciplinas);
