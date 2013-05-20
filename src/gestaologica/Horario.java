@@ -1,8 +1,5 @@
 package gestaologica;
 
-
-
-
 import java.io.FileNotFoundException;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -446,7 +443,11 @@ public class Horario implements Serializable {
      * Metodo toString
      */
     public String toString() {
-        return "Horario{" + "designacao=" + designacao + ", sigla_disciplina=" + sigla_disciplina + ", aulas=" + aulas + ", dia_semana=" + dia_semana + ", hora_inicio=" + hora_inicio + ", duracaoAula=" + duracaoAula + ", sigla_professor=" + sigla_professor + ", codigo_sala=" + codigo_sala + "\n";
+        return "Turma=" + designacao + ", Disciplina=" + sigla_disciplina + ", Aula tipo=" + aulas + ", Dia da semana=" + dia_semana + ", Hora de inicio=" + hora_inicio + ", Duração=" + duracaoAula + ", Professor=" + sigla_professor + ", Sala=" + codigo_sala + "\n";
+    }
+
+    public String toStringLista() {
+        return "" + designacao + ", " + sigla_disciplina + ", " + aulas + ", " + dia_semana + ", " + hora_inicio + ", " + duracaoAula + ", " + sigla_professor + ", " + codigo_sala + "\n";
     }
 
     /**

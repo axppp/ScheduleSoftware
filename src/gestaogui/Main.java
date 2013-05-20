@@ -13,6 +13,12 @@ import javax.swing.*;
 public class Main {
 
     private static JanelaPrincipal maingui;
+    public static ArrayList<SalaAula> s;
+    public static ArrayList<Aluno> a;
+    public static ArrayList<Professor> p;
+    public static ArrayList<Turma> t;
+    public static ArrayList<Disciplina> d;
+    public static ArrayList<Horario> h;
 
     /**
      * The main method to start the program. This method will show a splash
@@ -21,39 +27,37 @@ public class Main {
      * @param args command line parameters
      */
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        ArrayList<SalaAula> salas = new ArrayList<SalaAula>();
-        ArrayList<Aluno> alunos = new ArrayList<Aluno>();
-        ArrayList<Professor> professores = new ArrayList<Professor>();
-        ArrayList<Turma> turmas = new ArrayList<Turma>();
-        ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
-        ArrayList<Horario> horarios = new ArrayList<Horario>();
-
         //Inserção dos ficheiros de alunos, professores, disciplinas, salas, turmas, e horários.
-
         CSV ola = new CSV();
+
         ola.LerMemoriaFicheiro();
+
         if (!ola.getAluno().isEmpty() && !ola.getDisciplina().isEmpty() && !ola.getHorario().isEmpty() && !ola.getProfessor().isEmpty() && !ola.getSalaAula().isEmpty() && !ola.getTurma().isEmpty()) {
-            salas = ola.getSalaAula();
-            alunos = ola.getAluno();
-            professores = ola.getProfessor();
-            disciplinas = ola.getDisciplina();
-            turmas = ola.getTurma();
-            horarios = ola.getHorario();
+            s = ola.getSalaAula();
+            a = ola.getAluno();
+            p = ola.getProfessor();
+            d = ola.getDisciplina();
+            t = ola.getTurma();
+            h = ola.getHorario();
             System.out.println("Ficheiros guardados da utilização anterior.");
         } else {
-            salas = ola.Sala();
-            alunos = ola.Alunos();
-            professores = ola.Professor();
-            disciplinas = ola.Disciplinas();
-            turmas = ola.Turmas();
-            horarios = ola.Horario();
+            s = ola.Sala();
+            a = ola.Alunos();
+            p = ola.Professor();
+            d = ola.Disciplinas();
+            t = ola.Turmas();
+            h = ola.Horario();
             System.out.println("Novo.");
         }
+
         ola.testTXT();
         ola.GravarMemoriaFicheiro();
         ola.test();
+        
         Imagens img = new Imagens();
-        if (ola.isDfgh() == true || ola.isGhjk() == true) {
+
+        if (ola.isDfgh()
+                == true || ola.isGhjk() == true) {
             @SuppressWarnings("unused")
             SplashScreen splash = new SplashScreen(3000, img.splash, true);
             //lerEstadoAnterior();
@@ -63,7 +67,6 @@ public class Main {
             } catch (URISyntaxException e) {
             }
         }
-
     }
 
     /**
@@ -132,5 +135,47 @@ public class Main {
          * successfully loaded!", "Loading previous status",
          * JOptionPane.ERROR_MESSAGE); }
          */
+    }
+
+    /**
+     * @return the s
+     */
+    public static ArrayList<SalaAula> getS() {
+        return s;
+    }
+
+    /**
+     * @return the a
+     */
+    public static ArrayList<Aluno> getA() {
+        return a;
+    }
+
+    /**
+     * @return the p
+     */
+    public static ArrayList<Professor> getP() {
+        return p;
+    }
+
+    /**
+     * @return the t
+     */
+    public static ArrayList<Turma> getT() {
+        return t;
+    }
+
+    /**
+     * @return the d
+     */
+    public static ArrayList<Disciplina> getD() {
+        return d;
+    }
+
+    /**
+     * @return the h
+     */
+    public static ArrayList<Horario> getH() {
+        return h;
     }
 }

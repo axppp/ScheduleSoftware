@@ -1,8 +1,8 @@
 package gestaogui;
 
+import gestaologica.*;
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -250,7 +250,7 @@ public class AppConfig extends JFrame {
      */
     private void addList() {
 
-        // Panels/*
+        // Panels
         final Painel main_panel = new Painel(img.bg4);
         final JPanel buttons_panel = new JPanel(new GridLayout(5, 2, 10, 10));
 
@@ -398,20 +398,53 @@ public class AppConfig extends JFrame {
      * method.
      */
     private void EditCelulaHorario() {
-
+        Main m = new Main();
+        Turma t = new Turma();
+        Disciplina d = new Disciplina();
+        Professor p = new Professor();
+        SalaAula s = new SalaAula();
+        Component c = null;
         // Panels
         Painel main_panel = new Painel(img.bg4);
-        JPanel buttons_panel = new JPanel(new GridLayout(3, 1, 10, 10));
+        JPanel buttons_panel = new JPanel(new GridLayout(1, 3, 5, 5));
+        JPanel formulario_panel = new JPanel(new GridLayout(4, 6, 10, 10));
+        buttons_panel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Layout
         main_panel.setLayout(new BorderLayout());
-        menu.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        menu.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 15));
 
         // Labels
         JLabel lb = new JLabel("Edição da celula de Horário:");
 
         //List
-        JList l = new JList();
+        String[] v = new String[m.h.size() + 1];
+        v[0] = "Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n";
+
+        for (int i = 0; i < m.h.size(); i++) {
+            v[i + 1] = m.h.get(i).toStringLista();
+        }
+
+        JList l = new JList(v);
+        l.setValueIsAdjusting(true);
+//        Horario h = new Horario();
+//        h = new Horario(t, d, 1, 4, 11, 2, p, s);
+
+        //Formulario
+        JLabel la0 = new JLabel("Turma");
+        final JTextField te0 = new JTextField();
+        JLabel la1 = new JLabel("Disciplina");
+        final JTextField te1 = new JTextField();
+        JLabel la2 = new JLabel("Tipo Aula");
+        final JTextField te2 = new JTextField();
+        JLabel la3 = new JLabel("Dia da Semana");
+        final JTextField te3 = new JTextField();
+        JLabel la4 = new JLabel("Hora de Inicio");
+        final JTextField te4 = new JTextField();
+        JLabel la5 = new JLabel("Professor");
+        final JTextField te5 = new JTextField();
+        JLabel la6 = new JLabel("Sala");
+        final JTextField te6 = new JTextField();
 
         // Buttons
         Botao add = new Botao(img.add1, img.add1_o);
@@ -438,9 +471,6 @@ public class AppConfig extends JFrame {
         // Color
         lb.setForeground(Color.white);
 
-        //Lista
-        lb.add(l);
-
         // Buttons
         configButtons(botoes);
 
@@ -449,7 +479,18 @@ public class AppConfig extends JFrame {
         add.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-//				csv.intelImport(null, AppConfig.this, Main.getPaises(), Main.getDisciplinas(), Main.getModalidades(), Main.getJogos(), Main.getProvas(), Main.getEquipas(), Main.getAtleta());
+                int duracao = 0;
+                if (te2.getText().equalsIgnoreCase("t")) {
+                    duracao = 1;
+                } else if (te2.getText().equalsIgnoreCase("p")) {
+                    duracao = 2;
+                }
+                if (duracao == 1 || duracao == 2) {
+//                    Horario H = new Horario(te0.getText(), te1.getText(), te2.getText(), te3.getText(), te4.getText(), duracao, te5.getText(), te6.getText());
+                }else{
+                    JOptionPane.showMessageDialog(null,"Os dados não fazem parte da lista.");
+                }
+
             }
         });
 
@@ -498,18 +539,39 @@ public class AppConfig extends JFrame {
 //            }
 //        });
         // Adding to panels
+//        add.setAlignmentY(Component.CENTER_ALIGNMENT);
         buttons_panel.add(add);
+//        edit.setAlignmentY(Component.CENTER_ALIGNMENT);
         buttons_panel.add(edit);
+//        remove.setAlignmentY(Component.CENTER_ALIGNMENT);
         buttons_panel.add(remove);
 //        buttons_panel.add(impDisc);
 //        buttons_panel.add(impEv);
 //        buttons_panel.add(impResu);
+        formulario_panel.add(la0);
+        formulario_panel.add(te0);
+        formulario_panel.add(la1);
+        formulario_panel.add(te1);
+        formulario_panel.add(la2);
+        formulario_panel.add(te2);
+        formulario_panel.add(la3);
+        formulario_panel.add(te3);
+        formulario_panel.add(la4);
+        formulario_panel.add(te4);
+        formulario_panel.add(la5);
+        formulario_panel.add(te5);
+        formulario_panel.add(la6);
+        formulario_panel.add(te6);
 
         main_panel.add(lb, BorderLayout.NORTH);
-        main_panel.add(l, BorderLayout.SOUTH);
+        main_panel.add(new JScrollPane(l, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS), BorderLayout.CENTER);
 //        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+        main_panel.add(formulario_panel, BorderLayout.SOUTH);
 
-        menu.add(main_panel);
+        menu.add(main_panel, BorderLayout.NORTH);
+        menu.add(buttons_panel, BorderLayout.SOUTH);
+
     }
 
     /**
