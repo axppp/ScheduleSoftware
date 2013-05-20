@@ -40,11 +40,17 @@ public class CSV {
      * Arraylist temporarios do tipo Horario
      */
     private ArrayList<Horario> horario = new ArrayList<Horario>();
+    private boolean ghjk = true;
+    private boolean dfgh = true;
     /**
      * Flag para mensagem de erro em caso de o programa nao ter ficheiros
      * basicos ou não conter informação nos ficheiros binarios
      */
-    boolean ghjk = true, dfgh = true;
+    boolean  fiAluno = true, fiProfessor = true, fiTurma = true, fiHorario = true, fiDisciplina = true, fiSala = true;
+    /**
+     * String que devolve o erro dos ficheiros .txt nao encontrados
+     */
+    String textoErro = "";
 
     //codigo para leitura de salas a partir do ficheiro
     /**
@@ -73,7 +79,7 @@ public class CSV {
             } while (fi.hasNextLine());
         } catch (FileNotFoundException e) {
 //            System.out.println("Ficheiro basico Salas não encontrado.");
-            JOptionPane.showMessageDialog(null, "Ficheiro basico das salas não encontrado.");
+            fiSala = false;
             ghjk = false;
         }
         return getSalaAula();
@@ -104,7 +110,8 @@ public class CSV {
             } while (fi.hasNextLine());
         } catch (FileNotFoundException e) {
 //            System.out.println("Ficheiro basico de alunos não encontrado.");
-            JOptionPane.showMessageDialog(null, "Ficheiro basico dos alunos não encontrado.");
+//            JOptionPane.showMessageDialog(null, "Ficheiro basico dos alunos não encontrado.");
+            fiAluno = false;
             ghjk = false;
         }
         return getAluno();
@@ -134,7 +141,8 @@ public class CSV {
             } while (fi.hasNextLine());
         } catch (FileNotFoundException e) {
 //            System.out.println("Ficheiro basico de professores não encontrado.");
-            JOptionPane.showMessageDialog(null, "Ficheiro basico dos professores não encontrado.");
+//            JOptionPane.showMessageDialog(null, "Ficheiro basico dos professores não encontrado.");
+            fiProfessor = false;
             ghjk = false;
         }
         return getProfessor();
@@ -191,7 +199,8 @@ public class CSV {
             } while (fi.hasNextLine());
         } catch (FileNotFoundException e) {
 //            System.out.println("Ficheiro basico de turmas não encontrado.");
-            JOptionPane.showMessageDialog(null, "Ficheiro basico das turmas não encontrado.");
+//            JOptionPane.showMessageDialog(null, "Ficheiro basico das turmas não encontrado.");
+            fiTurma = false;
             ghjk = false;
         }
         return getTurma();
@@ -259,7 +268,8 @@ public class CSV {
             //System.out.println(professor.get(2).toStringProfessor());
         } catch (FileNotFoundException e) {
 //            System.out.println("Ficheiro basico de disciplinas não encontrado.");
-            JOptionPane.showMessageDialog(null, "Ficheiro basico das disciplinas não encontrado.");
+//            JOptionPane.showMessageDialog(null, "Ficheiro basico das disciplinas não encontrado.");
+            fiDisciplina = false;
             ghjk = false;
         }
         return getDisciplina();
@@ -322,7 +332,8 @@ public class CSV {
             } while (fi.hasNextLine());
         } catch (FileNotFoundException e) {
 //            System.out.println("Ficheiro basico de horarios não encontrado.");
-            JOptionPane.showMessageDialog(null, "Ficheiro basico dos horarios não encontrado.");
+//            JOptionPane.showMessageDialog(null, "Ficheiro basico dos horarios não encontrado.");
+            fiHorario = false;
             ghjk = false;
         }
         return getHorario();
@@ -330,37 +341,37 @@ public class CSV {
 
     public void GravarMemoriaFicheiro() throws IOException {
         try {
-            File h = new File("../pot/Ficheiros/Horario");
+            File h = new File("../pot/Ficheiros/Horario.bin");
             FileOutputStream ho = new FileOutputStream(h);
             ObjectOutputStream hoo = new ObjectOutputStream(ho);
             hoo.writeObject(getHorario());
             ho.close();
 
-            File a = new File("../pot/Ficheiros/Aluno");
+            File a = new File("../pot/Ficheiros/Aluno.bin");
             FileOutputStream al = new FileOutputStream(a);
             ObjectOutputStream alu = new ObjectOutputStream(al);
             alu.writeObject(getAluno());
             al.close();
 
-            File p = new File("../pot/Ficheiros/Professor");
+            File p = new File("../pot/Ficheiros/Professor.bin");
             FileOutputStream pr = new FileOutputStream(p);
             ObjectOutputStream pro = new ObjectOutputStream(pr);
             pro.writeObject(getProfessor());
             pr.close();
 
-            File d = new File("../pot/Ficheiros/Disciplina");
+            File d = new File("../pot/Ficheiros/Disciplina.bin");
             FileOutputStream di = new FileOutputStream(d);
             ObjectOutputStream dis = new ObjectOutputStream(di);
             dis.writeObject(getDisciplina());
             di.close();
 
-            File s = new File("../pot/Ficheiros/Salas");
+            File s = new File("../pot/Ficheiros/Salas.bin");
             FileOutputStream sa = new FileOutputStream(s);
             ObjectOutputStream sal = new ObjectOutputStream(sa);
             sal.writeObject(getSalaAula());
             sa.close();
 
-            File t = new File("../pot/Ficheiros/Turma");
+            File t = new File("../pot/Ficheiros/Turma.bin");
             FileOutputStream tu = new FileOutputStream(t);
             ObjectOutputStream tur = new ObjectOutputStream(tu);
             tur.writeObject(getTurma());
@@ -373,32 +384,32 @@ public class CSV {
 
     public void LerMemoriaFicheiro() throws IOException, ClassNotFoundException {
         try {
-            FileInputStream h = new FileInputStream("../pot/Ficheiros/Horario");
+            FileInputStream h = new FileInputStream("../pot/Ficheiros/Horario.bin");
             ObjectInputStream ho = new ObjectInputStream(h);
             this.horario = (ArrayList<Horario>) ho.readObject();
             h.close();
 
-            FileInputStream a = new FileInputStream("../pot/Ficheiros/Aluno");
+            FileInputStream a = new FileInputStream("../pot/Ficheiros/Aluno.bin");
             ObjectInputStream al = new ObjectInputStream(a);
             this.aluno = (ArrayList<Aluno>) al.readObject();
             a.close();
 
-            FileInputStream p = new FileInputStream("../pot/Ficheiros/Professor");
+            FileInputStream p = new FileInputStream("../pot/Ficheiros/Professor.bin");
             ObjectInputStream po = new ObjectInputStream(p);
             this.professor = (ArrayList<Professor>) po.readObject();
             p.close();
 
-            FileInputStream s = new FileInputStream("../pot/Ficheiros/Salas");
+            FileInputStream s = new FileInputStream("../pot/Ficheiros/Salas.bin");
             ObjectInputStream sa = new ObjectInputStream(s);
             this.salaAula = (ArrayList<SalaAula>) sa.readObject();
             s.close();
 
-            FileInputStream d = new FileInputStream("../pot/Ficheiros/Disciplina");
+            FileInputStream d = new FileInputStream("../pot/Ficheiros/Disciplina.bin");
             ObjectInputStream di = new ObjectInputStream(d);
             this.disciplina = (ArrayList<Disciplina>) di.readObject();
             d.close();
 
-            FileInputStream t = new FileInputStream("../pot/Ficheiros/Turma");
+            FileInputStream t = new FileInputStream("../pot/Ficheiros/Turma.bin");
             ObjectInputStream tu = new ObjectInputStream(t);
             this.turma = (ArrayList<Turma>) tu.readObject();
             t.close();
@@ -409,8 +420,32 @@ public class CSV {
         }
     }
 
+    public void testTXT() {
+        if (isGhjk() == false) {
+            if (fiAluno == false) {
+                textoErro += "Ficheiro basico dos alunos não encontrado.\n";
+            }
+            if (fiProfessor == false) {
+                textoErro += "Ficheiro basico dos professores não encontrado.\n";
+            }
+            if (fiTurma == false) {
+                textoErro += "Ficheiro basico das turmas não encontrado.\n";
+            }
+            if (fiHorario == false) {
+                textoErro += "Ficheiro basico dos horarios não encontrado.\n";
+            }
+            if (fiDisciplina == false) {
+                textoErro += "Ficheiro basico das disciplinas não encontrado.\n";
+            }
+            if (fiSala == false) {
+                textoErro += "Ficheiro basico das salas não encontrado.\n";
+            }
+            JOptionPane.showMessageDialog(null, textoErro);
+        }
+    }
+
     public void test() {
-        if (dfgh == false && ghjk == false) {
+        if (isDfgh() == false && isGhjk() == false) {
             JOptionPane.showMessageDialog(null, "Não é possível arrancar o programa "
                     + "sem ficheiros binários\n e/ou sem os ficheiros basicos, por favor "
                     + "adicione os ficheiros\n basicos/binários para que o programa funcione.\n"
@@ -458,5 +493,19 @@ public class CSV {
      */
     public ArrayList<Horario> getHorario() {
         return horario;
+    }
+
+    /**
+     * @return the ghjk
+     */
+    public boolean isGhjk() {
+        return ghjk;
+    }
+
+    /**
+     * @return the dfgh
+     */
+    public boolean isDfgh() {
+        return dfgh;
     }
 }

@@ -49,16 +49,19 @@ public class Main {
             horarios = ola.Horario();
             System.out.println("Novo.");
         }
+        ola.testTXT();
         ola.GravarMemoriaFicheiro();
         ola.test();
         Imagens img = new Imagens();
-        @SuppressWarnings("unused")
-        SplashScreen splash = new SplashScreen(3000, img.splash, true);
-        //lerEstadoAnterior();
-        //adicionarLinguas();
-        try {
-            maingui = new JanelaPrincipal();
-        } catch (URISyntaxException e) {
+        if (ola.isDfgh() == true || ola.isGhjk() == true) {
+            @SuppressWarnings("unused")
+            SplashScreen splash = new SplashScreen(3000, img.splash, true);
+            //lerEstadoAnterior();
+            //adicionarLinguas();
+            try {
+                maingui = new JanelaPrincipal();
+            } catch (URISyntaxException e) {
+            }
         }
 
     }

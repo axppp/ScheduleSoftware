@@ -45,6 +45,7 @@ public class TesteGestao {
             horarios = ola.Horario();
             System.out.println("Novo.");
         }
+        ola.testTXT();
         ola.GravarMemoriaFicheiro();
         ola.test();
 

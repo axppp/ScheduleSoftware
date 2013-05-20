@@ -409,7 +409,7 @@ public class AppConfig extends JFrame {
 
         // Labels
         JLabel lb = new JLabel("Edição da celula de Horário:");
-        
+
         //List
         JList l = new JList();
 
@@ -437,6 +437,9 @@ public class AppConfig extends JFrame {
 
         // Color
         lb.setForeground(Color.white);
+
+        //Lista
+        lb.add(l);
 
         // Buttons
         configButtons(botoes);
@@ -503,7 +506,8 @@ public class AppConfig extends JFrame {
 //        buttons_panel.add(impResu);
 
         main_panel.add(lb, BorderLayout.NORTH);
-        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+        main_panel.add(l, BorderLayout.SOUTH);
+//        main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
         menu.add(main_panel);
     }
