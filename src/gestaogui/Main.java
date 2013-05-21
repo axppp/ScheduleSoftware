@@ -31,6 +31,31 @@ public class Main {
      */
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         //Inserção dos ficheiros de alunos, professores, disciplinas, salas, turmas, e horários.
+        lerEstado();
+
+        Imagens img = new Imagens();
+
+        if (ola.isDfgh() == true || ola.isGhjk() == true) {
+            @SuppressWarnings("unused")
+            SplashScreen splash = new SplashScreen(3000, img.splash, true);
+            //lerEstadoAnterior();
+            //adicionarLinguas();
+            try {
+                maingui = new JanelaPrincipal();
+            } catch (URISyntaxException e) {
+            }
+        }
+    }
+
+    public static void gravarEstado() {
+        try {
+            ola.GravarMemoriaFicheiro();
+        } catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public static void lerEstado() throws IOException, ClassNotFoundException {
 
         ola.LerMemoriaFicheiro();
 
@@ -54,37 +79,6 @@ public class Main {
 
         ola.testTXT();
         ola.test();
-
-        Imagens img = new Imagens();
-
-        if (ola.isDfgh() == true || ola.isGhjk() == true) {
-            @SuppressWarnings("unused")
-            SplashScreen splash = new SplashScreen(3000, img.splash, true);
-            //lerEstadoAnterior();
-            //adicionarLinguas();
-            try {
-                maingui = new JanelaPrincipal();
-            } catch (URISyntaxException e) {
-            }
-        }
-    }
-
-    public static void gravarEstado() {
-        try {
-            ola.GravarMemoriaFicheiro();
-            /*
-             * try { ObjectOutputStream out = new ObjectOutputStream(new
-             * FileOutputStream("estado.bin")); out.writeObject(atleta);
-             * out.writeObject(modalidades); out.writeObject(provas);
-             * out.writeObject(paises); out.writeObject(equipas);
-             * out.writeObject(disciplinas); out.writeObject(jogos);
-             * out.writeObject(lingua); out.close(); } catch (IOException exc) {
-             * JOptionPane.showMessageDialog(maingui, "Status not saved!",
-             * "Closing Application", JOptionPane.ERROR_MESSAGE);
-             */
-        } catch (IOException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     /**

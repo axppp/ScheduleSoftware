@@ -60,7 +60,7 @@ public class CSV {
      */
     public ArrayList<SalaAula> Sala() throws FileNotFoundException {
         try {
-            Scanner fi = new Scanner(new File("../pot/Ficheiros/salas.txt"));
+            Scanner fi = new Scanner(new File("src/Ficheiros/salas.txt"));
             String bb = fi.nextLine();
 
             String[] c;
@@ -97,7 +97,7 @@ public class CSV {
     public ArrayList<Aluno> Alunos() throws FileNotFoundException {
 
         try {
-            Scanner fi = new Scanner(new File("../pot/Ficheiros/alunos.txt"));
+            Scanner fi = new Scanner(new File("src/Ficheiros/alunos.txt"));
             String bb = fi.nextLine();
             String[] c;
             String[] c1;
@@ -126,7 +126,7 @@ public class CSV {
     public ArrayList<Professor> Professor() throws FileNotFoundException {
         try {
 
-            Scanner fi = new Scanner(new File("../pot/Ficheiros/professores.txt"));
+            Scanner fi = new Scanner(new File("src/Ficheiros/professores.txt"));
             String bb = fi.nextLine();
 
             String[] c;
@@ -156,7 +156,7 @@ public class CSV {
      */
     public ArrayList<Turma> Turmas() throws FileNotFoundException {
         try {
-            Scanner fi = new Scanner(new File("../pot/Ficheiros/turmas.txt"));
+            Scanner fi = new Scanner(new File("src/Ficheiros/turmas.txt"));
             String bb = fi.nextLine();
 
             String[] c;
@@ -216,8 +216,8 @@ public class CSV {
     public ArrayList<Disciplina> Disciplinas() throws FileNotFoundException {
 
         try {
-            Scanner fi = new Scanner(new File("../pot/Ficheiros/disciplinas.txt"));
-            Scanner ji = new Scanner(new File("../pot/Ficheiros/disciplinas.txt"));
+            Scanner fi = new Scanner(new File("src/Ficheiros/disciplinas.txt"));
+            Scanner ji = new Scanner(new File("src/Ficheiros/disciplinas.txt"));
             String bb = fi.nextLine();
             String bbb = ji.nextLine();
 // leitura de ficheiro linha-a-linha
@@ -283,7 +283,7 @@ public class CSV {
      */
     public ArrayList<Horario> Horario() throws FileNotFoundException {
         try {
-            Scanner fi = new Scanner(new File("../pot/Ficheiros/horarios.txt"));
+            Scanner fi = new Scanner(new File("src/Ficheiros/horarios.txt"));
             String bb = fi.nextLine();
 
             int tipo = 2;
@@ -341,37 +341,37 @@ public class CSV {
 
     public void GravarMemoriaFicheiro() throws IOException {
         try {
-            File h = new File("../pot/Ficheiros/Horario.bin");
+            File h = new File("src/Ficheiros/Horario.bin");
             FileOutputStream ho = new FileOutputStream(h);
             ObjectOutputStream hoo = new ObjectOutputStream(ho);
             hoo.writeObject(getHorario());
             ho.close();
 
-            File a = new File("../pot/Ficheiros/Aluno.bin");
+            File a = new File("src/Ficheiros/Aluno.bin");
             FileOutputStream al = new FileOutputStream(a);
             ObjectOutputStream alu = new ObjectOutputStream(al);
             alu.writeObject(getAluno());
             al.close();
 
-            File p = new File("../pot/Ficheiros/Professor.bin");
+            File p = new File("src/Ficheiros/Professor.bin");
             FileOutputStream pr = new FileOutputStream(p);
             ObjectOutputStream pro = new ObjectOutputStream(pr);
             pro.writeObject(getProfessor());
             pr.close();
 
-            File d = new File("../pot/Ficheiros/Disciplina.bin");
+            File d = new File("src/Ficheiros/Disciplina.bin");
             FileOutputStream di = new FileOutputStream(d);
             ObjectOutputStream dis = new ObjectOutputStream(di);
             dis.writeObject(getDisciplina());
             di.close();
 
-            File s = new File("../pot/Ficheiros/Salas.bin");
+            File s = new File("src/Ficheiros/Salas.bin");
             FileOutputStream sa = new FileOutputStream(s);
             ObjectOutputStream sal = new ObjectOutputStream(sa);
             sal.writeObject(getSalaAula());
             sa.close();
 
-            File t = new File("../pot/Ficheiros/Turma.bin");
+            File t = new File("src/Ficheiros/Turma.bin");
             FileOutputStream tu = new FileOutputStream(t);
             ObjectOutputStream tur = new ObjectOutputStream(tu);
             tur.writeObject(getTurma());
@@ -384,32 +384,32 @@ public class CSV {
 
     public void LerMemoriaFicheiro() throws IOException, ClassNotFoundException {
         try {
-            FileInputStream h = new FileInputStream("../pot/Ficheiros/Horario.bin");
+            FileInputStream h = new FileInputStream("src/Ficheiros/Horario.bin");
             ObjectInputStream ho = new ObjectInputStream(h);
             this.horario = (ArrayList<Horario>) ho.readObject();
             h.close();
 
-            FileInputStream a = new FileInputStream("../pot/Ficheiros/Aluno.bin");
+            FileInputStream a = new FileInputStream("src/Ficheiros/Aluno.bin");
             ObjectInputStream al = new ObjectInputStream(a);
             this.aluno = (ArrayList<Aluno>) al.readObject();
             a.close();
 
-            FileInputStream p = new FileInputStream("../pot/Ficheiros/Professor.bin");
+            FileInputStream p = new FileInputStream("src/Ficheiros/Professor.bin");
             ObjectInputStream po = new ObjectInputStream(p);
             this.professor = (ArrayList<Professor>) po.readObject();
             p.close();
 
-            FileInputStream s = new FileInputStream("../pot/Ficheiros/Salas.bin");
+            FileInputStream s = new FileInputStream("src/Ficheiros/Salas.bin");
             ObjectInputStream sa = new ObjectInputStream(s);
             this.salaAula = (ArrayList<SalaAula>) sa.readObject();
             s.close();
 
-            FileInputStream d = new FileInputStream("../pot/Ficheiros/Disciplina.bin");
+            FileInputStream d = new FileInputStream("src/Ficheiros/Disciplina.bin");
             ObjectInputStream di = new ObjectInputStream(d);
             this.disciplina = (ArrayList<Disciplina>) di.readObject();
             d.close();
 
-            FileInputStream t = new FileInputStream("../pot/Ficheiros/Turma.bin");
+            FileInputStream t = new FileInputStream("src/Ficheiros/Turma.bin");
             ObjectInputStream tu = new ObjectInputStream(t);
             this.turma = (ArrayList<Turma>) tu.readObject();
             t.close();

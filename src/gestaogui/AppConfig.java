@@ -84,6 +84,7 @@ public class AppConfig extends JFrame {
      * TabbedPane that will hold various tabs.
      */
     private JTabbedPane jtp = new JTabbedPane();
+    
     DefaultListModel ModeloListaHorario = new DefaultListModel();
 
     /**
@@ -173,7 +174,7 @@ public class AppConfig extends JFrame {
 
         // Tabs
         jtp.addTab("Gerir", menu);
-        jtp.addTab("Ver", exp);
+        jtp.addTab("Listar", exp);
         jtp.addTab("Calcular", ad);
         jtp.addTab("Sala Livre", edit);
         jtp.addTab("Cenas", list);
@@ -428,8 +429,6 @@ public class AppConfig extends JFrame {
         }
         final JList l = new JList(ModeloListaHorario);
         l.setValueIsAdjusting(true);
-//        Horario h = new Horario();
-//        h = new Horario(t, d, 1, 4, 11, 2, p, s);
 
         //Formulario
         JLabel la0 = new JLabel("Turma");

@@ -286,7 +286,7 @@ public class Horario implements Serializable {
                         JOptionPane.showMessageDialog(null, "O professor ja ta a dar aula.");
 //                        System.out.println("O professor ja ta a dar aula.");
                     } else {
-                        if (this.getAulas() != cont) {
+                        if (this.getAulas() != cont && this.getCodigo_sala().equalsIgnoreCase(horario.get(i).getCodigo_sala())) {
                             flag = false;
                             JOptionPane.showMessageDialog(null, "A sala não é propria para " + tsala);
 //                            System.out.println("A sala não é propria para " + tsala);
@@ -347,7 +347,6 @@ public class Horario implements Serializable {
      * @return inteiro que caracteriza o tipo de sala 1-Teorica 2-Pratica
      */
     public int getAulas() {
-
         if (aulas.equals(aulas.T)) {
             return 1;
         } else if (aulas.equals(aulas.P)) {
