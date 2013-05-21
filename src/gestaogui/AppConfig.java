@@ -24,7 +24,7 @@ public class AppConfig extends JFrame {
      *
      * @see Panel Panel Class
      */
-    private Painel menu;
+    private Painel gerirHorarios;
     /**
      * Custom Panel that contains a menu within another panel.
      *
@@ -34,7 +34,7 @@ public class AppConfig extends JFrame {
      *
      * @see Panel Panel Class
      */
-    private Painel exp;
+    private Painel listarHorarios;
     /**
      * Custom Panel that contains a menu within another panel.
      *
@@ -44,7 +44,7 @@ public class AppConfig extends JFrame {
      *
      * @see Panel Panel Class
      */
-    private Painel ad;
+    private Painel listarDados;
     /**
      * Custom Panel that contains a menu within another panel.
      *
@@ -54,7 +54,7 @@ public class AppConfig extends JFrame {
      *
      * @see Panel Panel Class
      */
-    private Painel edit;
+    private Painel calculo;
     /**
      * Custom Panel that contains a menu within another panel.
      *
@@ -64,7 +64,7 @@ public class AppConfig extends JFrame {
      *
      * @see Panel Panel Class
      */
-    private Painel list;
+    private Painel salaLivre;
     /**
      * Instance of the class
      * <code>Imagens</code>, used to load images in order to fill buttons and
@@ -173,11 +173,11 @@ public class AppConfig extends JFrame {
         getContentPane().add(jtp);
 
         // Tabs
-        jtp.addTab("Gerir Horarios", menu);
-        jtp.addTab("Listar Horaios", exp);
-        jtp.addTab("Listar Dados", ad);
-        jtp.addTab("Calculo", edit);
-        jtp.addTab("Sala Livre", list);
+        jtp.addTab("Gerir Horarios", gerirHorarios);
+        jtp.addTab("Listar Horaios", listarHorarios);
+        jtp.addTab("Listar Dados", listarDados);
+        jtp.addTab("Calculo", calculo);
+        jtp.addTab("Sala Livre", salaLivre);
         jtp.setBackground(new Color(61, 71, 78));
         jtp.setForeground(Color.WHITE);
 
@@ -201,17 +201,17 @@ public class AppConfig extends JFrame {
     private void addPaineis() {
 
         // Panels
-        menu = new Painel(img.bg3);
-        exp = new Painel(img.bg3);
-        ad = new Painel(img.bg3);
-        edit = new Painel(img.bg3);
-        list = new Painel(img.bg3);
+        gerirHorarios = new Painel(img.bg3);
+        listarHorarios = new Painel(img.bg3);
+        listarDados = new Painel(img.bg3);
+        calculo = new Painel(img.bg3);
+        salaLivre = new Painel(img.bg3);
 
-        menu.setOpaque(false);
-        exp.setOpaque(false);
-        ad.setOpaque(false);
-        edit.setOpaque(false);
-        list.setOpaque(false);
+        gerirHorarios.setOpaque(false);
+        listarHorarios.setOpaque(false);
+        listarDados.setOpaque(false);
+        calculo.setOpaque(false);
+        salaLivre.setOpaque(false);
 
     }
 
@@ -257,7 +257,7 @@ public class AppConfig extends JFrame {
         final JPanel buttons_panel = new JPanel(new GridLayout(5, 2, 10, 10));
 
         // Layout
-        list.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        calculo.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
         main_panel.setLayout(new BorderLayout());
 
         // Buttons
@@ -386,7 +386,7 @@ public class AppConfig extends JFrame {
         main_panel.add(lb, BorderLayout.NORTH);
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
-        list.add(main_panel);
+        calculo.add(main_panel);
 
     }
 
@@ -414,7 +414,7 @@ public class AppConfig extends JFrame {
 
         // Layout
         main_panel.setLayout(new BorderLayout());
-        menu.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 15));
+        gerirHorarios.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 15));
 
         // Labels
         JLabel lb = new JLabel("Edição da celula de Horário:");
@@ -624,8 +624,8 @@ public class AppConfig extends JFrame {
 //        main_panel.add(buttons_panel, BorderLayout.SOUTH);
         main_panel.add(formulario_panel, BorderLayout.SOUTH);
 
-        menu.add(main_panel, BorderLayout.NORTH);
-        menu.add(buttons_panel, BorderLayout.SOUTH);
+        gerirHorarios.add(main_panel, BorderLayout.NORTH);
+        gerirHorarios.add(buttons_panel, BorderLayout.SOUTH);
 
     }
 
@@ -645,18 +645,18 @@ public class AppConfig extends JFrame {
         JPanel buttons_panel = new JPanel(new GridLayout(4, 2, 10, 10));
 
         // Layouts
-        exp.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        salaLivre.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
         main_panel.setLayout(new BorderLayout());
 
         // Labels
         JLabel lb = new JLabel("     Export:");
 
         // Buttons
-        Botao expCountry = new Botao(img.expCountry, img.expCountry_o);
+        Botao expC= new Botao(img.expCountry, img.expCountry_o);
         Botao expDisc = new Botao(img.expDisc, img.expDisc_o);
         Botao expResu = new Botao(img.expResu, img.expResu_o);
         Botao expPro = new Botao(img.expEv, img.expEv_o);
-        Botao[] botoes = {expCountry, expDisc, expResu, expPro};
+        Botao[] botoes = {expC, expDisc, expResu, expPro};
 
         // Customize
 
@@ -679,7 +679,7 @@ public class AppConfig extends JFrame {
 
         // ActionListeners
         // Countries
-        expCountry.addActionListener(new ActionListener() {
+        expC.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
 //				csv.exportPais(AppConfig.this, Main.getPaises());
@@ -735,7 +735,7 @@ public class AppConfig extends JFrame {
         });
 
         // Adding to panels
-        buttons_panel.add(expCountry);
+        buttons_panel.add(expC);
         buttons_panel.add(expDisc);
         buttons_panel.add(expResu);
         buttons_panel.add(expPro);
@@ -743,7 +743,7 @@ public class AppConfig extends JFrame {
         main_panel.add(lb, BorderLayout.NORTH);
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
-        exp.add(main_panel);
+        salaLivre.add(main_panel);
     }
 
     /**
@@ -762,7 +762,7 @@ public class AppConfig extends JFrame {
         JPanel buttons_panel = new JPanel(new GridLayout(3, 2, 10, 10));
 
         // Layout
-        ad.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        listarHorarios.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
         main_panel.setLayout(new BorderLayout());
 
         // Labels
@@ -841,7 +841,7 @@ public class AppConfig extends JFrame {
         main_panel.add(lbl_add, BorderLayout.NORTH);
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
-        ad.add(main_panel);
+        listarHorarios.add(main_panel);
 
     }
 
@@ -861,7 +861,7 @@ public class AppConfig extends JFrame {
         JPanel buttons_panel = new JPanel(new GridLayout(3, 2, 10, 10));
 
         // Layout
-        edit.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        listarDados.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
         main_panel.setLayout(new BorderLayout());
 
         // Labels
@@ -952,6 +952,6 @@ public class AppConfig extends JFrame {
         main_panel.add(lbl_edit, BorderLayout.NORTH);
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
-        edit.add(main_panel);
+        listarDados.add(main_panel);
     }
 }

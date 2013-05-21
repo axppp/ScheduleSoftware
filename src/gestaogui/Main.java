@@ -21,25 +21,17 @@ public class Main {
     public static ArrayList<Turma> t;
     public static ArrayList<Disciplina> d;
     public static ArrayList<Horario> h;
-    static CSV ola = new CSV();
 
-    /**
-     * The main method to start the program. This method will show a splash
-     * image while loads the previous state of the program.
-     *
-     * @param args command line parameters
-     */
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         //Inserção dos ficheiros de alunos, professores, disciplinas, salas, turmas, e horários.
         lerEstado();
 
         Imagens img = new Imagens();
-
+        CSV ola = new CSV();
         if (ola.isDfgh() == true || ola.isGhjk() == true) {
             @SuppressWarnings("unused")
             SplashScreen splash = new SplashScreen(3000, img.splash, true);
-            //lerEstadoAnterior();
-            //adicionarLinguas();
+            
             try {
                 maingui = new JanelaPrincipal();
             } catch (URISyntaxException e) {
@@ -48,6 +40,7 @@ public class Main {
     }
 
     public static void gravarEstado() {
+        CSV ola = new CSV();
         try {
             ola.GravarMemoriaFicheiro();
         } catch (IOException ex) {
@@ -56,7 +49,7 @@ public class Main {
     }
 
     public static void lerEstado() throws IOException, ClassNotFoundException {
-
+        CSV ola = new CSV();
         ola.LerMemoriaFicheiro();
 
         if (!ola.getAluno().isEmpty() && !ola.getDisciplina().isEmpty() && !ola.getHorario().isEmpty() && !ola.getProfessor().isEmpty() && !ola.getSalaAula().isEmpty() && !ola.getTurma().isEmpty()) {
