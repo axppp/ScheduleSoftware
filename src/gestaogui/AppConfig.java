@@ -173,11 +173,11 @@ public class AppConfig extends JFrame {
         getContentPane().add(jtp);
 
         // Tabs
-        jtp.addTab("Gerir", menu);
-        jtp.addTab("Listar", exp);
-        jtp.addTab("Calcular", ad);
-        jtp.addTab("Sala Livre", edit);
-        jtp.addTab("Cenas", list);
+        jtp.addTab("Gerir Horarios", menu);
+        jtp.addTab("Listar Horaios", exp);
+        jtp.addTab("Listar Dados", ad);
+        jtp.addTab("Calculo", edit);
+        jtp.addTab("Sala Livre", list);
         jtp.setBackground(new Color(61, 71, 78));
         jtp.setForeground(Color.WHITE);
 
