@@ -1,8 +1,5 @@
 package gestaologica;
 
-
-
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +13,7 @@ import java.util.Comparator;
  *
  * @author axppp
  */
-public class SalaAula implements Serializable{
+public class SalaAula implements Serializable {
 
     /**
      * variavel que vai guardar o codigo da sala
@@ -382,5 +379,9 @@ public class SalaAula implements Serializable{
     @Override
     public String toString() {
         return "SalaAula{" + "codigo=" + codigo + ", tipoSala=" + getTipoSala() + ", capacidade=" + capacidade + '}';
+    }
+
+    public String toStringSigla() {
+        return codigo;
     }
 }

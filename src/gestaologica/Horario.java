@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import javax.swing.JOptionPane;
 
 /*
  * To change this template, choose Tools | Templates and open the template in
@@ -92,7 +93,7 @@ public class Horario implements Serializable {
      * @param disc
      * @return Metodo para alterar um horario
      */
-    public void alterarHorario(Horario horarioNovo, ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
+    public int alterarHorario(Horario horarioNovo, ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
 
         if (validaHorario(this, horarioNovo, horarios, sala, disc) == true) {
             this.setDesignacao(horarioNovo.getDesignacao());
@@ -103,10 +104,15 @@ public class Horario implements Serializable {
             this.setDuracaoAula(horarioNovo.getDuracaoAula());
             this.setSigla_professor(horarioNovo.getSigla_professor());
             this.setCodigo_sala(horarioNovo.getCodigo_sala());
-            System.out.println("Horario alterado com sucesso!\n");
+            JOptionPane.showMessageDialog(null, "Horario alterado com sucesso!\n");
+//            System.out.println("Horario alterado com sucesso!\n");
+            return 1;
         } else {
-            System.out.println("Impossivel alterar horario, porque o horario nao é valido!!!" + "\n");
+            JOptionPane.showMessageDialog(null, "Impossivel alterar horario, porque o horario nao é valido!!!" + "\n");
+//            System.out.println("Impossivel alterar horario, porque o horario nao é valido!!!" + "\n");
+            return 2;
         }
+
     }
 
     /**
@@ -120,9 +126,11 @@ public class Horario implements Serializable {
     public void addHorario(ArrayList<Horario> horarios, ArrayList<SalaAula> sala, ArrayList<Disciplina> disc) {
         if (validaHorarioNovo(horarios, sala, disc) == true) {
             horarios.add(this);
-            System.out.println("O horario foi aprovado!\n");
+            JOptionPane.showMessageDialog(null, "O horario foi aprovado!\n");
+//            System.out.println("O horario foi aprovado!\n");
         } else {
-            System.out.println("Impossivel criar horario, porque o horario nao é valido!!!" + "\n");
+            JOptionPane.showMessageDialog(null, "Impossivel criar horario, porque o horario nao é valido!!!" + "\n");
+//            System.out.println("Impossivel criar horario, porque o horario nao é valido!!!" + "\n");
         }
 //        return horarios;
     }
@@ -155,7 +163,8 @@ public class Horario implements Serializable {
                 if (tsala.equalsIgnoreCase("ANFITIATRO")) {
                     nome = true;
                 } else {
-                    System.out.println("Este Professor so da Aulas teoricas nesta disciplina.");
+                    JOptionPane.showMessageDialog(null, "Este Professor so da Aulas teoricas nesta disciplina.");
+//                    System.out.println("Este Professor so da Aulas teoricas nesta disciplina.");
                     validacao = false;
                 }
             }
@@ -167,7 +176,8 @@ public class Horario implements Serializable {
         }
         if (nome == false) {
             validacao = false;
-            System.out.println("Esse Professor não exerce essa disciplina.");
+            JOptionPane.showMessageDialog(null, "Esse Professor não exerce essa disciplina.");
+//            System.out.println("Esse Professor não exerce essa disciplina.");
         }
         if (tsala.equalsIgnoreCase("ANFITIATRO")) {
             cont = 1;
@@ -177,22 +187,28 @@ public class Horario implements Serializable {
         do {
             if (horarioANT.equals(novo)) {
                 validacao = false;
-                System.out.println("Esse horario é igual ao que quer alterar.");
+                JOptionPane.showMessageDialog(null, "Esse horario é igual ao que quer alterar.");
+//                System.out.println("Esse horario é igual ao que quer alterar.");
             } else {
                 if (novo.getCodigo_sala().equalsIgnoreCase(horarios.get(i).getCodigo_sala()) && novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio()) {
                     validacao = false;
-                    System.out.println("A sala ja ta a ser ocupada.");
+                    JOptionPane.showMessageDialog(null, "A sala ja ta a ser ocupada.");
+//                    System.out.println("A sala ja ta a ser ocupada.");
                 } else {
                     if (novo.getDesignacao().equalsIgnoreCase(horarios.get(i).getDesignacao()) && novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio()) {
                         validacao = false;
-                        System.out.println("A turma ja tem aula.");
+                        JOptionPane.showMessageDialog(null, "A turma ja tem aula.");
+//                        System.out.println("A turma ja tem aula.");
                     } else {
                         if (novo.getSigla_professor().equalsIgnoreCase(horarios.get(i).getSigla_professor()) && novo.getDia_semana() == horarios.get(i).getDia_semana() && novo.getHora_inicio() == horarios.get(i).getHora_inicio()) {
                             validacao = false;
-                            System.out.println("O professor ja ta a dar aula.");
+                            JOptionPane.showMessageDialog(null, "O professor ja ta a dar aula.");
+//                            System.out.println("O professor ja ta a dar aula.");
+//                            System.out.println(i);
                         } else {
                             if (novo.getAulas() != cont) {
-                                System.out.println("A sala não é propria para " + tsala);
+                                JOptionPane.showMessageDialog(null, "A sala não é propria para " + tsala);
+//                                System.out.println("A sala não é propria para " + tsala);
                                 validacao = false;
                             }
                         }
@@ -234,7 +250,8 @@ public class Horario implements Serializable {
                     nome = true;
                 } else {
                     flag = false;
-                    System.out.println("Esse Professor só da teoricas.");
+                    JOptionPane.showMessageDialog(null, "Esse Professor só da teoricas.");
+//                    System.out.println("Esse Professor só da teoricas.");
                 }
             }
             for (int j = 0; j < disc.get(i).getProfessores().size(); j++) {
@@ -245,7 +262,8 @@ public class Horario implements Serializable {
         }
         if (nome == false) {
             flag = false;
-            System.out.println("Esse Professor não exerce essa disciplina.");
+            JOptionPane.showMessageDialog(null, "Esse Professor não exerce essa disciplina.");
+//            System.out.println("Esse Professor não exerce essa disciplina.");
         }
         if (tsala.equalsIgnoreCase("ANFITIATRO")) {
             cont = 1;
@@ -255,19 +273,23 @@ public class Horario implements Serializable {
         for (int i = 0; i < horario.size(); i++) {
             if (this.getCodigo_sala().equalsIgnoreCase(horario.get(i).getCodigo_sala()) && this.getDia_semana() == horario.get(i).getDia_semana() && this.getHora_inicio() == horario.get(i).getHora_inicio()) {
                 flag = false;
-                System.out.println("A sala ja ta a ser ocupada.");
+                JOptionPane.showMessageDialog(null, "A sala ja ta a ser ocupada.");
+//                System.out.println("A sala ja ta a ser ocupada.");
             } else {
                 if (this.getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao()) && this.getDia_semana() == horario.get(i).getDia_semana() && this.getHora_inicio() == horario.get(i).getHora_inicio()) {
                     flag = false;
-                    System.out.println("A turma ja tem aula.");
+                    JOptionPane.showMessageDialog(null, "A turma ja tem aula.");
+//                    System.out.println("A turma ja tem aula.");
                 } else {
                     if (this.getSigla_professor().equalsIgnoreCase(horario.get(i).getSigla_professor()) && this.getDia_semana() == horario.get(i).getDia_semana() && this.getHora_inicio() == horario.get(i).getHora_inicio()) {
                         flag = false;
-                        System.out.println("O professor ja ta a dar aula.");
+                        JOptionPane.showMessageDialog(null, "O professor ja ta a dar aula.");
+//                        System.out.println("O professor ja ta a dar aula.");
                     } else {
                         if (this.getAulas() != cont) {
                             flag = false;
-                            System.out.println("A sala não é propria para " + tsala);
+                            JOptionPane.showMessageDialog(null, "A sala não é propria para " + tsala);
+//                            System.out.println("A sala não é propria para " + tsala);
                         }
                     }
                 }
@@ -285,7 +307,8 @@ public class Horario implements Serializable {
     public void apagarHorario(ArrayList<Horario> horarios) {
         for (int i = 0; i < horarios.size(); i++) {
             if (horarios.get(i).equals(this)) {
-                System.out.println(horarios.get(i) + " apagado com sucesso!\n");
+                JOptionPane.showMessageDialog(null, "Horario[" + horarios.get(i).toString() + "] apagado com sucesso!\n");
+//                System.out.println(horarios.get(i) + " apagado com sucesso!\n");
                 horarios.remove(i);
 
             }

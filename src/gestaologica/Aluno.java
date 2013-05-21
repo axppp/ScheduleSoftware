@@ -141,6 +141,7 @@ public class Aluno extends Pessoa implements Serializable{
         System.out.println("O Aluno " + super.getNome() + " tem " + j + " horas de carga horaria semanal." + "\n");
         return j;
     }
+    
 
     /**
      * @return numeroAluno

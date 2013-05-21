@@ -1,8 +1,5 @@
 package gestaologica;
 
-
-
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +13,7 @@ import java.util.Comparator;
  *
  * @author Paulo Ponciano
  */
-public class Disciplina implements Serializable{
+public class Disciplina implements Serializable {
 
     /**
      * variavel que guarda a sigla da disciplina
@@ -183,7 +180,6 @@ public class Disciplina implements Serializable{
 //        }
 //        return h.toString() + t.toString();
 //    }
-
 //    /**
 //     *
 //     * @param disciplina
@@ -206,7 +202,6 @@ public class Disciplina implements Serializable{
 //        }
 //        return h.toString();
 //    }
-
     /**
      *
      * @return sigla
@@ -312,5 +307,9 @@ public class Disciplina implements Serializable{
     public String toString() {
         return "Disciplina com a sigla " + sigla + " e a designacao de " + designacao + " , tem " + numHorasTeoricas + "horas teoricas e " + numHorasPraticas + " horas praticas. O professor que lecciona as aulas teorica é " + sigla_prof_t + " , e os  professores das aulas praticas sao " + professores.toString() + "\n";
 
+    }
+
+    public String toStringSigla() {
+        return sigla;
     }
 }

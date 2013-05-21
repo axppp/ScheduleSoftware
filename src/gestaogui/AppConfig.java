@@ -84,6 +84,7 @@ public class AppConfig extends JFrame {
      * TabbedPane that will hold various tabs.
      */
     private JTabbedPane jtp = new JTabbedPane();
+    DefaultListModel ModeloListaHorario = new DefaultListModel();
 
     /**
      * Object AddDados important to control how tabs behave, if the object has
@@ -398,7 +399,7 @@ public class AppConfig extends JFrame {
      * method.
      */
     private void EditCelulaHorario() {
-        Main m = new Main();
+        final Main m = new Main();
         Turma t = new Turma();
         Disciplina d = new Disciplina();
         Professor p = new Professor();
@@ -420,31 +421,71 @@ public class AppConfig extends JFrame {
         //List
         String[] v = new String[m.h.size() + 1];
         v[0] = "Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n";
-
+        ModeloListaHorario.addElement("Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n");
         for (int i = 0; i < m.h.size(); i++) {
             v[i + 1] = m.h.get(i).toStringLista();
+            ModeloListaHorario.addElement(m.h.get(i).toStringLista());
         }
-
-        JList l = new JList(v);
+        final JList l = new JList(ModeloListaHorario);
         l.setValueIsAdjusting(true);
 //        Horario h = new Horario();
 //        h = new Horario(t, d, 1, 4, 11, 2, p, s);
 
         //Formulario
         JLabel la0 = new JLabel("Turma");
-        final JTextField te0 = new JTextField();
+        String[] v0 = new String[m.t.size()];
+        for (int i = 0; i < m.t.size(); i++) {
+            v0[i] = m.t.get(i).toStringSigla();
+        }
+        final JComboBox te0 = new JComboBox(v0);
+//        final JTextField te0 = new JTextField();
+
         JLabel la1 = new JLabel("Disciplina");
-        final JTextField te1 = new JTextField();
+        String[] v1 = new String[m.d.size()];
+        for (int i = 0; i < m.d.size(); i++) {
+            v1[i] = m.d.get(i).toStringSigla();
+        }
+        final JComboBox te1 = new JComboBox(v1);
+//        final JTextField te1 = new JTextField();
+
         JLabel la2 = new JLabel("Tipo Aula");
-        final JTextField te2 = new JTextField();
+        String[] v2 = new String[2];
+        v2[0] = "t";
+        v2[1] = "p";
+        final JComboBox te2 = new JComboBox(v2);
+//        final JTextField te2 = new JTextField();
+
         JLabel la3 = new JLabel("Dia da Semana");
-        final JTextField te3 = new JTextField();
+        String[] v3 = new String[5];
+        for (int i = 0; i < 5; i++) {
+            v3[i] = "" + (2 + i);
+        }
+        final JComboBox te3 = new JComboBox(v3);
+//        final JTextField te3 = new JTextField();
+
         JLabel la4 = new JLabel("Hora de Inicio");
-        final JTextField te4 = new JTextField();
+        String[] v4 = new String[8];
+        for (int i = 0; i < 8; i++) {
+            v4[i] = "" + (8 + i);
+        }
+        final JComboBox te4 = new JComboBox(v4);
+//        final JTextField te4 = new JTextField();
+
         JLabel la5 = new JLabel("Professor");
-        final JTextField te5 = new JTextField();
+        String[] v5 = new String[m.p.size()];
+        for (int i = 0; i < m.p.size(); i++) {
+            v5[i] = m.p.get(i).toString();
+        }
+        final JComboBox te5 = new JComboBox(v5);
+//        final JTextField te5 = new JTextField();
+
         JLabel la6 = new JLabel("Sala");
-        final JTextField te6 = new JTextField();
+        String[] v6 = new String[m.s.size()];
+        for (int i = 0; i < m.s.size(); i++) {
+            v6[i] = m.s.get(i).toStringSigla();
+        }
+        final JComboBox te6 = new JComboBox(v6);
+//        final JTextField te6 = new JTextField();
 
         // Buttons
         Botao add = new Botao(img.add1, img.add1_o);
@@ -475,42 +516,57 @@ public class AppConfig extends JFrame {
         configButtons(botoes);
 
 //		 ActionListeners
-//		 intelImport
+// adicionar a celula
         add.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 int duracao = 0;
-                if (te2.getText().equalsIgnoreCase("t")) {
+                if (te2.getSelectedIndex() == 0) {
                     duracao = 1;
-                } else if (te2.getText().equalsIgnoreCase("p")) {
+                } else if (te2.getSelectedIndex() == 1) {
                     duracao = 2;
                 }
                 if (duracao == 1 || duracao == 2) {
-//                    Horario H = new Horario(te0.getText(), te1.getText(), te2.getText(), te3.getText(), te4.getText(), duracao, te5.getText(), te6.getText());
-                }else{
-                    JOptionPane.showMessageDialog(null,"Os dados não fazem parte da lista.");
+                    Horario H = new Horario(m.t.get(te0.getSelectedIndex()), m.d.get(te1.getSelectedIndex()), te2.getSelectedIndex() + 1, te3.getSelectedIndex() + 2, te4.getSelectedIndex() + 8, duracao, m.p.get(te5.getSelectedIndex()), m.s.get(te6.getSelectedIndex()));
+                    H.addHorario(m.h, m.s, m.d);
+//                    dispose();
+//                    menu.repaint();
+                    ModeloListaHorario.addElement(H.toStringLista());
+
                 }
 
             }
         });
 
-//		 dragndrop
+// editar celula
         edit.addActionListener(new ActionListener() {
 
             @SuppressWarnings("unused")
             public void actionPerformed(ActionEvent e) {
-                setVisible(false);
-//				Drag dragDg = new Drag(AppConfig.this);
-                setVisible(true);
+                int duracao = 0, val = 0;
+                if (te2.getSelectedIndex() == 0) {
+                    duracao = 1;
+                } else if (te2.getSelectedIndex() == 1) {
+                    duracao = 2;
+                }
+                if (duracao == 1 || duracao == 2) {
+                    Horario H = new Horario(m.t.get(te0.getSelectedIndex()), m.d.get(te1.getSelectedIndex()), te2.getSelectedIndex() + 1, te3.getSelectedIndex() + 2, te4.getSelectedIndex() + 8, duracao, m.p.get(te5.getSelectedIndex()), m.s.get(te6.getSelectedIndex()));
+                    val = m.h.get(l.getSelectedIndex() - 1).alterarHorario(H, m.h, m.s, m.d);
+                    if (val == 1) {
+                        ModeloListaHorario.set(l.getSelectedIndex(), H.toStringLista());
+                    }
+                }
+
 
             }
         });
 
-        // Countries
+        // remover celula
         remove.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-//				csv.importPais(null, AppConfig.this, Main.getPaises());
+                m.h.get(l.getSelectedIndex() - 1).apagarHorario(m.h);
+                ModeloListaHorario.removeElementAt(l.getSelectedIndex());
             }
         });
 
