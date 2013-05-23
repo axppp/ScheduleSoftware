@@ -8,7 +8,7 @@ import javax.swing.border.*;
 
 @SuppressWarnings("serial")
 public class AppConfig extends JFrame {
-    
+
     private ListarDados ListarD;
     private Painel gerirHorarios;
     private Painel listarHorarios;
@@ -26,17 +26,11 @@ public class AppConfig extends JFrame {
         addTabs();
         EditCelulaHorario();
 
-        
+
 
         calculoCarga();
         listarHorarios();
-<<<<<<< HEAD
-<<<<<<< HEAD
         // addEdits();
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
         listarDados();
         setProperties(600, 500, 1, true);
 
@@ -152,7 +146,7 @@ public class AppConfig extends JFrame {
         listarProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                ListarD= new ListarDados();
+                ListarD = new ListarDados();
             }
         });
 
@@ -264,14 +258,6 @@ public class AppConfig extends JFrame {
         // Borders
         main_panel.setBorder(new EmptyBorder(20, 20, 5, 20));
         buttons_panel.setBorder(new EmptyBorder(5, 20, 20, 20));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-=======
-
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
         // Opaque
         main_panel.setOpaque(false);
@@ -288,6 +274,7 @@ public class AppConfig extends JFrame {
 
         //Mouse Listener
         l.addMouseListener(new MouseAdapter() {
+
             public void mouseClicked(MouseEvent evt) {
                 JList list = (JList) evt.getSource();
                 String Tipo = "";
@@ -316,6 +303,7 @@ public class AppConfig extends JFrame {
 //		 ActionListeners
 // adicionar a celula
         add.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 int duracao = 0;
                 if (te2.getSelectedIndex() == 0) {
@@ -337,6 +325,7 @@ public class AppConfig extends JFrame {
 
 // editar celula
         edit.addActionListener(new ActionListener() {
+
             @SuppressWarnings("unused")
             public void actionPerformed(ActionEvent e) {
                 int duracao = 0, val = 0;
@@ -359,6 +348,7 @@ public class AppConfig extends JFrame {
 
         // remover celula
         remove.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 m.horarios.get(l.getSelectedIndex() - 1).apagarHorario(m.horarios);
                 ModeloListaHorario.removeElementAt(l.getSelectedIndex());
@@ -396,15 +386,9 @@ public class AppConfig extends JFrame {
 
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private void addExports() {
     }
 
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
     private void calculoCarga() {
 
         // Panels
@@ -445,50 +429,39 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-        
+
         cargaProf.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 CargaHoraria carga = new CargaHoraria();
-               
+
             }
         });
-        
-       cargaAluno.addActionListener(new ActionListener() {
+
+        cargaAluno.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
-              
-               
             }
         });
-       
-       cargaDisc.addActionListener(new ActionListener() {
+
+        cargaDisc.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
-          
-               
             }
         });
-       
-       cargaTurma.addActionListener(new ActionListener() {
+
+        cargaTurma.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
-              
-               
             }
         });
-       
-       cargaSala.addActionListener(new ActionListener() {
+
+        cargaSala.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
-               
             }
         });
-        
-<<<<<<< HEAD
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
+
 
 
 
@@ -548,32 +521,19 @@ public class AppConfig extends JFrame {
         configButtons(botoes);
         // ActionListeners
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
         listarProf.addActionListener(new ActionListener() {
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
-        listarProf.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Listar a = new Listar();
-               
+
             }
         });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         listarAluno.addActionListener(new ActionListener() {
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
-        listarAluno.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
 //					a.setVisible(false);
@@ -584,16 +544,9 @@ public class AppConfig extends JFrame {
             }
         });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         listarDisc.addActionListener(new ActionListener() {
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
-=======
->>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
-        listarDisc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
 //					a.setVisible(false);
