@@ -96,10 +96,10 @@ public class JanelaPrincipal extends JFrame {
 
             @SuppressWarnings("unused")
             public void actionPerformed(ActionEvent e) {
-               // try {
-                 //   About about = new About(JanelaPrincipal.this);
-                //} catch (URISyntaxException e1) {
-                //}
+                try {
+                    About about = new About(JanelaPrincipal.this);
+                } catch (URISyntaxException e1) {
+                }
             }
         });
 
@@ -109,7 +109,7 @@ public class JanelaPrincipal extends JFrame {
         btn3.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-             //   close();
+                close();
             }
         });
 

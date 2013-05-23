@@ -33,7 +33,7 @@ public class AppConfig extends JFrame {
         setTitle("Gerir Horário");
         addPaineis();
         addTabs();
-        //EditCelulaHorario();
+        EditCelulaHorario();
         //addExports();
         //listarHorarios();
        // addEdits();
@@ -65,7 +65,6 @@ public class AppConfig extends JFrame {
         jtp.addTab("Sala Livre", salaLivre);
         jtp.setBackground(new Color(61, 71, 78));
         jtp.setForeground(Color.WHITE);
-
     }
 
     private void addPaineis() {
@@ -152,14 +151,17 @@ public class AppConfig extends JFrame {
 
    
     private void EditCelulaHorario() {
-      /*  final Main m = new Main();
+        
+        final Main m = new Main();
         Turma t = new Turma();
         Disciplina d = new Disciplina();
         Professor p = new Professor();
         SalaAula s = new SalaAula();
         Component c = null;
+        
+        
         // Panels
-        Painel main_panel = new Painel(img.bg4);
+        Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(1, 3, 5, 5));
         JPanel formulario_panel = new JPanel(new GridLayout(4, 6, 10, 10));
         buttons_panel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -172,29 +174,30 @@ public class AppConfig extends JFrame {
         JLabel lb = new JLabel("Edição da celula de Horário:");
 
         //List
-      //  String[] v = new String[m.h.size() + 1];
-        //v[0] = "Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n";
+        String[] v = new String[m.horarios.size()];
+         System.out.println("heyyyyyyyyyyy");
+       // v[0] = "Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n";
         ModeloListaHorario.addElement("Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n");
-        for (int i = 0; i < m.h.size(); i++) {
-            v[i + 1] = m.h.get(i).toStringLista();
-            ModeloListaHorario.addElement(m.h.get(i).toStringLista());
+        for (int i = 0; i < m.horarios.size(); i++) {
+            v[i] = m.horarios.get(i).toStringLista();
+            ModeloListaHorario.addElement(m.horarios.get(i).toStringLista());
         }
         final JList l = new JList(ModeloListaHorario);
         l.setValueIsAdjusting(true);
 
         //Formulario
         JLabel la0 = new JLabel("Turma");
-        String[] v0 = new String[m.t.size()];
-        for (int i = 0; i < m.t.size(); i++) {
-            v0[i] = m.t.get(i).toStringSigla();
+        String[] v0 = new String[m.turmas.size()];
+        for (int i = 0; i < m.turmas.size(); i++) {
+            v0[i] = m.turmas.get(i).toStringSigla();
         }
         final JComboBox te0 = new JComboBox(v0);
 //        final JTextField te0 = new JTextField();
 
         JLabel la1 = new JLabel("Disciplina");
-        String[] v1 = new String[m.d.size()];
-        for (int i = 0; i < m.d.size(); i++) {
-            v1[i] = m.d.get(i).toStringSigla();
+        String[] v1 = new String[m.disciplinas.size()];
+        for (int i = 0; i < m.disciplinas.size(); i++) {
+            v1[i] = m.disciplinas.get(i).toStringSigla();
         }
         final JComboBox te1 = new JComboBox(v1);
 //        final JTextField te1 = new JTextField();
@@ -223,28 +226,27 @@ public class AppConfig extends JFrame {
 //        final JTextField te4 = new JTextField();
 
         JLabel la5 = new JLabel("Professor");
-        String[] v5 = new String[m.p.size()];
-        for (int i = 0; i < m.p.size(); i++) {
-            v5[i] = m.p.get(i).toString();
+        String[] v5 = new String[m.professores.size()];
+        for (int i = 0; i < m.professores.size(); i++) {
+            v5[i] = m.professores.get(i).toString();
         }
         final JComboBox te5 = new JComboBox(v5);
 //        final JTextField te5 = new JTextField();
 
         JLabel la6 = new JLabel("Sala");
-        String[] v6 = new String[m.s.size()];
-        for (int i = 0; i < m.s.size(); i++) {
-            v6[i] = m.s.get(i).toStringSigla();
+        String[] v6 = new String[m.salas.size()];
+        for (int i = 0; i < m.salas.size(); i++) {
+            v6[i] = m.salas.get(i).toStringSigla();
         }
+        
         final JComboBox te6 = new JComboBox(v6);
-//        final JTextField te6 = new JTextField();
+     //  final JTextField te6 = new JTextField();
 
         // Buttons
-        Botao add = new Botao(img.add1, img.add1_o);
-        Botao edit = new Botao(img.remove1, img.remove1_o);
-        Botao remove = new Botao(img.remove1, img.remove1_o);
-//		Botao impDisc = new Botao(img.add1, img.add1_o);
-//		Botao impResu = new Botao(img.add1, img.add1_o);
-//		Botao impEv = new Botao(img.add1, img.add1_o);
+        Botao add = new Botao(img.gestor, img.gestorO);
+        Botao edit = new Botao(img.sobreNos, img.sobreNosO);
+        Botao remove = new Botao(img.sair, img.sairO);
+
         Botao[] botoes = {add, edit, remove};
 
         // Customize
@@ -278,8 +280,8 @@ public class AppConfig extends JFrame {
                     duracao = 2;
                 }
                 if (duracao == 1 || duracao == 2) {
-                    Horario H = new Horario(m.t.get(te0.getSelectedIndex()), m.d.get(te1.getSelectedIndex()), te2.getSelectedIndex() + 1, te3.getSelectedIndex() + 2, te4.getSelectedIndex() + 8, duracao, m.p.get(te5.getSelectedIndex()), m.s.get(te6.getSelectedIndex()));
-                    H.addHorario(m.h, m.s, m.d);
+                    Horario H = new Horario(m.turmas.get(te0.getSelectedIndex()), m.disciplinas.get(te1.getSelectedIndex()), te2.getSelectedIndex() + 1, te3.getSelectedIndex() + 2, te4.getSelectedIndex() + 8, duracao, m.professores.get(te5.getSelectedIndex()), m.salas.get(te6.getSelectedIndex()));
+                    H.addHorario(m.horarios, m.salas, m.disciplinas);
 //                    dispose();
 //                    menu.repaint();
                     ModeloListaHorario.addElement(H.toStringLista());
@@ -301,8 +303,8 @@ public class AppConfig extends JFrame {
                     duracao = 2;
                 }
                 if (duracao == 1 || duracao == 2) {
-                    Horario H = new Horario(m.t.get(te0.getSelectedIndex()), m.d.get(te1.getSelectedIndex()), te2.getSelectedIndex() + 1, te3.getSelectedIndex() + 2, te4.getSelectedIndex() + 8, duracao, m.p.get(te5.getSelectedIndex()), m.s.get(te6.getSelectedIndex()));
-                    val = m.h.get(l.getSelectedIndex() - 1).alterarHorario(H, m.h, m.s, m.d);
+                    Horario H = new Horario(m.turmas.get(te0.getSelectedIndex()), m.disciplinas.get(te1.getSelectedIndex()), te2.getSelectedIndex() + 1, te3.getSelectedIndex() + 2, te4.getSelectedIndex() + 8, duracao, m.professores.get(te5.getSelectedIndex()), m.salas.get(te6.getSelectedIndex()));
+                    val = m.horarios.get(l.getSelectedIndex() - 1).alterarHorario(H, m.horarios, m.salas, m.disciplinas);
                     if (val == 1) {
                         ModeloListaHorario.set(l.getSelectedIndex(), H.toStringLista());
                     }
@@ -316,45 +318,17 @@ public class AppConfig extends JFrame {
         remove.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                m.h.get(l.getSelectedIndex() - 1).apagarHorario(m.h);
+                m.horarios.get(l.getSelectedIndex() - 1).apagarHorario(m.horarios);
                 ModeloListaHorario.removeElementAt(l.getSelectedIndex());
             }
         });
 
-        // Disciplines
-//        impDisc.addActionListener(new ActionListener() {
-//
-//            public void actionPerformed(ActionEvent e) {
-////				csv.importDisc(null, AppConfig.this, Main.getDisciplinas(), Main.getModalidades());
-//            }
-//        });
-
-        // Results
-//        impResu.addActionListener(new ActionListener() {
-//
-//            public void actionPerformed(ActionEvent e) {
-////				csv.importResultados(null, AppConfig.this, Main.getAtleta(), Main.getModalidades(), Main.getPaises(), Main.getProvas(), Main.getEquipas(), Main.getJogos());
-//            }
-//        });
-
-        // Events
-
-//        impEv.addActionListener(new ActionListener() {
-//
-//            public void actionPerformed(ActionEvent e) {
-////				csv.importProvas(null, AppConfig.this, Main.getJogos(), Main.getProvas(), Main.getDisciplinas(), Main.getModalidades());
-//            }
-//        });
+     
         // Adding to panels
-//        add.setAlignmentY(Component.CENTER_ALIGNMENT);
+
         buttons_panel.add(add);
-//        edit.setAlignmentY(Component.CENTER_ALIGNMENT);
         buttons_panel.add(edit);
-//        remove.setAlignmentY(Component.CENTER_ALIGNMENT);
         buttons_panel.add(remove);
-//        buttons_panel.add(impDisc);
-//        buttons_panel.add(impEv);
-//        buttons_panel.add(impResu);
         formulario_panel.add(la0);
         formulario_panel.add(te0);
         formulario_panel.add(la1);
@@ -378,7 +352,7 @@ public class AppConfig extends JFrame {
 
         gerirHorarios.add(main_panel, BorderLayout.NORTH);
         gerirHorarios.add(buttons_panel, BorderLayout.SOUTH);
-*/
+
     }
 
    
