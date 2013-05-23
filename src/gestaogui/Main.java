@@ -28,13 +28,14 @@ public class Main {
         lerEstado();
 
         Imagens img = new Imagens();
-        //if (ola.isDfgh() == true || ola.isGhjk() == true) {
-        @SuppressWarnings("unused")
-        SplashScreen splash = new SplashScreen(3000, img.splash, true);
+        if (ola.isDfgh() == true || ola.isGhjk() == true) {
+            @SuppressWarnings("unused")
+            SplashScreen splash = new SplashScreen(3000, img.splash, true);
 
-        try {
-            maingui = new JanelaPrincipal();
-        } catch (URISyntaxException e) {
+            try {
+                maingui = new JanelaPrincipal();
+            } catch (URISyntaxException e) {
+            }
         }
     }
 
