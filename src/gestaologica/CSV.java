@@ -346,7 +346,7 @@ public class CSV {
             salaAula = (ArrayList<SalaAula>) in.readObject();
             aluno = (ArrayList<Aluno>) in.readObject();
             professor = (ArrayList<Professor>) in.readObject();
-            turma = (ArrayList) in.readObject();
+            turma = (ArrayList<Turma>) in.readObject();
             disciplina = (ArrayList<Disciplina>) in.readObject();
             horario = (ArrayList<Horario>) in.readObject();
             in.close();
