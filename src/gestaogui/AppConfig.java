@@ -24,23 +24,16 @@ public class AppConfig extends JFrame {
         addPaineis();
         addTabs();
         EditCelulaHorario();
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         //addExports();
         //listarHorarios();
         // addEdits();
         //addList();
-=======
-=======
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+
         calculoCarga();
         listarHorarios();
        // addEdits();
         listarDados();
-<<<<<<< HEAD
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
-=======
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
         setProperties(600, 500, 1, true);
 
     }
@@ -96,51 +89,6 @@ public class AppConfig extends JFrame {
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private void addList() {
-        /*
-         * // Panels final Painel main_panel = new Painel(img.bg4); final
-         * JPanel buttons_panel = new JPanel(new GridLayout(5, 2, 10, 10));
-         *
-         * // Layout calculo.setLayout(new FlowLayout(FlowLayout.CENTER, 0,
-         * 70)); main_panel.setLayout(new BorderLayout());
-         *
-         * // Buttons final Botao compAnalysis = new Botao(img.ca, img.ca_o);
-         * final Botao rankP = new Botao(img.rn, img.rn_o); final Botao rankA =
-         * new Botao(img.ra, img.ra_o); final Botao rankC = new Botao(img.rc,
-         * img.rc_o); final Botao rankS = new Botao(img.rs, img.rs_o); final
-         * Botao[] botoes = {compAnalysis, rankP, rankA, rankC, rankS};
-         *
-         * // Labels final JLabel lb = new JLabel(" Statistics and Listings:");
-         *
-         * // Border main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-         * buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-         *
-         * // Customization
-         *
-         * // Color lb.setForeground(Color.white);
-         *
-         * // Font lb.setFont((new Font("Arial", Font.BOLD, 14)));
-         *
-         * // Opaque main_panel.setOpaque(false);
-         * buttons_panel.setOpaque(false);
-         *
-         * // Buttons configButtons(botoes);
-         *
-         *
-         * // Adding to panels buttons_panel.add(compAnalysis);
-         * buttons_panel.add(rankP); buttons_panel.add(rankA);
-         * buttons_panel.add(rankC); buttons_panel.add(rankS);
-         *
-         * main_panel.add(lb, BorderLayout.NORTH); main_panel.add(buttons_panel,
-         * BorderLayout.SOUTH);
-         *
-         * calculo.add(main_panel);
-         */
-=======
-=======
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
   
     private void listarDados() {
 
@@ -197,10 +145,7 @@ public class AppConfig extends JFrame {
 
         listarDados.add(main_panel);
 
-<<<<<<< HEAD
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
-=======
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+
     }
 
     private void EditCelulaHorario() {
@@ -437,92 +382,12 @@ public class AppConfig extends JFrame {
 
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     private void addExports() {
-        /*
-         * // Panels Painel main_panel = new Painel(img.bg4); JPanel
-         * buttons_panel = new JPanel(new GridLayout(4, 2, 10, 10));
-         *
-         * // Layouts salaLivre.setLayout(new FlowLayout(FlowLayout.CENTER, 0,
-         * 70)); main_panel.setLayout(new BorderLayout());
-         *
-         * // Labels JLabel lb = new JLabel(" Export:");
-         *
-         * // Buttons Botao expC= new Botao(img.expCountry, img.expCountry_o);
-         * Botao expDisc = new Botao(img.expDisc, img.expDisc_o); Botao expResu
-         * = new Botao(img.expResu, img.expResu_o); Botao expPro = new
-         * Botao(img.expEv, img.expEv_o); Botao[] botoes = {expC, expDisc,
-         * expResu, expPro};
-         *
-         * // Customize
-         *
-         * // Font lb.setFont((new Font("Arial", Font.BOLD, 14)));
-         *
-         * // Color lb.setForeground(Color.white);
-         *
-         * // Border main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-         * buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-         *
-         * // Opaque main_panel.setOpaque(false);
-         * buttons_panel.setOpaque(false);
-         *
-         * // Buttons configButtons(botoes);
-         *
-         * // ActionListeners // Countries expC.addActionListener(new
-         * ActionListener() {
-         *
-         * public void actionPerformed(ActionEvent e) { //
-         * csv.exportPais(AppConfig.this, Main.getPaises()); } });
-         *
-         * // Competitions expDisc.addActionListener(new ActionListener() {
-         *
-         * public void actionPerformed(ActionEvent e) { //
-         * csv.exportDisciplina(AppConfig.this, Main.getModalidades()); } });
-         *
-         * // Results expResu.addActionListener(new ActionListener() {
-         *
-         * public void actionPerformed(ActionEvent e) { String[] genero =
-         * {"Male", "Female", "Mixed"}; //	Modalidade mod = (Modalidade)
-         * JOptionPane.showInputDialog(AppConfig.this, "Choose a sport?",
-         * "Export Results", JOptionPane.QUESTION_MESSAGE, null,
-         * Main.getModalidades().toArray(), Main.getModalidades().toArray()[0]);
-         * //	if (mod != null) { //	JogosOlimpicos edition = (JogosOlimpicos)
-         * JOptionPane.showInputDialog(AppConfig.this, "Which year?", "Export
-         * Events", JOptionPane.QUESTION_MESSAGE, null,
-         * Main.getJogos().toArray(), Main.getJogos().toArray()[0]); //	if
-         * (edition != null) { //	String genre = (String)
-         * JOptionPane.showInputDialog(AppConfig.this, "Which genre?", "Export
-         * Events?", JOptionPane.QUESTION_MESSAGE, null, genero, genero[0]); //
-         * if (genre != null) { //	int ano = edition.getAno(); //	int tipo = -1;
-         * //	if (genre.equals("Male")) { //	tipo = 0; //	} else if
-         * (genre.equals("Female")) { //	tipo = 1; //	} else if
-         * (genre.equals("Mixed")) { //	tipo = 2; //	} //	if (tipo != -1 || mod
-         * != null || edition != null || genre != null) //
-         * csv.exportResultados(AppConfig.this, Main.getModalidades(),
-         * Main.getProvas(), mod.getNome(), tipo, ano); //	} //	} //	} } });
-         *
-         * // Events expPro.addActionListener(new ActionListener() {
-         *
-         * public void actionPerformed(ActionEvent e) { //	JogosOlimpicos
-         * edition = (JogosOlimpicos)
-         * JOptionPane.showInputDialog(AppConfig.this, "Which year", "Export
-         * Events", JOptionPane.QUESTION_MESSAGE, null,
-         * Main.getJogos().toArray(), Main.getJogos().toArray()[0]); //	if
-         * (edition != null) { //	int ano = edition.getAno(); //
-         * csv.exportProvas(AppConfig.this, Main.getProvas(), ano); //	} } });
-         *
-         * // Adding to panels buttons_panel.add(expC);
-         * buttons_panel.add(expDisc); buttons_panel.add(expResu);
-         * buttons_panel.add(expPro);
-         *
-         * main_panel.add(lb, BorderLayout.NORTH); main_panel.add(buttons_panel,
-         * BorderLayout.SOUTH);
-         *
-         * salaLivre.add(main_panel);
-         *
-         */
-=======
+    }
+
+   
+
    
     private void calculoCarga() {
 
@@ -530,15 +395,7 @@ public class AppConfig extends JFrame {
         Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
 
-=======
-   
-    private void calculoCarga() {
 
-          // Panels
-        Painel main_panel = new Painel(img.background2);
-        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
-
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
         // Layout
         calculo.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
         main_panel.setLayout(new BorderLayout());
@@ -589,15 +446,10 @@ public class AppConfig extends JFrame {
         calculo.add(main_panel);
 
 
-<<<<<<< HEAD
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
-=======
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
     }
 
     private void listarHorarios() {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         /*
          * // Panels Painel main_panel = new Painel(img.bg4); JPanel
          * buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
@@ -657,9 +509,7 @@ public class AppConfig extends JFrame {
          *
          * listarHorarios.add(main_panel);
          */
-=======
-=======
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+
 
         // Panels
         Painel main_panel = new Painel(img.background2);
@@ -751,10 +601,7 @@ public class AppConfig extends JFrame {
 
         listarHorarios.add(main_panel);
 
-<<<<<<< HEAD
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
-=======
->>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+
     }
 
     private void addEdits() {
