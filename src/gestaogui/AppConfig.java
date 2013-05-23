@@ -9,6 +9,7 @@ import javax.swing.border.*;
 @SuppressWarnings("serial")
 public class AppConfig extends JFrame {
 
+    private ListarDados ListarD;
     private Painel gerirHorarios;
     private Painel listarHorarios;
     private Painel listarDados;
@@ -25,10 +26,11 @@ public class AppConfig extends JFrame {
         addTabs();
         EditCelulaHorario();
 
-        
+
 
         calculoCarga();
         listarHorarios();
+        // addEdits();
         listarDados();
         setProperties(600, 500, 1, true);
 
@@ -140,6 +142,38 @@ public class AppConfig extends JFrame {
 
         listarDados.add(main_panel);
 
+        //ActionListeners
+        listarProf.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Professor");
+            }
+        });
+        listarAluno.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Aluno");
+            }
+        });
+        listarTurma.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Turma");
+            }
+        });
+        listarDisc.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Disciplina");
+            }
+        });
+        listarSala.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Sala");
+            }
+        });
+
 
     }
 
@@ -249,7 +283,6 @@ public class AppConfig extends JFrame {
         main_panel.setBorder(new EmptyBorder(20, 20, 5, 20));
         buttons_panel.setBorder(new EmptyBorder(5, 20, 20, 20));
 
-
         // Opaque
         main_panel.setOpaque(false);
         buttons_panel.setOpaque(false);
@@ -265,6 +298,7 @@ public class AppConfig extends JFrame {
 
         //Mouse Listener
         l.addMouseListener(new MouseAdapter() {
+
             public void mouseClicked(MouseEvent evt) {
                 JList list = (JList) evt.getSource();
                 String Tipo = "";
@@ -293,6 +327,7 @@ public class AppConfig extends JFrame {
 //		 ActionListeners
 // adicionar a celula
         add.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 int duracao = 0;
                 if (te2.getSelectedIndex() == 0) {
@@ -314,6 +349,7 @@ public class AppConfig extends JFrame {
 
 // editar celula
         edit.addActionListener(new ActionListener() {
+
             @SuppressWarnings("unused")
             public void actionPerformed(ActionEvent e) {
                 int duracao = 0, val = 0;
@@ -336,6 +372,7 @@ public class AppConfig extends JFrame {
 
         // remover celula
         remove.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 m.horarios.get(l.getSelectedIndex() - 1).apagarHorario(m.horarios);
                 ModeloListaHorario.removeElementAt(l.getSelectedIndex());
@@ -371,6 +408,9 @@ public class AppConfig extends JFrame {
         gerirHorarios.add(main_panel, BorderLayout.NORTH);
         gerirHorarios.add(buttons_panel, BorderLayout.SOUTH);
 
+    }
+
+    private void addExports() {
     }
 
     private void calculoCarga() {
@@ -413,41 +453,79 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-        
+
         cargaProf.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                CargaHoraria carga = new CargaHoraria();
+
+=======
+>>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
                 CargaHoraria carga = new CargaHoraria("professor");
                
+>>>>>>> Carga Horaria v2
             }
         });
-        
-       cargaAluno.addActionListener(new ActionListener() {
+
+        cargaAluno.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
               CargaHoraria carga = new CargaHoraria("aluno");
                
+>>>>>>> Carga Horaria v2
             }
         });
-       
-       cargaDisc.addActionListener(new ActionListener() {
+
+        cargaDisc.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
           CargaHoraria carga = new CargaHoraria("disciplina");
                
+>>>>>>> Carga Horaria v2
             }
         });
-       
-       cargaTurma.addActionListener(new ActionListener() {
+
+        cargaTurma.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
               CargaHoraria carga = new CargaHoraria("turma");
                
+>>>>>>> Carga Horaria v2
             }
         });
-       
-       cargaSala.addActionListener(new ActionListener() {
+
+        cargaSala.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
                CargaHoraria carga = new CargaHoraria("sala");
+=======
+<<<<<<< HEAD
+=======
+               CargaHoraria carga = new CargaHoraria("sala");
+>>>>>>> Carga Horaria v2
+>>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
             }
         });
-        
+
 
 
 
@@ -508,15 +586,18 @@ public class AppConfig extends JFrame {
         // ActionListeners
 
 
+
         listarProf.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 Listar a = new Listar();
-               
+
             }
         });
 
 
         listarAluno.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
 //					a.setVisible(false);
@@ -529,6 +610,7 @@ public class AppConfig extends JFrame {
 
 
         listarDisc.addActionListener(new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
 //					a.setVisible(false);
