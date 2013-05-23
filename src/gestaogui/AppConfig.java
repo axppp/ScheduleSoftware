@@ -31,7 +31,10 @@ public class AppConfig extends JFrame {
         calculoCarga();
         listarHorarios();
 <<<<<<< HEAD
+<<<<<<< HEAD
         // addEdits();
+=======
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 =======
 >>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
         listarDados();
@@ -262,6 +265,10 @@ public class AppConfig extends JFrame {
         main_panel.setBorder(new EmptyBorder(20, 20, 5, 20));
         buttons_panel.setBorder(new EmptyBorder(5, 20, 20, 20));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 =======
 
 >>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
@@ -390,9 +397,12 @@ public class AppConfig extends JFrame {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void addExports() {
     }
 
+=======
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 =======
 >>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
     private void calculoCarga() {
@@ -436,7 +446,10 @@ public class AppConfig extends JFrame {
         // Buttons
         configButtons(botoes);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
         
         cargaProf.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -472,6 +485,9 @@ public class AppConfig extends JFrame {
             }
         });
         
+<<<<<<< HEAD
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
+=======
 >>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
 
@@ -533,8 +549,11 @@ public class AppConfig extends JFrame {
         // ActionListeners
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         listarProf.addActionListener(new ActionListener() {
+=======
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 =======
 >>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
@@ -546,8 +565,11 @@ public class AppConfig extends JFrame {
         });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         listarAluno.addActionListener(new ActionListener() {
+=======
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 =======
 >>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
@@ -563,8 +585,11 @@ public class AppConfig extends JFrame {
         });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         listarDisc.addActionListener(new ActionListener() {
+=======
+>>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 =======
 >>>>>>> ff8f62de4c60377b30ee159d5bfa295c5cf77048
 
