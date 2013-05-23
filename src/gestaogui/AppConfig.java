@@ -25,15 +25,21 @@ public class AppConfig extends JFrame {
         addTabs();
         EditCelulaHorario();
 <<<<<<< HEAD
+<<<<<<< HEAD
         //addExports();
         //listarHorarios();
         // addEdits();
         //addList();
 =======
+=======
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
         calculoCarga();
         listarHorarios();
        // addEdits();
         listarDados();
+<<<<<<< HEAD
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+=======
 >>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
         setProperties(600, 500, 1, true);
 
@@ -91,6 +97,7 @@ public class AppConfig extends JFrame {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void addList() {
         /*
          * // Panels final Painel main_panel = new Painel(img.bg4); final
@@ -132,6 +139,8 @@ public class AppConfig extends JFrame {
          * calculo.add(main_panel);
          */
 =======
+=======
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
   
     private void listarDados() {
 
@@ -188,6 +197,9 @@ public class AppConfig extends JFrame {
 
         listarDados.add(main_panel);
 
+<<<<<<< HEAD
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+=======
 >>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
     }
 
@@ -426,6 +438,7 @@ public class AppConfig extends JFrame {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void addExports() {
         /*
          * // Panels Painel main_panel = new Painel(img.bg4); JPanel
@@ -517,6 +530,15 @@ public class AppConfig extends JFrame {
         Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
 
+=======
+   
+    private void calculoCarga() {
+
+          // Panels
+        Painel main_panel = new Painel(img.background2);
+        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
+
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
         // Layout
         calculo.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
         main_panel.setLayout(new BorderLayout());
@@ -567,10 +589,14 @@ public class AppConfig extends JFrame {
         calculo.add(main_panel);
 
 
+<<<<<<< HEAD
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+=======
 >>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
     }
 
     private void listarHorarios() {
+<<<<<<< HEAD
 <<<<<<< HEAD
         /*
          * // Panels Painel main_panel = new Painel(img.bg4); JPanel
@@ -632,6 +658,8 @@ public class AppConfig extends JFrame {
          * listarHorarios.add(main_panel);
          */
 =======
+=======
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
 
         // Panels
         Painel main_panel = new Painel(img.background2);
@@ -723,6 +751,9 @@ public class AppConfig extends JFrame {
 
         listarHorarios.add(main_panel);
 
+<<<<<<< HEAD
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
+=======
 >>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
     }
 
