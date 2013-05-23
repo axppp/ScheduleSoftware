@@ -146,7 +146,31 @@ public class AppConfig extends JFrame {
         listarProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                ListarD = new ListarDados();
+                ListarD = new ListarDados("Professor");
+            }
+        });
+        listarAluno.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Aluno");
+            }
+        });
+        listarTurma.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Turma");
+            }
+        });
+        listarDisc.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Disciplina");
+            }
+        });
+        listarSala.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD = new ListarDados("Sala");
             }
         });
 
