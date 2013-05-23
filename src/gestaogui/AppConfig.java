@@ -8,7 +8,8 @@ import javax.swing.border.*;
 
 @SuppressWarnings("serial")
 public class AppConfig extends JFrame {
-
+    
+    private ListarDados ListarD;
     private Painel gerirHorarios;
     private Painel listarHorarios;
     private Painel listarDados;
@@ -32,7 +33,7 @@ public class AppConfig extends JFrame {
 
         calculoCarga();
         listarHorarios();
-       // addEdits();
+        // addEdits();
         listarDados();
         setProperties(600, 500, 1, true);
 
@@ -89,10 +90,9 @@ public class AppConfig extends JFrame {
         }
     }
 
-  
     private void listarDados() {
 
-         // Panels
+        // Panels
         Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
 
@@ -129,9 +129,9 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-     
- 
- 
+
+
+
 
         // Adding to panels
         buttons_panel.add(listarProf);
@@ -144,6 +144,14 @@ public class AppConfig extends JFrame {
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
         listarDados.add(main_panel);
+
+        //ActionListeners
+        listarProf.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                ListarD= new ListarDados();
+            }
+        });
 
 
     }
@@ -182,7 +190,7 @@ public class AppConfig extends JFrame {
         }
         final JList l = new JList(ModeloListaHorario);
         l.setValueIsAdjusting(true);
-        
+
 
         //Formulario
         JLabel la0 = new JLabel("Turma");
@@ -251,8 +259,8 @@ public class AppConfig extends JFrame {
         // Customize
 
         // Borders
-        main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-        buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        main_panel.setBorder(new EmptyBorder(20, 20, 5, 20));
+        buttons_panel.setBorder(new EmptyBorder(5, 20, 20, 20));
 
         // Opaque
         main_panel.setOpaque(false);
@@ -382,16 +390,12 @@ public class AppConfig extends JFrame {
 
     }
 
-
     private void addExports() {
     }
 
-   
-
-   
     private void calculoCarga() {
 
-          // Panels
+        // Panels
         Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
 
@@ -429,9 +433,9 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-     
- 
- 
+
+
+
 
         // Adding to panels
         buttons_panel.add(listarProf);
@@ -550,7 +554,7 @@ public class AppConfig extends JFrame {
         configButtons(botoes);
         // ActionListeners
 
-     
+
         listarProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -563,7 +567,7 @@ public class AppConfig extends JFrame {
             }
         });
 
-    
+
         listarAluno.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -576,7 +580,7 @@ public class AppConfig extends JFrame {
             }
         });
 
-       
+
         listarDisc.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
