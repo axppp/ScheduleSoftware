@@ -24,10 +24,17 @@ public class AppConfig extends JFrame {
         addPaineis();
         addTabs();
         EditCelulaHorario();
+<<<<<<< HEAD
         //addExports();
         //listarHorarios();
         // addEdits();
         //addList();
+=======
+        calculoCarga();
+        listarHorarios();
+       // addEdits();
+        listarDados();
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
         setProperties(600, 500, 1, true);
 
     }
@@ -83,6 +90,7 @@ public class AppConfig extends JFrame {
         }
     }
 
+<<<<<<< HEAD
     private void addList() {
         /*
          * // Panels final Painel main_panel = new Painel(img.bg4); final
@@ -123,6 +131,64 @@ public class AppConfig extends JFrame {
          *
          * calculo.add(main_panel);
          */
+=======
+  
+    private void listarDados() {
+
+         // Panels
+        Painel main_panel = new Painel(img.background2);
+        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
+
+        // Layout
+        listarDados.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        main_panel.setLayout(new BorderLayout());
+
+        // Labels
+        JLabel lbl_add = new JLabel("     Listar Dados:");
+
+        // Buttons
+        Botao listarProf = new Botao(img.professor, img.professorO);
+        Botao listarAluno = new Botao(img.aluno, img.alunoO);
+        Botao listarDisc = new Botao(img.disciplina, img.disciplinaO);
+        Botao listarTurma = new Botao(img.turma, img.turmaO);
+        Botao listarSala = new Botao(img.sala, img.salaO);
+        Botao[] botoes = {listarProf, listarAluno, listarDisc, listarTurma, listarSala};
+
+        // Customize
+
+        // Font
+        lbl_add.setFont((new Font("Arial", Font.BOLD, 14)));
+
+        // Color
+        lbl_add.setForeground(Color.white);
+
+        // Borders
+        main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
+        // Opaque
+        main_panel.setOpaque(false);
+        buttons_panel.setOpaque(false);
+
+        // Buttons
+        configButtons(botoes);
+     
+ 
+ 
+
+        // Adding to panels
+        buttons_panel.add(listarProf);
+        buttons_panel.add(listarAluno);
+        buttons_panel.add(listarDisc);
+        buttons_panel.add(listarTurma);
+        buttons_panel.add(listarSala);
+
+        main_panel.add(lbl_add, BorderLayout.NORTH);
+        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+
+        listarDados.add(main_panel);
+
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
     }
 
     private void EditCelulaHorario() {
@@ -159,6 +225,7 @@ public class AppConfig extends JFrame {
         }
         final JList l = new JList(ModeloListaHorario);
         l.setValueIsAdjusting(true);
+        
 
         //Formulario
         JLabel la0 = new JLabel("Turma");
@@ -218,9 +285,9 @@ public class AppConfig extends JFrame {
         //  final JTextField te6 = new JTextField();
 
         // Buttons
-        Botao add = new Botao(img.gestor, img.gestorO);
-        Botao edit = new Botao(img.sobreNos, img.sobreNosO);
-        Botao remove = new Botao(img.sair, img.sairO);
+        Botao add = new Botao(img.add, img.addO);
+        Botao edit = new Botao(img.editar, img.editarO);
+        Botao remove = new Botao(img.remover, img.removerO);
 
         Botao[] botoes = {add, edit, remove};
 
@@ -358,6 +425,7 @@ public class AppConfig extends JFrame {
 
     }
 
+<<<<<<< HEAD
     private void addExports() {
         /*
          * // Panels Painel main_panel = new Painel(img.bg4); JPanel
@@ -441,9 +509,69 @@ public class AppConfig extends JFrame {
          * salaLivre.add(main_panel);
          *
          */
+=======
+   
+    private void calculoCarga() {
+
+          // Panels
+        Painel main_panel = new Painel(img.background2);
+        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
+
+        // Layout
+        calculo.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        main_panel.setLayout(new BorderLayout());
+
+        // Labels
+        JLabel lbl_add = new JLabel("     Calcular Carga Horaria:");
+
+        // Buttons
+        Botao listarProf = new Botao(img.professor, img.professorO);
+        Botao listarAluno = new Botao(img.aluno, img.alunoO);
+        Botao listarDisc = new Botao(img.disciplina, img.disciplinaO);
+        Botao listarTurma = new Botao(img.turma, img.turmaO);
+        Botao listarSala = new Botao(img.sala, img.salaO);
+        Botao[] botoes = {listarProf, listarAluno, listarDisc, listarTurma, listarSala};
+
+        // Customize
+
+        // Font
+        lbl_add.setFont((new Font("Arial", Font.BOLD, 14)));
+
+        // Color
+        lbl_add.setForeground(Color.white);
+
+        // Borders
+        main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
+        // Opaque
+        main_panel.setOpaque(false);
+        buttons_panel.setOpaque(false);
+
+        // Buttons
+        configButtons(botoes);
+     
+ 
+ 
+
+        // Adding to panels
+        buttons_panel.add(listarProf);
+        buttons_panel.add(listarAluno);
+        buttons_panel.add(listarDisc);
+        buttons_panel.add(listarTurma);
+        buttons_panel.add(listarSala);
+
+        main_panel.add(lbl_add, BorderLayout.NORTH);
+        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+
+        calculo.add(main_panel);
+
+
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
     }
 
     private void listarHorarios() {
+<<<<<<< HEAD
         /*
          * // Panels Painel main_panel = new Painel(img.bg4); JPanel
          * buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
@@ -503,6 +631,99 @@ public class AppConfig extends JFrame {
          *
          * listarHorarios.add(main_panel);
          */
+=======
+
+        // Panels
+        Painel main_panel = new Painel(img.background2);
+        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
+
+        // Layout
+        listarHorarios.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        main_panel.setLayout(new BorderLayout());
+
+        // Labels
+        JLabel lbl_add = new JLabel("     Listar Horarios:");
+
+        // Buttons
+        Botao listarProf = new Botao(img.professor, img.professorO);
+        Botao listarAluno = new Botao(img.aluno, img.alunoO);
+        Botao listarDisc = new Botao(img.disciplina, img.disciplinaO);
+        Botao listarTurma = new Botao(img.turma, img.turmaO);
+        Botao listarSala = new Botao(img.sala, img.salaO);
+        Botao[] botoes = {listarProf, listarAluno, listarDisc, listarTurma, listarSala};
+
+        // Customize
+
+        // Font
+        lbl_add.setFont((new Font("Arial", Font.BOLD, 14)));
+
+        // Color
+        lbl_add.setForeground(Color.white);
+
+        // Borders
+        main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
+        // Opaque
+        main_panel.setOpaque(false);
+        buttons_panel.setOpaque(false);
+
+        // Buttons
+        configButtons(botoes);
+        // ActionListeners
+
+     
+        listarProf.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+//				if (a != null) {
+//					a.setVisible(false);
+//					a = null;
+//				}
+//				a = new AddDados(null, null, null);
+//				a.setSelectedIndex(0);
+            }
+        });
+
+    
+        listarAluno.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+//				if (a != null) {
+//					a.setVisible(false);
+//					a = null;
+//				}
+//				a = new AddDados(null, null, null);
+//				a.setSelectedIndex(1);
+            }
+        });
+
+       
+        listarDisc.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+//				if (a != null) {
+//					a.setVisible(false);
+//					a = null;
+//				}
+//				a = new AddDados(null, null, null);
+//				a.setSelectedIndex(2);
+            }
+        });
+
+        // Adding to panels
+        buttons_panel.add(listarProf);
+        buttons_panel.add(listarAluno);
+        buttons_panel.add(listarDisc);
+        buttons_panel.add(listarTurma);
+        buttons_panel.add(listarSala);
+
+        main_panel.add(lbl_add, BorderLayout.NORTH);
+        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+
+        listarHorarios.add(main_panel);
+
+>>>>>>> b37b481d6122900a681a5fefb56cd8ff7f168ce8
     }
 
     private void addEdits() {
