@@ -46,7 +46,7 @@ public class CSV {
      * Flag para mensagem de erro em caso de o programa nao ter ficheiros
      * basicos ou não conter informação nos ficheiros binarios
      */
-    boolean  fiAluno = true, fiProfessor = true, fiTurma = true, fiHorario = true, fiDisciplina = true, fiSala = true;
+    boolean fiAluno = true, fiProfessor = true, fiTurma = true, fiHorario = true, fiDisciplina = true, fiSala = true;
     /**
      * String que devolve o erro dos ficheiros .txt nao encontrados
      */
@@ -339,6 +339,41 @@ public class CSV {
         return getHorario();
     }
 
+    public void lerEstado() throws IOException, ClassNotFoundException {
+
+        try {
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream("estado.bin"));
+            salaAula = (ArrayList<SalaAula>) in.readObject();
+            aluno = (ArrayList<Aluno>) in.readObject();
+            professor = (ArrayList<Professor>) in.readObject();
+            turma = (ArrayList) in.readObject();
+            disciplina = (ArrayList<Disciplina>) in.readObject();
+            horario = (ArrayList<Horario>) in.readObject();
+            in.close();
+        } catch (IOException exc) {
+            JOptionPane.showMessageDialog(null, "Estado Anterior Nao Lido", "A Carregar", JOptionPane.ERROR_MESSAGE);
+            dfgh = false;
+        } catch (ClassNotFoundException exc) {
+            JOptionPane.showMessageDialog(null, "Estado Anterior Nao Lido", "A Carregar", JOptionPane.ERROR_MESSAGE);
+            dfgh = false;
+        }
+    }
+
+    public void gravarEstado() {
+        try {
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("estado.bin"));
+            out.writeObject(salaAula);
+            out.writeObject(aluno);
+            out.writeObject(professor);
+            out.writeObject(turma);
+            out.writeObject(disciplina);
+            out.writeObject(horario);
+            out.close();
+            System.out.println("ola");
+        } catch (IOException exc) {
+            JOptionPane.showMessageDialog(null, "Status not saved!", "Closing Application", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
     public void testTXT() {
         if (isGhjk() == false) {
