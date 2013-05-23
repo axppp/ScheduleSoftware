@@ -208,7 +208,7 @@ public class Aluno extends Pessoa implements Serializable{
      * Metodo toString
      */
     public String toString() {
-        return super.toString() + " o seu numero é " + numeroAluno + " e nasceu no dia " + dataNasc.getDia() + " no mes de " + dataNasc.getMes() + " e no ano " + dataNasc.getAno() + "\n O contacto telefonico é " + Telefone + " e encontrasse colocado na turma " + turma + "." + " \n";
+        return super.toString() + " o seu numero é " + numeroAluno + " e nasceu no dia " + dataNasc.getDia() + " no mês de " + dataNasc.getMes() + " e no ano " + dataNasc.getAno() + "\n O contacto telefonico é " + Telefone + " e encontrasse colocado na turma " + turma + "." + " \n";
     }
 
     /**
