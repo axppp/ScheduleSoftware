@@ -31,10 +31,10 @@ public class About extends JDialog {
 		final URI visit_url = new URI("https://code.google.com/p/lapr2-projeto/");
 
 		// Main panel
-		Painel panel_principal = new Painel(img.bg3);
+		Painel panel_principal = new Painel(img.background2);
 
 		// Logo button with hiperlink to the project's website
-		Botao logo = new Botao(img.logo);
+		//Botao logo = new Botao(img.logo);
 
 		// Inner panel and customization
 		JPanel inner = new JPanel();
@@ -44,11 +44,11 @@ public class About extends JDialog {
 		JLabel version = new JLabel("Version: Medal Management Realease 1");
 
 		// Action listener
-		logo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				open(visit_url);
-			}
-		});
+		//logo.addActionListener(new ActionListener() {
+		//	public void actionPerformed(ActionEvent e) {
+		//		open(visit_url);
+		//	}
+		//});
 
 		// Customizations
 
@@ -56,8 +56,8 @@ public class About extends JDialog {
 		panel_principal.setLayout(new BorderLayout());
 
 		// - logo
-		logo.setContentAreaFilled(false);
-		logo.setBorderPainted(false);
+		//logo.setContentAreaFilled(false);
+		//logo.setBorderPainted(false);
 
 		// - inner panel
 		inner.setLayout(new GridLayout(2, 1, 0, 0));
@@ -74,7 +74,7 @@ public class About extends JDialog {
 		inner.add(name);
 		inner.add(version);
 		panel_principal.add(inner, BorderLayout.EAST);
-		panel_principal.add(logo, BorderLayout.CENTER);
+		//panel_principal.add(logo, BorderLayout.CENTER);
 		panel_principal.setBorder(new EmptyBorder(30, 20, 0, 0));
 		getContentPane().add(panel_principal);
 
@@ -83,26 +83,7 @@ public class About extends JDialog {
 
 	}
 
-	/**
-	 * Sets the properties to this frame such as <code>/size<code>,
-	 * <code>visibility</code> and the <code>operation</code> that will happen
-	 * by default when the user initiates a "close" on this frame.
-	 * 
-	 * @see java.awt.Window#setSize(int,int)
-	 * 
-	 * @see javax.swing.JFrame#setDefaultCloseOperation(int)
-	 * 
-	 * @see java.awt.Window#setVisible(boolean)
-	 * 
-	 * @param w
-	 *            the desired width to the window
-	 * 
-	 * @param h
-	 *            the desired height to the window
-	 * 
-	 * @param visible
-	 *            sets the windows to visible if the parameter is true
-	 */
+	
 	private void setProperties(int w, int h, boolean visible) {
 		setSize(w, h);
 		setVisible(visible);

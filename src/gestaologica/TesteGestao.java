@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author axppp
  */
 public class TesteGestao {
-
+/*
     public static void main(String[] args) throws Exception {
 
         ArrayList<SalaAula> salas = new ArrayList<SalaAula>();
@@ -132,5 +132,5 @@ public class TesteGestao {
 //        disciplinas.get(3).listarDadosDisciplina(disciplinas);
 
 
-    }
+    }*/
 }

@@ -6,157 +6,42 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-/**
- * Class that creates a frame with some tabs to let the user choose if he wants
- * to import, export, manually add, manually edit or either get listings and
- * statistics.
- *
- */
+
 @SuppressWarnings("serial")
 public class AppConfig extends JFrame {
 
-    /**
-     * Custom Panel that contains a menu within another panel.
-     *
-     * @see #addTabs()
-     *
-     * @see #addPaineis()
-     *
-     * @see Panel Panel Class
-     */
+   
     private Painel gerirHorarios;
-    /**
-     * Custom Panel that contains a menu within another panel.
-     *
-     * @see #addTabs()
-     *
-     * @see #addPaineis()
-     *
-     * @see Panel Panel Class
-     */
+  
     private Painel listarHorarios;
-    /**
-     * Custom Panel that contains a menu within another panel.
-     *
-     * @see #addTabs()
-     *
-     * @see #addPaineis()
-     *
-     * @see Panel Panel Class
-     */
+   
     private Painel listarDados;
-    /**
-     * Custom Panel that contains a menu within another panel.
-     *
-     * @see #addTabs()
-     *
-     * @see #addPaineis()
-     *
-     * @see Panel Panel Class
-     */
+    
     private Painel calculo;
-    /**
-     * Custom Panel that contains a menu within another panel.
-     *
-     * @see #addTabs()
-     *
-     * @see #addPaineis()
-     *
-     * @see Panel Panel Class
-     */
+  
     private Painel salaLivre;
-    /**
-     * Instance of the class
-     * <code>Imagens</code>, used to load images in order to fill buttons and
-     * panels.
-     *
-     * @see Imagens Imagens Class
-     */
+   
     private Imagens img = new Imagens();
-    /**
-     * Instance of the class
-     * <code>Csv</code>, used in the method
-     * <code>addImports()</code> and
-     * <code>addExport()</code> in order to be able to import and export files.
-     */
-    //private final Csv csv = new Csv();
-    /**
-     * TabbedPane that will hold various tabs.
-     */
+   
     private JTabbedPane jtp = new JTabbedPane();
     
     DefaultListModel ModeloListaHorario = new DefaultListModel();
 
-    /**
-     * Object AddDados important to control how tabs behave, if the object has
-     * been initialized, that object will be used instead of creating another
-     * one
-     */
-    //private AddDados a;
-    /**
-     * Object AddList important to control how tabs behave, if the object has
-     * been initialized, that object will be used instead of creating another
-     * one
-     */
-    //private AddList al;
-    /**
-     * Constructor of this class it calls its superclass constructor to set the
-     * <code>title</code>, it also calls all the necessary methods in this class
-     * in order to initialize the
-     * <code>panels</code> when an object of this class is created. Sets
-     * properties.
-     *
-     * @see #addPaineis()
-     *
-     * @see #addTabs()
-     *
-     * @see #addImports()
-     *
-     * @see #addExports()
-     *
-     * @see #addEdits()
-     *
-     * @see #addList()
-     *
-     * @see #setProperties(int,int,int,boolean)
-     */
+    
     public AppConfig() {
 
         setTitle("Gerir Horário");
-
         addPaineis();
         addTabs();
-        EditCelulaHorario();
-        addExports();
-        addAdds();
-        addEdits();
-        addList();
+        //EditCelulaHorario();
+        //addExports();
+        //listarHorarios();
+       // addEdits();
+        //addList();
         setProperties(600, 500, 1, true);
 
     }
 
-    /**
-     * Sets the properties to this frame such as
-     * <code>/size<code>,
-     * <code>visibility</code> and the
-     * <code>operation</code> that will happen by default when the user
-     * initiates a "close" on this frame.
-     *
-     * @see java.awt.Window#setSize(int,int)
-     *
-     * @see javax.swing.JFrame#setDefaultCloseOperation(int)
-     *
-     * @see java.awt.Window#setVisible(boolean)
-     *
-     * @param w the desired width to the window
-     *
-     * @param h the desired height to the window
-     *
-     * @param opcao parameter to use when calling
-     * javax.swing.JFrame#setDefaultCloseOperation(int)
-     *
-     * @param visible sets the windows to visible if the parameter is true
-     */
     private void setProperties(int w, int h, int opcao, boolean visible) {
         setSize(w, h);
         setDefaultCloseOperation(opcao);
@@ -183,29 +68,14 @@ public class AppConfig extends JFrame {
 
     }
 
-    /**
-     * This method creates custom panels and sets them as not Opaque, it is
-     * called in the constructor.
-     *
-     * @see #imp
-     *
-     * @see #exp
-     *
-     * @see #ad
-     *
-     * @see #edit
-     *
-     * @see #list
-     *
-     */
     private void addPaineis() {
 
         // Panels
-        gerirHorarios = new Painel(img.bg3);
-        listarHorarios = new Painel(img.bg3);
-        listarDados = new Painel(img.bg3);
-        calculo = new Painel(img.bg3);
-        salaLivre = new Painel(img.bg3);
+        gerirHorarios = new Painel(img.background2);
+        listarHorarios = new Painel(img.background2);
+        listarDados = new Painel(img.background2);
+        calculo = new Painel(img.background2);
+        salaLivre = new Painel(img.background2);
 
         gerirHorarios.setOpaque(false);
         listarHorarios.setOpaque(false);
@@ -214,24 +84,7 @@ public class AppConfig extends JFrame {
         salaLivre.setOpaque(false);
 
     }
-
-    /**
-     * Returns true if no linked lists needed are empty
-     *
-     * @return Returns true if no linked lists needed are empty
-     */
-    /*
-     * private boolean isReady() { //return (!Main.getPaises().isEmpty() ||
-     * !Main.getAtleta().isEmpty() || !Main.getJogos().isEmpty() ||
-     * !Main.getDisciplinas().isEmpty() || !Main.getModalidades().isEmpty() ||
-     * !Main.getProvas().isEmpty()); }
-     */
-    /**
-     * Sets both contentAreaFilled and BorderPainted of the vector botoes to
-     * false. Sets an empty border
-     *
-     * @param botoes vector of Botao
-     */
+ 
     private void configButtons(Botao[] botoes) {
         final Border emptyBorder = BorderFactory.createEmptyBorder();
         for (Botao bt : botoes) {
@@ -241,17 +94,9 @@ public class AppConfig extends JFrame {
         }
     }
 
-    /**
-     * Has the purpose to create a minimalistic menu, adding a title and
-     * programmed buttons to the
-     * <code>list</code> panel. This method is meticulous about the way tabs
-     * behave trying to give the user a smooth navigation between tabs. It uses
-     * the method
-     * <code>isReady()</code> in order to aproach a safer implementation of the
-     * method.
-     */
+  
     private void addList() {
-
+/*
         // Panels
         final Painel main_panel = new Painel(img.bg4);
         final JPanel buttons_panel = new JPanel(new GridLayout(5, 2, 10, 10));
@@ -289,92 +134,7 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-
-        // ActionListeners
-        compAnalysis.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-//				if (Main.getPaises().size() >= 5) {
-//					if (al != null) {
-//						al.setSelectedIndex(0);
-//						al.setVisible(true);
-//					} else {
-//						al = new AddList();
-//						al.setSelectedIndex(0);
-//					}
-//				} else {
-//					JOptionPane.showMessageDialog(AppConfig.this, "Make sure you imported countries!");
-//				}
-            }
-        });
-
-        rankP.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-//				if (isReady()) {
-//					if (al != null) {
-//						al.setSelectedIndex(1);
-//						al.setVisible(true);
-//					} else {
-//						al = new AddList();
-//						al.setSelectedIndex(1);
-//					}
-//				} else {
-//					JOptionPane.showMessageDialog(AppConfig.this, "Make sure you imported the necessary data!");
-//				}
-            }
-        });
-
-        rankA.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-//				if (isReady()) {
-//					if (al != null) {
-//						al.setSelectedIndex(2);
-//						al.setVisible(true);
-//					} else {
-//						al = new AddList();
-//						al.setSelectedIndex(2);
-//					}
-//				} else {
-//					JOptionPane.showMessageDialog(AppConfig.this, "Make sure you imported the necessary data!");
-//				}
-            }
-        });
-
-        rankC.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-//				if (isReady()) {
-//					if (al != null) {
-//						al.setSelectedIndex(3);
-//						al.setVisible(true);
-//					} else {
-//						al = new AddList();
-//						al.setSelectedIndex(3);
-//					}
-//				} else {
-//					JOptionPane.showMessageDialog(AppConfig.this, "Make sure you imported the necessary data!");
-//				}
-            }
-        });
-
-        rankS.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-//				if (isReady()) {
-//					if (al != null) {
-//						al.setSelectedIndex(4);
-//						al.setVisible(true);
-//					} else {
-//						al = new AddList();
-//						al.setSelectedIndex(4);
-//					}
-//				} else {
-//					JOptionPane.showMessageDialog(AppConfig.this, "Make sure you imported the necessary data!");
-//				}
-            }
-        });
+ 
 
         // Adding to panels
         buttons_panel.add(compAnalysis);
@@ -387,20 +147,12 @@ public class AppConfig extends JFrame {
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
         calculo.add(main_panel);
-
+*/
     }
 
-    /**
-     * Has the purpose to create a minimalistic menu, adding a title and
-     * programmed buttons to the
-     * <code>imp</code> panel. This method is meticulous about the way tabs
-     * behave trying to give the user a smooth navigation between tabs. It uses
-     * the method
-     * <code>isReady()</code> in order to aproach a safer implementation of the
-     * method.
-     */
+   
     private void EditCelulaHorario() {
-        final Main m = new Main();
+      /*  final Main m = new Main();
         Turma t = new Turma();
         Disciplina d = new Disciplina();
         Professor p = new Professor();
@@ -420,8 +172,8 @@ public class AppConfig extends JFrame {
         JLabel lb = new JLabel("Edição da celula de Horário:");
 
         //List
-        String[] v = new String[m.h.size() + 1];
-        v[0] = "Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n";
+      //  String[] v = new String[m.h.size() + 1];
+        //v[0] = "Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n";
         ModeloListaHorario.addElement("Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n");
         for (int i = 0; i < m.h.size(); i++) {
             v[i + 1] = m.h.get(i).toStringLista();
@@ -626,20 +378,12 @@ public class AppConfig extends JFrame {
 
         gerirHorarios.add(main_panel, BorderLayout.NORTH);
         gerirHorarios.add(buttons_panel, BorderLayout.SOUTH);
-
+*/
     }
 
-    /**
-     * Has the purpose to create a minimalistic menu, adding a title and
-     * programmed buttons to the
-     * <code>exp</code> panel. This method is meticulous about the way tabs
-     * behave trying to give the user a smooth navigation between tabs. It uses
-     * the method
-     * <code>isReady()</code> in order to aproach a safer implementation of the
-     * method.
-     */
+   
     private void addExports() {
-
+/*
         // Panels
         Painel main_panel = new Painel(img.bg4);
         JPanel buttons_panel = new JPanel(new GridLayout(4, 2, 10, 10));
@@ -744,35 +488,30 @@ public class AppConfig extends JFrame {
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
         salaLivre.add(main_panel);
+        * */
     }
 
-    /**
-     * Has the purpose to create a minimalistic menu, adding a title and
-     * programmed buttons to the
-     * <code>add</code> panel. This method is meticulous about the way tabs
-     * behave trying to give the user a smooth navigation between tabs. It uses
-     * the method
-     * <code>isReady()</code> in order to aproach a safer implementation of the
-     * method.
-     */
-    private void addAdds() {
-
+    
+    private void listarHorarios() {
+/*
         // Panels
         Painel main_panel = new Painel(img.bg4);
-        JPanel buttons_panel = new JPanel(new GridLayout(3, 2, 10, 10));
+        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
 
         // Layout
         listarHorarios.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
         main_panel.setLayout(new BorderLayout());
 
         // Labels
-        JLabel lbl_add = new JLabel("     Add:");
+        JLabel lbl_add = new JLabel("     Listar Horarios:");
 
         // Buttons
-        Botao addCo = new Botao(img.addCo, img.addCo_o);
-        Botao addDis = new Botao(img.addDis, img.addDis_o);
-        Botao addSpo = new Botao(img.addSpo, img.addSpo_o);
-        Botao[] botoes = {addCo, addDis, addSpo};
+        Botao listarProf = new Botao(img.addCo, img.addCo_o);
+        Botao listarAluno = new Botao(img.btn_horariosAluno, img.btn_horariosAlunoO);
+        Botao listarDisc = new Botao(img.addSpo, img.addSpo_o);
+        Botao listarTurma = new Botao(img.addSpo, img.addSpo_o);
+        Botao listarSala = new Botao(img.addSpo, img.addSpo_o);
+        Botao[] botoes = {listarProf, listarAluno, listarDisc, listarTurma, listarSala};
 
         // Customize
 
@@ -795,7 +534,7 @@ public class AppConfig extends JFrame {
         // ActionListeners
 
         // Add country
-        addCo.addActionListener(new ActionListener() {
+        listarProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
@@ -808,7 +547,7 @@ public class AppConfig extends JFrame {
         });
 
         // Add Competition
-        addDis.addActionListener(new ActionListener() {
+        listarAluno.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
@@ -821,7 +560,7 @@ public class AppConfig extends JFrame {
         });
 
         // Add Sport
-        addSpo.addActionListener(new ActionListener() {
+        listarDisc.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
@@ -834,28 +573,23 @@ public class AppConfig extends JFrame {
         });
 
         // Adding to panels
-        buttons_panel.add(addCo);
-        buttons_panel.add(addDis);
-        buttons_panel.add(addSpo);
+        buttons_panel.add(listarProf);
+        buttons_panel.add(listarAluno);
+        buttons_panel.add(listarDisc);
+        buttons_panel.add(listarTurma);
+        buttons_panel.add(listarSala);
 
         main_panel.add(lbl_add, BorderLayout.NORTH);
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
         listarHorarios.add(main_panel);
-
+*/
     }
 
-    /**
-     * Has the purpose to create a minimalistic menu, adding a title and
-     * programmed buttons to the
-     * <code>edit</code> panel. This method is meticulous about the way tabs
-     * behave trying to give the user a smooth navigation between tabs. It uses
-     * the method
-     * <code>isReady()</code> in order to aproach a safer implementation of the
-     * method.
-     */
+   
     private void addEdits() {
 
+        /*
         // Panels
         Painel main_panel = new Painel(img.bg4);
         JPanel buttons_panel = new JPanel(new GridLayout(3, 2, 10, 10));
@@ -953,5 +687,6 @@ public class AppConfig extends JFrame {
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
 
         listarDados.add(main_panel);
+        * */
     }
 }
