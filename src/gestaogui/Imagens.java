@@ -32,4 +32,39 @@ public class Imagens {
         String background2 = ("src/Imagens/background2.png");
         
         String exit =("src/Imagens/exit.png");
+        
+        String add =("src/Imagens/btn_add.png");
+        
+        String addO =("src/Imagens/btn_addO.png");
+        
+        String remover =("src/Imagens/btn_remove.png");
+        
+        String removerO = ("src/Imagens/btn_removeO.png");
+        
+        String editar = ("src/Imagens/btn_edit.png");
+        
+        String editarO = ("src/Imagens/btn_editO.png");
+        
+        String aluno = ("src/Imagens/btn_aluno.png");
+
+        String alunoO = ("src/Imagens/btn_alunoO.png");
+        
+        String professor =("src/Imagens/btn_professor.png");
+        
+        String professorO = ("src/Imagens/btn_professorO.png");
+        
+        String disciplina = ("src/Imagens/btn_disciplina.png");
+        
+        String disciplinaO = ("src/Imagens/btn_disciplinaO.png");
+        
+        String turma = ("src/Imagens/btn_turma.png");
+        
+        String turmaO =("src/Imagens/btn_turmaO.png");
+        
+        String sala = ("src/Imagens/btn_sala.png");
+        
+        String salaO =("src/Imagens/btn_salaO.png");
+
+
+
 }
