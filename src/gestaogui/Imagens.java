@@ -15,9 +15,9 @@ public class Imagens {
 
         String splash =("src/Imagens/splash.png");
         
-        String gestor = ("src/Imagens/btnGestor.png");
+        String gestor = ("src/Imagens/btn_gestor.png");
 	
-        String gestorO = ("src/Imagens/btnGestorO.png");
+        String gestorO = ("src/Imagens/btn_gestorO.png");
         
         String sobreNos = ("src/Imagens/sobreNos.png");
 
@@ -31,5 +31,5 @@ public class Imagens {
         
         String background2 = ("src/Imagens/background2.png");
         
-        String exit =("src(Imagens/exit.png");
+        String exit =("src/Imagens/exit.png");
 }
