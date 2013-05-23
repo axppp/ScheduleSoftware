@@ -25,14 +25,10 @@ public class AppConfig extends JFrame {
         addTabs();
         EditCelulaHorario();
 
-        //addExports();
-        //listarHorarios();
-        // addEdits();
-        //addList();
+        
 
         calculoCarga();
         listarHorarios();
-       // addEdits();
         listarDados();
         setProperties(600, 500, 1, true);
 
@@ -89,10 +85,9 @@ public class AppConfig extends JFrame {
         }
     }
 
-  
     private void listarDados() {
 
-         // Panels
+        // Panels
         Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
 
@@ -129,9 +124,9 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-     
- 
- 
+
+
+
 
         // Adding to panels
         buttons_panel.add(listarProf);
@@ -173,7 +168,7 @@ public class AppConfig extends JFrame {
 
         //List
         String[] v = new String[m.horarios.size()];
-        System.out.println("heyyyyyyyyyyy");
+
         // v[0] = "Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n";
         ModeloListaHorario.addElement("Turma" + ", Disciplina" + ", Tipo Aula" + ", Dia da semana" + ", Hora de inicio" + ", Duração" + ", Professor" + ", Sala" + "\n");
         for (int i = 0; i < m.horarios.size(); i++) {
@@ -182,7 +177,7 @@ public class AppConfig extends JFrame {
         }
         final JList l = new JList(ModeloListaHorario);
         l.setValueIsAdjusting(true);
-        
+
 
         //Formulario
         JLabel la0 = new JLabel("Turma");
@@ -191,7 +186,7 @@ public class AppConfig extends JFrame {
             v0[i] = m.turmas.get(i).toStringSigla();
         }
         final JComboBox te0 = new JComboBox(v0);
-//        final JTextField te0 = new JTextField();
+
 
         JLabel la1 = new JLabel("Disciplina");
         String[] v1 = new String[m.disciplinas.size()];
@@ -199,14 +194,14 @@ public class AppConfig extends JFrame {
             v1[i] = m.disciplinas.get(i).toStringSigla();
         }
         final JComboBox te1 = new JComboBox(v1);
-//        final JTextField te1 = new JTextField();
+
 
         JLabel la2 = new JLabel("Tipo Aula");
         String[] v2 = new String[2];
         v2[0] = "t";
         v2[1] = "p";
         final JComboBox te2 = new JComboBox(v2);
-//        final JTextField te2 = new JTextField();
+
 
         JLabel la3 = new JLabel("Dia da Semana");
         String[] v3 = new String[5];
@@ -214,7 +209,7 @@ public class AppConfig extends JFrame {
             v3[i] = "" + (2 + i);
         }
         final JComboBox te3 = new JComboBox(v3);
-//        final JTextField te3 = new JTextField();
+
 
         JLabel la4 = new JLabel("Hora de Inicio");
         String[] v4 = new String[8];
@@ -222,7 +217,7 @@ public class AppConfig extends JFrame {
             v4[i] = "" + (8 + i);
         }
         final JComboBox te4 = new JComboBox(v4);
-//        final JTextField te4 = new JTextField();
+
 
         JLabel la5 = new JLabel("Professor");
         String[] v5 = new String[m.professores.size()];
@@ -230,7 +225,7 @@ public class AppConfig extends JFrame {
             v5[i] = m.professores.get(i).toString();
         }
         final JComboBox te5 = new JComboBox(v5);
-//        final JTextField te5 = new JTextField();
+
 
         JLabel la6 = new JLabel("Sala");
         String[] v6 = new String[m.salas.size()];
@@ -239,7 +234,7 @@ public class AppConfig extends JFrame {
         }
 
         final JComboBox te6 = new JComboBox(v6);
-        //  final JTextField te6 = new JTextField();
+
 
         // Buttons
         Botao add = new Botao(img.add, img.addO);
@@ -251,8 +246,9 @@ public class AppConfig extends JFrame {
         // Customize
 
         // Borders
-        main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-        buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        main_panel.setBorder(new EmptyBorder(20, 20, 5, 20));
+        buttons_panel.setBorder(new EmptyBorder(5, 20, 20, 20));
+
 
         // Opaque
         main_panel.setOpaque(false);
@@ -269,7 +265,6 @@ public class AppConfig extends JFrame {
 
         //Mouse Listener
         l.addMouseListener(new MouseAdapter() {
-
             public void mouseClicked(MouseEvent evt) {
                 JList list = (JList) evt.getSource();
                 String Tipo = "";
@@ -298,7 +293,6 @@ public class AppConfig extends JFrame {
 //		 ActionListeners
 // adicionar a celula
         add.addActionListener(new ActionListener() {
-
             public void actionPerformed(ActionEvent e) {
                 int duracao = 0;
                 if (te2.getSelectedIndex() == 0) {
@@ -320,7 +314,6 @@ public class AppConfig extends JFrame {
 
 // editar celula
         edit.addActionListener(new ActionListener() {
-
             @SuppressWarnings("unused")
             public void actionPerformed(ActionEvent e) {
                 int duracao = 0, val = 0;
@@ -343,13 +336,11 @@ public class AppConfig extends JFrame {
 
         // remover celula
         remove.addActionListener(new ActionListener() {
-
             public void actionPerformed(ActionEvent e) {
                 m.horarios.get(l.getSelectedIndex() - 1).apagarHorario(m.horarios);
                 ModeloListaHorario.removeElementAt(l.getSelectedIndex());
             }
         });
-
 
         // Adding to panels
 
@@ -374,7 +365,7 @@ public class AppConfig extends JFrame {
         main_panel.add(lb, BorderLayout.NORTH);
         main_panel.add(new JScrollPane(l, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS), BorderLayout.CENTER);
-//        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+        //main_panel.add(buttons_panel, BorderLayout.SOUTH);
         main_panel.add(formulario_panel, BorderLayout.SOUTH);
 
         gerirHorarios.add(main_panel, BorderLayout.NORTH);
@@ -382,16 +373,9 @@ public class AppConfig extends JFrame {
 
     }
 
-
-    private void addExports() {
-    }
-
-   
-
-   
     private void calculoCarga() {
 
-          // Panels
+        // Panels
         Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
 
@@ -404,12 +388,12 @@ public class AppConfig extends JFrame {
         JLabel lbl_add = new JLabel("     Calcular Carga Horaria:");
 
         // Buttons
-        Botao listarProf = new Botao(img.professor, img.professorO);
-        Botao listarAluno = new Botao(img.aluno, img.alunoO);
-        Botao listarDisc = new Botao(img.disciplina, img.disciplinaO);
-        Botao listarTurma = new Botao(img.turma, img.turmaO);
-        Botao listarSala = new Botao(img.sala, img.salaO);
-        Botao[] botoes = {listarProf, listarAluno, listarDisc, listarTurma, listarSala};
+        Botao cargaProf = new Botao(img.professor, img.professorO);
+        Botao cargaAluno = new Botao(img.aluno, img.alunoO);
+        Botao cargaDisc = new Botao(img.disciplina, img.disciplinaO);
+        Botao cargaTurma = new Botao(img.turma, img.turmaO);
+        Botao cargaSala = new Botao(img.sala, img.salaO);
+        Botao[] botoes = {cargaProf, cargaAluno, cargaDisc, cargaTurma, cargaSala};
 
         // Customize
 
@@ -429,16 +413,51 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-     
- 
- 
+        
+        cargaProf.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                CargaHoraria carga = new CargaHoraria();
+               
+            }
+        });
+        
+       cargaAluno.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+              
+               
+            }
+        });
+       
+       cargaDisc.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+          
+               
+            }
+        });
+       
+       cargaTurma.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+              
+               
+            }
+        });
+       
+       cargaSala.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+               
+            }
+        });
+        
+
+
+
 
         // Adding to panels
-        buttons_panel.add(listarProf);
-        buttons_panel.add(listarAluno);
-        buttons_panel.add(listarDisc);
-        buttons_panel.add(listarTurma);
-        buttons_panel.add(listarSala);
+        buttons_panel.add(cargaProf);
+        buttons_panel.add(cargaAluno);
+        buttons_panel.add(cargaDisc);
+        buttons_panel.add(cargaTurma);
+        buttons_panel.add(cargaSala);
 
         main_panel.add(lbl_add, BorderLayout.NORTH);
         main_panel.add(buttons_panel, BorderLayout.SOUTH);
@@ -449,68 +468,6 @@ public class AppConfig extends JFrame {
     }
 
     private void listarHorarios() {
-
-        /*
-         * // Panels Painel main_panel = new Painel(img.bg4); JPanel
-         * buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
-         *
-         * // Layout listarHorarios.setLayout(new FlowLayout(FlowLayout.CENTER,
-         * 0, 70)); main_panel.setLayout(new BorderLayout());
-         *
-         * // Labels JLabel lbl_add = new JLabel(" Listar Horarios:");
-         *
-         * // Buttons Botao listarProf = new Botao(img.addCo, img.addCo_o);
-         * Botao listarAluno = new Botao(img.btn_horariosAluno,
-         * img.btn_horariosAlunoO); Botao listarDisc = new Botao(img.addSpo,
-         * img.addSpo_o); Botao listarTurma = new Botao(img.addSpo,
-         * img.addSpo_o); Botao listarSala = new Botao(img.addSpo,
-         * img.addSpo_o); Botao[] botoes = {listarProf, listarAluno, listarDisc,
-         * listarTurma, listarSala};
-         *
-         * // Customize
-         *
-         * // Font lbl_add.setFont((new Font("Arial", Font.BOLD, 14)));
-         *
-         * // Color lbl_add.setForeground(Color.white);
-         *
-         * // Borders main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-         * buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
-         *
-         * // Opaque main_panel.setOpaque(false);
-         * buttons_panel.setOpaque(false);
-         *
-         * // Buttons configButtons(botoes); // ActionListeners
-         *
-         * // Add country listarProf.addActionListener(new ActionListener() {
-         *
-         * public void actionPerformed(ActionEvent e) { //	if (a != null) { //
-         * a.setVisible(false); //	a = null; //	} //	a = new AddDados(null,
-         * null, null); //	a.setSelectedIndex(0); } });
-         *
-         * // Add Competition listarAluno.addActionListener(new
-         * ActionListener() {
-         *
-         * public void actionPerformed(ActionEvent e) { //	if (a != null) { //
-         * a.setVisible(false); //	a = null; //	} //	a = new AddDados(null,
-         * null, null); //	a.setSelectedIndex(1); } });
-         *
-         * // Add Sport listarDisc.addActionListener(new ActionListener() {
-         *
-         * public void actionPerformed(ActionEvent e) { //	if (a != null) { //
-         * a.setVisible(false); //	a = null; //	} //	a = new AddDados(null,
-         * null, null); //	a.setSelectedIndex(2); } });
-         *
-         * // Adding to panels buttons_panel.add(listarProf);
-         * buttons_panel.add(listarAluno); buttons_panel.add(listarDisc);
-         * buttons_panel.add(listarTurma); buttons_panel.add(listarSala);
-         *
-         * main_panel.add(lbl_add, BorderLayout.NORTH);
-         * main_panel.add(buttons_panel, BorderLayout.SOUTH);
-         *
-         * listarHorarios.add(main_panel);
-         */
-
-
         // Panels
         Painel main_panel = new Painel(img.background2);
         JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
@@ -550,22 +507,16 @@ public class AppConfig extends JFrame {
         configButtons(botoes);
         // ActionListeners
 
-     
-        listarProf.addActionListener(new ActionListener() {
 
+        listarProf.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-//				if (a != null) {
-//					a.setVisible(false);
-//					a = null;
-//				}
-//				a = new AddDados(null, null, null);
-//				a.setSelectedIndex(0);
+                Listar a = new Listar();
+               
             }
         });
 
-    
-        listarAluno.addActionListener(new ActionListener() {
 
+        listarAluno.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
 //					a.setVisible(false);
@@ -576,9 +527,8 @@ public class AppConfig extends JFrame {
             }
         });
 
-       
-        listarDisc.addActionListener(new ActionListener() {
 
+        listarDisc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 //				if (a != null) {
 //					a.setVisible(false);
