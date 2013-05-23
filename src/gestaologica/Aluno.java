@@ -218,4 +218,9 @@ public class Aluno extends Pessoa implements Serializable{
     public String toStringNome() {
         return super.toString();
     }
+    
+    public String toStringNumeroAluno()
+    {
+        return getNumeroAluno() +"";
+    }
 }

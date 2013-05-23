@@ -416,35 +416,35 @@ public class AppConfig extends JFrame {
         
         cargaProf.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                CargaHoraria carga = new CargaHoraria();
+                CargaHoraria carga = new CargaHoraria("professor");
                
             }
         });
         
        cargaAluno.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-              
+              CargaHoraria carga = new CargaHoraria("aluno");
                
             }
         });
        
        cargaDisc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-          
+          CargaHoraria carga = new CargaHoraria("disciplina");
                
             }
         });
        
        cargaTurma.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-              
+              CargaHoraria carga = new CargaHoraria("turma");
                
             }
         });
        
        cargaSala.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-               
+               CargaHoraria carga = new CargaHoraria("sala");
             }
         });
         
