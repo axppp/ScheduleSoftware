@@ -56,76 +56,71 @@ public class CargaHoraria extends JFrame {
 
 
         panel.add(lb);
-        if(tipo.equalsIgnoreCase("professor"))
-        {
-            
-        JLabel la5 = new JLabel(tipo);
-        la5.setFont(new Font("Arial", Font.BOLD, 14));
-        la5.setForeground(Color.white);
-        String[] v5 = new String[m.professores.size() + 1];
-        v5[0] = " ";
-        for (int i = 1; i < m.professores.size() + 1; i++) {
-            v5[i] = m.professores.get(i - 1).toString();
-        }
-        final JComboBox te5 = new JComboBox(v5);
-        panel.add(la5);
-        panel.add(te5);
-        
-        te5.addActionListener(te5);
-        }else if(tipo.equalsIgnoreCase("aluno"))
-        {
+        if (tipo.equalsIgnoreCase("professor")) {
+
             JLabel la5 = new JLabel(tipo);
             la5.setFont(new Font("Arial", Font.BOLD, 14));
-        la5.setForeground(Color.white);
-        String[] v5 = new String[m.alunos.size() + 1];
-        v5[0] = " ";
-        for (int i = 1; i < m.alunos.size() + 1; i++) {
-            v5[i] = m.alunos.get(i - 1).toStringNumeroAluno();
+            la5.setForeground(Color.white);
+            String[] v5 = new String[m.professores.size() + 1];
+            v5[0] = " ";
+            for (int i = 1; i < m.professores.size() + 1; i++) {
+                v5[i] = m.professores.get(i - 1).toString();
+            }
+            final JComboBox te5 = new JComboBox(v5);
+            panel.add(la5);
+            panel.add(te5);
+
+            te5.addActionListener(te5);
+        } else if (tipo.equalsIgnoreCase("aluno")) {
+            JLabel la5 = new JLabel(tipo);
+            la5.setFont(new Font("Arial", Font.BOLD, 14));
+            la5.setForeground(Color.white);
+            String[] v5 = new String[m.alunos.size() + 1];
+            v5[0] = " ";
+            for (int i = 1; i < m.alunos.size() + 1; i++) {
+                v5[i] = m.alunos.get(i - 1).toStringNumeroAluno();
+            }
+            final JComboBox te5 = new JComboBox(v5);
+            panel.add(la5);
+            panel.add(te5);
+        } else if (tipo.equalsIgnoreCase("turma")) {
+            JLabel la5 = new JLabel(tipo);
+            la5.setFont(new Font("Arial", Font.BOLD, 14));
+            la5.setForeground(Color.white);
+            String[] v5 = new String[m.turmas.size() + 1];
+            v5[0] = " ";
+            for (int i = 1; i < m.turmas.size() + 1; i++) {
+                v5[i] = m.turmas.get(i - 1).getDesignacao();
+            }
+            final JComboBox te5 = new JComboBox(v5);
+            panel.add(la5);
+            panel.add(te5);
+        } else if (tipo.equalsIgnoreCase("disciplina")) {
+            JLabel la5 = new JLabel(tipo);
+            la5.setFont(new Font("Arial", Font.BOLD, 14));
+            la5.setForeground(Color.white);
+            String[] v5 = new String[m.disciplinas.size() + 1];
+            v5[0] = " ";
+            for (int i = 1; i < m.disciplinas.size() + 1; i++) {
+                v5[i] = m.disciplinas.get(i - 1).getDesignacao();
+            }
+            final JComboBox te5 = new JComboBox(v5);
+            panel.add(la5);
+            panel.add(te5);
+        } else if (tipo.equalsIgnoreCase("sala")) {
+            JLabel la5 = new JLabel(tipo);
+            la5.setFont(new Font("Arial", Font.BOLD, 14));
+            la5.setForeground(Color.white);
+            String[] v5 = new String[m.salas.size() + 1];
+            v5[0] = " ";
+            for (int i = 1; i < m.salas.size() + 1; i++) {
+                v5[i] = m.salas.get(i - 1).getCodigo();
+            }
+            final JComboBox te5 = new JComboBox(v5);
+            panel.add(la5);
+            panel.add(te5);
         }
-        final JComboBox te5 = new JComboBox(v5);
-        panel.add(la5);
-        panel.add(te5);
-        }else if(tipo.equalsIgnoreCase("turma"))
-        {
-              JLabel la5 = new JLabel(tipo);
-              la5.setFont(new Font("Arial", Font.BOLD, 14));
-        la5.setForeground(Color.white);
-        String[] v5 = new String[m.turmas.size() + 1];
-        v5[0] = " ";
-        for (int i = 1; i < m.turmas.size() + 1; i++) {
-            v5[i] = m.turmas.get(i - 1).getDesignacao();
-        }
-         final JComboBox te5 = new JComboBox(v5);
-         panel.add(la5);
-         panel.add(te5);
-        }else if(tipo.equalsIgnoreCase("disciplina"))
-        {
-              JLabel la5 = new JLabel(tipo);
-              la5.setFont(new Font("Arial", Font.BOLD, 14));
-        la5.setForeground(Color.white);
-        String[] v5 = new String[m.disciplinas.size() + 1];
-        v5[0] = " ";
-        for (int i = 1; i < m.disciplinas.size() + 1; i++) {
-            v5[i] = m.disciplinas.get(i - 1).getDesignacao();
-        }
-         final JComboBox te5 = new JComboBox(v5);
-        panel.add(la5);
-         panel.add(te5);
-        }else if(tipo.equalsIgnoreCase("sala"))
-        {
-              JLabel la5 = new JLabel(tipo);
-              la5.setFont(new Font("Arial", Font.BOLD, 14));
-        la5.setForeground(Color.white);
-        String[] v5 = new String[m.salas.size() + 1];
-        v5[0] = " ";
-        for (int i = 1; i < m.salas.size() + 1; i++) {
-            v5[i] = m.salas.get(i - 1).getCodigo();
-        }
-         final JComboBox te5 = new JComboBox(v5);
-        panel.add(la5);
-         panel.add(te5);
-        }
-            
+
 
         // panel.add(lb2);
 

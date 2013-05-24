@@ -65,6 +65,9 @@ public class Imagens {
         
         String salaO =("src/Imagens/btn_salaO.png");
 
-
+        String ok=("src/Imagens/btn_ok.png");
+        
+        String okO=("src/Imagens/btn_okO.png");
+        
 
 }

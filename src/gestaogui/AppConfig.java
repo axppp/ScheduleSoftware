@@ -10,6 +10,7 @@ import javax.swing.border.*;
 public class AppConfig extends JFrame {
 
     private ListarDados ListarD;
+    private SalaLivre SalaL;
     private Painel gerirHorarios;
     private Painel listarHorarios;
     private Painel listarDados;
@@ -32,6 +33,7 @@ public class AppConfig extends JFrame {
         listarHorarios();
         // addEdits();
         listarDados();
+        salaLivre();
         setProperties(600, 500, 1, true);
 
     }
@@ -171,6 +173,62 @@ public class AppConfig extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 ListarD = new ListarDados("Sala");
+            }
+        });
+
+
+    }
+
+    private void salaLivre() {
+
+        // Panels
+        Painel main_panel = new Painel(img.background2);
+        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
+
+        // Layout
+        salaLivre.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        main_panel.setLayout(new BorderLayout());
+
+        // Labels
+        JLabel lbl_add = new JLabel("     Ocupação Sala:");
+
+        // Buttons
+        Botao listarSala = new Botao(img.sala, img.salaO);
+        Botao[] botoes = {listarSala};
+
+        // Customize
+
+        // Font
+        lbl_add.setFont((new Font("Arial", Font.BOLD, 14)));
+
+        // Color
+        lbl_add.setForeground(Color.white);
+
+        // Borders
+        main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
+        // Opaque
+        main_panel.setOpaque(false);
+        buttons_panel.setOpaque(false);
+
+        // Buttons
+        configButtons(botoes);
+
+
+        // Adding to panels
+        buttons_panel.add(listarSala);
+
+        main_panel.add(lbl_add, BorderLayout.NORTH);
+        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+
+        salaLivre.add(main_panel);
+
+        //ActionListeners
+        listarSala.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                SalaL = new SalaLivre();
+                SalaL.setVisible(true);
             }
         });
 
@@ -457,72 +515,39 @@ public class AppConfig extends JFrame {
         cargaProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                CargaHoraria carga = new CargaHoraria();
-
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
                 CargaHoraria carga = new CargaHoraria("professor");
-               
->>>>>>> Carga Horaria v2
+
             }
         });
 
         cargaAluno.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
-              CargaHoraria carga = new CargaHoraria("aluno");
-               
->>>>>>> Carga Horaria v2
+                CargaHoraria carga = new CargaHoraria("aluno");
+
             }
         });
 
         cargaDisc.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
-          CargaHoraria carga = new CargaHoraria("disciplina");
-               
->>>>>>> Carga Horaria v2
+                CargaHoraria carga = new CargaHoraria("disciplina");
+
             }
         });
 
         cargaTurma.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
-              CargaHoraria carga = new CargaHoraria("turma");
-               
->>>>>>> Carga Horaria v2
+                CargaHoraria carga = new CargaHoraria("turma");
+
             }
         });
 
         cargaSala.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-               CargaHoraria carga = new CargaHoraria("sala");
-=======
-<<<<<<< HEAD
-=======
-               CargaHoraria carga = new CargaHoraria("sala");
->>>>>>> Carga Horaria v2
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
+                CargaHoraria carga = new CargaHoraria("sala");
             }
         });
 

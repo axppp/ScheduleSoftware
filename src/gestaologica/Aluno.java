@@ -1,8 +1,5 @@
 package gestaologica;
 
-
-
-
 import gestaologica.Data;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +15,7 @@ import java.util.Date;
  *
  * @author axppp
  */
-public class Aluno extends Pessoa implements Serializable{
+public class Aluno extends Pessoa implements Serializable {
 
     /**
      * variavel que guarda o numero de aluno
@@ -80,12 +77,14 @@ public class Aluno extends Pessoa implements Serializable{
         }
 
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.getHora_inicio() - p2.getHora_inicio();
             }
         });
-        
+
         Collections.sort(h, new Comparator<Horario>() {
+
             public int compare(Horario p1, Horario p2) {
                 return p1.getDia_semana() - p2.getDia_semana();
             }
@@ -99,20 +98,20 @@ public class Aluno extends Pessoa implements Serializable{
      * @param alunos
      * @return objecto aluno Metodo para listar dados de um determinado aluno
      */
-    public Aluno listarDadosAluno(ArrayList<Aluno> alunos) {
-        Aluno aluno = new Aluno();
-        boolean flag = false;
-        for (int i = 0; i < alunos.size(); i++) {
-            if (numeroAluno == alunos.get(i).getNumeroAluno()) {
-                aluno = alunos.get(i);
-                flag = true;
-            }
-        }
-        if (flag == false) {
-            System.out.println("Aluno nao encontrado." + "\n");
-        }
-        System.out.println(aluno);
-        return aluno;
+    public String listarDadosAluno() {
+//        Aluno aluno = new Aluno();
+//        boolean flag = false;
+//        for (int i = 0; i < alunos.size(); i++) {
+//            if (numeroAluno == alunos.get(i).getNumeroAluno()) {
+//                aluno = alunos.get(i);
+//                flag = true;
+//            }
+//        }
+//        if (flag == false) {
+//            System.out.println("Aluno nao encontrado." + "\n");
+//        }
+//        System.out.println(aluno);
+        return this.toString();
     }
 
     /**
@@ -141,7 +140,6 @@ public class Aluno extends Pessoa implements Serializable{
         System.out.println("O Aluno " + super.getNome() + " tem " + j + " horas de carga horaria semanal." + "\n");
         return j;
     }
-    
 
     /**
      * @return numeroAluno
@@ -218,14 +216,8 @@ public class Aluno extends Pessoa implements Serializable{
     public String toStringNome() {
         return super.getNome();
     }
-    
-    public String toStringNumeroAluno()
-    {
-        return getNumeroAluno() +"";
-    }
-    
-    public String toStringNumeroAluno()
-    {
-        return getNumeroAluno() +"";
+
+    public String toStringNumeroAluno() {
+        return getNumeroAluno() + "";
     }
 }

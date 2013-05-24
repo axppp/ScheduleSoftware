@@ -1,8 +1,5 @@
 package gestaologica;
 
-
-
-
 import gestaologica.Data;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +15,7 @@ import java.util.Comparator;
  *
  * @author Paulo Ponciano
  */
-public class Professor extends Pessoa implements Serializable{
+public class Professor extends Pessoa implements Serializable {
 
     /**
      * variavel que guarda a sigla do professor
@@ -73,14 +70,22 @@ public class Professor extends Pessoa implements Serializable{
                         h.add(disciplina.get(j));
                         for (int k = 0; k < turma.size(); k++) {
                             if (turma.get(k).getDesignacao().equalsIgnoreCase(horario.get(i).getDesignacao())) {
-                                t.add(turma.get(k));
+                                if (t.isEmpty()) {
+                                    t.add(turma.get(k));
+                                } else {
+                                    for (int l = 0; l < t.size(); l++) {
+                                        if (!t.get(l).equals(turma.get(k))) {
+                                            t.add(turma.get(k));
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
         }
-        return h.toString() + t.toString();
+        return "O Professor " + this.getNome() + " lecciona a(s) \n" + h.toString() + " na(s) turma(s) \n" + t.toString();
     }
 
     /**
@@ -127,20 +132,20 @@ public class Professor extends Pessoa implements Serializable{
      * @param prof
      * @return objecto professor Metodo para listar dados de um dado professor
      */
-    public Professor listarDadosProfessor(ArrayList<Professor> professores) {
-        Professor professor = new Professor();
-        boolean flag = false;
-        for (int i = 0; i < professores.size(); i++) {
-            if (sigla.equalsIgnoreCase(professores.get(i).getSigla())) {
-                professor = professores.get(i);
-                flag = true;
-            }
-        }
-        if (flag == false) {
-            System.out.println("Professor nao encontrado." + "\n");
-        }
-        System.out.println(professor.toStringProfessor() + "\n");
-        return professor;
+    public String listarDadosProfessor() {
+//        Professor professor = new Professor();
+//        boolean flag = false;
+//        for (int i = 0; i < professores.size(); i++) {
+//            if (sigla.equalsIgnoreCase(professores.get(i).getSigla())) {
+//                professor = professores.get(i);
+//                flag = true;
+//            }
+//        }
+//        if (flag == false) {
+//            System.out.println("Professor nao encontrado." + "\n");
+//        }
+//        System.out.println(professor.toStringProfessor() + "\n");
+        return this.toStringProfessor();
     }
 
     /**
@@ -223,6 +228,6 @@ public class Professor extends Pessoa implements Serializable{
      * @return
      */
     public String toStringProfessor() {
-        return super.toString() + " é o professor que contem a sigla " + sigla + " e a data da sua contratacao foi " + datacontratacao.getDia() + " do mes " + datacontratacao.getMes() + " do ano de " + datacontratacao.getAno();
+        return super.toString() + " é o professor que contem a sigla " + sigla + " e a data da sua contratação foi no dia " + datacontratacao.getDia() + ", do " + datacontratacao.getMes() + ", de " + datacontratacao.getAno() + ".";
     }
 }

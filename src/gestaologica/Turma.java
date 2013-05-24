@@ -142,20 +142,20 @@ public class Turma implements Serializable{
      * @param turmas
      * @return objecto turma Metodo para listar os dados de uma dada turma
      */
-    public Turma listarDadosTurma(ArrayList<Turma> turmas) {
-        Turma turma = new Turma();
-        boolean flag = false;
-        for (int i = 0; i < turmas.size(); i++) {
-            if (designacao.equalsIgnoreCase(turmas.get(i).getDesignacao())) {
-                turma = turmas.get(i);
-                flag = true;
-            }
-        }
-        if (flag == false) {
-            System.out.println("Turma nao encontrado." + "\n");
-        }
-        System.out.println(turma + "\n");
-        return turma;
+    public String listarDadosTurma() {
+//        Turma turma = new Turma();
+//        boolean flag = false;
+//        for (int i = 0; i < turmas.size(); i++) {
+//            if (designacao.equalsIgnoreCase(turmas.get(i).getDesignacao())) {
+//                turma = turmas.get(i);
+//                flag = true;
+//            }
+//        }
+//        if (flag == false) {
+//            System.out.println("Turma nao encontrado." + "\n");
+//        }
+//        System.out.println(turma + "\n");
+        return this.toString();
     }
 
     /**
@@ -204,7 +204,7 @@ public class Turma implements Serializable{
 
     @Override
     public String toString() {
-        return "Turma{" + "designacao=" + designacao + ", tem " + alunos.size() + " Alunos " + '}';
+        return "Turma com " + "designacao=" + designacao + ", tem " + alunos.size() + " Alunos.";
     }
 
     /**
