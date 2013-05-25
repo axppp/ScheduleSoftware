@@ -216,17 +216,12 @@ public class Aluno extends Pessoa implements Serializable {
     public String toStringNome() {
         return super.getNome();
     }
-<<<<<<< HEAD
+
     
     public String toStringNumeroAluno()
     {
         return getNumeroAluno() +"";
     }
     
-=======
 
-    public String toStringNumeroAluno() {
-        return getNumeroAluno() + "";
-    }
->>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
 }
