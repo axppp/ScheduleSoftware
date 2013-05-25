@@ -92,7 +92,7 @@ public class ListarDados extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).toStringProfessor());
+                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).listarDadosProfessor());
                 }
             }
         });
@@ -139,7 +139,7 @@ public class ListarDados extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.alunos.get(te5.getSelectedIndex() - 1));
+                    JOptionPane.showMessageDialog(null, m.alunos.get(te5.getSelectedIndex() - 1).listarDadosAluno());
                 }
             }
         });
@@ -186,7 +186,7 @@ public class ListarDados extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.turmas.get(te5.getSelectedIndex() - 1));
+                    JOptionPane.showMessageDialog(null, m.turmas.get(te5.getSelectedIndex() - 1).listarDadosTurma());
                 }
             }
         });
@@ -233,7 +233,7 @@ public class ListarDados extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.salas.get(te5.getSelectedIndex() - 1));
+                    JOptionPane.showMessageDialog(null, m.salas.get(te5.getSelectedIndex() - 1).listarDadosSala());
                 }
             }
         });
@@ -280,7 +280,7 @@ public class ListarDados extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.disciplinas.get(te5.getSelectedIndex() - 1));
+                    JOptionPane.showMessageDialog(null, m.disciplinas.get(te5.getSelectedIndex() - 1).listarDadosDisciplina());
                 }
             }
         });

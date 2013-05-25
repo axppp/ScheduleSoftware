@@ -477,6 +477,6 @@ public class Horario implements Serializable {
      * @return Metodo toString para uma aula extra
      */
     public String toStringAulaExtra() {
-        return "Sala esta acessivel das " + hora_inicio + " ate as " + (hora_inicio + duracaoAula);
+        return "Sala esta acessivel das " + hora_inicio + "H ate as " + (hora_inicio + duracaoAula)+"H";
     }
 }

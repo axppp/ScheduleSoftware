@@ -138,6 +138,7 @@ public class CargaHoraria extends JFrame {
 
         final JComboBox te5;
         panel.add(lb);
+<<<<<<< HEAD
 
 
         String[] v5 = new String[m.professores.size() + 1];
@@ -369,6 +370,8 @@ public class CargaHoraria extends JFrame {
 
         final JComboBox te5;
         panel.add(lb);
+=======
+>>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
         if (tipo.equalsIgnoreCase("professor")) {
 
             JLabel la5 = new JLabel(tipo);
@@ -379,11 +382,19 @@ public class CargaHoraria extends JFrame {
             for (int i = 1; i < m.professores.size() + 1; i++) {
                 v5[i] = m.professores.get(i - 1).toString();
             }
+<<<<<<< HEAD
             te5 = new JComboBox(v5);
             panel.add(la5);
             panel.add(te5);
 
 
+=======
+            final JComboBox te5 = new JComboBox(v5);
+            panel.add(la5);
+            panel.add(te5);
+
+            te5.addActionListener(te5);
+>>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
         } else if (tipo.equalsIgnoreCase("aluno")) {
             JLabel la5 = new JLabel(tipo);
             la5.setFont(new Font("Arial", Font.BOLD, 14));
@@ -393,7 +404,11 @@ public class CargaHoraria extends JFrame {
             for (int i = 1; i < m.alunos.size() + 1; i++) {
                 v5[i] = m.alunos.get(i - 1).toStringNumeroAluno();
             }
+<<<<<<< HEAD
             te5 = new JComboBox(v5);
+=======
+            final JComboBox te5 = new JComboBox(v5);
+>>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
             panel.add(la5);
             panel.add(te5);
         } else if (tipo.equalsIgnoreCase("turma")) {
@@ -405,7 +420,11 @@ public class CargaHoraria extends JFrame {
             for (int i = 1; i < m.turmas.size() + 1; i++) {
                 v5[i] = m.turmas.get(i - 1).getDesignacao();
             }
+<<<<<<< HEAD
             te5 = new JComboBox(v5);
+=======
+            final JComboBox te5 = new JComboBox(v5);
+>>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
             panel.add(la5);
             panel.add(te5);
         } else if (tipo.equalsIgnoreCase("disciplina")) {
@@ -417,7 +436,11 @@ public class CargaHoraria extends JFrame {
             for (int i = 1; i < m.disciplinas.size() + 1; i++) {
                 v5[i] = m.disciplinas.get(i - 1).getDesignacao();
             }
+<<<<<<< HEAD
             te5 = new JComboBox(v5);
+=======
+            final JComboBox te5 = new JComboBox(v5);
+>>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
             panel.add(la5);
             panel.add(te5);
         } else if (tipo.equalsIgnoreCase("sala")) {
@@ -429,10 +452,18 @@ public class CargaHoraria extends JFrame {
             for (int i = 1; i < m.salas.size() + 1; i++) {
                 v5[i] = m.salas.get(i - 1).getCodigo();
             }
+<<<<<<< HEAD
             te5 = new JComboBox(v5);
             panel.add(la5);
             panel.add(te5);
         }
+=======
+            final JComboBox te5 = new JComboBox(v5);
+            panel.add(la5);
+            panel.add(te5);
+        }
+
+>>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
 
 
         adicionar.addActionListener(new ActionListener() {

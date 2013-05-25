@@ -152,20 +152,20 @@ public class SalaAula implements Serializable {
      * @return objecto sala de aula Metodo para listar dados de uma determinada
      * sala de aula
      */
-    public SalaAula listarDadosSala(ArrayList<SalaAula> Salas) {
-        SalaAula salaAula = new SalaAula();
-        boolean flag = false;
-        for (int i = 0; i < Salas.size(); i++) {
-            if (codigo.equalsIgnoreCase(Salas.get(i).getCodigo())) {
-                salaAula = Salas.get(i);
-                flag = true;
-            }
-        }
-        if (flag == false) {
-            System.out.println("Sala nao encontrado.\n");
-        }
-        System.out.println(salaAula + "\n");
-        return salaAula;
+    public String listarDadosSala() {
+//        SalaAula salaAula = new SalaAula();
+//        boolean flag = false;
+//        for (int i = 0; i < Salas.size(); i++) {
+//            if (codigo.equalsIgnoreCase(Salas.get(i).getCodigo())) {
+//                salaAula = Salas.get(i);
+//                flag = true;
+//            }
+//        }
+//        if (flag == false) {
+//            System.out.println("Sala nao encontrado.\n");
+//        }
+//        System.out.println(salaAula + "\n");
+        return this.toString();
     }
 
     /**
@@ -339,14 +339,14 @@ public class SalaAula implements Serializable {
             }
         }
         if (hor.size() == 0) {
-            return "Sala disponivel das " + temp + " ate as 18.\n";
+            return "Sala disponivel das " + temp + "H ate as 18H.\n";
         }
         for (int i = 0; i < hor.size(); i++) {
             if (hor.get(i).getHora_inicio() >= b) {
                 return hor.get(i).toStringAulaExtra();
             }
             if (hor.size() == i + 1 && 18 > temp) {
-                return "Sala disponivel das " + temp + " ate as 18.\n";
+                return "Sala disponivel das " + temp + "H ate as 18H.\n";
             }
         }
         return "Sala nao disponivel.";

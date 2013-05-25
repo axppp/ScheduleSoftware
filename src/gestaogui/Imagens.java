@@ -65,8 +65,15 @@ public class Imagens {
         
         String salaO =("src/Imagens/btn_salaO.png");
 
+<<<<<<< HEAD
         String ver = ("src/Imagens/btn_ver.png");
 
         String verO = ("src/Imagens/btn_verO.png");
+=======
+        String ok=("src/Imagens/btn_ok.png");
+        
+        String okO=("src/Imagens/btn_okO.png");
+        
+>>>>>>> eda6e76b528d888771bbf7ffef6a846f08ace0c4
 
 }

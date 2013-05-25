@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author axppp
  */
 public class TesteGestao {
-/*
+
     public static void main(String[] args) throws Exception {
 
         ArrayList<SalaAula> salas = new ArrayList<SalaAula>();
@@ -27,7 +27,7 @@ public class TesteGestao {
 //Inserção dos ficheiros de alunos, professores, disciplinas, salas, turmas, e horários.
 
         CSV ola = new CSV();
-        ola.LerMemoriaFicheiro();
+        ola.lerEstado();
         if (!ola.getAluno().isEmpty()) {
             salas = ola.getSalaAula();
             alunos = ola.getAluno();
@@ -46,7 +46,7 @@ public class TesteGestao {
             System.out.println("Novo.");
         }
         ola.testTXT();
-        ola.GravarMemoriaFicheiro();
+        ola.gravarEstado();
         ola.test();
 
 
@@ -105,8 +105,8 @@ public class TesteGestao {
 
 
 //Listar as disciplinas lecionadas por um determinado professor
-//        String g = professores.get(10).ListarDisciplinaProfessor(turmas, disciplinas, horarios);
-//        System.out.println(g);
+        String g = professores.get(10).ListarDisciplinaProfessor(turmas, disciplinas, horarios);
+        System.out.println(g);
 
 
 //Listar as disciplinas que decorrem numa dada sala.
@@ -132,5 +132,5 @@ public class TesteGestao {
 //        disciplinas.get(3).listarDadosDisciplina(disciplinas);
 
 
-    }*/
+    }
 }

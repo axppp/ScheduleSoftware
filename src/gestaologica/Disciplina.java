@@ -109,20 +109,20 @@ public class Disciplina implements Serializable {
      * @return objecto disciplina Metodo para listar os dados de uma dada
      * disciplina
      */
-    public Disciplina listarDadosDisciplina(ArrayList<Disciplina> disciplinas) {
-        Disciplina disciplina = new Disciplina();
-        boolean flag = false;
-        for (int i = 0; i < disciplinas.size(); i++) {
-            if (sigla.equalsIgnoreCase(disciplinas.get(i).getSigla())) {
-                disciplina = disciplinas.get(i);
-                flag = true;
-            }
-        }
-        if (flag == false) {
-            System.out.println("Disciplina nao encontrado.\n");
-        }
-        System.out.println(disciplina + "\n");
-        return disciplina;
+    public String listarDadosDisciplina() {
+//        Disciplina disciplina = new Disciplina();
+//        boolean flag = false;
+//        for (int i = 0; i < disciplinas.size(); i++) {
+//            if (sigla.equalsIgnoreCase(disciplinas.get(i).getSigla())) {
+//                disciplina = disciplinas.get(i);
+//                flag = true;
+//            }
+//        }
+//        if (flag == false) {
+//            System.out.println("Disciplina nao encontrado.\n");
+//        }
+//        System.out.println(disciplina + "\n");
+        return this.toString();
     }
 
     /**
@@ -305,7 +305,7 @@ public class Disciplina implements Serializable {
      * Metodo toString
      */
     public String toString() {
-        return "Disciplina com a sigla " + sigla + " e a designacao de " + designacao + " , tem " + numHorasTeoricas + "horas teoricas e " + numHorasPraticas + " horas praticas. O professor que lecciona as aulas teorica é " + sigla_prof_t + " , e os  professores das aulas praticas sao " + professores.toString() + "\n";
+        return "Disciplina com a sigla " + sigla + " e a designacao de " + designacao + " , tem " + numHorasTeoricas + "horas teoricas e " + numHorasPraticas + " horas praticas.\n O professor que lecciona as aulas teorica é " + sigla_prof_t + " , e os  professores das aulas praticas sao " + professores.toString() + ".\n";
 
     }
 
