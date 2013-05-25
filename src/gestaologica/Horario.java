@@ -33,7 +33,7 @@ public class Horario implements Serializable {
 
         T, P
     };
-    tipo_aula aulas;
+    Horario.tipo_aula aulas;
     /**
      * variavel que guarda o dia da semana do horario
      */
@@ -218,6 +218,10 @@ public class Horario implements Serializable {
             i++;
         } while (i < horarios.size() && validacao == true);
 
+        if (novo.getHora_inicio() == 17 && novo.getDuracaoAula() == 2) {
+            validacao = false;
+            JOptionPane.showMessageDialog(null, "A aula não é valida pois começa às 17h e tem 2 horas de duração.\n Sendo que as Aulas terminam as 18h.");
+        }
         return validacao;
 
 
@@ -294,6 +298,10 @@ public class Horario implements Serializable {
                     }
                 }
             }
+        }
+        if (this.getHora_inicio() == 17 && this.getDuracaoAula() == 2) {
+            flag = false;
+            JOptionPane.showMessageDialog(null, "A aula não é valida pois começa às 17h e tem 2 horas de duração.\n Sendo que as Aulas terminam as 18h.");
         }
         return flag;
     }
@@ -477,6 +485,6 @@ public class Horario implements Serializable {
      * @return Metodo toString para uma aula extra
      */
     public String toStringAulaExtra() {
-        return "Sala esta acessivel das " + hora_inicio + "H ate as " + (hora_inicio + duracaoAula)+"H";
+        return "Sala esta acessivel das " + hora_inicio + "H ate as " + (hora_inicio + duracaoAula) + "H";
     }
 }

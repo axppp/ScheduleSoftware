@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class TesteGestao {
 
-    public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
 
         ArrayList<SalaAula> salas = new ArrayList<SalaAula>();
         ArrayList<Aluno> alunos = new ArrayList<Aluno>();
@@ -105,8 +105,8 @@ public class TesteGestao {
 
 
 //Listar as disciplinas lecionadas por um determinado professor
-        String g = professores.get(10).ListarDisciplinaProfessor(turmas, disciplinas, horarios);
-        System.out.println(g);
+//        String g = professores.get(10).ListarDisciplinaProfessor(turmas, disciplinas, horarios);
+//        System.out.println(g);
 
 
 //Listar as disciplinas que decorrem numa dada sala.
@@ -132,5 +132,5 @@ public class TesteGestao {
 //        disciplinas.get(3).listarDadosDisciplina(disciplinas);
 
 
-    }
+    }*/
 }
