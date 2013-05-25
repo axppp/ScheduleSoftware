@@ -175,7 +175,7 @@ public class SalaAula implements Serializable {
      * @return numero de horas que uma sala tem durante a semana Metodo para
      * calcular a carga horaria de uma determinada sala
      */
-    public int CargaHorariaSala(ArrayList<SalaAula> sala, ArrayList<Horario> horario) {
+    public String CargaHorariaSala(ArrayList<SalaAula> sala, ArrayList<Horario> horario) {
         int j = 0;
 //        ArrayList<Horario> h = new ArrayList<>();
         String t = null;
@@ -191,8 +191,8 @@ public class SalaAula implements Serializable {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        System.out.println("A Sala " + codigo + " tem " + j + " horas de carga horaria semanal." + "\n");
-        return j;
+        
+        return "A Sala " + codigo + " tem " + j + " horas de carga horaria semanal." + "\n";
     }
 
     /**

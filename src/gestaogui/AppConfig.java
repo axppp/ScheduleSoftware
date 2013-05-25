@@ -457,72 +457,50 @@ public class AppConfig extends JFrame {
         cargaProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                CargaHoraria carga = new CargaHoraria();
 
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
+              
+
+
                 CargaHoraria carga = new CargaHoraria("professor");
                
->>>>>>> Carga Horaria v2
+
             }
         });
 
         cargaAluno.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
+
               CargaHoraria carga = new CargaHoraria("aluno");
                
->>>>>>> Carga Horaria v2
             }
         });
 
         cargaDisc.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
+
           CargaHoraria carga = new CargaHoraria("disciplina");
                
->>>>>>> Carga Horaria v2
+
             }
         });
 
         cargaTurma.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
+
               CargaHoraria carga = new CargaHoraria("turma");
                
->>>>>>> Carga Horaria v2
             }
         });
 
         cargaSala.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
+
                CargaHoraria carga = new CargaHoraria("sala");
-=======
-<<<<<<< HEAD
-=======
-               CargaHoraria carga = new CargaHoraria("sala");
->>>>>>> Carga Horaria v2
->>>>>>> 122b91ed8f2b7c0ba47b6289e21f24760706353d
+
             }
         });
 

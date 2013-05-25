@@ -150,7 +150,7 @@ public class Professor extends Pessoa implements Serializable{
      * @return numero de horas que um professor tem durante a semana Metodo para
      * calcular a carga horaria de um determinado professor
      */
-    public int CargaHorariaProfessor(ArrayList<Professor> prof, ArrayList<Horario> horario) {
+    public String CargaHorariaProfessor(ArrayList<Professor> prof, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
@@ -166,8 +166,8 @@ public class Professor extends Pessoa implements Serializable{
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        System.out.println("O Professor " + super.getNome() + " tem " + j + " horas de carga horaria semanal." + "\n");
-        return j;
+        
+        return "O Professor " + super.getNome() + " tem " + j + " horas de carga horaria semanal." + "\n";
     }
 
     /**

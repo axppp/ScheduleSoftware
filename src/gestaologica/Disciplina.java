@@ -132,7 +132,7 @@ public class Disciplina implements Serializable {
      * @return numero de horas que uma disciplina tem durante a semana Metodo
      * para calcular a carga horaria de uma determinada disciplina
      */
-    public int CargaHorariaDisciplina(ArrayList<Disciplina> disc, ArrayList<Horario> horario) {
+    public String CargaHorariaDisciplina(ArrayList<Disciplina> disc, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         String t = null;
@@ -148,8 +148,8 @@ public class Disciplina implements Serializable {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        System.out.println("A disciplina " + sigla + " tem " + j + " horas de carga horaria semanal." + "\n");
-        return j;
+        
+        return "A disciplina " + sigla + " tem " + j + " horas de carga horaria semanal." + "\n";
     }
 
 //    /**

@@ -60,7 +60,8 @@ public class JanelaPrincipal extends JFrame {
         // Panels
         Painel panel = new Painel(new FlowLayout(FlowLayout.CENTER, 55, 120));
         Painel panelbtn = new Painel(img.background);
-
+        panel.setImage(img.background);
+        
         // Panels customization
         panelbtn.setLayout(new GridLayout(4, 1, 10, 10));
         panelbtn.setBorder(new EmptyBorder(20, 20, 30, 20));

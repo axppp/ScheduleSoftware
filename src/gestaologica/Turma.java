@@ -189,7 +189,7 @@ public class Turma implements Serializable{
      * @return numero de horas que uma turma tem durante a semana Metodo para
      * calcular a carga horario de uma determinada turma
      */
-    public int CargaHorariaTurma(ArrayList<Turma> Turma, ArrayList<Horario> horario) {
+    public String CargaHorariaTurma(ArrayList<Turma> Turma, ArrayList<Horario> horario) {
         int j = 0;
         ArrayList<Horario> h = new ArrayList<>();
         for (int i = 0; i < horario.size(); i++) {
@@ -198,8 +198,8 @@ public class Turma implements Serializable{
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        System.out.println("A Turma " + designacao + " tem " + j + " horas de carga horaria semanal." + "\n");
-        return j;
+       
+        return "A Turma " + designacao + " tem " + j + " horas de carga horaria semanal." + "\n";
     }
 
     @Override
