@@ -41,4 +41,14 @@ public class Imagens {
     String okO = ("src/Imagens/btn_okO.png");
     String cancel = ("src/Imagens/btn_cancel.png");
     String cancelO = ("src/Imagens/btn_cancelO.png");
+    String disciplinaProf = ("src/Imagens/btn_listarDiscProf.png");
+    String disciplinaProfO = ("src/Imagens/btn_listarDiscProfO.png");
+    String listarTurmaProf = ("src/Imagens/btn_listarTurmaProf.png");
+    String listarTurmaProfO = ("src/Imagens/btn_listarTurmaProfO.png");
+    String disciplinaSala = ("src/Imagens/btn_disciplinaSala.png");
+    String disciplinaSalaO = ("src/Imagens/btn_disciplinaSalaO.png");
+    String listarAlunos = ("src/Imagens/btn_listarAlunos.png");
+    String listarAlunosO = ("src/Imagens/btn_listarAlunosO.png");
+    String taxa = ("src/Imagens/btn_taxa.png");
+    String taxaO = ("src/Imagens/btn_taxaO.png");
 }

@@ -32,7 +32,7 @@ public class AppConfig extends JFrame {
         
         calculoCarga();
         listarHorarios();
-        // addEdits();
+        listarSalaAluno();
         listarDados();
         salaLivre();
         setProperties(600, 500, 1, true);
@@ -667,5 +667,61 @@ public class AppConfig extends JFrame {
         
     }
     
+    private void listarSalaAluno()
+    {
+          // Panels
+        Painel main_panel = new Painel(img.background2);
+        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
+
+        // Layout
+        listarOutros.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
+        main_panel.setLayout(new BorderLayout());
+
+        // Labels
+        JLabel lbl_add = new JLabel("     Listar Dados:");
+
+        // Buttons
+        Botao listarAlunos = new Botao(img.listarAlunos, img.listarAlunosO);
+        Botao listarDiscProf = new Botao(img.disciplinaProf, img.disciplinaProfO);
+        Botao taxaOcup = new Botao(img.taxa, img.taxaO);
+        Botao listarDiscSala = new Botao(img.disciplinaSala, img.disciplinaSalaO);
+        Botao listarTurmaProf = new Botao(img.listarTurmaProf, img.listarTurmaProfO);
+        Botao[] botoes = {listarAlunos, listarDiscProf, taxaOcup, listarDiscSala, listarTurmaProf};
+
+        // Customize
+
+        // Font
+        lbl_add.setFont((new Font("Arial", Font.BOLD, 14)));
+
+        // Color
+        lbl_add.setForeground(Color.white);
+
+        // Borders
+        main_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        buttons_panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+
+        // Opaque
+        main_panel.setOpaque(false);
+        buttons_panel.setOpaque(false);
+
+        // Buttons
+        configButtons(botoes);
+
+
+
+
+        // Adding to panels
+        buttons_panel.add(listarAlunos);
+        buttons_panel.add(listarDiscProf);
+        buttons_panel.add(taxaOcup);
+        buttons_panel.add(listarDiscSala);
+        buttons_panel.add(listarTurmaProf);
+        
+        main_panel.add(lbl_add, BorderLayout.NORTH);
+        main_panel.add(buttons_panel, BorderLayout.SOUTH);
+        
+        listarOutros.add(main_panel);
+        
+    }
    
 }
