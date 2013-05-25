@@ -30,23 +30,23 @@ public class ListarDados extends JFrame {
         super("Listar Dados");
         if (nome.equalsIgnoreCase("professor")) {
             ListarDadosProf();
-            setProperties(300, 150, 1, true);
+            
         } else if (nome.equalsIgnoreCase("aluno")) {
             ListarDadosAluno();
-            setProperties(300, 150, 1, true);
+            
         } else if (nome.equalsIgnoreCase("turma")) {
             ListarDadosTurma();
-            setProperties(300, 150, 1, true);
+            
         } else if (nome.equalsIgnoreCase("disciplina")) {
             ListarDadosDisciplina();
-            setProperties(300, 150, 1, true);
+            
         } else if (nome.equalsIgnoreCase("sala")) {
             ListarDadosSala();
-            setProperties(300, 150, 1, true);
+            
 
         }
 
-
+        setProperties(300, 200, 1, true);   
 
     }
 
@@ -55,17 +55,23 @@ public class ListarDados extends JFrame {
         final Main m = new Main();
         // Panels
         Painel panel = new Painel();
-        //Painel panelbtn = new Painel(img.background2);
+        JPanel panelbtn = new JPanel();
         panel.setImage(img.background);
+        
+         final Botao cancelar = new Botao(img.cancel, img.cancelO);
+        Botao[] botoes = {cancelar};
+
+         configButtons(botoes);
+        panelbtn.setOpaque(false);
 
         // Panels customization
-        panel.setLayout(new GridLayout(2, 1, 10, 10));
+        panel.setLayout(new GridLayout(3, 1, 10, 10));
         panel.setBorder(new EmptyBorder(20, 20, 30, 20));
         panel.setOpaque(false);
         // Empty border
         Border emptyBorder = BorderFactory.createEmptyBorder();
 
-        JLabel lb = new JLabel("Carga Horária");
+        JLabel lb = new JLabel("Listar Dados");
 
         // Title customization
         lb.setFont(new Font("Arial", Font.BOLD, 14));
@@ -84,6 +90,14 @@ public class ListarDados extends JFrame {
         // panel.add(lb2);
         panel.add(lb);
         panel.add(te5);
+         cancelar.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+            dispose();
+        }
+        });
+         
+          panelbtn.add(cancelar);
+        panel.add(panelbtn);
 
 
         add(panel, BorderLayout.NORTH);
@@ -103,17 +117,23 @@ public class ListarDados extends JFrame {
         final Main m = new Main();
         // Panels
         Painel panel = new Painel();
-        //Painel panelbtn = new Painel(img.background2);
+        JPanel panelbtn = new JPanel();
         panel.setImage(img.background);
+        
+        final Botao cancelar = new Botao(img.cancel, img.cancelO);
+        Botao[] botoes = {cancelar};
+
+         configButtons(botoes);
+         panelbtn.setOpaque(false);
 
         // Panels customization
-        panel.setLayout(new GridLayout(2, 1, 10, 10));
+        panel.setLayout(new GridLayout(3, 1, 10, 10));
         panel.setBorder(new EmptyBorder(20, 20, 30, 20));
         panel.setOpaque(false);
         // Empty border
         Border emptyBorder = BorderFactory.createEmptyBorder();
 
-        JLabel lb = new JLabel("Carga Horária");
+        JLabel lb = new JLabel("Listar Dados");
 
         // Title customization
         lb.setFont(new Font("Arial", Font.BOLD, 14));
@@ -132,6 +152,15 @@ public class ListarDados extends JFrame {
         // panel.add(lb2);
         panel.add(lb);
         panel.add(te5);
+        
+          cancelar.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+            dispose();
+        }
+        });
+         
+          panelbtn.add(cancelar);
+        panel.add(panelbtn);
 
         add(panel, BorderLayout.NORTH);
 
@@ -150,17 +179,25 @@ public class ListarDados extends JFrame {
         final Main m = new Main();
         // Panels
         Painel panel = new Painel();
-        //Painel panelbtn = new Painel(img.background2);
+        JPanel panelbtn = new JPanel();
         panel.setImage(img.background);
 
+        
+        final Botao cancelar = new Botao(img.cancel, img.cancelO);
+        Botao[] botoes = {cancelar};
+
+         configButtons(botoes);
+         
         // Panels customization
-        panel.setLayout(new GridLayout(2, 1, 10, 10));
+        panel.setLayout(new GridLayout(3, 1, 10, 10));
         panel.setBorder(new EmptyBorder(20, 20, 30, 20));
         panel.setOpaque(false);
+        
+        panelbtn.setOpaque(false);
         // Empty border
         Border emptyBorder = BorderFactory.createEmptyBorder();
 
-        JLabel lb = new JLabel("Carga Horária");
+        JLabel lb = new JLabel("Listar Dados");
 
         // Title customization
         lb.setFont(new Font("Arial", Font.BOLD, 14));
@@ -179,6 +216,15 @@ public class ListarDados extends JFrame {
         // panel.add(lb2);
         panel.add(lb);
         panel.add(te5);
+        
+         cancelar.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+            dispose();
+        }
+        });
+         
+          panelbtn.add(cancelar);
+        panel.add(panelbtn);
 
         add(panel, BorderLayout.NORTH);
 
@@ -197,17 +243,23 @@ public class ListarDados extends JFrame {
         final Main m = new Main();
         // Panels
         Painel panel = new Painel();
-        //Painel panelbtn = new Painel(img.background2);
+        JPanel panelbtn = new JPanel();
         panel.setImage(img.background);
+        
+        final Botao cancelar = new Botao(img.cancel, img.cancelO);
+        Botao[] botoes = {cancelar};
+
+         configButtons(botoes);
 
         // Panels customization
-        panel.setLayout(new GridLayout(2, 1, 10, 10));
+        panel.setLayout(new GridLayout(3, 1, 10, 10));
         panel.setBorder(new EmptyBorder(20, 20, 30, 20));
         panel.setOpaque(false);
         // Empty border
         Border emptyBorder = BorderFactory.createEmptyBorder();
+        panelbtn.setOpaque(false);
 
-        JLabel lb = new JLabel("Carga Horária");
+        JLabel lb = new JLabel("Listar Dados");
 
         // Title customization
         lb.setFont(new Font("Arial", Font.BOLD, 14));
@@ -226,6 +278,15 @@ public class ListarDados extends JFrame {
         // panel.add(lb2);
         panel.add(lb);
         panel.add(te5);
+        
+         cancelar.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+            dispose();
+        }
+        });
+         
+          panelbtn.add(cancelar);
+        panel.add(panelbtn);
 
         add(panel, BorderLayout.NORTH);
 
@@ -244,17 +305,25 @@ public class ListarDados extends JFrame {
         final Main m = new Main();
         // Panels
         Painel panel = new Painel();
-        //Painel panelbtn = new Painel(img.background2);
+        JPanel panelbtn = new JPanel();
         panel.setImage(img.background);
+        
+        
+        final Botao cancelar = new Botao(img.cancel, img.cancelO);
+        Botao[] botoes = {cancelar};
 
+         configButtons(botoes);
+        
         // Panels customization
-        panel.setLayout(new GridLayout(2, 1, 10, 10));
+        panel.setLayout(new GridLayout(3, 1, 10, 10));
         panel.setBorder(new EmptyBorder(20, 20, 30, 20));
         panel.setOpaque(false);
+        panelbtn.setOpaque(false);
+        
         // Empty border
         Border emptyBorder = BorderFactory.createEmptyBorder();
 
-        JLabel lb = new JLabel("Carga Horária");
+        JLabel lb = new JLabel("Listar Dados");
 
         // Title customization
         lb.setFont(new Font("Arial", Font.BOLD, 14));
@@ -275,6 +344,15 @@ public class ListarDados extends JFrame {
         panel.add(te5);
 
         add(panel, BorderLayout.NORTH);
+        
+         cancelar.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+            dispose();
+        }
+        });
+         
+          panelbtn.add(cancelar);
+        panel.add(panelbtn);
 
         te5.addActionListener(new ActionListener() {
 
@@ -291,5 +369,14 @@ public class ListarDados extends JFrame {
         setDefaultCloseOperation(opcao);
         setVisible(visible);
         setLocationRelativeTo(null);
+    }
+    
+     private void configButtons(Botao[] botoes) {
+        final Border emptyBorder = BorderFactory.createEmptyBorder();
+        for (Botao bt : botoes) {
+            bt.setContentAreaFilled(false);
+            bt.setBorderPainted(false);
+            bt.setBorder(emptyBorder);
+        }
     }
 }

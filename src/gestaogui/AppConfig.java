@@ -706,7 +706,36 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
+        
+        listarAlunos.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+				
+            }
+        });
+        
+        listarDiscProf.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
 
+            }
+        });
+
+        taxaOcup.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        
+        listarDiscSala.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        
+        listarTurmaProf.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
 
 
 

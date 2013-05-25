@@ -56,8 +56,8 @@ public class CargaHoraria extends JFrame {
         JPanel panelbtn = new JPanel();
         panel.setImage(img.background);
 
-        final Botao adicionar = new Botao(img.cancel, img.cancelO);
-        Botao[] botoes = {adicionar};
+        final Botao cancelar = new Botao(img.cancel, img.cancelO);
+        Botao[] botoes = {cancelar};
 
         configButtons(botoes);
 
@@ -97,13 +97,13 @@ public class CargaHoraria extends JFrame {
             }
         });
 
-         adicionar.addActionListener(new ActionListener(){
+         cancelar.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){
             dispose();
         }
         });
 
-        panelbtn.add(adicionar);
+        panelbtn.add(cancelar);
         panel.add(panelbtn);
 
         add(panel, BorderLayout.NORTH);
