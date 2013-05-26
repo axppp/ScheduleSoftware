@@ -85,7 +85,11 @@ public class Professor extends Pessoa implements Serializable {
                 }
             }
         }
-        return "O Professor " + this.getNome() + " lecciona a(s) \n" + h.toString() + " na(s) turma(s) \n" + t.toString();
+        if (h.isEmpty() || t.isEmpty()) {
+            return "O Professor " + this.getNome() + " não tem disciplina e/ou turma especificada. \n";
+        } else {
+            return "O Professor " + this.getNome() + " lecciona a(s) \n" + h.toString() + " na(s) turma(s) \n" + t.toString();
+        }
     }
 
     /**
@@ -171,7 +175,7 @@ public class Professor extends Pessoa implements Serializable {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        
+
         return "O Professor " + super.getNome() + " tem " + j + " horas de carga horaria semanal." + "\n";
     }
 

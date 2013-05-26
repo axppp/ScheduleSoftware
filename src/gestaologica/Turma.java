@@ -1,8 +1,5 @@
 package gestaologica;
 
-
-
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +13,7 @@ import java.util.Comparator;
  *
  * @author axppp
  */
-public class Turma implements Serializable{
+public class Turma implements Serializable {
 
     private String designacao;
     private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
@@ -167,7 +164,10 @@ public class Turma implements Serializable{
      */
     public String listarProfessorTurma(ArrayList<Professor> prof, ArrayList<Horario> horario) {
         ArrayList<Horario> h = new ArrayList<>();
+        ArrayList<Horario> ho = new ArrayList<>();
         ArrayList<Professor> p = new ArrayList<>();
+        String St = "";
+        int teoricas = 0, praticas = 0;
         for (int i = 0; i < horario.size(); i++) {
             if (this.designacao.equalsIgnoreCase(horario.get(i).getDesignacao())) {
                 h.add(horario.get(i));
@@ -175,11 +175,45 @@ public class Turma implements Serializable{
                     if (prof.get(j).getSigla().equalsIgnoreCase(horario.get(i).getSigla_professor()) && !p.contains(prof.get(j))) {
                         p.add(prof.get(j));
                     }
-
                 }
             }
         }
-        return p.toString() + h.toString();
+        if (p.isEmpty() && h.isEmpty()) {
+            return "Essa turma não tem professores.";
+        } else {
+            ho.add(h.get(0));
+            boolean f = true;
+            for (int i = 1; i < h.size(); i++) {
+                h.get(i).getSigla_disciplina();
+                h.get(i).getDuracaoAula();
+                for (int j = 0; j < ho.size(); j++) {
+                    if (h.get(i).getSigla_disciplina().equalsIgnoreCase(ho.get(j).getSigla_disciplina()) || ho.contains(h.get(i))) {
+                        f = false;
+                    }
+                }
+                if (f == true) {
+                    ho.add(h.get(i));
+                } else {
+                    f = true;
+                }
+            }
+            for (int i = 0; i < ho.size(); i++) {
+                praticas = 0;
+                teoricas = 0;
+                for (int j = 0; j < h.size(); j++) {
+                    if (h.get(j).getSigla_disciplina().equalsIgnoreCase(ho.get(i).getSigla_disciplina())) {
+                        if (h.get(j).getDuracaoAula() == 2) {
+                            praticas++;
+                        } else if (h.get(j).getDuracaoAula() == 1) {
+                            teoricas++;
+                        }
+                    }
+                }
+                St += "\n, tem a disciplina " + ho.get(i).getSigla_disciplina() + " com " + praticas + " praticas e " + teoricas + " teoricas,";
+            }
+//            System.out.println("A turma " + this.getDesignacao() + " tem como Professores " + p.toString() + St);
+            return "A turma " + this.getDesignacao() + " tem como Professores " + p.toString() + "" + St;
+        }
     }
 
     /**
@@ -198,7 +232,7 @@ public class Turma implements Serializable{
                 j += horario.get(i).getDuracaoAula();
             }
         }
-       
+
         return "A Turma " + designacao + " tem " + j + " horas de carga horaria semanal." + "\n";
     }
 

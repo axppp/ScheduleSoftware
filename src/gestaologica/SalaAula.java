@@ -102,7 +102,11 @@ public class SalaAula implements Serializable {
                 }
             }
         }
-        return h.toString();
+        if (h.isEmpty()) {
+            return "Sala sem aulas.";
+        } else {
+            return h.toString();
+        }
     }
 
     /**
@@ -191,7 +195,7 @@ public class SalaAula implements Serializable {
                 j += horario.get(i).getDuracaoAula();
             }
         }
-        
+
         return "A Sala " + codigo + " tem " + j + " horas de carga horaria semanal." + "\n";
     }
 
@@ -378,7 +382,7 @@ public class SalaAula implements Serializable {
 //    }
     @Override
     public String toString() {
-        return "SalaAula{" + "codigo=" + codigo + ", tipoSala=" + getTipoSala() + ", capacidade=" + capacidade + '}';
+        return "SalaAula{" + "codigo=" + codigo + ", tipoSala=" + getTipoSala() + ", capacidade=" + capacidade + "}\n";
     }
 
     public String toStringSigla() {

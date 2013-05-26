@@ -478,12 +478,12 @@ public class AppConfig extends JFrame {
     }
 
     private void ListarAlunos() {
-
+        final JLabel flag = new JLabel("crescente");
         final Main m = new Main();
 
         // Panels
         Painel main_panel = new Painel(img.background2);
-        JPanel buttons_panel = new JPanel(new GridLayout(4, 2, 5, 5));
+        JPanel buttons_panel = new JPanel(new GridLayout(1, 5, 5, 5));
         JPanel formulario_panel = new JPanel(new GridLayout(2, 1, 10, 10));
         buttons_panel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -519,19 +519,17 @@ public class AppConfig extends JFrame {
         }
         final JComboBox te0 = new JComboBox(v0);
         // Buttons
-        Botao decrescente = new Botao(img.add, img.addO);
-        Botao crescente = new Botao(img.editar, img.editarO);
-        Botao ascendente = new Botao(img.add, img.addO);
-        Botao descendente = new Botao(img.editar, img.editarO);
+        Botao decrescente = new Botao(img.NumeroDes, img.NumeroDesO);
+        Botao crescente = new Botao(img.NumeroAsc, img.NumeroAscO);
+        Botao ascendente = new Botao(img.NomeAsc, img.NomeAscO);
+        Botao descendente = new Botao(img.NomeDesc, img.NomeDescO);
         Botao cancelar = new Botao(img.cancel, img.cancelO);
         Botao[] botoes = {crescente, decrescente, ascendente, descendente, cancelar};
 
         // Customize
         // Borders
-        main_panel.setBorder(
-                new EmptyBorder(20, 20, 5, 20));
-        buttons_panel.setBorder(
-                new EmptyBorder(5, 20, 20, 20));
+        main_panel.setBorder(new EmptyBorder(20, 20, 5, 20));
+        buttons_panel.setBorder(new EmptyBorder(10, 20, 5, 20));
 
         // Opaque
         main_panel.setOpaque(
@@ -548,26 +546,6 @@ public class AppConfig extends JFrame {
 
         // Buttons
         configButtons(botoes);
-
-        //Mouse Listener
-        l.addMouseListener(
-                new MouseAdapter() {
-
-                    public void mouseClicked(MouseEvent evt) {
-                        JList list = (JList) evt.getSource();
-                        String Tipo = "";
-                        if (evt.getClickCount() == 1) {
-                            int index = list.locationToIndex(evt.getPoint());
-
-                        }
-                    }
-                });
-        cancelar.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
 
         buttons_panel.add(crescente);
         buttons_panel.add(decrescente);
@@ -586,26 +564,130 @@ public class AppConfig extends JFrame {
         ListarAlunos.add(main_panel, BorderLayout.NORTH);
         ListarAlunos.add(buttons_panel, BorderLayout.SOUTH);
 
+        //Mouse Listener
+        l.addMouseListener(new MouseAdapter() {
+
+            public void mouseClicked(MouseEvent evt) {
+                JList list = (JList) evt.getSource();
+                int index = list.locationToIndex(evt.getPoint());
+                if (evt.getClickCount() == 1) {
+                    if (flag.getText().equalsIgnoreCase("crescente")) {
+                        ArrayList<Aluno> a = new ArrayList<>();
+                        a = m.turmas.get(te0.getSelectedIndex()).listarAlunosCrescenteNR();
+                        JOptionPane.showMessageDialog(ListarAlunos, a.get(index).listarDadosAluno());
+                    } else if (flag.getText().equalsIgnoreCase("decrescente")) {
+                        ArrayList<Aluno> a = new ArrayList<>();
+                        a = m.turmas.get(te0.getSelectedIndex()).listarAlunosDecrescenteNR();
+                        JOptionPane.showMessageDialog(ListarAlunos, a.get(index).listarDadosAluno());
+                    } else if (flag.getText().equalsIgnoreCase("ascendente")) {
+                        ArrayList<Aluno> a = new ArrayList<>();
+                        a = m.turmas.get(te0.getSelectedIndex()).listarAlunosNomeCrescente();
+                        JOptionPane.showMessageDialog(ListarAlunos, a.get(index).listarDadosAluno());
+                    } else if (flag.getText().equalsIgnoreCase("descendente")) {
+                        ArrayList<Aluno> a = new ArrayList<>();
+                        a = m.turmas.get(te0.getSelectedIndex()).listarAlunosNomeDecrescente();
+                        JOptionPane.showMessageDialog(ListarAlunos, a.get(index).listarDadosAluno());
+                    }
+
+                }
+            }
+        });
+
+
+        cancelar.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
+        //ActionListener
         te0.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 ModeloListaAluno.clear();
                 ArrayList<Aluno> a = new ArrayList<>();
-                a = m.turmas.get(te0.getSelectedIndex()).listarAlunosCrescenteNR();
-//                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).listarDadosProfessor());
-                //List
-                String[] v = new String[a.size()];
+                if (flag.getText().equalsIgnoreCase("crescente")) {
+                    a = m.turmas.get(te0.getSelectedIndex()).listarAlunosCrescenteNR();
+                } else if (flag.getText().equalsIgnoreCase("decrescente")) {
+                    a = m.turmas.get(te0.getSelectedIndex()).listarAlunosDecrescenteNR();
+                } else if (flag.getText().equalsIgnoreCase("ascendente")) {
+                    a = m.turmas.get(te0.getSelectedIndex()).listarAlunosNomeCrescente();
+                } else if (flag.getText().equalsIgnoreCase("descendente")) {
+                    a = m.turmas.get(te0.getSelectedIndex()).listarAlunosNomeDecrescente();
+                }
 
                 for (int i = 0; i < a.size(); i++) {
-                    v[i] = a.get(i).toStringNome();
                     ModeloListaAluno.addElement(a.get(i).getNumeroAluno() + " - " + a.get(i).toStringNome());
                 }
 
             }
         });
-    }
+        crescente.addActionListener(new ActionListener() {
 
-    private void addExports() {
+            public void actionPerformed(ActionEvent e) {
+                flag.setText("crescente");
+                ModeloListaAluno.clear();
+                ArrayList<Aluno> a = new ArrayList<>();
+                a = m.turmas.get(te0.getSelectedIndex()).listarAlunosCrescenteNR();
+//                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).listarDadosProfessor());
+                //List
+
+                for (int i = 0; i < a.size(); i++) {
+                    ModeloListaAluno.addElement(a.get(i).getNumeroAluno() + " - " + a.get(i).toStringNome());
+                }
+
+
+            }
+        });
+        decrescente.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                flag.setText("decrescente");
+                ModeloListaAluno.clear();
+                ArrayList<Aluno> a = new ArrayList<>();
+                a = m.turmas.get(te0.getSelectedIndex()).listarAlunosDecrescenteNR();
+//                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).listarDadosProfessor());
+                //List
+
+                for (int i = 0; i < a.size(); i++) {
+                    ModeloListaAluno.addElement(a.get(i).getNumeroAluno() + " - " + a.get(i).toStringNome());
+                }
+
+            }
+        });
+        ascendente.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                flag.setText("ascendente");
+                ModeloListaAluno.clear();
+                ArrayList<Aluno> a = new ArrayList<>();
+                a = m.turmas.get(te0.getSelectedIndex()).listarAlunosNomeCrescente();
+//                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).listarDadosProfessor());
+                //List
+
+                for (int i = 0; i < a.size(); i++) {
+                    ModeloListaAluno.addElement(a.get(i).getNumeroAluno() + " - " + a.get(i).toStringNome());
+                }
+
+            }
+        });
+        descendente.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                flag.setText("descendente");
+                ModeloListaAluno.clear();
+                ArrayList<Aluno> a = new ArrayList<>();
+                a = m.turmas.get(te0.getSelectedIndex()).listarAlunosNomeDecrescente();
+//                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).listarDadosProfessor());
+                //List
+
+                for (int i = 0; i < a.size(); i++) {
+                    ModeloListaAluno.addElement(a.get(i).getNumeroAluno() + " - " + a.get(i).toStringNome());
+                }
+
+            }
+        });
     }
 
     private void calculoCarga() {
@@ -769,7 +851,7 @@ public class AppConfig extends JFrame {
         listarProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                Listar a = new Listar("professor");
+                LHorariosG a = new LHorariosG("professor");
 
             }
         });
@@ -778,7 +860,7 @@ public class AppConfig extends JFrame {
         listarAluno.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                Listar a = new Listar("aluno");
+                LHorariosG a = new LHorariosG("aluno");
             }
         });
 
@@ -786,20 +868,20 @@ public class AppConfig extends JFrame {
         listarDisc.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                Listar a = new Listar("disciplina");
+                LHorariosG a = new LHorariosG("disciplina");
             }
         });
 
         listarTurma.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                Listar a = new Listar("turma");
+                LHorariosG a = new LHorariosG("turma");
             }
         });
         listarSala.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                Listar a = new Listar("sala");
+                LHorariosG a = new LHorariosG("sala");
             }
         });
 
@@ -822,7 +904,7 @@ public class AppConfig extends JFrame {
     private void Outros() {
         // Panels
         Painel main_panel = new Painel(img.background2);
-        JPanel buttons_panel = new JPanel(new GridLayout(6, 2, 10, 10));
+        JPanel buttons_panel = new JPanel(new GridLayout(4, 2, 10, 10));
 
         // Layout
         listarOutros.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 70));
@@ -832,12 +914,11 @@ public class AppConfig extends JFrame {
         JLabel lbl_add = new JLabel("     Listar Dados:");
 
         // Buttons
-        Botao listarAlunos = new Botao(img.listarAlunos, img.listarAlunosO);
-        Botao listarDiscProf = new Botao(img.disciplinaProf, img.disciplinaProfO);
         Botao taxaOcup = new Botao(img.taxa, img.taxaO);
+        Botao listarDiscProf = new Botao(img.disciplinaProf, img.disciplinaProfO);
         Botao listarDiscSala = new Botao(img.disciplinaSala, img.disciplinaSalaO);
         Botao listarTurmaProf = new Botao(img.listarTurmaProf, img.listarTurmaProfO);
-        Botao[] botoes = {listarAlunos, listarDiscProf, taxaOcup, listarDiscSala, listarTurmaProf};
+        Botao[] botoes = {listarDiscProf, taxaOcup, listarDiscSala, listarTurmaProf};
 
         // Customize
 
@@ -858,41 +939,38 @@ public class AppConfig extends JFrame {
         // Buttons
         configButtons(botoes);
 
-        listarAlunos.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                Outros o = new Outros("professor");
-            }
-        });
-
         listarDiscProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                Outros o = new Outros("professor");
+
             }
         });
 
         taxaOcup.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                Outros o = new Outros("taxa");
             }
         });
 
         listarDiscSala.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                Outros o = new Outros("disciplina");
             }
         });
 
         listarTurmaProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                Outros o = new Outros("turma");
             }
         });
 
 
 
         // Adding to panels
-        buttons_panel.add(listarAlunos);
         buttons_panel.add(listarDiscProf);
         buttons_panel.add(taxaOcup);
         buttons_panel.add(listarDiscSala);

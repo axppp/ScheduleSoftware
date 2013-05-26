@@ -51,4 +51,12 @@ public class Imagens {
     String listarAlunosO = ("src/Imagens/btn_listarAlunosO.png");
     String taxa = ("src/Imagens/btn_taxa.png");
     String taxaO = ("src/Imagens/btn_taxaO.png");
+    String NomeAsc = ("src/Imagens/btn_nomeAsc.png");
+    String NomeAscO = ("src/Imagens/btn_nomeAscO.png");
+    String NomeDesc = ("src/Imagens/btn_nomeDes.png");
+    String NomeDescO = ("src/Imagens/btn_nomeDesO.png");
+    String NumeroAsc = ("src/Imagens/btn_numeroAsc.png");
+    String NumeroAscO = ("src/Imagens/btn_numeroAscO.png");
+    String NumeroDes=("src/Imagens/btn_numeroDesc.png");
+    String NumeroDesO=("src/Imagens/btn_numeroDescO.png");
 }

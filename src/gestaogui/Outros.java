@@ -28,25 +28,25 @@ public class Outros extends JFrame {
     public Outros(String nome) {
         super("Listar Dados");
         if (nome.equalsIgnoreCase("professor")) {
-        } else if (nome.equalsIgnoreCase("aluno")) {
-        } else if (nome.equalsIgnoreCase("turma")) {
+            ListarDiscProf();
+        } else if (nome.equalsIgnoreCase("taxa")) {
+            Taxa();
         } else if (nome.equalsIgnoreCase("disciplina")) {
-        } else if (nome.equalsIgnoreCase("sala")) {
+            ListarDiscSala();
+        } else if (nome.equalsIgnoreCase("turma")) {
+            ListarTurmaProf();
         }
 
-        setProperties(300, 200, 1, true);
+        setProperties(300, 300, 1, true);
 
     }
 
-    
-
-    private void ListarDadosAluno() {
+    private void ListarDiscProf() {
 
         final Main m = new Main();
         // Panels
-        Painel panel = new Painel();
+        Painel panel = new Painel(img.background2);
         JPanel panelbtn = new JPanel();
-        panel.setImage(img.background);
 
         final Botao cancelar = new Botao(img.cancel, img.cancelO);
         Botao[] botoes = {cancelar};
@@ -56,10 +56,10 @@ public class Outros extends JFrame {
 
         // Panels customization
         panel.setLayout(new GridLayout(3, 1, 10, 10));
-        panel.setBorder(new EmptyBorder(20, 20, 30, 20));
+        panel.setBorder(new EmptyBorder(20, 20, 20, 20));
         panel.setOpaque(false);
         // Empty border
-        Border emptyBorder = BorderFactory.createEmptyBorder();
+//        Border emptyBorder = BorderFactory.createEmptyBorder();
 
         JLabel lb = new JLabel("Listar Dados");
 
@@ -69,11 +69,11 @@ public class Outros extends JFrame {
 
 
 
-        JLabel la5 = new JLabel("Aluno");
-        String[] v5 = new String[m.alunos.size() + 1];
+        JLabel la5 = new JLabel("Professor");
+        String[] v5 = new String[m.professores.size() + 1];
         v5[0] = " ";
-        for (int i = 1; i < m.alunos.size() + 1; i++) {
-            v5[i] = m.alunos.get(i - 1).toStringNumeroAluno();
+        for (int i = 1; i < m.professores.size() + 1; i++) {
+            v5[i] = m.professores.get(i - 1).toString();
         }
         final JComboBox te5 = new JComboBox(v5);
 
@@ -83,6 +83,7 @@ public class Outros extends JFrame {
 
         cancelar.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
@@ -91,60 +92,59 @@ public class Outros extends JFrame {
         panelbtn.add(cancelar);
         panel.add(panelbtn);
 
-        add(panel, BorderLayout.NORTH);
+        add(panel, BorderLayout.CENTER);
 
         te5.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.alunos.get(te5.getSelectedIndex() - 1).listarDadosAluno());
+                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).ListarDisciplinaProfessor(m.turmas, m.disciplinas, m.horarios));
                 }
             }
         });
     }
 
-    private void ListarDadosTurma() {
+    private void Taxa() {
 
         final Main m = new Main();
         // Panels
         Painel panel = new Painel();
         JPanel panelbtn = new JPanel();
-        panel.setImage(img.background);
+        panel.setImage(img.background2);
 
 
         final Botao cancelar = new Botao(img.cancel, img.cancelO);
-        Botao[] botoes = {cancelar};
+        final Botao ok = new Botao(img.ok, img.okO);
+        Botao[] botoes = {ok, cancelar};
 
         configButtons(botoes);
 
         // Panels customization
-        panel.setLayout(new GridLayout(3, 1, 10, 10));
-        panel.setBorder(new EmptyBorder(20, 20, 30, 20));
+        panel.setLayout(new GridLayout(1, 1, 10, 10));
+        panel.setBorder(new EmptyBorder(20, 20, 10, 20));
         panel.setOpaque(false);
 
         panelbtn.setOpaque(false);
+        panelbtn.setLayout(new GridLayout(4, 2, 20, 20));
         // Empty border
         Border emptyBorder = BorderFactory.createEmptyBorder();
 
         JLabel lb = new JLabel("Listar Dados");
+        JLabel lbespaço = new JLabel();
+        final JTextField te = new JTextField();
+        JLabel lb1 = new JLabel("Insira Taxa:");
 
         // Title customization
         lb.setFont(new Font("Arial", Font.BOLD, 14));
         lb.setForeground(Color.white);
+        lb1.setFont(new Font("Arial", Font.BOLD, 10));
+        lb1.setForeground(Color.white);
 
+        panelbtn.add(lb);
+        panelbtn.add(lbespaço);
+        panelbtn.add(lb1);
+        panelbtn.add(te);
 
-
-        JLabel la5 = new JLabel("Turma");
-        String[] v5 = new String[m.turmas.size() + 1];
-        v5[0] = " ";
-        for (int i = 1; i < m.turmas.size() + 1; i++) {
-            v5[i] = m.turmas.get(i - 1).toStringSigla();
-        }
-        final JComboBox te5 = new JComboBox(v5);
-
-        // panel.add(lb2);
-        panel.add(lb);
-        panel.add(te5);
 
         cancelar.addActionListener(new ActionListener() {
 
@@ -153,28 +153,28 @@ public class Outros extends JFrame {
             }
         });
 
+        panelbtn.add(ok);
         panelbtn.add(cancelar);
-        panel.add(panelbtn);
+        panel.add(panelbtn, BorderLayout.CENTER);
 
-        add(panel, BorderLayout.NORTH);
+        add(panel, BorderLayout.CENTER);
 
-        te5.addActionListener(new ActionListener() {
+        ok.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.turmas.get(te5.getSelectedIndex() - 1).listarDadosTurma());
-                }
+                SalaAula sala = new SalaAula();
+                JOptionPane.showMessageDialog(null, sala.ocupacaoSala(m.salas, Integer.parseInt(te.getText()), m.horarios));
+
             }
         });
     }
 
-    private void ListarDadosSala() {
+    private void ListarDiscSala() {
 
         final Main m = new Main();
         // Panels
-        Painel panel = new Painel();
+        Painel panel = new Painel(img.background2);
         JPanel panelbtn = new JPanel();
-        panel.setImage(img.background);
 
         final Botao cancelar = new Botao(img.cancel, img.cancelO);
         Botao[] botoes = {cancelar};
@@ -219,26 +219,24 @@ public class Outros extends JFrame {
         panelbtn.add(cancelar);
         panel.add(panelbtn);
 
-        add(panel, BorderLayout.NORTH);
+        add(panel, BorderLayout.CENTER);
 
         te5.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.salas.get(te5.getSelectedIndex() - 1).listarDadosSala());
+                    JOptionPane.showMessageDialog(null, m.salas.get(te5.getSelectedIndex() - 1).ListarDisciplinaSala(m.disciplinas, m.horarios));
                 }
             }
         });
     }
 
-    private void ListarDadosDisciplina() {
+    private void ListarTurmaProf() {
 
         final Main m = new Main();
         // Panels
-        Painel panel = new Painel();
+        Painel panel = new Painel(img.background2);
         JPanel panelbtn = new JPanel();
-        panel.setImage(img.background);
-
 
         final Botao cancelar = new Botao(img.cancel, img.cancelO);
         Botao[] botoes = {cancelar};
@@ -262,11 +260,11 @@ public class Outros extends JFrame {
 
 
 
-        JLabel la5 = new JLabel("Disciplinas");
-        String[] v5 = new String[m.disciplinas.size() + 1];
+        JLabel la5 = new JLabel("Turmas");
+        String[] v5 = new String[m.turmas.size() + 1];
         v5[0] = " ";
-        for (int i = 1; i < m.disciplinas.size() + 1; i++) {
-            v5[i] = m.disciplinas.get(i - 1).toStringSigla();
+        for (int i = 1; i < m.turmas.size() + 1; i++) {
+            v5[i] = m.turmas.get(i - 1).toStringSigla();
         }
         final JComboBox te5 = new JComboBox(v5);
 
@@ -274,7 +272,7 @@ public class Outros extends JFrame {
         panel.add(lb);
         panel.add(te5);
 
-        add(panel, BorderLayout.NORTH);
+        add(panel, BorderLayout.CENTER);
 
         cancelar.addActionListener(new ActionListener() {
 
@@ -290,7 +288,7 @@ public class Outros extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 if (te5.getSelectedIndex() > 0) {
-                    JOptionPane.showMessageDialog(null, m.disciplinas.get(te5.getSelectedIndex() - 1).listarDadosDisciplina());
+                    JOptionPane.showMessageDialog(null, m.turmas.get(te5.getSelectedIndex() - 1).listarProfessorTurma(m.professores, m.horarios));
                 }
             }
         });
