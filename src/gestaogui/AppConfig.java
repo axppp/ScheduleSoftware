@@ -851,7 +851,7 @@ public class AppConfig extends JFrame {
         listarProf.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                LHorariosG a = new LHorariosG("professor");
+                Listar a = new Listar("professor");
 
             }
         });
@@ -860,7 +860,7 @@ public class AppConfig extends JFrame {
         listarAluno.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                LHorariosG a = new LHorariosG("aluno");
+                 Listar a = new Listar("aluno");
             }
         });
 
@@ -868,20 +868,20 @@ public class AppConfig extends JFrame {
         listarDisc.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                LHorariosG a = new LHorariosG("disciplina");
+                 Listar a = new Listar("disciplina");
             }
         });
 
         listarTurma.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                LHorariosG a = new LHorariosG("turma");
+                Listar a = new Listar("turma");
             }
         });
         listarSala.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                LHorariosG a = new LHorariosG("sala");
+                 Listar a = new Listar("sala");
             }
         });
 
