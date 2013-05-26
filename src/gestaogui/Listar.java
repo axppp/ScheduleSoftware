@@ -22,9 +22,25 @@ public class Listar extends JFrame {
     private Imagens img = new Imagens();
     private AppConfig appconfig;
 
-    public Listar() {
+    public Listar(String nome) {
         super("Listagem");
-        listagemProf();
+                if (nome.equalsIgnoreCase("professor")) {
+            listagemProf();
+            
+        } else if (nome.equalsIgnoreCase("aluno")) {
+            listagemAluno();
+            
+        } else if (nome.equalsIgnoreCase("turma")) {
+            listagemTurma();
+            
+        } else if (nome.equalsIgnoreCase("disciplina")) {
+            listagemDisciplina();
+            
+        } else if (nome.equalsIgnoreCase("sala")) {
+            listagemSala();
+            
+
+        }
         setProperties(850, 400, 1, true);
 
 
@@ -59,6 +75,9134 @@ public class Listar extends JFrame {
         NomeCom.setFont(new Font("Arial", Font.BOLD, 12));
         NomeCom.setForeground(Color.white);
 
+        HorarioVazio();
+
+        panel.add(panelbtn, BorderLayout.CENTER);
+        panelbtn.add(lb, BorderLayout.NORTH);
+        panelbtn.add(lb1, BorderLayout.CENTER);
+        panelbtn.add(lb2, BorderLayout.CENTER);
+        panelbtn.add(lb3, BorderLayout.CENTER);
+        panelbtn.add(lb4, BorderLayout.CENTER);
+        panelbtn.add(lb5, BorderLayout.CENTER);
+        panelbtn.add(lb6, BorderLayout.CENTER);
+        panelbtn.add(lb7, BorderLayout.CENTER);
+        panelbtn.add(lb8, BorderLayout.CENTER);
+        panelbtn.add(lb9, BorderLayout.CENTER);
+        panelbtn.add(lb10, BorderLayout.CENTER);
+        panelbtn.add(lb0, BorderLayout.CENTER);
+        panelbtn.add(lb01, BorderLayout.CENTER);
+        panelbtn.add(lb02, BorderLayout.CENTER);
+        panelbtn.add(lb03, BorderLayout.CENTER);
+        panelbtn.add(lb04, BorderLayout.CENTER);
+        panelbtn.add(lb05, BorderLayout.CENTER);
+        panelbtn.add(lb06, BorderLayout.CENTER);
+        panelbtn.add(lb07, BorderLayout.CENTER);
+        panelbtn.add(lb08, BorderLayout.CENTER);
+        panelbtn.add(lb09, BorderLayout.CENTER);
+        panelbtn.add(lb010, BorderLayout.CENTER);
+        panelbtn.add(lb11, BorderLayout.CENTER);
+        panelbtn.add(P8Seg, BorderLayout.CENTER);
+        panelbtn.add(lb13, BorderLayout.CENTER);
+        panelbtn.add(P8Ter, BorderLayout.CENTER);
+        panelbtn.add(lb15, BorderLayout.CENTER);
+        panelbtn.add(P8Qua, BorderLayout.CENTER);
+        panelbtn.add(lb17, BorderLayout.CENTER);
+        panelbtn.add(P8Qui, BorderLayout.CENTER);
+        panelbtn.add(lb19, BorderLayout.CENTER);
+        panelbtn.add(P8Sex, BorderLayout.CENTER);
+        panelbtn.add(lb21, BorderLayout.CENTER);
+        panelbtn.add(lb22, BorderLayout.CENTER);
+        panelbtn.add(lb23, BorderLayout.CENTER);
+        panelbtn.add(lb24, BorderLayout.CENTER);
+        panelbtn.add(lb25, BorderLayout.CENTER);
+        panelbtn.add(lb26, BorderLayout.CENTER);
+        panelbtn.add(lb27, BorderLayout.CENTER);
+        panelbtn.add(lb28, BorderLayout.CENTER);
+        panelbtn.add(lb29, BorderLayout.CENTER);
+        panelbtn.add(lb30, BorderLayout.CENTER);
+        panelbtn.add(lb31, BorderLayout.CENTER);
+        panelbtn.add(lb32, BorderLayout.CENTER);
+        panelbtn.add(lb33, BorderLayout.CENTER);
+        panelbtn.add(lb34, BorderLayout.CENTER);
+        panelbtn.add(lb35, BorderLayout.CENTER);
+        panelbtn.add(lb36, BorderLayout.CENTER);
+        panelbtn.add(lb37, BorderLayout.CENTER);
+        panelbtn.add(lb38, BorderLayout.CENTER);
+        panelbtn.add(lb39, BorderLayout.CENTER);
+        panelbtn.add(lb40, BorderLayout.CENTER);
+        panelbtn.add(lb41, BorderLayout.CENTER);
+        panelbtn.add(lb42, BorderLayout.CENTER);
+        panelbtn.add(lb43, BorderLayout.CENTER);
+        panelbtn.add(lb44, BorderLayout.CENTER);
+        panelbtn.add(lb45, BorderLayout.CENTER);
+        panelbtn.add(lb46, BorderLayout.CENTER);
+        panelbtn.add(lb47, BorderLayout.CENTER);
+        panelbtn.add(lb48, BorderLayout.CENTER);
+        panelbtn.add(lb49, BorderLayout.CENTER);
+        panelbtn.add(lb50, BorderLayout.CENTER);
+        panelbtn.add(lb51, BorderLayout.CENTER);
+        panelbtn.add(lb52, BorderLayout.CENTER);
+        panelbtn.add(lb53, BorderLayout.CENTER);
+        panelbtn.add(lb54, BorderLayout.CENTER);
+        panelbtn.add(lb55, BorderLayout.CENTER);
+        panelbtn.add(lb56, BorderLayout.CENTER);
+        panelbtn.add(lb57, BorderLayout.CENTER);
+        panelbtn.add(lb58, BorderLayout.CENTER);
+        panelbtn.add(lb59, BorderLayout.CENTER);
+        panelbtn.add(lb60, BorderLayout.CENTER);
+        panelbtn.add(lb61, BorderLayout.CENTER);
+        panelbtn.add(lb62, BorderLayout.CENTER);
+        panelbtn.add(lb63, BorderLayout.CENTER);
+        panelbtn.add(lb64, BorderLayout.CENTER);
+        panelbtn.add(lb65, BorderLayout.CENTER);
+        panelbtn.add(lb66, BorderLayout.CENTER);
+        panelbtn.add(lb67, BorderLayout.CENTER);
+        panelbtn.add(lb68, BorderLayout.CENTER);
+        panelbtn.add(lb69, BorderLayout.CENTER);
+        panelbtn.add(lb70, BorderLayout.CENTER);
+        panelbtn.add(lb71, BorderLayout.CENTER);
+        panelbtn.add(lb72, BorderLayout.CENTER);
+        panelbtn.add(lb73, BorderLayout.CENTER);
+        panelbtn.add(lb74, BorderLayout.CENTER);
+        panelbtn.add(lb75, BorderLayout.CENTER);
+        panelbtn.add(lb76, BorderLayout.CENTER);
+        panelbtn.add(lb77, BorderLayout.CENTER);
+        panelbtn.add(lb78, BorderLayout.CENTER);
+        panelbtn.add(lb79, BorderLayout.CENTER);
+        panelbtn.add(lb80, BorderLayout.CENTER);
+        panelbtn.add(lb81, BorderLayout.CENTER);
+        panelbtn.add(lb82, BorderLayout.CENTER);
+        panelbtn.add(lb83, BorderLayout.CENTER);
+        panelbtn.add(lb84, BorderLayout.CENTER);
+        panelbtn.add(lb85, BorderLayout.CENTER);
+        panelbtn.add(lb86, BorderLayout.CENTER);
+        panelbtn.add(lb87, BorderLayout.CENTER);
+        panelbtn.add(lb88, BorderLayout.CENTER);
+        panelbtn.add(lb89, BorderLayout.CENTER);
+        panelbtn.add(lb90, BorderLayout.CENTER);
+        panelbtn.add(lb91, BorderLayout.CENTER);
+        panelbtn.add(lb92, BorderLayout.CENTER);
+        panelbtn.add(lb93, BorderLayout.CENTER);
+        panelbtn.add(lb94, BorderLayout.CENTER);
+        panelbtn.add(lb95, BorderLayout.CENTER);
+        panelbtn.add(lb96, BorderLayout.CENTER);
+        panelbtn.add(lb97, BorderLayout.CENTER);
+        panelbtn.add(lb98, BorderLayout.CENTER);
+        panelbtn.add(lb99, BorderLayout.CENTER);
+        panelbtn.add(lb100, BorderLayout.CENTER);
+        panelbtn.add(lb101, BorderLayout.CENTER);
+        panelbtn.add(lb102, BorderLayout.CENTER);
+        panelbtn.add(lb103, BorderLayout.CENTER);
+        panelbtn.add(lb104, BorderLayout.CENTER);
+        panelbtn.add(lb105, BorderLayout.CENTER);
+        panelbtn.add(lb106, BorderLayout.CENTER);
+        panelbtn.add(lb107, BorderLayout.CENTER);
+        panelbtn.add(lb108, BorderLayout.CENTER);
+        panelbtn.add(lb109, BorderLayout.CENTER);
+        panelbtn.add(lb110, BorderLayout.CENTER);
+        panelbtn.add(lb111, BorderLayout.CENTER);
+        panelbtn.add(lb112, BorderLayout.CENTER);
+        panelbtn.add(lb113, BorderLayout.CENTER);
+        panelbtn.add(lb114, BorderLayout.CENTER);
+        panelbtn.add(lb115, BorderLayout.CENTER);
+        panelbtn.add(lb116, BorderLayout.CENTER);
+        panelbtn.add(lb117, BorderLayout.CENTER);
+        panelbtn.add(lb118, BorderLayout.CENTER);
+        panelbtn.add(lb119, BorderLayout.CENTER);
+        panelbtn.add(lb120, BorderLayout.CENTER);
+        panelbtn.add(lb121, BorderLayout.CENTER);
+        panelbtn.add(lb122, BorderLayout.CENTER);
+        panelbtn.add(lb123, BorderLayout.CENTER);
+        panelbtn.add(lb124, BorderLayout.CENTER);
+        panelbtn.add(lb125, BorderLayout.CENTER);
+        panelbtn.add(lb126, BorderLayout.CENTER);
+        panelbtn.add(lb127, BorderLayout.CENTER);
+        panelbtn.add(lb128, BorderLayout.CENTER);
+        panelbtn.add(lb129, BorderLayout.CENTER);
+        panelbtn.add(lb130, BorderLayout.CENTER);
+        panelbtn.add(lb131, BorderLayout.CENTER);
+        panelbtn.add(lb000, BorderLayout.CENTER);
+        panelbtn.add(lb001, BorderLayout.CENTER);
+        panelbtn.add(lb002, BorderLayout.CENTER);
+        panelbtn.add(lb003, BorderLayout.CENTER);
+        panelbtn.add(lb004, BorderLayout.CENTER);
+        panelbtn.add(lb005, BorderLayout.CENTER);
+        panelbtn.add(lb006, BorderLayout.CENTER);
+        panelbtn.add(lb007, BorderLayout.CENTER);
+        panelbtn.add(lb008, BorderLayout.CENTER);
+        panelbtn.add(lb009, BorderLayout.CENTER);
+        panelbtn.add(lb0010, BorderLayout.CENTER);
+
+        panelbtn.add(NomeCom);
+//        panelbtn.add(null);
+        panelbtn.add(com);
+        panelbtn.add(lb0011, BorderLayout.CENTER);
+        panelbtn.add(lb0012, BorderLayout.CENTER);
+        panelbtn.add(lb0013, BorderLayout.CENTER);
+        panelbtn.add(lb0014, BorderLayout.CENTER);
+        panelbtn.add(lb0015, BorderLayout.CENTER);
+        panelbtn.add(lb0016, BorderLayout.CENTER);
+
+        add(panel, BorderLayout.CENTER);
+
+        com.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                HorarioVazio();
+                ArrayList<Horario> h = new ArrayList<>();
+                if (com.getSelectedIndex() > 0) {
+                    h = m.professores.get(com.getSelectedIndex() - 1).listarHorarioProfessor(m.professores, m.horarios);
+                    for (int i = 0; i < h.size(); i++) {
+                        if (h.get(i).getDia_semana() == 2) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText(h.get(i).getDesignacao());
+                                    lb24.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(161, 62, 3));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(161, 62, 3));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText("-");
+                                    lb24.setText("-");
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(88, 97, 102));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(88, 97, 102));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText("-");
+                                    lb35.setText("-");
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText("-");
+                                    lb46.setText("-");
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText("-");
+                                    lb57.setText("-");
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText("-");
+                                    lb68.setText("-");
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText("-");
+                                    lb79.setText("-");
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText("-");
+                                    lb90.setText("-");
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText("-");
+                                    lb101.setText("-");
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText("-");
+                                    lb112.setText("-");
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(88, 97, 102));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(88, 97, 102));
+                                    lb123.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb111.setText(h.get(i).getSigla_professor());
+                                    lb112.setText(h.get(i).getSigla_disciplina());
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(161, 62, 3));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(161, 62, 3));
+                                    lb123.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 3) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText(h.get(i).getDesignacao());
+                                    lb26.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(161, 62, 3));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(161, 62, 3));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText("-");
+                                    lb26.setText("-");
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(88, 97, 102));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(88, 97, 102));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText("-");
+                                    lb37.setText("-");
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText("-");
+                                    lb48.setText("-");
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText("-");
+                                    lb59.setText("-");
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText("-");
+                                    lb70.setText("-");
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText("-");
+                                    lb81.setText("-");
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText("-");
+                                    lb92.setText("-");
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText("-");
+                                    lb103.setText("-");
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText("-");
+                                    lb114.setText("-");
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(88, 97, 102));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(88, 97, 102));
+                                    lb125.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb113.setText(h.get(i).getSigla_professor()+"\n"+h.get(i).getSigla_disciplina());
+                                    lb114.setText(h.get(i).getSigla_disciplina());
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(161, 62, 3));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(161, 62, 3));
+                                    lb125.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 4) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText(h.get(i).getDesignacao());
+                                    lb28.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(161, 62, 3));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(161, 62, 3));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText("-");
+                                    lb28.setText("-");
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(88, 97, 102));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(88, 97, 102));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText("-");
+                                    lb39.setText("-");
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText("-");
+                                    lb50.setText("-");
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText("-");
+                                    lb61.setText("-");
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText("-");
+                                    lb72.setText("-");
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText("-");
+                                    lb83.setText("-");
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText("-");
+                                    lb94.setText("-");
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText("-");
+                                    lb105.setText("-");
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText("-");
+                                    lb116.setText("-");
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(88, 97, 102));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(88, 97, 102));
+                                    lb127.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb115.setText(h.get(i).getSigla_professor());
+                                    lb116.setText(h.get(i).getSigla_disciplina());
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(161, 62, 3));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(161, 62, 3));
+                                    lb127.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 5) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText(h.get(i).getDesignacao());
+                                    lb30.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(161, 62, 3));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(161, 62, 3));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText("-");
+                                    lb30.setText("-");
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(88, 97, 102));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(88, 97, 102));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText("-");
+                                    lb41.setText("-");
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText("-");
+                                    lb52.setText("-");
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText("-");
+                                    lb63.setText("-");
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText("-");
+                                    lb74.setText("-");
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText("-");
+                                    lb85.setText("-");
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText("-");
+                                    lb96.setText("-");
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText("-");
+                                    lb107.setText("-");
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText("-");
+                                    lb118.setText("-");
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(88, 97, 102));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(88, 97, 102));
+                                    lb129.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb117.setText(h.get(i).getSigla_professor());
+                                    lb118.setText(h.get(i).getSigla_disciplina());
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(161, 62, 3));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(161, 62, 3));
+                                    lb129.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 6) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText(h.get(i).getDesignacao());
+                                    lb32.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(161, 62, 3));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(161, 62, 3));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText("-");
+                                    lb32.setText("-");
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(88, 97, 102));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(88, 97, 102));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText("-");
+                                    lb43.setText("-");
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));;
+                                    lb54.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText("-");
+                                    lb54.setText("-");
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText("-");
+                                    lb65.setText("-");
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText("-");
+                                    lb76.setText("-");
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText("-");
+                                    lb87.setText("-");
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText("-");
+                                    lb98.setText("-");
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText("-");
+                                    lb109.setText("-");
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText("-");
+                                    lb120.setText("-");
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(88, 97, 102));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(88, 97, 102));
+                                    lb131.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb119.setText(h.get(i).getSigla_professor());
+                                    lb120.setText(h.get(i).getSigla_disciplina());
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(161, 62, 3));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(161, 62, 3));
+                                    lb131.setOpaque(true);
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    HorarioVazio();
+                }
+            }
+        });
+    }
+
+    private void listagemAluno() {
+        final Main m = new Main();
+
+        // Panels
+        Painel panel = new Painel(new FlowLayout(FlowLayout.CENTER, 60, 120));
+        Painel panelbtn = new Painel(img.background2);
+        panel.setLayout(new GridLayout(1, 0, 0, 10));
+
+        // Panels customization
+        panelbtn.setLayout(new GridLayout(15, 11, 0, 0));
+//        panelbtn.setBorder(new EmptyBorder(10, 10, 10, 10));
+        panelbtn.setOpaque(false);
+        // Empty border
+//        Border emptyBorder = BorderFactory.createEmptyBorder();
+        JLabel NomeCom = new JLabel("Alunos:", JLabel.CENTER);
+        String[] v5 = new String[m.alunos.size() + 1];
+        v5[0] = " ";
+        for (int i = 1; i < m.alunos.size() + 1; i++) {
+            v5[i] = m.alunos.get(i - 1).toStringNumeroAluno();
+        }
+        final JComboBox com = new JComboBox(v5);
+
+        // Title customization
+
+        lb.setFont(new Font("Arial", Font.BOLD, 14));
+        lb.setForeground(Color.white);
+        NomeCom.setFont(new Font("Arial", Font.BOLD, 12));
+        NomeCom.setForeground(Color.white);
+
+        HorarioVazio();
+
+        panel.add(panelbtn, BorderLayout.CENTER);
+        panelbtn.add(lb, BorderLayout.NORTH);
+        panelbtn.add(lb1, BorderLayout.CENTER);
+        panelbtn.add(lb2, BorderLayout.CENTER);
+        panelbtn.add(lb3, BorderLayout.CENTER);
+        panelbtn.add(lb4, BorderLayout.CENTER);
+        panelbtn.add(lb5, BorderLayout.CENTER);
+        panelbtn.add(lb6, BorderLayout.CENTER);
+        panelbtn.add(lb7, BorderLayout.CENTER);
+        panelbtn.add(lb8, BorderLayout.CENTER);
+        panelbtn.add(lb9, BorderLayout.CENTER);
+        panelbtn.add(lb10, BorderLayout.CENTER);
+        panelbtn.add(lb0, BorderLayout.CENTER);
+        panelbtn.add(lb01, BorderLayout.CENTER);
+        panelbtn.add(lb02, BorderLayout.CENTER);
+        panelbtn.add(lb03, BorderLayout.CENTER);
+        panelbtn.add(lb04, BorderLayout.CENTER);
+        panelbtn.add(lb05, BorderLayout.CENTER);
+        panelbtn.add(lb06, BorderLayout.CENTER);
+        panelbtn.add(lb07, BorderLayout.CENTER);
+        panelbtn.add(lb08, BorderLayout.CENTER);
+        panelbtn.add(lb09, BorderLayout.CENTER);
+        panelbtn.add(lb010, BorderLayout.CENTER);
+        panelbtn.add(lb11, BorderLayout.CENTER);
+        panelbtn.add(P8Seg, BorderLayout.CENTER);
+        panelbtn.add(lb13, BorderLayout.CENTER);
+        panelbtn.add(P8Ter, BorderLayout.CENTER);
+        panelbtn.add(lb15, BorderLayout.CENTER);
+        panelbtn.add(P8Qua, BorderLayout.CENTER);
+        panelbtn.add(lb17, BorderLayout.CENTER);
+        panelbtn.add(P8Qui, BorderLayout.CENTER);
+        panelbtn.add(lb19, BorderLayout.CENTER);
+        panelbtn.add(P8Sex, BorderLayout.CENTER);
+        panelbtn.add(lb21, BorderLayout.CENTER);
+        panelbtn.add(lb22, BorderLayout.CENTER);
+        panelbtn.add(lb23, BorderLayout.CENTER);
+        panelbtn.add(lb24, BorderLayout.CENTER);
+        panelbtn.add(lb25, BorderLayout.CENTER);
+        panelbtn.add(lb26, BorderLayout.CENTER);
+        panelbtn.add(lb27, BorderLayout.CENTER);
+        panelbtn.add(lb28, BorderLayout.CENTER);
+        panelbtn.add(lb29, BorderLayout.CENTER);
+        panelbtn.add(lb30, BorderLayout.CENTER);
+        panelbtn.add(lb31, BorderLayout.CENTER);
+        panelbtn.add(lb32, BorderLayout.CENTER);
+        panelbtn.add(lb33, BorderLayout.CENTER);
+        panelbtn.add(lb34, BorderLayout.CENTER);
+        panelbtn.add(lb35, BorderLayout.CENTER);
+        panelbtn.add(lb36, BorderLayout.CENTER);
+        panelbtn.add(lb37, BorderLayout.CENTER);
+        panelbtn.add(lb38, BorderLayout.CENTER);
+        panelbtn.add(lb39, BorderLayout.CENTER);
+        panelbtn.add(lb40, BorderLayout.CENTER);
+        panelbtn.add(lb41, BorderLayout.CENTER);
+        panelbtn.add(lb42, BorderLayout.CENTER);
+        panelbtn.add(lb43, BorderLayout.CENTER);
+        panelbtn.add(lb44, BorderLayout.CENTER);
+        panelbtn.add(lb45, BorderLayout.CENTER);
+        panelbtn.add(lb46, BorderLayout.CENTER);
+        panelbtn.add(lb47, BorderLayout.CENTER);
+        panelbtn.add(lb48, BorderLayout.CENTER);
+        panelbtn.add(lb49, BorderLayout.CENTER);
+        panelbtn.add(lb50, BorderLayout.CENTER);
+        panelbtn.add(lb51, BorderLayout.CENTER);
+        panelbtn.add(lb52, BorderLayout.CENTER);
+        panelbtn.add(lb53, BorderLayout.CENTER);
+        panelbtn.add(lb54, BorderLayout.CENTER);
+        panelbtn.add(lb55, BorderLayout.CENTER);
+        panelbtn.add(lb56, BorderLayout.CENTER);
+        panelbtn.add(lb57, BorderLayout.CENTER);
+        panelbtn.add(lb58, BorderLayout.CENTER);
+        panelbtn.add(lb59, BorderLayout.CENTER);
+        panelbtn.add(lb60, BorderLayout.CENTER);
+        panelbtn.add(lb61, BorderLayout.CENTER);
+        panelbtn.add(lb62, BorderLayout.CENTER);
+        panelbtn.add(lb63, BorderLayout.CENTER);
+        panelbtn.add(lb64, BorderLayout.CENTER);
+        panelbtn.add(lb65, BorderLayout.CENTER);
+        panelbtn.add(lb66, BorderLayout.CENTER);
+        panelbtn.add(lb67, BorderLayout.CENTER);
+        panelbtn.add(lb68, BorderLayout.CENTER);
+        panelbtn.add(lb69, BorderLayout.CENTER);
+        panelbtn.add(lb70, BorderLayout.CENTER);
+        panelbtn.add(lb71, BorderLayout.CENTER);
+        panelbtn.add(lb72, BorderLayout.CENTER);
+        panelbtn.add(lb73, BorderLayout.CENTER);
+        panelbtn.add(lb74, BorderLayout.CENTER);
+        panelbtn.add(lb75, BorderLayout.CENTER);
+        panelbtn.add(lb76, BorderLayout.CENTER);
+        panelbtn.add(lb77, BorderLayout.CENTER);
+        panelbtn.add(lb78, BorderLayout.CENTER);
+        panelbtn.add(lb79, BorderLayout.CENTER);
+        panelbtn.add(lb80, BorderLayout.CENTER);
+        panelbtn.add(lb81, BorderLayout.CENTER);
+        panelbtn.add(lb82, BorderLayout.CENTER);
+        panelbtn.add(lb83, BorderLayout.CENTER);
+        panelbtn.add(lb84, BorderLayout.CENTER);
+        panelbtn.add(lb85, BorderLayout.CENTER);
+        panelbtn.add(lb86, BorderLayout.CENTER);
+        panelbtn.add(lb87, BorderLayout.CENTER);
+        panelbtn.add(lb88, BorderLayout.CENTER);
+        panelbtn.add(lb89, BorderLayout.CENTER);
+        panelbtn.add(lb90, BorderLayout.CENTER);
+        panelbtn.add(lb91, BorderLayout.CENTER);
+        panelbtn.add(lb92, BorderLayout.CENTER);
+        panelbtn.add(lb93, BorderLayout.CENTER);
+        panelbtn.add(lb94, BorderLayout.CENTER);
+        panelbtn.add(lb95, BorderLayout.CENTER);
+        panelbtn.add(lb96, BorderLayout.CENTER);
+        panelbtn.add(lb97, BorderLayout.CENTER);
+        panelbtn.add(lb98, BorderLayout.CENTER);
+        panelbtn.add(lb99, BorderLayout.CENTER);
+        panelbtn.add(lb100, BorderLayout.CENTER);
+        panelbtn.add(lb101, BorderLayout.CENTER);
+        panelbtn.add(lb102, BorderLayout.CENTER);
+        panelbtn.add(lb103, BorderLayout.CENTER);
+        panelbtn.add(lb104, BorderLayout.CENTER);
+        panelbtn.add(lb105, BorderLayout.CENTER);
+        panelbtn.add(lb106, BorderLayout.CENTER);
+        panelbtn.add(lb107, BorderLayout.CENTER);
+        panelbtn.add(lb108, BorderLayout.CENTER);
+        panelbtn.add(lb109, BorderLayout.CENTER);
+        panelbtn.add(lb110, BorderLayout.CENTER);
+        panelbtn.add(lb111, BorderLayout.CENTER);
+        panelbtn.add(lb112, BorderLayout.CENTER);
+        panelbtn.add(lb113, BorderLayout.CENTER);
+        panelbtn.add(lb114, BorderLayout.CENTER);
+        panelbtn.add(lb115, BorderLayout.CENTER);
+        panelbtn.add(lb116, BorderLayout.CENTER);
+        panelbtn.add(lb117, BorderLayout.CENTER);
+        panelbtn.add(lb118, BorderLayout.CENTER);
+        panelbtn.add(lb119, BorderLayout.CENTER);
+        panelbtn.add(lb120, BorderLayout.CENTER);
+        panelbtn.add(lb121, BorderLayout.CENTER);
+        panelbtn.add(lb122, BorderLayout.CENTER);
+        panelbtn.add(lb123, BorderLayout.CENTER);
+        panelbtn.add(lb124, BorderLayout.CENTER);
+        panelbtn.add(lb125, BorderLayout.CENTER);
+        panelbtn.add(lb126, BorderLayout.CENTER);
+        panelbtn.add(lb127, BorderLayout.CENTER);
+        panelbtn.add(lb128, BorderLayout.CENTER);
+        panelbtn.add(lb129, BorderLayout.CENTER);
+        panelbtn.add(lb130, BorderLayout.CENTER);
+        panelbtn.add(lb131, BorderLayout.CENTER);
+        panelbtn.add(lb000, BorderLayout.CENTER);
+        panelbtn.add(lb001, BorderLayout.CENTER);
+        panelbtn.add(lb002, BorderLayout.CENTER);
+        panelbtn.add(lb003, BorderLayout.CENTER);
+        panelbtn.add(lb004, BorderLayout.CENTER);
+        panelbtn.add(lb005, BorderLayout.CENTER);
+        panelbtn.add(lb006, BorderLayout.CENTER);
+        panelbtn.add(lb007, BorderLayout.CENTER);
+        panelbtn.add(lb008, BorderLayout.CENTER);
+        panelbtn.add(lb009, BorderLayout.CENTER);
+        panelbtn.add(lb0010, BorderLayout.CENTER);
+
+        panelbtn.add(NomeCom);
+//        panelbtn.add(null);
+        panelbtn.add(com);
+        panelbtn.add(lb0011, BorderLayout.CENTER);
+        panelbtn.add(lb0012, BorderLayout.CENTER);
+        panelbtn.add(lb0013, BorderLayout.CENTER);
+        panelbtn.add(lb0014, BorderLayout.CENTER);
+        panelbtn.add(lb0015, BorderLayout.CENTER);
+        panelbtn.add(lb0016, BorderLayout.CENTER);
+
+        add(panel, BorderLayout.CENTER);
+
+        com.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                HorarioVazio();
+                ArrayList<Horario> h = new ArrayList<>();
+                if (com.getSelectedIndex() > 0) {
+                    h = m.alunos.get(com.getSelectedIndex() - 1).listarHorarioAluno(m.alunos, m.horarios);
+                    for (int i = 0; i < h.size(); i++) {
+                        if (h.get(i).getDia_semana() == 2) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText(h.get(i).getDesignacao());
+                                    lb24.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(161, 62, 3));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(161, 62, 3));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText("-");
+                                    lb24.setText("-");
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(88, 97, 102));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(88, 97, 102));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText("-");
+                                    lb35.setText("-");
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText("-");
+                                    lb46.setText("-");
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText("-");
+                                    lb57.setText("-");
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText("-");
+                                    lb68.setText("-");
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText("-");
+                                    lb79.setText("-");
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText("-");
+                                    lb90.setText("-");
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText("-");
+                                    lb101.setText("-");
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText("-");
+                                    lb112.setText("-");
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(88, 97, 102));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(88, 97, 102));
+                                    lb123.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb111.setText(h.get(i).getSigla_professor());
+                                    lb112.setText(h.get(i).getSigla_disciplina());
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(161, 62, 3));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(161, 62, 3));
+                                    lb123.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 3) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText(h.get(i).getDesignacao());
+                                    lb26.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(161, 62, 3));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(161, 62, 3));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText("-");
+                                    lb26.setText("-");
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(88, 97, 102));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(88, 97, 102));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText("-");
+                                    lb37.setText("-");
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText("-");
+                                    lb48.setText("-");
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText("-");
+                                    lb59.setText("-");
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText("-");
+                                    lb70.setText("-");
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText("-");
+                                    lb81.setText("-");
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText("-");
+                                    lb92.setText("-");
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText("-");
+                                    lb103.setText("-");
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText("-");
+                                    lb114.setText("-");
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(88, 97, 102));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(88, 97, 102));
+                                    lb125.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb113.setText(h.get(i).getSigla_professor());
+                                    lb114.setText(h.get(i).getSigla_disciplina());
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(161, 62, 3));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(161, 62, 3));
+                                    lb125.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 4) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText(h.get(i).getDesignacao());
+                                    lb28.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(161, 62, 3));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(161, 62, 3));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText("-");
+                                    lb28.setText("-");
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(88, 97, 102));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(88, 97, 102));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText("-");
+                                    lb39.setText("-");
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText("-");
+                                    lb50.setText("-");
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText("-");
+                                    lb61.setText("-");
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText("-");
+                                    lb72.setText("-");
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText("-");
+                                    lb83.setText("-");
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText("-");
+                                    lb94.setText("-");
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText("-");
+                                    lb105.setText("-");
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText("-");
+                                    lb116.setText("-");
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(88, 97, 102));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(88, 97, 102));
+                                    lb127.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb115.setText(h.get(i).getSigla_professor());
+                                    lb116.setText(h.get(i).getSigla_disciplina());
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(161, 62, 3));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(161, 62, 3));
+                                    lb127.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 5) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText(h.get(i).getDesignacao());
+                                    lb30.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(161, 62, 3));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(161, 62, 3));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText("-");
+                                    lb30.setText("-");
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(88, 97, 102));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(88, 97, 102));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText("-");
+                                    lb41.setText("-");
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText("-");
+                                    lb52.setText("-");
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText("-");
+                                    lb63.setText("-");
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText("-");
+                                    lb74.setText("-");
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText("-");
+                                    lb85.setText("-");
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText("-");
+                                    lb96.setText("-");
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText("-");
+                                    lb107.setText("-");
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText("-");
+                                    lb118.setText("-");
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(88, 97, 102));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(88, 97, 102));
+                                    lb129.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb117.setText(h.get(i).getSigla_professor());
+                                    lb118.setText(h.get(i).getSigla_disciplina());
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(161, 62, 3));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(161, 62, 3));
+                                    lb129.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 6) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText(h.get(i).getDesignacao());
+                                    lb32.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(161, 62, 3));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(161, 62, 3));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText("-");
+                                    lb32.setText("-");
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(88, 97, 102));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(88, 97, 102));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText("-");
+                                    lb43.setText("-");
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));;
+                                    lb54.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText("-");
+                                    lb54.setText("-");
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText("-");
+                                    lb65.setText("-");
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText("-");
+                                    lb76.setText("-");
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText("-");
+                                    lb87.setText("-");
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText("-");
+                                    lb98.setText("-");
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText("-");
+                                    lb109.setText("-");
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText("-");
+                                    lb120.setText("-");
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(88, 97, 102));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(88, 97, 102));
+                                    lb131.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb119.setText(h.get(i).getSigla_professor());
+                                    lb120.setText(h.get(i).getSigla_disciplina());
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(161, 62, 3));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(161, 62, 3));
+                                    lb131.setOpaque(true);
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    HorarioVazio();
+                }
+            }
+        });
+    }
+
+    private void listagemTurma() {
+        final Main m = new Main();
+
+        // Panels
+        Painel panel = new Painel(new FlowLayout(FlowLayout.CENTER, 60, 120));
+        Painel panelbtn = new Painel(img.background2);
+        panel.setLayout(new GridLayout(1, 0, 0, 10));
+
+        // Panels customization
+        panelbtn.setLayout(new GridLayout(15, 11, 0, 0));
+//        panelbtn.setBorder(new EmptyBorder(10, 10, 10, 10));
+        panelbtn.setOpaque(false);
+        // Empty border
+//        Border emptyBorder = BorderFactory.createEmptyBorder();
+        JLabel NomeCom = new JLabel("Turmas:", JLabel.CENTER);
+        String[] v5 = new String[m.turmas.size() + 1];
+        v5[0] = " ";
+        for (int i = 1; i < m.turmas.size() + 1; i++) {
+            v5[i] = m.turmas.get(i - 1).toStringSigla();
+        }
+        final JComboBox com = new JComboBox(v5);
+
+        // Title customization
+
+        lb.setFont(new Font("Arial", Font.BOLD, 14));
+        lb.setForeground(Color.white);
+        NomeCom.setFont(new Font("Arial", Font.BOLD, 12));
+        NomeCom.setForeground(Color.white);
+
+        HorarioVazio();
+
+        panel.add(panelbtn, BorderLayout.CENTER);
+        panelbtn.add(lb, BorderLayout.NORTH);
+        panelbtn.add(lb1, BorderLayout.CENTER);
+        panelbtn.add(lb2, BorderLayout.CENTER);
+        panelbtn.add(lb3, BorderLayout.CENTER);
+        panelbtn.add(lb4, BorderLayout.CENTER);
+        panelbtn.add(lb5, BorderLayout.CENTER);
+        panelbtn.add(lb6, BorderLayout.CENTER);
+        panelbtn.add(lb7, BorderLayout.CENTER);
+        panelbtn.add(lb8, BorderLayout.CENTER);
+        panelbtn.add(lb9, BorderLayout.CENTER);
+        panelbtn.add(lb10, BorderLayout.CENTER);
+        panelbtn.add(lb0, BorderLayout.CENTER);
+        panelbtn.add(lb01, BorderLayout.CENTER);
+        panelbtn.add(lb02, BorderLayout.CENTER);
+        panelbtn.add(lb03, BorderLayout.CENTER);
+        panelbtn.add(lb04, BorderLayout.CENTER);
+        panelbtn.add(lb05, BorderLayout.CENTER);
+        panelbtn.add(lb06, BorderLayout.CENTER);
+        panelbtn.add(lb07, BorderLayout.CENTER);
+        panelbtn.add(lb08, BorderLayout.CENTER);
+        panelbtn.add(lb09, BorderLayout.CENTER);
+        panelbtn.add(lb010, BorderLayout.CENTER);
+        panelbtn.add(lb11, BorderLayout.CENTER);
+        panelbtn.add(P8Seg, BorderLayout.CENTER);
+        panelbtn.add(lb13, BorderLayout.CENTER);
+        panelbtn.add(P8Ter, BorderLayout.CENTER);
+        panelbtn.add(lb15, BorderLayout.CENTER);
+        panelbtn.add(P8Qua, BorderLayout.CENTER);
+        panelbtn.add(lb17, BorderLayout.CENTER);
+        panelbtn.add(P8Qui, BorderLayout.CENTER);
+        panelbtn.add(lb19, BorderLayout.CENTER);
+        panelbtn.add(P8Sex, BorderLayout.CENTER);
+        panelbtn.add(lb21, BorderLayout.CENTER);
+        panelbtn.add(lb22, BorderLayout.CENTER);
+        panelbtn.add(lb23, BorderLayout.CENTER);
+        panelbtn.add(lb24, BorderLayout.CENTER);
+        panelbtn.add(lb25, BorderLayout.CENTER);
+        panelbtn.add(lb26, BorderLayout.CENTER);
+        panelbtn.add(lb27, BorderLayout.CENTER);
+        panelbtn.add(lb28, BorderLayout.CENTER);
+        panelbtn.add(lb29, BorderLayout.CENTER);
+        panelbtn.add(lb30, BorderLayout.CENTER);
+        panelbtn.add(lb31, BorderLayout.CENTER);
+        panelbtn.add(lb32, BorderLayout.CENTER);
+        panelbtn.add(lb33, BorderLayout.CENTER);
+        panelbtn.add(lb34, BorderLayout.CENTER);
+        panelbtn.add(lb35, BorderLayout.CENTER);
+        panelbtn.add(lb36, BorderLayout.CENTER);
+        panelbtn.add(lb37, BorderLayout.CENTER);
+        panelbtn.add(lb38, BorderLayout.CENTER);
+        panelbtn.add(lb39, BorderLayout.CENTER);
+        panelbtn.add(lb40, BorderLayout.CENTER);
+        panelbtn.add(lb41, BorderLayout.CENTER);
+        panelbtn.add(lb42, BorderLayout.CENTER);
+        panelbtn.add(lb43, BorderLayout.CENTER);
+        panelbtn.add(lb44, BorderLayout.CENTER);
+        panelbtn.add(lb45, BorderLayout.CENTER);
+        panelbtn.add(lb46, BorderLayout.CENTER);
+        panelbtn.add(lb47, BorderLayout.CENTER);
+        panelbtn.add(lb48, BorderLayout.CENTER);
+        panelbtn.add(lb49, BorderLayout.CENTER);
+        panelbtn.add(lb50, BorderLayout.CENTER);
+        panelbtn.add(lb51, BorderLayout.CENTER);
+        panelbtn.add(lb52, BorderLayout.CENTER);
+        panelbtn.add(lb53, BorderLayout.CENTER);
+        panelbtn.add(lb54, BorderLayout.CENTER);
+        panelbtn.add(lb55, BorderLayout.CENTER);
+        panelbtn.add(lb56, BorderLayout.CENTER);
+        panelbtn.add(lb57, BorderLayout.CENTER);
+        panelbtn.add(lb58, BorderLayout.CENTER);
+        panelbtn.add(lb59, BorderLayout.CENTER);
+        panelbtn.add(lb60, BorderLayout.CENTER);
+        panelbtn.add(lb61, BorderLayout.CENTER);
+        panelbtn.add(lb62, BorderLayout.CENTER);
+        panelbtn.add(lb63, BorderLayout.CENTER);
+        panelbtn.add(lb64, BorderLayout.CENTER);
+        panelbtn.add(lb65, BorderLayout.CENTER);
+        panelbtn.add(lb66, BorderLayout.CENTER);
+        panelbtn.add(lb67, BorderLayout.CENTER);
+        panelbtn.add(lb68, BorderLayout.CENTER);
+        panelbtn.add(lb69, BorderLayout.CENTER);
+        panelbtn.add(lb70, BorderLayout.CENTER);
+        panelbtn.add(lb71, BorderLayout.CENTER);
+        panelbtn.add(lb72, BorderLayout.CENTER);
+        panelbtn.add(lb73, BorderLayout.CENTER);
+        panelbtn.add(lb74, BorderLayout.CENTER);
+        panelbtn.add(lb75, BorderLayout.CENTER);
+        panelbtn.add(lb76, BorderLayout.CENTER);
+        panelbtn.add(lb77, BorderLayout.CENTER);
+        panelbtn.add(lb78, BorderLayout.CENTER);
+        panelbtn.add(lb79, BorderLayout.CENTER);
+        panelbtn.add(lb80, BorderLayout.CENTER);
+        panelbtn.add(lb81, BorderLayout.CENTER);
+        panelbtn.add(lb82, BorderLayout.CENTER);
+        panelbtn.add(lb83, BorderLayout.CENTER);
+        panelbtn.add(lb84, BorderLayout.CENTER);
+        panelbtn.add(lb85, BorderLayout.CENTER);
+        panelbtn.add(lb86, BorderLayout.CENTER);
+        panelbtn.add(lb87, BorderLayout.CENTER);
+        panelbtn.add(lb88, BorderLayout.CENTER);
+        panelbtn.add(lb89, BorderLayout.CENTER);
+        panelbtn.add(lb90, BorderLayout.CENTER);
+        panelbtn.add(lb91, BorderLayout.CENTER);
+        panelbtn.add(lb92, BorderLayout.CENTER);
+        panelbtn.add(lb93, BorderLayout.CENTER);
+        panelbtn.add(lb94, BorderLayout.CENTER);
+        panelbtn.add(lb95, BorderLayout.CENTER);
+        panelbtn.add(lb96, BorderLayout.CENTER);
+        panelbtn.add(lb97, BorderLayout.CENTER);
+        panelbtn.add(lb98, BorderLayout.CENTER);
+        panelbtn.add(lb99, BorderLayout.CENTER);
+        panelbtn.add(lb100, BorderLayout.CENTER);
+        panelbtn.add(lb101, BorderLayout.CENTER);
+        panelbtn.add(lb102, BorderLayout.CENTER);
+        panelbtn.add(lb103, BorderLayout.CENTER);
+        panelbtn.add(lb104, BorderLayout.CENTER);
+        panelbtn.add(lb105, BorderLayout.CENTER);
+        panelbtn.add(lb106, BorderLayout.CENTER);
+        panelbtn.add(lb107, BorderLayout.CENTER);
+        panelbtn.add(lb108, BorderLayout.CENTER);
+        panelbtn.add(lb109, BorderLayout.CENTER);
+        panelbtn.add(lb110, BorderLayout.CENTER);
+        panelbtn.add(lb111, BorderLayout.CENTER);
+        panelbtn.add(lb112, BorderLayout.CENTER);
+        panelbtn.add(lb113, BorderLayout.CENTER);
+        panelbtn.add(lb114, BorderLayout.CENTER);
+        panelbtn.add(lb115, BorderLayout.CENTER);
+        panelbtn.add(lb116, BorderLayout.CENTER);
+        panelbtn.add(lb117, BorderLayout.CENTER);
+        panelbtn.add(lb118, BorderLayout.CENTER);
+        panelbtn.add(lb119, BorderLayout.CENTER);
+        panelbtn.add(lb120, BorderLayout.CENTER);
+        panelbtn.add(lb121, BorderLayout.CENTER);
+        panelbtn.add(lb122, BorderLayout.CENTER);
+        panelbtn.add(lb123, BorderLayout.CENTER);
+        panelbtn.add(lb124, BorderLayout.CENTER);
+        panelbtn.add(lb125, BorderLayout.CENTER);
+        panelbtn.add(lb126, BorderLayout.CENTER);
+        panelbtn.add(lb127, BorderLayout.CENTER);
+        panelbtn.add(lb128, BorderLayout.CENTER);
+        panelbtn.add(lb129, BorderLayout.CENTER);
+        panelbtn.add(lb130, BorderLayout.CENTER);
+        panelbtn.add(lb131, BorderLayout.CENTER);
+        panelbtn.add(lb000, BorderLayout.CENTER);
+        panelbtn.add(lb001, BorderLayout.CENTER);
+        panelbtn.add(lb002, BorderLayout.CENTER);
+        panelbtn.add(lb003, BorderLayout.CENTER);
+        panelbtn.add(lb004, BorderLayout.CENTER);
+        panelbtn.add(lb005, BorderLayout.CENTER);
+        panelbtn.add(lb006, BorderLayout.CENTER);
+        panelbtn.add(lb007, BorderLayout.CENTER);
+        panelbtn.add(lb008, BorderLayout.CENTER);
+        panelbtn.add(lb009, BorderLayout.CENTER);
+        panelbtn.add(lb0010, BorderLayout.CENTER);
+
+        panelbtn.add(NomeCom);
+//        panelbtn.add(null);
+        panelbtn.add(com);
+        panelbtn.add(lb0011, BorderLayout.CENTER);
+        panelbtn.add(lb0012, BorderLayout.CENTER);
+        panelbtn.add(lb0013, BorderLayout.CENTER);
+        panelbtn.add(lb0014, BorderLayout.CENTER);
+        panelbtn.add(lb0015, BorderLayout.CENTER);
+        panelbtn.add(lb0016, BorderLayout.CENTER);
+
+        add(panel, BorderLayout.CENTER);
+
+        com.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                HorarioVazio();
+                ArrayList<Horario> h = new ArrayList<>();
+                if (com.getSelectedIndex() > 0) {
+                    h = m.turmas.get(com.getSelectedIndex() - 1).listarHorarioTurma(m.horarios);
+                    for (int i = 0; i < h.size(); i++) {
+                        if (h.get(i).getDia_semana() == 2) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText(h.get(i).getDesignacao());
+                                    lb24.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(161, 62, 3));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(161, 62, 3));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText("-");
+                                    lb24.setText("-");
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(88, 97, 102));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(88, 97, 102));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText("-");
+                                    lb35.setText("-");
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText("-");
+                                    lb46.setText("-");
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText("-");
+                                    lb57.setText("-");
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText("-");
+                                    lb68.setText("-");
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText("-");
+                                    lb79.setText("-");
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText("-");
+                                    lb90.setText("-");
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText("-");
+                                    lb101.setText("-");
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText("-");
+                                    lb112.setText("-");
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(88, 97, 102));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(88, 97, 102));
+                                    lb123.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb111.setText(h.get(i).getSigla_professor());
+                                    lb112.setText(h.get(i).getSigla_disciplina());
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(161, 62, 3));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(161, 62, 3));
+                                    lb123.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 3) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText(h.get(i).getDesignacao());
+                                    lb26.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(161, 62, 3));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(161, 62, 3));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText("-");
+                                    lb26.setText("-");
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(88, 97, 102));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(88, 97, 102));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText("-");
+                                    lb37.setText("-");
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText("-");
+                                    lb48.setText("-");
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText("-");
+                                    lb59.setText("-");
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText("-");
+                                    lb70.setText("-");
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText("-");
+                                    lb81.setText("-");
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText("-");
+                                    lb92.setText("-");
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText("-");
+                                    lb103.setText("-");
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText("-");
+                                    lb114.setText("-");
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(88, 97, 102));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(88, 97, 102));
+                                    lb125.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb113.setText(h.get(i).getSigla_professor());
+                                    lb114.setText(h.get(i).getSigla_disciplina());
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(161, 62, 3));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(161, 62, 3));
+                                    lb125.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 4) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText(h.get(i).getDesignacao());
+                                    lb28.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(161, 62, 3));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(161, 62, 3));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText("-");
+                                    lb28.setText("-");
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(88, 97, 102));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(88, 97, 102));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText("-");
+                                    lb39.setText("-");
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText("-");
+                                    lb50.setText("-");
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText("-");
+                                    lb61.setText("-");
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText("-");
+                                    lb72.setText("-");
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText("-");
+                                    lb83.setText("-");
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText("-");
+                                    lb94.setText("-");
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText("-");
+                                    lb105.setText("-");
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText("-");
+                                    lb116.setText("-");
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(88, 97, 102));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(88, 97, 102));
+                                    lb127.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb115.setText(h.get(i).getSigla_professor());
+                                    lb116.setText(h.get(i).getSigla_disciplina());
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(161, 62, 3));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(161, 62, 3));
+                                    lb127.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 5) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText(h.get(i).getDesignacao());
+                                    lb30.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(161, 62, 3));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(161, 62, 3));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText("-");
+                                    lb30.setText("-");
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(88, 97, 102));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(88, 97, 102));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText("-");
+                                    lb41.setText("-");
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText("-");
+                                    lb52.setText("-");
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText("-");
+                                    lb63.setText("-");
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText("-");
+                                    lb74.setText("-");
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText("-");
+                                    lb85.setText("-");
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText("-");
+                                    lb96.setText("-");
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText("-");
+                                    lb107.setText("-");
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText("-");
+                                    lb118.setText("-");
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(88, 97, 102));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(88, 97, 102));
+                                    lb129.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb117.setText(h.get(i).getSigla_professor());
+                                    lb118.setText(h.get(i).getSigla_disciplina());
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(161, 62, 3));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(161, 62, 3));
+                                    lb129.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 6) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText(h.get(i).getDesignacao());
+                                    lb32.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(161, 62, 3));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(161, 62, 3));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText("-");
+                                    lb32.setText("-");
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(88, 97, 102));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(88, 97, 102));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText("-");
+                                    lb43.setText("-");
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));;
+                                    lb54.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText("-");
+                                    lb54.setText("-");
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText("-");
+                                    lb65.setText("-");
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText("-");
+                                    lb76.setText("-");
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText("-");
+                                    lb87.setText("-");
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText("-");
+                                    lb98.setText("-");
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText("-");
+                                    lb109.setText("-");
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText("-");
+                                    lb120.setText("-");
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(88, 97, 102));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(88, 97, 102));
+                                    lb131.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb119.setText(h.get(i).getSigla_professor());
+                                    lb120.setText(h.get(i).getSigla_disciplina());
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(161, 62, 3));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(161, 62, 3));
+                                    lb131.setOpaque(true);
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    HorarioVazio();
+                }
+            }
+        });
+    }
+
+    private void listagemDisciplina() {
+        final Main m = new Main();
+
+        // Panels
+        Painel panel = new Painel(new FlowLayout(FlowLayout.CENTER, 60, 120));
+        Painel panelbtn = new Painel(img.background2);
+        panel.setLayout(new GridLayout(1, 0, 0, 10));
+
+        // Panels customization
+        panelbtn.setLayout(new GridLayout(15, 11, 0, 0));
+//        panelbtn.setBorder(new EmptyBorder(10, 10, 10, 10));
+        panelbtn.setOpaque(false);
+        // Empty border
+//        Border emptyBorder = BorderFactory.createEmptyBorder();
+        JLabel NomeCom = new JLabel("Disciplina:", JLabel.CENTER);
+        String[] v5 = new String[m.disciplinas.size() + 1];
+        v5[0] = " ";
+        for (int i = 1; i < m.disciplinas.size() + 1; i++) {
+            v5[i] = m.disciplinas.get(i - 1).toStringSigla();
+        }
+        final JComboBox com = new JComboBox(v5);
+
+        // Title customization
+
+        lb.setFont(new Font("Arial", Font.BOLD, 14));
+        lb.setForeground(Color.white);
+        NomeCom.setFont(new Font("Arial", Font.BOLD, 12));
+        NomeCom.setForeground(Color.white);
+
+        HorarioVazio();
+
+        panel.add(panelbtn, BorderLayout.CENTER);
+        panelbtn.add(lb, BorderLayout.NORTH);
+        panelbtn.add(lb1, BorderLayout.CENTER);
+        panelbtn.add(lb2, BorderLayout.CENTER);
+        panelbtn.add(lb3, BorderLayout.CENTER);
+        panelbtn.add(lb4, BorderLayout.CENTER);
+        panelbtn.add(lb5, BorderLayout.CENTER);
+        panelbtn.add(lb6, BorderLayout.CENTER);
+        panelbtn.add(lb7, BorderLayout.CENTER);
+        panelbtn.add(lb8, BorderLayout.CENTER);
+        panelbtn.add(lb9, BorderLayout.CENTER);
+        panelbtn.add(lb10, BorderLayout.CENTER);
+        panelbtn.add(lb0, BorderLayout.CENTER);
+        panelbtn.add(lb01, BorderLayout.CENTER);
+        panelbtn.add(lb02, BorderLayout.CENTER);
+        panelbtn.add(lb03, BorderLayout.CENTER);
+        panelbtn.add(lb04, BorderLayout.CENTER);
+        panelbtn.add(lb05, BorderLayout.CENTER);
+        panelbtn.add(lb06, BorderLayout.CENTER);
+        panelbtn.add(lb07, BorderLayout.CENTER);
+        panelbtn.add(lb08, BorderLayout.CENTER);
+        panelbtn.add(lb09, BorderLayout.CENTER);
+        panelbtn.add(lb010, BorderLayout.CENTER);
+        panelbtn.add(lb11, BorderLayout.CENTER);
+        panelbtn.add(P8Seg, BorderLayout.CENTER);
+        panelbtn.add(lb13, BorderLayout.CENTER);
+        panelbtn.add(P8Ter, BorderLayout.CENTER);
+        panelbtn.add(lb15, BorderLayout.CENTER);
+        panelbtn.add(P8Qua, BorderLayout.CENTER);
+        panelbtn.add(lb17, BorderLayout.CENTER);
+        panelbtn.add(P8Qui, BorderLayout.CENTER);
+        panelbtn.add(lb19, BorderLayout.CENTER);
+        panelbtn.add(P8Sex, BorderLayout.CENTER);
+        panelbtn.add(lb21, BorderLayout.CENTER);
+        panelbtn.add(lb22, BorderLayout.CENTER);
+        panelbtn.add(lb23, BorderLayout.CENTER);
+        panelbtn.add(lb24, BorderLayout.CENTER);
+        panelbtn.add(lb25, BorderLayout.CENTER);
+        panelbtn.add(lb26, BorderLayout.CENTER);
+        panelbtn.add(lb27, BorderLayout.CENTER);
+        panelbtn.add(lb28, BorderLayout.CENTER);
+        panelbtn.add(lb29, BorderLayout.CENTER);
+        panelbtn.add(lb30, BorderLayout.CENTER);
+        panelbtn.add(lb31, BorderLayout.CENTER);
+        panelbtn.add(lb32, BorderLayout.CENTER);
+        panelbtn.add(lb33, BorderLayout.CENTER);
+        panelbtn.add(lb34, BorderLayout.CENTER);
+        panelbtn.add(lb35, BorderLayout.CENTER);
+        panelbtn.add(lb36, BorderLayout.CENTER);
+        panelbtn.add(lb37, BorderLayout.CENTER);
+        panelbtn.add(lb38, BorderLayout.CENTER);
+        panelbtn.add(lb39, BorderLayout.CENTER);
+        panelbtn.add(lb40, BorderLayout.CENTER);
+        panelbtn.add(lb41, BorderLayout.CENTER);
+        panelbtn.add(lb42, BorderLayout.CENTER);
+        panelbtn.add(lb43, BorderLayout.CENTER);
+        panelbtn.add(lb44, BorderLayout.CENTER);
+        panelbtn.add(lb45, BorderLayout.CENTER);
+        panelbtn.add(lb46, BorderLayout.CENTER);
+        panelbtn.add(lb47, BorderLayout.CENTER);
+        panelbtn.add(lb48, BorderLayout.CENTER);
+        panelbtn.add(lb49, BorderLayout.CENTER);
+        panelbtn.add(lb50, BorderLayout.CENTER);
+        panelbtn.add(lb51, BorderLayout.CENTER);
+        panelbtn.add(lb52, BorderLayout.CENTER);
+        panelbtn.add(lb53, BorderLayout.CENTER);
+        panelbtn.add(lb54, BorderLayout.CENTER);
+        panelbtn.add(lb55, BorderLayout.CENTER);
+        panelbtn.add(lb56, BorderLayout.CENTER);
+        panelbtn.add(lb57, BorderLayout.CENTER);
+        panelbtn.add(lb58, BorderLayout.CENTER);
+        panelbtn.add(lb59, BorderLayout.CENTER);
+        panelbtn.add(lb60, BorderLayout.CENTER);
+        panelbtn.add(lb61, BorderLayout.CENTER);
+        panelbtn.add(lb62, BorderLayout.CENTER);
+        panelbtn.add(lb63, BorderLayout.CENTER);
+        panelbtn.add(lb64, BorderLayout.CENTER);
+        panelbtn.add(lb65, BorderLayout.CENTER);
+        panelbtn.add(lb66, BorderLayout.CENTER);
+        panelbtn.add(lb67, BorderLayout.CENTER);
+        panelbtn.add(lb68, BorderLayout.CENTER);
+        panelbtn.add(lb69, BorderLayout.CENTER);
+        panelbtn.add(lb70, BorderLayout.CENTER);
+        panelbtn.add(lb71, BorderLayout.CENTER);
+        panelbtn.add(lb72, BorderLayout.CENTER);
+        panelbtn.add(lb73, BorderLayout.CENTER);
+        panelbtn.add(lb74, BorderLayout.CENTER);
+        panelbtn.add(lb75, BorderLayout.CENTER);
+        panelbtn.add(lb76, BorderLayout.CENTER);
+        panelbtn.add(lb77, BorderLayout.CENTER);
+        panelbtn.add(lb78, BorderLayout.CENTER);
+        panelbtn.add(lb79, BorderLayout.CENTER);
+        panelbtn.add(lb80, BorderLayout.CENTER);
+        panelbtn.add(lb81, BorderLayout.CENTER);
+        panelbtn.add(lb82, BorderLayout.CENTER);
+        panelbtn.add(lb83, BorderLayout.CENTER);
+        panelbtn.add(lb84, BorderLayout.CENTER);
+        panelbtn.add(lb85, BorderLayout.CENTER);
+        panelbtn.add(lb86, BorderLayout.CENTER);
+        panelbtn.add(lb87, BorderLayout.CENTER);
+        panelbtn.add(lb88, BorderLayout.CENTER);
+        panelbtn.add(lb89, BorderLayout.CENTER);
+        panelbtn.add(lb90, BorderLayout.CENTER);
+        panelbtn.add(lb91, BorderLayout.CENTER);
+        panelbtn.add(lb92, BorderLayout.CENTER);
+        panelbtn.add(lb93, BorderLayout.CENTER);
+        panelbtn.add(lb94, BorderLayout.CENTER);
+        panelbtn.add(lb95, BorderLayout.CENTER);
+        panelbtn.add(lb96, BorderLayout.CENTER);
+        panelbtn.add(lb97, BorderLayout.CENTER);
+        panelbtn.add(lb98, BorderLayout.CENTER);
+        panelbtn.add(lb99, BorderLayout.CENTER);
+        panelbtn.add(lb100, BorderLayout.CENTER);
+        panelbtn.add(lb101, BorderLayout.CENTER);
+        panelbtn.add(lb102, BorderLayout.CENTER);
+        panelbtn.add(lb103, BorderLayout.CENTER);
+        panelbtn.add(lb104, BorderLayout.CENTER);
+        panelbtn.add(lb105, BorderLayout.CENTER);
+        panelbtn.add(lb106, BorderLayout.CENTER);
+        panelbtn.add(lb107, BorderLayout.CENTER);
+        panelbtn.add(lb108, BorderLayout.CENTER);
+        panelbtn.add(lb109, BorderLayout.CENTER);
+        panelbtn.add(lb110, BorderLayout.CENTER);
+        panelbtn.add(lb111, BorderLayout.CENTER);
+        panelbtn.add(lb112, BorderLayout.CENTER);
+        panelbtn.add(lb113, BorderLayout.CENTER);
+        panelbtn.add(lb114, BorderLayout.CENTER);
+        panelbtn.add(lb115, BorderLayout.CENTER);
+        panelbtn.add(lb116, BorderLayout.CENTER);
+        panelbtn.add(lb117, BorderLayout.CENTER);
+        panelbtn.add(lb118, BorderLayout.CENTER);
+        panelbtn.add(lb119, BorderLayout.CENTER);
+        panelbtn.add(lb120, BorderLayout.CENTER);
+        panelbtn.add(lb121, BorderLayout.CENTER);
+        panelbtn.add(lb122, BorderLayout.CENTER);
+        panelbtn.add(lb123, BorderLayout.CENTER);
+        panelbtn.add(lb124, BorderLayout.CENTER);
+        panelbtn.add(lb125, BorderLayout.CENTER);
+        panelbtn.add(lb126, BorderLayout.CENTER);
+        panelbtn.add(lb127, BorderLayout.CENTER);
+        panelbtn.add(lb128, BorderLayout.CENTER);
+        panelbtn.add(lb129, BorderLayout.CENTER);
+        panelbtn.add(lb130, BorderLayout.CENTER);
+        panelbtn.add(lb131, BorderLayout.CENTER);
+        panelbtn.add(lb000, BorderLayout.CENTER);
+        panelbtn.add(lb001, BorderLayout.CENTER);
+        panelbtn.add(lb002, BorderLayout.CENTER);
+        panelbtn.add(lb003, BorderLayout.CENTER);
+        panelbtn.add(lb004, BorderLayout.CENTER);
+        panelbtn.add(lb005, BorderLayout.CENTER);
+        panelbtn.add(lb006, BorderLayout.CENTER);
+        panelbtn.add(lb007, BorderLayout.CENTER);
+        panelbtn.add(lb008, BorderLayout.CENTER);
+        panelbtn.add(lb009, BorderLayout.CENTER);
+        panelbtn.add(lb0010, BorderLayout.CENTER);
+
+        panelbtn.add(NomeCom);
+//        panelbtn.add(null);
+        panelbtn.add(com);
+        panelbtn.add(lb0011, BorderLayout.CENTER);
+        panelbtn.add(lb0012, BorderLayout.CENTER);
+        panelbtn.add(lb0013, BorderLayout.CENTER);
+        panelbtn.add(lb0014, BorderLayout.CENTER);
+        panelbtn.add(lb0015, BorderLayout.CENTER);
+        panelbtn.add(lb0016, BorderLayout.CENTER);
+
+        add(panel, BorderLayout.CENTER);
+
+        com.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                HorarioVazio();
+                ArrayList<Horario> h = new ArrayList<>();
+                if (com.getSelectedIndex() > 0) {
+                    h = m.disciplinas.get(com.getSelectedIndex() - 1).listarHorarioDisciplina(m.disciplinas, m.horarios);
+                    for (int i = 0; i < h.size(); i++) {
+                        if (h.get(i).getDia_semana() == 2) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText(h.get(i).getDesignacao());
+                                    lb24.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(161, 62, 3));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(161, 62, 3));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText("-");
+                                    lb24.setText("-");
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(88, 97, 102));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(88, 97, 102));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText("-");
+                                    lb35.setText("-");
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText("-");
+                                    lb46.setText("-");
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText("-");
+                                    lb57.setText("-");
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText("-");
+                                    lb68.setText("-");
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText("-");
+                                    lb79.setText("-");
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText("-");
+                                    lb90.setText("-");
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText("-");
+                                    lb101.setText("-");
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText("-");
+                                    lb112.setText("-");
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(88, 97, 102));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(88, 97, 102));
+                                    lb123.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb111.setText(h.get(i).getSigla_professor());
+                                    lb112.setText(h.get(i).getSigla_disciplina());
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(161, 62, 3));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(161, 62, 3));
+                                    lb123.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 3) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText(h.get(i).getDesignacao());
+                                    lb26.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(161, 62, 3));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(161, 62, 3));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText("-");
+                                    lb26.setText("-");
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(88, 97, 102));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(88, 97, 102));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText("-");
+                                    lb37.setText("-");
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText("-");
+                                    lb48.setText("-");
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText("-");
+                                    lb59.setText("-");
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText("-");
+                                    lb70.setText("-");
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText("-");
+                                    lb81.setText("-");
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText("-");
+                                    lb92.setText("-");
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText("-");
+                                    lb103.setText("-");
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText("-");
+                                    lb114.setText("-");
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(88, 97, 102));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(88, 97, 102));
+                                    lb125.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb113.setText(h.get(i).getSigla_professor());
+                                    lb114.setText(h.get(i).getSigla_disciplina());
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(161, 62, 3));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(161, 62, 3));
+                                    lb125.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 4) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText(h.get(i).getDesignacao());
+                                    lb28.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(161, 62, 3));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(161, 62, 3));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText("-");
+                                    lb28.setText("-");
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(88, 97, 102));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(88, 97, 102));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText("-");
+                                    lb39.setText("-");
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText("-");
+                                    lb50.setText("-");
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText("-");
+                                    lb61.setText("-");
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText("-");
+                                    lb72.setText("-");
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText("-");
+                                    lb83.setText("-");
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText("-");
+                                    lb94.setText("-");
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText("-");
+                                    lb105.setText("-");
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText("-");
+                                    lb116.setText("-");
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(88, 97, 102));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(88, 97, 102));
+                                    lb127.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb115.setText(h.get(i).getSigla_professor());
+                                    lb116.setText(h.get(i).getSigla_disciplina());
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(161, 62, 3));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(161, 62, 3));
+                                    lb127.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 5) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText(h.get(i).getDesignacao());
+                                    lb30.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(161, 62, 3));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(161, 62, 3));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText("-");
+                                    lb30.setText("-");
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(88, 97, 102));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(88, 97, 102));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText("-");
+                                    lb41.setText("-");
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText("-");
+                                    lb52.setText("-");
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText("-");
+                                    lb63.setText("-");
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText("-");
+                                    lb74.setText("-");
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText("-");
+                                    lb85.setText("-");
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText("-");
+                                    lb96.setText("-");
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText("-");
+                                    lb107.setText("-");
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText("-");
+                                    lb118.setText("-");
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(88, 97, 102));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(88, 97, 102));
+                                    lb129.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb117.setText(h.get(i).getSigla_professor());
+                                    lb118.setText(h.get(i).getSigla_disciplina());
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(161, 62, 3));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(161, 62, 3));
+                                    lb129.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 6) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText(h.get(i).getDesignacao());
+                                    lb32.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(161, 62, 3));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(161, 62, 3));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText("-");
+                                    lb32.setText("-");
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(88, 97, 102));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(88, 97, 102));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText("-");
+                                    lb43.setText("-");
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));;
+                                    lb54.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText("-");
+                                    lb54.setText("-");
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText("-");
+                                    lb65.setText("-");
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText("-");
+                                    lb76.setText("-");
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText("-");
+                                    lb87.setText("-");
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText("-");
+                                    lb98.setText("-");
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText("-");
+                                    lb109.setText("-");
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText("-");
+                                    lb120.setText("-");
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(88, 97, 102));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(88, 97, 102));
+                                    lb131.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb119.setText(h.get(i).getSigla_professor());
+                                    lb120.setText(h.get(i).getSigla_disciplina());
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(161, 62, 3));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(161, 62, 3));
+                                    lb131.setOpaque(true);
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    HorarioVazio();
+                }
+            }
+        });
+    }
+
+    
+    private void listagemSala() {
+        final Main m = new Main();
+
+        // Panels
+        Painel panel = new Painel(new FlowLayout(FlowLayout.CENTER, 60, 120));
+        Painel panelbtn = new Painel(img.background2);
+        panel.setLayout(new GridLayout(1, 0, 0, 10));
+
+        // Panels customization
+        panelbtn.setLayout(new GridLayout(15, 11, 0, 0));
+//        panelbtn.setBorder(new EmptyBorder(10, 10, 10, 10));
+        panelbtn.setOpaque(false);
+        // Empty border
+//        Border emptyBorder = BorderFactory.createEmptyBorder();
+        JLabel NomeCom = new JLabel("Sala:", JLabel.CENTER);
+        String[] v5 = new String[m.salas.size() + 1];
+        v5[0] = " ";
+        for (int i = 1; i < m.salas.size() + 1; i++) {
+            v5[i] = m.salas.get(i - 1).toStringSigla();
+        }
+        final JComboBox com = new JComboBox(v5);
+
+        // Title customization
+
+        lb.setFont(new Font("Arial", Font.BOLD, 14));
+        lb.setForeground(Color.white);
+        NomeCom.setFont(new Font("Arial", Font.BOLD, 12));
+        NomeCom.setForeground(Color.white);
+
+        HorarioVazio();
+
+        panel.add(panelbtn, BorderLayout.CENTER);
+        panelbtn.add(lb, BorderLayout.NORTH);
+        panelbtn.add(lb1, BorderLayout.CENTER);
+        panelbtn.add(lb2, BorderLayout.CENTER);
+        panelbtn.add(lb3, BorderLayout.CENTER);
+        panelbtn.add(lb4, BorderLayout.CENTER);
+        panelbtn.add(lb5, BorderLayout.CENTER);
+        panelbtn.add(lb6, BorderLayout.CENTER);
+        panelbtn.add(lb7, BorderLayout.CENTER);
+        panelbtn.add(lb8, BorderLayout.CENTER);
+        panelbtn.add(lb9, BorderLayout.CENTER);
+        panelbtn.add(lb10, BorderLayout.CENTER);
+        panelbtn.add(lb0, BorderLayout.CENTER);
+        panelbtn.add(lb01, BorderLayout.CENTER);
+        panelbtn.add(lb02, BorderLayout.CENTER);
+        panelbtn.add(lb03, BorderLayout.CENTER);
+        panelbtn.add(lb04, BorderLayout.CENTER);
+        panelbtn.add(lb05, BorderLayout.CENTER);
+        panelbtn.add(lb06, BorderLayout.CENTER);
+        panelbtn.add(lb07, BorderLayout.CENTER);
+        panelbtn.add(lb08, BorderLayout.CENTER);
+        panelbtn.add(lb09, BorderLayout.CENTER);
+        panelbtn.add(lb010, BorderLayout.CENTER);
+        panelbtn.add(lb11, BorderLayout.CENTER);
+        panelbtn.add(P8Seg, BorderLayout.CENTER);
+        panelbtn.add(lb13, BorderLayout.CENTER);
+        panelbtn.add(P8Ter, BorderLayout.CENTER);
+        panelbtn.add(lb15, BorderLayout.CENTER);
+        panelbtn.add(P8Qua, BorderLayout.CENTER);
+        panelbtn.add(lb17, BorderLayout.CENTER);
+        panelbtn.add(P8Qui, BorderLayout.CENTER);
+        panelbtn.add(lb19, BorderLayout.CENTER);
+        panelbtn.add(P8Sex, BorderLayout.CENTER);
+        panelbtn.add(lb21, BorderLayout.CENTER);
+        panelbtn.add(lb22, BorderLayout.CENTER);
+        panelbtn.add(lb23, BorderLayout.CENTER);
+        panelbtn.add(lb24, BorderLayout.CENTER);
+        panelbtn.add(lb25, BorderLayout.CENTER);
+        panelbtn.add(lb26, BorderLayout.CENTER);
+        panelbtn.add(lb27, BorderLayout.CENTER);
+        panelbtn.add(lb28, BorderLayout.CENTER);
+        panelbtn.add(lb29, BorderLayout.CENTER);
+        panelbtn.add(lb30, BorderLayout.CENTER);
+        panelbtn.add(lb31, BorderLayout.CENTER);
+        panelbtn.add(lb32, BorderLayout.CENTER);
+        panelbtn.add(lb33, BorderLayout.CENTER);
+        panelbtn.add(lb34, BorderLayout.CENTER);
+        panelbtn.add(lb35, BorderLayout.CENTER);
+        panelbtn.add(lb36, BorderLayout.CENTER);
+        panelbtn.add(lb37, BorderLayout.CENTER);
+        panelbtn.add(lb38, BorderLayout.CENTER);
+        panelbtn.add(lb39, BorderLayout.CENTER);
+        panelbtn.add(lb40, BorderLayout.CENTER);
+        panelbtn.add(lb41, BorderLayout.CENTER);
+        panelbtn.add(lb42, BorderLayout.CENTER);
+        panelbtn.add(lb43, BorderLayout.CENTER);
+        panelbtn.add(lb44, BorderLayout.CENTER);
+        panelbtn.add(lb45, BorderLayout.CENTER);
+        panelbtn.add(lb46, BorderLayout.CENTER);
+        panelbtn.add(lb47, BorderLayout.CENTER);
+        panelbtn.add(lb48, BorderLayout.CENTER);
+        panelbtn.add(lb49, BorderLayout.CENTER);
+        panelbtn.add(lb50, BorderLayout.CENTER);
+        panelbtn.add(lb51, BorderLayout.CENTER);
+        panelbtn.add(lb52, BorderLayout.CENTER);
+        panelbtn.add(lb53, BorderLayout.CENTER);
+        panelbtn.add(lb54, BorderLayout.CENTER);
+        panelbtn.add(lb55, BorderLayout.CENTER);
+        panelbtn.add(lb56, BorderLayout.CENTER);
+        panelbtn.add(lb57, BorderLayout.CENTER);
+        panelbtn.add(lb58, BorderLayout.CENTER);
+        panelbtn.add(lb59, BorderLayout.CENTER);
+        panelbtn.add(lb60, BorderLayout.CENTER);
+        panelbtn.add(lb61, BorderLayout.CENTER);
+        panelbtn.add(lb62, BorderLayout.CENTER);
+        panelbtn.add(lb63, BorderLayout.CENTER);
+        panelbtn.add(lb64, BorderLayout.CENTER);
+        panelbtn.add(lb65, BorderLayout.CENTER);
+        panelbtn.add(lb66, BorderLayout.CENTER);
+        panelbtn.add(lb67, BorderLayout.CENTER);
+        panelbtn.add(lb68, BorderLayout.CENTER);
+        panelbtn.add(lb69, BorderLayout.CENTER);
+        panelbtn.add(lb70, BorderLayout.CENTER);
+        panelbtn.add(lb71, BorderLayout.CENTER);
+        panelbtn.add(lb72, BorderLayout.CENTER);
+        panelbtn.add(lb73, BorderLayout.CENTER);
+        panelbtn.add(lb74, BorderLayout.CENTER);
+        panelbtn.add(lb75, BorderLayout.CENTER);
+        panelbtn.add(lb76, BorderLayout.CENTER);
+        panelbtn.add(lb77, BorderLayout.CENTER);
+        panelbtn.add(lb78, BorderLayout.CENTER);
+        panelbtn.add(lb79, BorderLayout.CENTER);
+        panelbtn.add(lb80, BorderLayout.CENTER);
+        panelbtn.add(lb81, BorderLayout.CENTER);
+        panelbtn.add(lb82, BorderLayout.CENTER);
+        panelbtn.add(lb83, BorderLayout.CENTER);
+        panelbtn.add(lb84, BorderLayout.CENTER);
+        panelbtn.add(lb85, BorderLayout.CENTER);
+        panelbtn.add(lb86, BorderLayout.CENTER);
+        panelbtn.add(lb87, BorderLayout.CENTER);
+        panelbtn.add(lb88, BorderLayout.CENTER);
+        panelbtn.add(lb89, BorderLayout.CENTER);
+        panelbtn.add(lb90, BorderLayout.CENTER);
+        panelbtn.add(lb91, BorderLayout.CENTER);
+        panelbtn.add(lb92, BorderLayout.CENTER);
+        panelbtn.add(lb93, BorderLayout.CENTER);
+        panelbtn.add(lb94, BorderLayout.CENTER);
+        panelbtn.add(lb95, BorderLayout.CENTER);
+        panelbtn.add(lb96, BorderLayout.CENTER);
+        panelbtn.add(lb97, BorderLayout.CENTER);
+        panelbtn.add(lb98, BorderLayout.CENTER);
+        panelbtn.add(lb99, BorderLayout.CENTER);
+        panelbtn.add(lb100, BorderLayout.CENTER);
+        panelbtn.add(lb101, BorderLayout.CENTER);
+        panelbtn.add(lb102, BorderLayout.CENTER);
+        panelbtn.add(lb103, BorderLayout.CENTER);
+        panelbtn.add(lb104, BorderLayout.CENTER);
+        panelbtn.add(lb105, BorderLayout.CENTER);
+        panelbtn.add(lb106, BorderLayout.CENTER);
+        panelbtn.add(lb107, BorderLayout.CENTER);
+        panelbtn.add(lb108, BorderLayout.CENTER);
+        panelbtn.add(lb109, BorderLayout.CENTER);
+        panelbtn.add(lb110, BorderLayout.CENTER);
+        panelbtn.add(lb111, BorderLayout.CENTER);
+        panelbtn.add(lb112, BorderLayout.CENTER);
+        panelbtn.add(lb113, BorderLayout.CENTER);
+        panelbtn.add(lb114, BorderLayout.CENTER);
+        panelbtn.add(lb115, BorderLayout.CENTER);
+        panelbtn.add(lb116, BorderLayout.CENTER);
+        panelbtn.add(lb117, BorderLayout.CENTER);
+        panelbtn.add(lb118, BorderLayout.CENTER);
+        panelbtn.add(lb119, BorderLayout.CENTER);
+        panelbtn.add(lb120, BorderLayout.CENTER);
+        panelbtn.add(lb121, BorderLayout.CENTER);
+        panelbtn.add(lb122, BorderLayout.CENTER);
+        panelbtn.add(lb123, BorderLayout.CENTER);
+        panelbtn.add(lb124, BorderLayout.CENTER);
+        panelbtn.add(lb125, BorderLayout.CENTER);
+        panelbtn.add(lb126, BorderLayout.CENTER);
+        panelbtn.add(lb127, BorderLayout.CENTER);
+        panelbtn.add(lb128, BorderLayout.CENTER);
+        panelbtn.add(lb129, BorderLayout.CENTER);
+        panelbtn.add(lb130, BorderLayout.CENTER);
+        panelbtn.add(lb131, BorderLayout.CENTER);
+        panelbtn.add(lb000, BorderLayout.CENTER);
+        panelbtn.add(lb001, BorderLayout.CENTER);
+        panelbtn.add(lb002, BorderLayout.CENTER);
+        panelbtn.add(lb003, BorderLayout.CENTER);
+        panelbtn.add(lb004, BorderLayout.CENTER);
+        panelbtn.add(lb005, BorderLayout.CENTER);
+        panelbtn.add(lb006, BorderLayout.CENTER);
+        panelbtn.add(lb007, BorderLayout.CENTER);
+        panelbtn.add(lb008, BorderLayout.CENTER);
+        panelbtn.add(lb009, BorderLayout.CENTER);
+        panelbtn.add(lb0010, BorderLayout.CENTER);
+
+        panelbtn.add(NomeCom);
+//        panelbtn.add(null);
+        panelbtn.add(com);
+        panelbtn.add(lb0011, BorderLayout.CENTER);
+        panelbtn.add(lb0012, BorderLayout.CENTER);
+        panelbtn.add(lb0013, BorderLayout.CENTER);
+        panelbtn.add(lb0014, BorderLayout.CENTER);
+        panelbtn.add(lb0015, BorderLayout.CENTER);
+        panelbtn.add(lb0016, BorderLayout.CENTER);
+
+        add(panel, BorderLayout.CENTER);
+
+        com.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                HorarioVazio();
+                ArrayList<Horario> h = new ArrayList<>();
+                if (com.getSelectedIndex() > 0) {
+                    h = m.salas.get(com.getSelectedIndex() - 1).listarHorarioSala(m.salas, m.horarios);
+                    for (int i = 0; i < h.size(); i++) {
+                        if (h.get(i).getDia_semana() == 2) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText(h.get(i).getDesignacao());
+                                    lb24.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(161, 62, 3));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(161, 62, 3));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Seg.setText(h.get(i).getSigla_professor());
+                                    lb13.setText(h.get(i).getSigla_disciplina());
+                                    lb23.setText("-");
+                                    lb24.setText("-");
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    P8Seg.setBackground(new Color(88, 97, 102));
+                                    P8Seg.setOpaque(true);
+                                    lb13.setBackground(new Color(88, 97, 102));
+                                    lb13.setOpaque(true);
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText(h.get(i).getDesignacao());
+                                    lb35.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(161, 62, 3));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(161, 62, 3));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb23.setText(h.get(i).getSigla_professor());
+                                    lb24.setText(h.get(i).getSigla_disciplina());
+                                    lb34.setText("-");
+                                    lb35.setText("-");
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb23.setBackground(new Color(88, 97, 102));
+                                    lb23.setOpaque(true);
+                                    lb24.setBackground(new Color(88, 97, 102));
+                                    lb24.setOpaque(true);
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText(h.get(i).getDesignacao());
+                                    lb46.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(161, 62, 3));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(161, 62, 3));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb34.setText(h.get(i).getSigla_professor());
+                                    lb35.setText(h.get(i).getSigla_disciplina());
+                                    lb45.setText("-");
+                                    lb46.setText("-");
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb34.setBackground(new Color(88, 97, 102));
+                                    lb34.setOpaque(true);
+                                    lb35.setBackground(new Color(88, 97, 102));
+                                    lb35.setOpaque(true);
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText(h.get(i).getDesignacao());
+                                    lb57.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(161, 62, 3));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(161, 62, 3));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb45.setText(h.get(i).getSigla_professor());
+                                    lb46.setText(h.get(i).getSigla_disciplina());
+                                    lb56.setText("-");
+                                    lb57.setText("-");
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb45.setBackground(new Color(88, 97, 102));
+                                    lb45.setOpaque(true);
+                                    lb46.setBackground(new Color(88, 97, 102));
+                                    lb46.setOpaque(true);
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText(h.get(i).getDesignacao());
+                                    lb68.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(161, 62, 3));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(161, 62, 3));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb56.setText(h.get(i).getSigla_professor());
+                                    lb57.setText(h.get(i).getSigla_disciplina());
+                                    lb67.setText("-");
+                                    lb68.setText("-");
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb56.setBackground(new Color(88, 97, 102));
+                                    lb56.setOpaque(true);
+                                    lb57.setBackground(new Color(88, 97, 102));
+                                    lb57.setOpaque(true);
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText(h.get(i).getDesignacao());
+                                    lb79.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(161, 62, 3));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(161, 62, 3));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb67.setText(h.get(i).getSigla_professor());
+                                    lb68.setText(h.get(i).getSigla_disciplina());
+                                    lb78.setText("-");
+                                    lb79.setText("-");
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb67.setBackground(new Color(88, 97, 102));
+                                    lb67.setOpaque(true);
+                                    lb68.setBackground(new Color(88, 97, 102));
+                                    lb68.setOpaque(true);
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText(h.get(i).getDesignacao());
+                                    lb90.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(161, 62, 3));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(161, 62, 3));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb78.setText(h.get(i).getSigla_professor());
+                                    lb79.setText(h.get(i).getSigla_disciplina());
+                                    lb89.setText("-");
+                                    lb90.setText("-");
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb78.setBackground(new Color(88, 97, 102));
+                                    lb78.setOpaque(true);
+                                    lb79.setBackground(new Color(88, 97, 102));
+                                    lb79.setOpaque(true);
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText(h.get(i).getDesignacao());
+                                    lb101.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(161, 62, 3));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(161, 62, 3));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb89.setText(h.get(i).getSigla_professor());
+                                    lb90.setText(h.get(i).getSigla_disciplina());
+                                    lb100.setText("-");
+                                    lb101.setText("-");
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb89.setBackground(new Color(88, 97, 102));
+                                    lb89.setOpaque(true);
+                                    lb90.setBackground(new Color(88, 97, 102));
+                                    lb90.setOpaque(true);
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText(h.get(i).getDesignacao());
+                                    lb112.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(161, 62, 3));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(161, 62, 3));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb100.setText(h.get(i).getSigla_professor());
+                                    lb101.setText(h.get(i).getSigla_disciplina());
+                                    lb111.setText("-");
+                                    lb112.setText("-");
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb100.setBackground(new Color(88, 97, 102));
+                                    lb100.setOpaque(true);
+                                    lb101.setBackground(new Color(88, 97, 102));
+                                    lb101.setOpaque(true);
+                                    lb111.setBackground(new Color(88, 97, 102));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(88, 97, 102));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(88, 97, 102));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(88, 97, 102));
+                                    lb123.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb111.setText(h.get(i).getSigla_professor());
+                                    lb112.setText(h.get(i).getSigla_disciplina());
+                                    lb122.setText(h.get(i).getDesignacao());
+                                    lb123.setText(h.get(i).getCodigo_sala());
+                                    lb111.setBackground(new Color(161, 62, 3));
+                                    lb111.setOpaque(true);
+                                    lb112.setBackground(new Color(161, 62, 3));
+                                    lb112.setOpaque(true);
+                                    lb122.setBackground(new Color(161, 62, 3));
+                                    lb122.setOpaque(true);
+                                    lb123.setBackground(new Color(161, 62, 3));
+                                    lb123.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 3) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText(h.get(i).getDesignacao());
+                                    lb26.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(161, 62, 3));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(161, 62, 3));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Ter.setText(h.get(i).getSigla_professor());
+                                    lb15.setText(h.get(i).getSigla_disciplina());
+                                    lb25.setText("-");
+                                    lb26.setText("-");
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    P8Ter.setBackground(new Color(88, 97, 102));
+                                    P8Ter.setOpaque(true);
+                                    lb15.setBackground(new Color(88, 97, 102));
+                                    lb15.setOpaque(true);
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText(h.get(i).getDesignacao());
+                                    lb37.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(161, 62, 3));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(161, 62, 3));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb25.setText(h.get(i).getSigla_professor());
+                                    lb26.setText(h.get(i).getSigla_disciplina());
+                                    lb36.setText("-");
+                                    lb37.setText("-");
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb25.setBackground(new Color(88, 97, 102));
+                                    lb25.setOpaque(true);
+                                    lb26.setBackground(new Color(88, 97, 102));
+                                    lb26.setOpaque(true);
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText(h.get(i).getDesignacao());
+                                    lb48.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(161, 62, 3));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(161, 62, 3));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb36.setText(h.get(i).getSigla_professor());
+                                    lb37.setText(h.get(i).getSigla_disciplina());
+                                    lb47.setText("-");
+                                    lb48.setText("-");
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb36.setBackground(new Color(88, 97, 102));
+                                    lb36.setOpaque(true);
+                                    lb37.setBackground(new Color(88, 97, 102));
+                                    lb37.setOpaque(true);
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText(h.get(i).getDesignacao());
+                                    lb59.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(161, 62, 3));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(161, 62, 3));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb47.setText(h.get(i).getSigla_professor());
+                                    lb48.setText(h.get(i).getSigla_disciplina());
+                                    lb58.setText("-");
+                                    lb59.setText("-");
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb47.setBackground(new Color(88, 97, 102));
+                                    lb47.setOpaque(true);
+                                    lb48.setBackground(new Color(88, 97, 102));
+                                    lb48.setOpaque(true);
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText(h.get(i).getDesignacao());
+                                    lb70.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(161, 62, 3));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(161, 62, 3));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb58.setText(h.get(i).getSigla_professor());
+                                    lb59.setText(h.get(i).getSigla_disciplina());
+                                    lb69.setText("-");
+                                    lb70.setText("-");
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb58.setBackground(new Color(88, 97, 102));
+                                    lb58.setOpaque(true);
+                                    lb59.setBackground(new Color(88, 97, 102));
+                                    lb59.setOpaque(true);
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText(h.get(i).getDesignacao());
+                                    lb81.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(161, 62, 3));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(161, 62, 3));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb69.setText(h.get(i).getSigla_professor());
+                                    lb70.setText(h.get(i).getSigla_disciplina());
+                                    lb80.setText("-");
+                                    lb81.setText("-");
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb69.setBackground(new Color(88, 97, 102));
+                                    lb69.setOpaque(true);
+                                    lb70.setBackground(new Color(88, 97, 102));
+                                    lb70.setOpaque(true);
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText(h.get(i).getDesignacao());
+                                    lb92.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(161, 62, 3));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(161, 62, 3));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb80.setText(h.get(i).getSigla_professor());
+                                    lb81.setText(h.get(i).getSigla_disciplina());
+                                    lb91.setText("-");
+                                    lb92.setText("-");
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb80.setBackground(new Color(88, 97, 102));
+                                    lb80.setOpaque(true);
+                                    lb81.setBackground(new Color(88, 97, 102));
+                                    lb81.setOpaque(true);
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText(h.get(i).getDesignacao());
+                                    lb103.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(161, 62, 3));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(161, 62, 3));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb91.setText(h.get(i).getSigla_professor());
+                                    lb92.setText(h.get(i).getSigla_disciplina());
+                                    lb102.setText("-");
+                                    lb103.setText("-");
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb91.setBackground(new Color(88, 97, 102));
+                                    lb91.setOpaque(true);
+                                    lb92.setBackground(new Color(88, 97, 102));
+                                    lb92.setOpaque(true);
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText(h.get(i).getDesignacao());
+                                    lb114.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(161, 62, 3));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(161, 62, 3));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb102.setText(h.get(i).getSigla_professor());
+                                    lb103.setText(h.get(i).getSigla_disciplina());
+                                    lb113.setText("-");
+                                    lb114.setText("-");
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb102.setBackground(new Color(88, 97, 102));
+                                    lb102.setOpaque(true);
+                                    lb103.setBackground(new Color(88, 97, 102));
+                                    lb103.setOpaque(true);
+                                    lb113.setBackground(new Color(88, 97, 102));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(88, 97, 102));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(88, 97, 102));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(88, 97, 102));
+                                    lb125.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb113.setText(h.get(i).getSigla_professor());
+                                    lb114.setText(h.get(i).getSigla_disciplina());
+                                    lb124.setText(h.get(i).getDesignacao());
+                                    lb125.setText(h.get(i).getCodigo_sala());
+                                    lb113.setBackground(new Color(161, 62, 3));
+                                    lb113.setOpaque(true);
+                                    lb114.setBackground(new Color(161, 62, 3));
+                                    lb114.setOpaque(true);
+                                    lb124.setBackground(new Color(161, 62, 3));
+                                    lb124.setOpaque(true);
+                                    lb125.setBackground(new Color(161, 62, 3));
+                                    lb125.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 4) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText(h.get(i).getDesignacao());
+                                    lb28.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(161, 62, 3));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(161, 62, 3));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qua.setText(h.get(i).getSigla_professor());
+                                    lb17.setText(h.get(i).getSigla_disciplina());
+                                    lb27.setText("-");
+                                    lb28.setText("-");
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    P8Qua.setBackground(new Color(88, 97, 102));
+                                    P8Qua.setOpaque(true);
+                                    lb17.setBackground(new Color(88, 97, 102));
+                                    lb17.setOpaque(true);
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText(h.get(i).getDesignacao());
+                                    lb39.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(161, 62, 3));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(161, 62, 3));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb27.setText(h.get(i).getSigla_professor());
+                                    lb28.setText(h.get(i).getSigla_disciplina());
+                                    lb38.setText("-");
+                                    lb39.setText("-");
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb27.setBackground(new Color(88, 97, 102));
+                                    lb27.setOpaque(true);
+                                    lb28.setBackground(new Color(88, 97, 102));
+                                    lb28.setOpaque(true);
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText(h.get(i).getDesignacao());
+                                    lb50.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(161, 62, 3));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(161, 62, 3));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb38.setText(h.get(i).getSigla_professor());
+                                    lb39.setText(h.get(i).getSigla_disciplina());
+                                    lb49.setText("-");
+                                    lb50.setText("-");
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb38.setBackground(new Color(88, 97, 102));
+                                    lb38.setOpaque(true);
+                                    lb39.setBackground(new Color(88, 97, 102));
+                                    lb39.setOpaque(true);
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText(h.get(i).getDesignacao());
+                                    lb61.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(161, 62, 3));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(161, 62, 3));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb49.setText(h.get(i).getSigla_professor());
+                                    lb50.setText(h.get(i).getSigla_disciplina());
+                                    lb60.setText("-");
+                                    lb61.setText("-");
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb49.setBackground(new Color(88, 97, 102));
+                                    lb49.setOpaque(true);
+                                    lb50.setBackground(new Color(88, 97, 102));
+                                    lb50.setOpaque(true);
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText(h.get(i).getDesignacao());
+                                    lb72.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(161, 62, 3));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(161, 62, 3));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb60.setText(h.get(i).getSigla_professor());
+                                    lb61.setText(h.get(i).getSigla_disciplina());
+                                    lb71.setText("-");
+                                    lb72.setText("-");
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb60.setBackground(new Color(88, 97, 102));
+                                    lb60.setOpaque(true);
+                                    lb61.setBackground(new Color(88, 97, 102));
+                                    lb61.setOpaque(true);
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText(h.get(i).getDesignacao());
+                                    lb83.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(161, 62, 3));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(161, 62, 3));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb71.setText(h.get(i).getSigla_professor());
+                                    lb72.setText(h.get(i).getSigla_disciplina());
+                                    lb82.setText("-");
+                                    lb83.setText("-");
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb71.setBackground(new Color(88, 97, 102));
+                                    lb71.setOpaque(true);
+                                    lb72.setBackground(new Color(88, 97, 102));
+                                    lb72.setOpaque(true);
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText(h.get(i).getDesignacao());
+                                    lb94.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(161, 62, 3));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(161, 62, 3));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb82.setText(h.get(i).getSigla_professor());
+                                    lb83.setText(h.get(i).getSigla_disciplina());
+                                    lb93.setText("-");
+                                    lb94.setText("-");
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb82.setBackground(new Color(88, 97, 102));
+                                    lb82.setOpaque(true);
+                                    lb83.setBackground(new Color(88, 97, 102));
+                                    lb83.setOpaque(true);
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText(h.get(i).getDesignacao());
+                                    lb105.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(161, 62, 3));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(161, 62, 3));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb93.setText(h.get(i).getSigla_professor());
+                                    lb94.setText(h.get(i).getSigla_disciplina());
+                                    lb104.setText("-");
+                                    lb105.setText("-");
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb93.setBackground(new Color(88, 97, 102));
+                                    lb93.setOpaque(true);
+                                    lb94.setBackground(new Color(88, 97, 102));
+                                    lb94.setOpaque(true);
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText(h.get(i).getDesignacao());
+                                    lb116.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(161, 62, 3));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(161, 62, 3));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb104.setText(h.get(i).getSigla_professor());
+                                    lb105.setText(h.get(i).getSigla_disciplina());
+                                    lb115.setText("-");
+                                    lb116.setText("-");
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb104.setBackground(new Color(88, 97, 102));
+                                    lb104.setOpaque(true);
+                                    lb105.setBackground(new Color(88, 97, 102));
+                                    lb105.setOpaque(true);
+                                    lb115.setBackground(new Color(88, 97, 102));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(88, 97, 102));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(88, 97, 102));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(88, 97, 102));
+                                    lb127.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb115.setText(h.get(i).getSigla_professor());
+                                    lb116.setText(h.get(i).getSigla_disciplina());
+                                    lb126.setText(h.get(i).getDesignacao());
+                                    lb127.setText(h.get(i).getCodigo_sala());
+                                    lb115.setBackground(new Color(161, 62, 3));
+                                    lb115.setOpaque(true);
+                                    lb116.setBackground(new Color(161, 62, 3));
+                                    lb116.setOpaque(true);
+                                    lb126.setBackground(new Color(161, 62, 3));
+                                    lb126.setOpaque(true);
+                                    lb127.setBackground(new Color(161, 62, 3));
+                                    lb127.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 5) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText(h.get(i).getDesignacao());
+                                    lb30.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(161, 62, 3));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(161, 62, 3));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Qui.setText(h.get(i).getSigla_professor());
+                                    lb19.setText(h.get(i).getSigla_disciplina());
+                                    lb29.setText("-");
+                                    lb30.setText("-");
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    P8Qui.setBackground(new Color(88, 97, 102));
+                                    P8Qui.setOpaque(true);
+                                    lb19.setBackground(new Color(88, 97, 102));
+                                    lb19.setOpaque(true);
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText(h.get(i).getDesignacao());
+                                    lb41.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(161, 62, 3));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(161, 62, 3));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb29.setText(h.get(i).getSigla_professor());
+                                    lb30.setText(h.get(i).getSigla_disciplina());
+                                    lb40.setText("-");
+                                    lb41.setText("-");
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb29.setBackground(new Color(88, 97, 102));
+                                    lb29.setOpaque(true);
+                                    lb30.setBackground(new Color(88, 97, 102));
+                                    lb30.setOpaque(true);
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText(h.get(i).getDesignacao());
+                                    lb52.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(161, 62, 3));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(161, 62, 3));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb40.setText(h.get(i).getSigla_professor());
+                                    lb41.setText(h.get(i).getSigla_disciplina());
+                                    lb51.setText("-");
+                                    lb52.setText("-");
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb40.setBackground(new Color(88, 97, 102));
+                                    lb40.setOpaque(true);
+                                    lb41.setBackground(new Color(88, 97, 102));
+                                    lb41.setOpaque(true);
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText(h.get(i).getDesignacao());
+                                    lb63.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(161, 62, 3));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(161, 62, 3));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb51.setText(h.get(i).getSigla_professor());
+                                    lb52.setText(h.get(i).getSigla_disciplina());
+                                    lb62.setText("-");
+                                    lb63.setText("-");
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb51.setBackground(new Color(88, 97, 102));
+                                    lb51.setOpaque(true);
+                                    lb52.setBackground(new Color(88, 97, 102));
+                                    lb52.setOpaque(true);
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText(h.get(i).getDesignacao());
+                                    lb74.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(161, 62, 3));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(161, 62, 3));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb62.setText(h.get(i).getSigla_professor());
+                                    lb63.setText(h.get(i).getSigla_disciplina());
+                                    lb73.setText("-");
+                                    lb74.setText("-");
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb62.setBackground(new Color(88, 97, 102));
+                                    lb62.setOpaque(true);
+                                    lb63.setBackground(new Color(88, 97, 102));
+                                    lb63.setOpaque(true);
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText(h.get(i).getDesignacao());
+                                    lb85.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(161, 62, 3));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(161, 62, 3));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb73.setText(h.get(i).getSigla_professor());
+                                    lb74.setText(h.get(i).getSigla_disciplina());
+                                    lb84.setText("-");
+                                    lb85.setText("-");
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb73.setBackground(new Color(88, 97, 102));
+                                    lb73.setOpaque(true);
+                                    lb74.setBackground(new Color(88, 97, 102));
+                                    lb74.setOpaque(true);
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText(h.get(i).getDesignacao());
+                                    lb96.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(161, 62, 3));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(161, 62, 3));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb84.setText(h.get(i).getSigla_professor());
+                                    lb85.setText(h.get(i).getSigla_disciplina());
+                                    lb95.setText("-");
+                                    lb96.setText("-");
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb84.setBackground(new Color(88, 97, 102));
+                                    lb84.setOpaque(true);
+                                    lb85.setBackground(new Color(88, 97, 102));
+                                    lb85.setOpaque(true);
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText(h.get(i).getDesignacao());
+                                    lb107.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(161, 62, 3));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(161, 62, 3));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb95.setText(h.get(i).getSigla_professor());
+                                    lb96.setText(h.get(i).getSigla_disciplina());
+                                    lb106.setText("-");
+                                    lb107.setText("-");
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb95.setBackground(new Color(88, 97, 102));
+                                    lb95.setOpaque(true);
+                                    lb96.setBackground(new Color(88, 97, 102));
+                                    lb96.setOpaque(true);
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText(h.get(i).getDesignacao());
+                                    lb118.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(161, 62, 3));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(161, 62, 3));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb106.setText(h.get(i).getSigla_professor());
+                                    lb107.setText(h.get(i).getSigla_disciplina());
+                                    lb117.setText("-");
+                                    lb118.setText("-");
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb106.setBackground(new Color(88, 97, 102));
+                                    lb106.setOpaque(true);
+                                    lb107.setBackground(new Color(88, 97, 102));
+                                    lb107.setOpaque(true);
+                                    lb117.setBackground(new Color(88, 97, 102));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(88, 97, 102));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(88, 97, 102));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(88, 97, 102));
+                                    lb129.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb117.setText(h.get(i).getSigla_professor());
+                                    lb118.setText(h.get(i).getSigla_disciplina());
+                                    lb128.setText(h.get(i).getDesignacao());
+                                    lb129.setText(h.get(i).getCodigo_sala());
+                                    lb117.setBackground(new Color(161, 62, 3));
+                                    lb117.setOpaque(true);
+                                    lb118.setBackground(new Color(161, 62, 3));
+                                    lb118.setOpaque(true);
+                                    lb128.setBackground(new Color(161, 62, 3));
+                                    lb128.setOpaque(true);
+                                    lb129.setBackground(new Color(161, 62, 3));
+                                    lb129.setOpaque(true);
+                                }
+                            }
+                        } else if (h.get(i).getDia_semana() == 6) {
+                            if (h.get(i).getHora_inicio() == 8) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText(h.get(i).getDesignacao());
+                                    lb32.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(161, 62, 3));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(161, 62, 3));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    P8Sex.setText(h.get(i).getSigla_professor());
+                                    lb21.setText(h.get(i).getSigla_disciplina());
+                                    lb31.setText("-");
+                                    lb32.setText("-");
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    P8Sex.setBackground(new Color(88, 97, 102));
+                                    P8Sex.setOpaque(true);
+                                    lb21.setBackground(new Color(88, 97, 102));
+                                    lb21.setOpaque(true);
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 9) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText(h.get(i).getDesignacao());
+                                    lb43.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(161, 62, 3));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(161, 62, 3));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb31.setText(h.get(i).getSigla_professor());
+                                    lb32.setText(h.get(i).getSigla_disciplina());
+                                    lb42.setText("-");
+                                    lb43.setText("-");
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb31.setBackground(new Color(88, 97, 102));
+                                    lb31.setOpaque(true);
+                                    lb32.setBackground(new Color(88, 97, 102));
+                                    lb32.setOpaque(true);
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));;
+                                    lb54.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 10) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText(h.get(i).getDesignacao());
+                                    lb54.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(161, 62, 3));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(161, 62, 3));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb42.setText(h.get(i).getSigla_professor());
+                                    lb43.setText(h.get(i).getSigla_disciplina());
+                                    lb53.setText("-");
+                                    lb54.setText("-");
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb42.setBackground(new Color(88, 97, 102));
+                                    lb42.setOpaque(true);
+                                    lb43.setBackground(new Color(88, 97, 102));
+                                    lb43.setOpaque(true);
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 11) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText(h.get(i).getDesignacao());
+                                    lb65.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(161, 62, 3));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(161, 62, 3));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb53.setText(h.get(i).getSigla_professor());
+                                    lb54.setText(h.get(i).getSigla_disciplina());
+                                    lb64.setText("-");
+                                    lb65.setText("-");
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb53.setBackground(new Color(88, 97, 102));
+                                    lb53.setOpaque(true);
+                                    lb54.setBackground(new Color(88, 97, 102));
+                                    lb54.setOpaque(true);
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 12) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText(h.get(i).getDesignacao());
+                                    lb76.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(161, 62, 3));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(161, 62, 3));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb64.setText(h.get(i).getSigla_professor());
+                                    lb65.setText(h.get(i).getSigla_disciplina());
+                                    lb75.setText("-");
+                                    lb76.setText("-");
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb64.setBackground(new Color(88, 97, 102));
+                                    lb64.setOpaque(true);
+                                    lb65.setBackground(new Color(88, 97, 102));
+                                    lb65.setOpaque(true);
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 13) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText(h.get(i).getDesignacao());
+                                    lb87.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(161, 62, 3));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(161, 62, 3));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb75.setText(h.get(i).getSigla_professor());
+                                    lb76.setText(h.get(i).getSigla_disciplina());
+                                    lb86.setText("-");
+                                    lb87.setText("-");
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb75.setBackground(new Color(88, 97, 102));
+                                    lb75.setOpaque(true);
+                                    lb76.setBackground(new Color(88, 97, 102));
+                                    lb76.setOpaque(true);
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 14) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText(h.get(i).getDesignacao());
+                                    lb98.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(161, 62, 3));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(161, 62, 3));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb86.setText(h.get(i).getSigla_professor());
+                                    lb87.setText(h.get(i).getSigla_disciplina());
+                                    lb97.setText("-");
+                                    lb98.setText("-");
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb86.setBackground(new Color(88, 97, 102));
+                                    lb86.setOpaque(true);
+                                    lb87.setBackground(new Color(88, 97, 102));
+                                    lb87.setOpaque(true);
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 15) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText(h.get(i).getDesignacao());
+                                    lb109.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(161, 62, 3));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(161, 62, 3));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb97.setText(h.get(i).getSigla_professor());
+                                    lb98.setText(h.get(i).getSigla_disciplina());
+                                    lb108.setText("-");
+                                    lb109.setText("-");
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb97.setBackground(new Color(88, 97, 102));
+                                    lb97.setOpaque(true);
+                                    lb98.setBackground(new Color(88, 97, 102));
+                                    lb98.setOpaque(true);
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 16) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText(h.get(i).getDesignacao());
+                                    lb120.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(161, 62, 3));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(161, 62, 3));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                } else if (h.get(i).getDuracaoAula() == 2) {
+                                    lb108.setText(h.get(i).getSigla_professor());
+                                    lb109.setText(h.get(i).getSigla_disciplina());
+                                    lb119.setText("-");
+                                    lb120.setText("-");
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb108.setBackground(new Color(88, 97, 102));
+                                    lb108.setOpaque(true);
+                                    lb109.setBackground(new Color(88, 97, 102));
+                                    lb109.setOpaque(true);
+                                    lb119.setBackground(new Color(88, 97, 102));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(88, 97, 102));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(88, 97, 102));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(88, 97, 102));
+                                    lb131.setOpaque(true);
+                                }
+                            } else if (h.get(i).getHora_inicio() == 17) {
+                                if (h.get(i).getDuracaoAula() == 1) {
+                                    lb119.setText(h.get(i).getSigla_professor());
+                                    lb120.setText(h.get(i).getSigla_disciplina());
+                                    lb130.setText(h.get(i).getDesignacao());
+                                    lb131.setText(h.get(i).getCodigo_sala());
+                                    lb119.setBackground(new Color(161, 62, 3));
+                                    lb119.setOpaque(true);
+                                    lb120.setBackground(new Color(161, 62, 3));
+                                    lb120.setOpaque(true);
+                                    lb130.setBackground(new Color(161, 62, 3));
+                                    lb130.setOpaque(true);
+                                    lb131.setBackground(new Color(161, 62, 3));
+                                    lb131.setOpaque(true);
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    HorarioVazio();
+                }
+            }
+        });
+    }
+    
+    public void HorarioVazio() {
 
         lb0.setFont(new Font("Arial", Font.BOLD, 10));
         lb0.setForeground(Color.white);
@@ -482,1815 +9626,16 @@ public class Listar extends JFrame {
         lb0012.setFont(new Font("Arial", Font.BOLD, 10));
         lb0013.setFont(new Font("Arial", Font.BOLD, 10));
         lb0014.setFont(new Font("Arial", Font.BOLD, 10));
-        lb0014.setForeground(Color.RED.darker());
-        lb0014.setBorder(borderO);
+        lb0014.setOpaque(true);
+        lb0014.setBackground(new Color(161, 62, 3));
+        lb0014.setForeground(Color.BLACK);
+        lb0014.setBorder(borderG);
         lb0015.setFont(new Font("Arial", Font.BOLD, 10));
         lb0016.setFont(new Font("Arial", Font.BOLD, 10));
-        lb0016.setForeground(Color.GRAY);
-        lb0016.setBorder(borderG);
-
-        HorarioVazio();
-
-        panel.add(panelbtn, BorderLayout.CENTER);
-        panelbtn.add(lb, BorderLayout.NORTH);
-        panelbtn.add(lb1, BorderLayout.CENTER);
-        panelbtn.add(lb2, BorderLayout.CENTER);
-        panelbtn.add(lb3, BorderLayout.CENTER);
-        panelbtn.add(lb4, BorderLayout.CENTER);
-        panelbtn.add(lb5, BorderLayout.CENTER);
-        panelbtn.add(lb6, BorderLayout.CENTER);
-        panelbtn.add(lb7, BorderLayout.CENTER);
-        panelbtn.add(lb8, BorderLayout.CENTER);
-        panelbtn.add(lb9, BorderLayout.CENTER);
-        panelbtn.add(lb10, BorderLayout.CENTER);
-        panelbtn.add(lb0, BorderLayout.CENTER);
-        panelbtn.add(lb01, BorderLayout.CENTER);
-        panelbtn.add(lb02, BorderLayout.CENTER);
-        panelbtn.add(lb03, BorderLayout.CENTER);
-        panelbtn.add(lb04, BorderLayout.CENTER);
-        panelbtn.add(lb05, BorderLayout.CENTER);
-        panelbtn.add(lb06, BorderLayout.CENTER);
-        panelbtn.add(lb07, BorderLayout.CENTER);
-        panelbtn.add(lb08, BorderLayout.CENTER);
-        panelbtn.add(lb09, BorderLayout.CENTER);
-        panelbtn.add(lb010, BorderLayout.CENTER);
-        panelbtn.add(lb11, BorderLayout.CENTER);
-        panelbtn.add(P8Seg, BorderLayout.CENTER);
-        panelbtn.add(lb13, BorderLayout.CENTER);
-        panelbtn.add(P8Ter, BorderLayout.CENTER);
-        panelbtn.add(lb15, BorderLayout.CENTER);
-        panelbtn.add(P8Qua, BorderLayout.CENTER);
-        panelbtn.add(lb17, BorderLayout.CENTER);
-        panelbtn.add(P8Qui, BorderLayout.CENTER);
-        panelbtn.add(lb19, BorderLayout.CENTER);
-        panelbtn.add(P8Sex, BorderLayout.CENTER);
-        panelbtn.add(lb21, BorderLayout.CENTER);
-        panelbtn.add(lb22, BorderLayout.CENTER);
-        panelbtn.add(lb23, BorderLayout.CENTER);
-        panelbtn.add(lb24, BorderLayout.CENTER);
-        panelbtn.add(lb25, BorderLayout.CENTER);
-        panelbtn.add(lb26, BorderLayout.CENTER);
-        panelbtn.add(lb27, BorderLayout.CENTER);
-        panelbtn.add(lb28, BorderLayout.CENTER);
-        panelbtn.add(lb29, BorderLayout.CENTER);
-        panelbtn.add(lb30, BorderLayout.CENTER);
-        panelbtn.add(lb31, BorderLayout.CENTER);
-        panelbtn.add(lb32, BorderLayout.CENTER);
-        panelbtn.add(lb33, BorderLayout.CENTER);
-        panelbtn.add(lb34, BorderLayout.CENTER);
-        panelbtn.add(lb35, BorderLayout.CENTER);
-        panelbtn.add(lb36, BorderLayout.CENTER);
-        panelbtn.add(lb37, BorderLayout.CENTER);
-        panelbtn.add(lb38, BorderLayout.CENTER);
-        panelbtn.add(lb39, BorderLayout.CENTER);
-        panelbtn.add(lb40, BorderLayout.CENTER);
-        panelbtn.add(lb41, BorderLayout.CENTER);
-        panelbtn.add(lb42, BorderLayout.CENTER);
-        panelbtn.add(lb43, BorderLayout.CENTER);
-        panelbtn.add(lb44, BorderLayout.CENTER);
-        panelbtn.add(lb45, BorderLayout.CENTER);
-        panelbtn.add(lb46, BorderLayout.CENTER);
-        panelbtn.add(lb47, BorderLayout.CENTER);
-        panelbtn.add(lb48, BorderLayout.CENTER);
-        panelbtn.add(lb49, BorderLayout.CENTER);
-        panelbtn.add(lb50, BorderLayout.CENTER);
-        panelbtn.add(lb51, BorderLayout.CENTER);
-        panelbtn.add(lb52, BorderLayout.CENTER);
-        panelbtn.add(lb53, BorderLayout.CENTER);
-        panelbtn.add(lb54, BorderLayout.CENTER);
-        panelbtn.add(lb55, BorderLayout.CENTER);
-        panelbtn.add(lb56, BorderLayout.CENTER);
-        panelbtn.add(lb57, BorderLayout.CENTER);
-        panelbtn.add(lb58, BorderLayout.CENTER);
-        panelbtn.add(lb59, BorderLayout.CENTER);
-        panelbtn.add(lb60, BorderLayout.CENTER);
-        panelbtn.add(lb61, BorderLayout.CENTER);
-        panelbtn.add(lb62, BorderLayout.CENTER);
-        panelbtn.add(lb63, BorderLayout.CENTER);
-        panelbtn.add(lb64, BorderLayout.CENTER);
-        panelbtn.add(lb65, BorderLayout.CENTER);
-        panelbtn.add(lb66, BorderLayout.CENTER);
-        panelbtn.add(lb67, BorderLayout.CENTER);
-        panelbtn.add(lb68, BorderLayout.CENTER);
-        panelbtn.add(lb69, BorderLayout.CENTER);
-        panelbtn.add(lb70, BorderLayout.CENTER);
-        panelbtn.add(lb71, BorderLayout.CENTER);
-        panelbtn.add(lb72, BorderLayout.CENTER);
-        panelbtn.add(lb73, BorderLayout.CENTER);
-        panelbtn.add(lb74, BorderLayout.CENTER);
-        panelbtn.add(lb75, BorderLayout.CENTER);
-        panelbtn.add(lb76, BorderLayout.CENTER);
-        panelbtn.add(lb77, BorderLayout.CENTER);
-        panelbtn.add(lb78, BorderLayout.CENTER);
-        panelbtn.add(lb79, BorderLayout.CENTER);
-        panelbtn.add(lb80, BorderLayout.CENTER);
-        panelbtn.add(lb81, BorderLayout.CENTER);
-        panelbtn.add(lb82, BorderLayout.CENTER);
-        panelbtn.add(lb83, BorderLayout.CENTER);
-        panelbtn.add(lb84, BorderLayout.CENTER);
-        panelbtn.add(lb85, BorderLayout.CENTER);
-        panelbtn.add(lb86, BorderLayout.CENTER);
-        panelbtn.add(lb87, BorderLayout.CENTER);
-        panelbtn.add(lb88, BorderLayout.CENTER);
-        panelbtn.add(lb89, BorderLayout.CENTER);
-        panelbtn.add(lb90, BorderLayout.CENTER);
-        panelbtn.add(lb91, BorderLayout.CENTER);
-        panelbtn.add(lb92, BorderLayout.CENTER);
-        panelbtn.add(lb93, BorderLayout.CENTER);
-        panelbtn.add(lb94, BorderLayout.CENTER);
-        panelbtn.add(lb95, BorderLayout.CENTER);
-        panelbtn.add(lb96, BorderLayout.CENTER);
-        panelbtn.add(lb97, BorderLayout.CENTER);
-        panelbtn.add(lb98, BorderLayout.CENTER);
-        panelbtn.add(lb99, BorderLayout.CENTER);
-        panelbtn.add(lb100, BorderLayout.CENTER);
-        panelbtn.add(lb101, BorderLayout.CENTER);
-        panelbtn.add(lb102, BorderLayout.CENTER);
-        panelbtn.add(lb103, BorderLayout.CENTER);
-        panelbtn.add(lb104, BorderLayout.CENTER);
-        panelbtn.add(lb105, BorderLayout.CENTER);
-        panelbtn.add(lb106, BorderLayout.CENTER);
-        panelbtn.add(lb107, BorderLayout.CENTER);
-        panelbtn.add(lb108, BorderLayout.CENTER);
-        panelbtn.add(lb109, BorderLayout.CENTER);
-        panelbtn.add(lb110, BorderLayout.CENTER);
-        panelbtn.add(lb111, BorderLayout.CENTER);
-        panelbtn.add(lb112, BorderLayout.CENTER);
-        panelbtn.add(lb113, BorderLayout.CENTER);
-        panelbtn.add(lb114, BorderLayout.CENTER);
-        panelbtn.add(lb115, BorderLayout.CENTER);
-        panelbtn.add(lb116, BorderLayout.CENTER);
-        panelbtn.add(lb117, BorderLayout.CENTER);
-        panelbtn.add(lb118, BorderLayout.CENTER);
-        panelbtn.add(lb119, BorderLayout.CENTER);
-        panelbtn.add(lb120, BorderLayout.CENTER);
-        panelbtn.add(lb121, BorderLayout.CENTER);
-        panelbtn.add(lb122, BorderLayout.CENTER);
-        panelbtn.add(lb123, BorderLayout.CENTER);
-        panelbtn.add(lb124, BorderLayout.CENTER);
-        panelbtn.add(lb125, BorderLayout.CENTER);
-        panelbtn.add(lb126, BorderLayout.CENTER);
-        panelbtn.add(lb127, BorderLayout.CENTER);
-        panelbtn.add(lb128, BorderLayout.CENTER);
-        panelbtn.add(lb129, BorderLayout.CENTER);
-        panelbtn.add(lb130, BorderLayout.CENTER);
-        panelbtn.add(lb131, BorderLayout.CENTER);
-        panelbtn.add(lb000, BorderLayout.CENTER);
-        panelbtn.add(lb001, BorderLayout.CENTER);
-        panelbtn.add(lb002, BorderLayout.CENTER);
-        panelbtn.add(lb003, BorderLayout.CENTER);
-        panelbtn.add(lb004, BorderLayout.CENTER);
-        panelbtn.add(lb005, BorderLayout.CENTER);
-        panelbtn.add(lb006, BorderLayout.CENTER);
-        panelbtn.add(lb007, BorderLayout.CENTER);
-        panelbtn.add(lb008, BorderLayout.CENTER);
-        panelbtn.add(lb009, BorderLayout.CENTER);
-        panelbtn.add(lb0010, BorderLayout.CENTER);
-
-        panelbtn.add(NomeCom);
-//        panelbtn.add(null);
-        panelbtn.add(com);
-        panelbtn.add(lb0011, BorderLayout.CENTER);
-        panelbtn.add(lb0012, BorderLayout.CENTER);
-        panelbtn.add(lb0013, BorderLayout.CENTER);
-        panelbtn.add(lb0014, BorderLayout.CENTER);
-        panelbtn.add(lb0015, BorderLayout.CENTER);
-        panelbtn.add(lb0016, BorderLayout.CENTER);
-
-        add(panel, BorderLayout.CENTER);
-
-        com.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                HorarioVazio();
-                ArrayList<Horario> h = new ArrayList<>();
-                if (com.getSelectedIndex() > 0) {
-                    h = m.professores.get(com.getSelectedIndex() - 1).listarHorarioProfessor(m.professores, m.horarios);
-                    for (int i = 0; i < h.size(); i++) {
-                        if (h.get(i).getDia_semana() == 2) {
-                            if (h.get(i).getHora_inicio() == 8) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    P8Seg.setText(h.get(i).getSigla_professor());
-                                    lb13.setText(h.get(i).getSigla_disciplina());
-                                    lb23.setText(h.get(i).getDesignacao());
-                                    lb24.setText(h.get(i).getCodigo_sala());
-                                    P8Seg.setForeground(Color.red.darker());
-                                    P8Seg.setBorder(borderO);
-                                    lb13.setForeground(Color.red.darker());
-                                    lb13.setBorder(borderO);
-                                    lb23.setForeground(Color.red.darker());
-                                    lb23.setBorder(borderO);
-                                    lb24.setForeground(Color.red.darker());
-                                    lb24.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    P8Seg.setText(h.get(i).getSigla_professor());
-                                    lb13.setText(h.get(i).getSigla_disciplina());
-                                    lb23.setText("-");
-                                    lb24.setText("-");
-                                    lb34.setText(h.get(i).getDesignacao());
-                                    lb35.setText(h.get(i).getCodigo_sala());
-                                    P8Seg.setForeground(Color.GRAY);
-                                    P8Seg.setBorder(borderG);
-                                    lb13.setForeground(Color.GRAY);
-                                    lb13.setBorder(borderG);
-                                    lb23.setForeground(Color.GRAY);
-                                    lb23.setBorder(borderG);
-                                    lb24.setForeground(Color.GRAY);
-                                    lb24.setBorder(borderG);
-                                    lb34.setForeground(Color.GRAY);
-                                    lb34.setBorder(borderG);
-                                    lb35.setForeground(Color.GRAY);
-                                    lb35.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 9) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb23.setText(h.get(i).getSigla_professor());
-                                    lb24.setText(h.get(i).getSigla_disciplina());
-                                    lb34.setText(h.get(i).getDesignacao());
-                                    lb35.setText(h.get(i).getCodigo_sala());
-                                    lb23.setForeground(Color.red.darker());
-                                    lb23.setBorder(borderO);
-                                    lb24.setForeground(Color.red.darker());
-                                    lb24.setBorder(borderO);
-                                    lb34.setForeground(Color.red.darker());
-                                    lb34.setBorder(borderO);
-                                    lb35.setForeground(Color.red.darker());
-                                    lb35.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb23.setText(h.get(i).getSigla_professor());
-                                    lb24.setText(h.get(i).getSigla_disciplina());
-                                    lb34.setText("-");
-                                    lb35.setText("-");
-                                    lb45.setText(h.get(i).getDesignacao());
-                                    lb46.setText(h.get(i).getCodigo_sala());
-                                    lb23.setForeground(Color.GRAY);
-                                    lb23.setBorder(borderG);
-                                    lb24.setForeground(Color.GRAY);
-                                    lb24.setBorder(borderG);
-                                    lb34.setForeground(Color.GRAY);
-                                    lb34.setBorder(borderG);
-                                    lb35.setForeground(Color.GRAY);
-                                    lb35.setBorder(borderG);
-                                    lb45.setForeground(Color.GRAY);
-                                    lb45.setBorder(borderG);
-                                    lb46.setForeground(Color.GRAY);
-                                    lb46.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 10) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb34.setText(h.get(i).getSigla_professor());
-                                    lb35.setText(h.get(i).getSigla_disciplina());
-                                    lb45.setText(h.get(i).getDesignacao());
-                                    lb46.setText(h.get(i).getCodigo_sala());
-                                    lb34.setForeground(Color.red.darker());
-                                    lb34.setBorder(borderO);
-                                    lb35.setForeground(Color.red.darker());
-                                    lb35.setBorder(borderO);
-                                    lb45.setForeground(Color.red.darker());
-                                    lb45.setBorder(borderO);
-                                    lb46.setForeground(Color.red.darker());
-                                    lb46.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb34.setText(h.get(i).getSigla_professor());
-                                    lb35.setText(h.get(i).getSigla_disciplina());
-                                    lb45.setText("-");
-                                    lb46.setText("-");
-                                    lb56.setText(h.get(i).getDesignacao());
-                                    lb57.setText(h.get(i).getCodigo_sala());
-                                    lb34.setForeground(Color.GRAY);
-                                    lb34.setBorder(borderG);
-                                    lb35.setForeground(Color.GRAY);
-                                    lb35.setBorder(borderG);
-                                    lb45.setForeground(Color.GRAY);
-                                    lb45.setBorder(borderG);
-                                    lb46.setForeground(Color.GRAY);
-                                    lb46.setBorder(borderG);
-                                    lb56.setForeground(Color.GRAY);
-                                    lb56.setBorder(borderG);
-                                    lb57.setForeground(Color.GRAY);
-                                    lb57.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 11) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb45.setText(h.get(i).getSigla_professor());
-                                    lb46.setText(h.get(i).getSigla_disciplina());
-                                    lb56.setText(h.get(i).getDesignacao());
-                                    lb57.setText(h.get(i).getCodigo_sala());
-                                    lb45.setForeground(Color.red.darker());
-                                    lb45.setBorder(borderO);
-                                    lb46.setForeground(Color.red.darker());
-                                    lb46.setBorder(borderO);
-                                    lb56.setForeground(Color.red.darker());
-                                    lb56.setBorder(borderO);
-                                    lb57.setForeground(Color.red.darker());
-                                    lb57.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb45.setText(h.get(i).getSigla_professor());
-                                    lb46.setText(h.get(i).getSigla_disciplina());
-                                    lb56.setText("-");
-                                    lb57.setText("-");
-                                    lb67.setText(h.get(i).getDesignacao());
-                                    lb68.setText(h.get(i).getCodigo_sala());
-                                    lb45.setForeground(Color.GRAY);
-                                    lb45.setBorder(borderG);
-                                    lb46.setForeground(Color.GRAY);
-                                    lb46.setBorder(borderG);
-                                    lb56.setForeground(Color.GRAY);
-                                    lb56.setBorder(borderG);
-                                    lb57.setForeground(Color.GRAY);
-                                    lb57.setBorder(borderG);
-                                    lb67.setForeground(Color.GRAY);
-                                    lb67.setBorder(borderG);
-                                    lb68.setForeground(Color.GRAY);
-                                    lb68.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 12) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb56.setText(h.get(i).getSigla_professor());
-                                    lb57.setText(h.get(i).getSigla_disciplina());
-                                    lb67.setText(h.get(i).getDesignacao());
-                                    lb68.setText(h.get(i).getCodigo_sala());
-                                    lb56.setForeground(Color.red.darker());
-                                    lb56.setBorder(borderO);
-                                    lb57.setForeground(Color.red.darker());
-                                    lb57.setBorder(borderO);
-                                    lb67.setForeground(Color.red.darker());
-                                    lb67.setBorder(borderO);
-                                    lb68.setForeground(Color.red.darker());
-                                    lb68.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb56.setText(h.get(i).getSigla_professor());
-                                    lb57.setText(h.get(i).getSigla_disciplina());
-                                    lb67.setText("-");
-                                    lb68.setText("-");
-                                    lb78.setText(h.get(i).getDesignacao());
-                                    lb79.setText(h.get(i).getCodigo_sala());
-                                    lb56.setForeground(Color.GRAY);
-                                    lb56.setBorder(borderG);
-                                    lb57.setForeground(Color.GRAY);
-                                    lb57.setBorder(borderG);
-                                    lb67.setForeground(Color.GRAY);
-                                    lb67.setBorder(borderG);
-                                    lb68.setForeground(Color.GRAY);
-                                    lb68.setBorder(borderG);
-                                    lb78.setForeground(Color.GRAY);
-                                    lb78.setBorder(borderG);
-                                    lb79.setForeground(Color.GRAY);
-                                    lb79.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 13) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb67.setText(h.get(i).getSigla_professor());
-                                    lb68.setText(h.get(i).getSigla_disciplina());
-                                    lb78.setText(h.get(i).getDesignacao());
-                                    lb79.setText(h.get(i).getCodigo_sala());
-                                    lb67.setForeground(Color.red.darker());
-                                    lb67.setBorder(borderO);
-                                    lb68.setForeground(Color.red.darker());
-                                    lb68.setBorder(borderO);
-                                    lb78.setForeground(Color.red.darker());
-                                    lb78.setBorder(borderO);
-                                    lb79.setForeground(Color.red.darker());
-                                    lb79.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb67.setText(h.get(i).getSigla_professor());
-                                    lb68.setText(h.get(i).getSigla_disciplina());
-                                    lb78.setText("-");
-                                    lb79.setText("-");
-                                    lb89.setText(h.get(i).getDesignacao());
-                                    lb90.setText(h.get(i).getCodigo_sala());
-                                    lb67.setForeground(Color.GRAY);
-                                    lb67.setBorder(borderG);
-                                    lb68.setForeground(Color.GRAY);
-                                    lb68.setBorder(borderG);
-                                    lb78.setForeground(Color.GRAY);
-                                    lb78.setBorder(borderG);
-                                    lb79.setForeground(Color.GRAY);
-                                    lb79.setBorder(borderG);
-                                    lb89.setForeground(Color.GRAY);
-                                    lb89.setBorder(borderG);
-                                    lb90.setForeground(Color.GRAY);
-                                    lb90.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 14) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb78.setText(h.get(i).getSigla_professor());
-                                    lb79.setText(h.get(i).getSigla_disciplina());
-                                    lb89.setText(h.get(i).getDesignacao());
-                                    lb90.setText(h.get(i).getCodigo_sala());
-                                    lb78.setForeground(Color.red.darker());
-                                    lb78.setBorder(borderO);
-                                    lb79.setForeground(Color.red.darker());
-                                    lb79.setBorder(borderO);
-                                    lb89.setForeground(Color.red.darker());
-                                    lb89.setBorder(borderO);
-                                    lb90.setForeground(Color.red.darker());
-                                    lb90.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb78.setText(h.get(i).getSigla_professor());
-                                    lb79.setText(h.get(i).getSigla_disciplina());
-                                    lb89.setText("-");
-                                    lb90.setText("-");
-                                    lb100.setText(h.get(i).getDesignacao());
-                                    lb101.setText(h.get(i).getCodigo_sala());
-                                    lb78.setForeground(Color.GRAY);
-                                    lb78.setBorder(borderG);
-                                    lb79.setForeground(Color.GRAY);
-                                    lb79.setBorder(borderG);
-                                    lb89.setForeground(Color.GRAY);
-                                    lb89.setBorder(borderG);
-                                    lb90.setForeground(Color.GRAY);
-                                    lb90.setBorder(borderG);
-                                    lb100.setForeground(Color.GRAY);
-                                    lb100.setBorder(borderG);
-                                    lb101.setForeground(Color.GRAY);
-                                    lb101.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 15) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb89.setText(h.get(i).getSigla_professor());
-                                    lb90.setText(h.get(i).getSigla_disciplina());
-                                    lb100.setText(h.get(i).getDesignacao());
-                                    lb101.setText(h.get(i).getCodigo_sala());
-                                    lb89.setForeground(Color.red.darker());
-                                    lb89.setBorder(borderO);
-                                    lb90.setForeground(Color.red.darker());
-                                    lb90.setBorder(borderO);
-                                    lb100.setForeground(Color.red.darker());
-                                    lb100.setBorder(borderO);
-                                    lb101.setForeground(Color.red.darker());
-                                    lb101.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb89.setText(h.get(i).getSigla_professor());
-                                    lb90.setText(h.get(i).getSigla_disciplina());
-                                    lb100.setText("-");
-                                    lb101.setText("-");
-                                    lb111.setText(h.get(i).getDesignacao());
-                                    lb112.setText(h.get(i).getCodigo_sala());
-                                    lb89.setForeground(Color.GRAY);
-                                    lb89.setBorder(borderG);
-                                    lb90.setForeground(Color.GRAY);
-                                    lb90.setBorder(borderG);
-                                    lb100.setForeground(Color.GRAY);
-                                    lb100.setBorder(borderG);
-                                    lb101.setForeground(Color.GRAY);
-                                    lb101.setBorder(borderG);
-                                    lb111.setForeground(Color.GRAY);
-                                    lb111.setBorder(borderG);
-                                    lb112.setForeground(Color.GRAY);
-                                    lb112.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 16) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb100.setText(h.get(i).getSigla_professor());
-                                    lb101.setText(h.get(i).getSigla_disciplina());
-                                    lb111.setText(h.get(i).getDesignacao());
-                                    lb112.setText(h.get(i).getCodigo_sala());
-                                    lb100.setForeground(Color.red.darker());
-                                    lb100.setBorder(borderO);
-                                    lb101.setForeground(Color.red.darker());
-                                    lb101.setBorder(borderO);
-                                    lb111.setForeground(Color.red.darker());
-                                    lb111.setBorder(borderO);
-                                    lb112.setForeground(Color.red.darker());
-                                    lb112.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb100.setText(h.get(i).getSigla_professor());
-                                    lb101.setText(h.get(i).getSigla_disciplina());
-                                    lb111.setText("-");
-                                    lb112.setText("-");
-                                    lb122.setText(h.get(i).getDesignacao());
-                                    lb123.setText(h.get(i).getCodigo_sala());
-                                    lb100.setForeground(Color.GRAY);
-                                    lb100.setBorder(borderG);
-                                    lb101.setForeground(Color.GRAY);
-                                    lb101.setBorder(borderG);
-                                    lb111.setForeground(Color.GRAY);
-                                    lb111.setBorder(borderG);
-                                    lb112.setForeground(Color.GRAY);
-                                    lb112.setBorder(borderG);
-                                    lb122.setForeground(Color.GRAY);
-                                    lb122.setBorder(borderG);
-                                    lb123.setForeground(Color.GRAY);
-                                    lb123.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 17) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb111.setText(h.get(i).getSigla_professor());
-                                    lb112.setText(h.get(i).getSigla_disciplina());
-                                    lb122.setText(h.get(i).getDesignacao());
-                                    lb123.setText(h.get(i).getCodigo_sala());
-                                    lb111.setForeground(Color.red.darker());
-                                    lb111.setBorder(borderO);
-                                    lb112.setForeground(Color.red.darker());
-                                    lb112.setBorder(borderO);
-                                    lb122.setForeground(Color.red.darker());
-                                    lb122.setBorder(borderO);
-                                    lb123.setForeground(Color.red.darker());
-                                    lb123.setBorder(borderO);
-                                }
-                            }
-                        } else if (h.get(i).getDia_semana() == 3) {
-                            if (h.get(i).getHora_inicio() == 8) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    P8Ter.setText(h.get(i).getSigla_professor());
-                                    lb15.setText(h.get(i).getSigla_disciplina());
-                                    lb25.setText(h.get(i).getDesignacao());
-                                    lb26.setText(h.get(i).getCodigo_sala());
-                                    P8Ter.setForeground(Color.red.darker());
-                                    P8Ter.setBorder(borderO);
-                                    lb15.setForeground(Color.red.darker());
-                                    lb15.setBorder(borderO);
-                                    lb25.setForeground(Color.red.darker());
-                                    lb25.setBorder(borderO);
-                                    lb26.setForeground(Color.red.darker());
-                                    lb26.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    P8Ter.setText(h.get(i).getSigla_professor());
-                                    lb15.setText(h.get(i).getSigla_disciplina());
-                                    lb25.setText("-");
-                                    lb26.setText("-");
-                                    lb36.setText(h.get(i).getDesignacao());
-                                    lb37.setText(h.get(i).getCodigo_sala());
-                                    P8Ter.setForeground(Color.GRAY);
-                                    P8Ter.setBorder(borderG);
-                                    lb15.setForeground(Color.GRAY);
-                                    lb15.setBorder(borderG);
-                                    lb25.setForeground(Color.GRAY);
-                                    lb25.setBorder(borderG);
-                                    lb26.setForeground(Color.GRAY);
-                                    lb26.setBorder(borderG);
-                                    lb36.setForeground(Color.GRAY);
-                                    lb36.setBorder(borderG);
-                                    lb37.setForeground(Color.GRAY);
-                                    lb37.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 9) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb25.setText(h.get(i).getSigla_professor());
-                                    lb26.setText(h.get(i).getSigla_disciplina());
-                                    lb36.setText(h.get(i).getDesignacao());
-                                    lb37.setText(h.get(i).getCodigo_sala());
-                                    lb25.setForeground(Color.red.darker());
-                                    lb25.setBorder(borderO);
-                                    lb26.setForeground(Color.red.darker());
-                                    lb26.setBorder(borderO);
-                                    lb36.setForeground(Color.red.darker());
-                                    lb36.setBorder(borderO);
-                                    lb37.setForeground(Color.red.darker());
-                                    lb37.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb25.setText(h.get(i).getSigla_professor());
-                                    lb26.setText(h.get(i).getSigla_disciplina());
-                                    lb36.setText("-");
-                                    lb37.setText("-");
-                                    lb47.setText(h.get(i).getDesignacao());
-                                    lb48.setText(h.get(i).getCodigo_sala());
-                                    lb25.setForeground(Color.GRAY);
-                                    lb25.setBorder(borderG);
-                                    lb26.setForeground(Color.GRAY);
-                                    lb26.setBorder(borderG);
-                                    lb36.setForeground(Color.GRAY);
-                                    lb36.setBorder(borderG);
-                                    lb37.setForeground(Color.GRAY);
-                                    lb37.setBorder(borderG);
-                                    lb47.setForeground(Color.GRAY);
-                                    lb47.setBorder(borderG);
-                                    lb48.setForeground(Color.GRAY);
-                                    lb48.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 10) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb36.setText(h.get(i).getSigla_professor());
-                                    lb37.setText(h.get(i).getSigla_disciplina());
-                                    lb47.setText(h.get(i).getDesignacao());
-                                    lb48.setText(h.get(i).getCodigo_sala());
-                                    lb36.setForeground(Color.red.darker());
-                                    lb36.setBorder(borderO);
-                                    lb37.setForeground(Color.red.darker());
-                                    lb37.setBorder(borderO);
-                                    lb47.setForeground(Color.red.darker());
-                                    lb47.setBorder(borderO);
-                                    lb48.setForeground(Color.red.darker());
-                                    lb48.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb36.setText(h.get(i).getSigla_professor());
-                                    lb37.setText(h.get(i).getSigla_disciplina());
-                                    lb47.setText("-");
-                                    lb48.setText("-");
-                                    lb58.setText(h.get(i).getDesignacao());
-                                    lb59.setText(h.get(i).getCodigo_sala());
-                                    lb36.setForeground(Color.GRAY);
-                                    lb36.setBorder(borderG);
-                                    lb37.setForeground(Color.GRAY);
-                                    lb37.setBorder(borderG);
-                                    lb47.setForeground(Color.GRAY);
-                                    lb47.setBorder(borderG);
-                                    lb48.setForeground(Color.GRAY);
-                                    lb48.setBorder(borderG);
-                                    lb58.setForeground(Color.GRAY);
-                                    lb58.setBorder(borderG);
-                                    lb59.setForeground(Color.GRAY);
-                                    lb59.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 11) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb47.setText(h.get(i).getSigla_professor());
-                                    lb48.setText(h.get(i).getSigla_disciplina());
-                                    lb58.setText(h.get(i).getDesignacao());
-                                    lb59.setText(h.get(i).getCodigo_sala());
-                                    lb47.setForeground(Color.red.darker());
-                                    lb47.setBorder(borderO);
-                                    lb48.setForeground(Color.red.darker());
-                                    lb48.setBorder(borderO);
-                                    lb58.setForeground(Color.red.darker());
-                                    lb58.setBorder(borderO);
-                                    lb59.setForeground(Color.red.darker());
-                                    lb59.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb47.setText(h.get(i).getSigla_professor());
-                                    lb48.setText(h.get(i).getSigla_disciplina());
-                                    lb58.setText("-");
-                                    lb59.setText("-");
-                                    lb69.setText(h.get(i).getDesignacao());
-                                    lb70.setText(h.get(i).getCodigo_sala());
-                                    lb47.setForeground(Color.GRAY);
-                                    lb47.setBorder(borderG);
-                                    lb48.setForeground(Color.GRAY);
-                                    lb48.setBorder(borderG);
-                                    lb58.setForeground(Color.GRAY);
-                                    lb58.setBorder(borderG);
-                                    lb59.setForeground(Color.GRAY);
-                                    lb59.setBorder(borderG);
-                                    lb69.setForeground(Color.GRAY);
-                                    lb69.setBorder(borderG);
-                                    lb70.setForeground(Color.GRAY);
-                                    lb70.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 12) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb58.setText(h.get(i).getSigla_professor());
-                                    lb59.setText(h.get(i).getSigla_disciplina());
-                                    lb69.setText(h.get(i).getDesignacao());
-                                    lb70.setText(h.get(i).getCodigo_sala());
-                                    lb58.setForeground(Color.red.darker());
-                                    lb58.setBorder(borderO);
-                                    lb59.setForeground(Color.red.darker());
-                                    lb59.setBorder(borderO);
-                                    lb69.setForeground(Color.red.darker());
-                                    lb69.setBorder(borderO);
-                                    lb70.setForeground(Color.red.darker());
-                                    lb70.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb58.setText(h.get(i).getSigla_professor());
-                                    lb59.setText(h.get(i).getSigla_disciplina());
-                                    lb69.setText("-");
-                                    lb70.setText("-");
-                                    lb80.setText(h.get(i).getDesignacao());
-                                    lb81.setText(h.get(i).getCodigo_sala());
-                                    lb58.setForeground(Color.GRAY);
-                                    lb58.setBorder(borderG);
-                                    lb59.setForeground(Color.GRAY);
-                                    lb59.setBorder(borderG);
-                                    lb69.setForeground(Color.GRAY);
-                                    lb69.setBorder(borderG);
-                                    lb70.setForeground(Color.GRAY);
-                                    lb70.setBorder(borderG);
-                                    lb80.setForeground(Color.GRAY);
-                                    lb80.setBorder(borderG);
-                                    lb81.setForeground(Color.GRAY);
-                                    lb81.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 13) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb69.setText(h.get(i).getSigla_professor());
-                                    lb70.setText(h.get(i).getSigla_disciplina());
-                                    lb80.setText(h.get(i).getDesignacao());
-                                    lb81.setText(h.get(i).getCodigo_sala());
-                                    lb69.setForeground(Color.red.darker());
-                                    lb69.setBorder(borderO);
-                                    lb70.setForeground(Color.red.darker());
-                                    lb70.setBorder(borderO);
-                                    lb80.setForeground(Color.red.darker());
-                                    lb80.setBorder(borderO);
-                                    lb81.setForeground(Color.red.darker());
-                                    lb81.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb69.setText(h.get(i).getSigla_professor());
-                                    lb70.setText(h.get(i).getSigla_disciplina());
-                                    lb80.setText("-");
-                                    lb81.setText("-");
-                                    lb91.setText(h.get(i).getDesignacao());
-                                    lb92.setText(h.get(i).getCodigo_sala());
-                                    lb69.setForeground(Color.GRAY);
-                                    lb69.setBorder(borderG);
-                                    lb70.setForeground(Color.GRAY);
-                                    lb70.setBorder(borderG);
-                                    lb80.setForeground(Color.GRAY);
-                                    lb80.setBorder(borderG);
-                                    lb81.setForeground(Color.GRAY);
-                                    lb81.setBorder(borderG);
-                                    lb91.setForeground(Color.GRAY);
-                                    lb91.setBorder(borderG);
-                                    lb92.setForeground(Color.GRAY);
-                                    lb92.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 14) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb80.setText(h.get(i).getSigla_professor());
-                                    lb81.setText(h.get(i).getSigla_disciplina());
-                                    lb91.setText(h.get(i).getDesignacao());
-                                    lb92.setText(h.get(i).getCodigo_sala());
-                                    lb80.setForeground(Color.red.darker());
-                                    lb80.setBorder(borderO);
-                                    lb81.setForeground(Color.red.darker());
-                                    lb81.setBorder(borderO);
-                                    lb91.setForeground(Color.red.darker());
-                                    lb91.setBorder(borderO);
-                                    lb92.setForeground(Color.red.darker());
-                                    lb92.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb80.setText(h.get(i).getSigla_professor());
-                                    lb81.setText(h.get(i).getSigla_disciplina());
-                                    lb91.setText("-");
-                                    lb92.setText("-");
-                                    lb102.setText(h.get(i).getDesignacao());
-                                    lb103.setText(h.get(i).getCodigo_sala());
-                                    lb80.setForeground(Color.GRAY);
-                                    lb80.setBorder(borderG);
-                                    lb81.setForeground(Color.GRAY);
-                                    lb81.setBorder(borderG);
-                                    lb91.setForeground(Color.GRAY);
-                                    lb91.setBorder(borderG);
-                                    lb92.setForeground(Color.GRAY);
-                                    lb92.setBorder(borderG);
-                                    lb102.setForeground(Color.GRAY);
-                                    lb102.setBorder(borderG);
-                                    lb103.setForeground(Color.GRAY);
-                                    lb103.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 15) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb91.setText(h.get(i).getSigla_professor());
-                                    lb92.setText(h.get(i).getSigla_disciplina());
-                                    lb102.setText(h.get(i).getDesignacao());
-                                    lb103.setText(h.get(i).getCodigo_sala());
-                                    lb91.setForeground(Color.red.darker());
-                                    lb91.setBorder(borderO);
-                                    lb92.setForeground(Color.red.darker());
-                                    lb92.setBorder(borderO);
-                                    lb102.setForeground(Color.red.darker());
-                                    lb102.setBorder(borderO);
-                                    lb103.setForeground(Color.red.darker());
-                                    lb103.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb91.setText(h.get(i).getSigla_professor());
-                                    lb92.setText(h.get(i).getSigla_disciplina());
-                                    lb102.setText("-");
-                                    lb103.setText("-");
-                                    lb113.setText(h.get(i).getDesignacao());
-                                    lb114.setText(h.get(i).getCodigo_sala());
-                                    lb91.setForeground(Color.GRAY);
-                                    lb91.setBorder(borderG);
-                                    lb92.setForeground(Color.GRAY);
-                                    lb92.setBorder(borderG);
-                                    lb102.setForeground(Color.GRAY);
-                                    lb102.setBorder(borderG);
-                                    lb103.setForeground(Color.GRAY);
-                                    lb103.setBorder(borderG);
-                                    lb113.setForeground(Color.GRAY);
-                                    lb113.setBorder(borderG);
-                                    lb114.setForeground(Color.GRAY);
-                                    lb114.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 16) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb102.setText(h.get(i).getSigla_professor());
-                                    lb103.setText(h.get(i).getSigla_disciplina());
-                                    lb113.setText(h.get(i).getDesignacao());
-                                    lb114.setText(h.get(i).getCodigo_sala());
-                                    lb102.setForeground(Color.red.darker());
-                                    lb102.setBorder(borderO);
-                                    lb103.setForeground(Color.red.darker());
-                                    lb103.setBorder(borderO);
-                                    lb113.setForeground(Color.red.darker());
-                                    lb113.setBorder(borderO);
-                                    lb114.setForeground(Color.red.darker());
-                                    lb114.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb102.setText(h.get(i).getSigla_professor());
-                                    lb103.setText(h.get(i).getSigla_disciplina());
-                                    lb113.setText("-");
-                                    lb114.setText("-");
-                                    lb124.setText(h.get(i).getDesignacao());
-                                    lb125.setText(h.get(i).getCodigo_sala());
-                                    lb102.setForeground(Color.GRAY);
-                                    lb102.setBorder(borderG);
-                                    lb103.setForeground(Color.GRAY);
-                                    lb103.setBorder(borderG);
-                                    lb113.setForeground(Color.GRAY);
-                                    lb113.setBorder(borderG);
-                                    lb114.setForeground(Color.GRAY);
-                                    lb114.setBorder(borderG);
-                                    lb124.setForeground(Color.GRAY);
-                                    lb124.setBorder(borderG);
-                                    lb125.setForeground(Color.GRAY);
-                                    lb125.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 17) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb113.setText(h.get(i).getSigla_professor());
-                                    lb114.setText(h.get(i).getSigla_disciplina());
-                                    lb124.setText(h.get(i).getDesignacao());
-                                    lb125.setText(h.get(i).getCodigo_sala());
-                                    lb113.setForeground(Color.red.darker());
-                                    lb113.setBorder(borderO);
-                                    lb114.setForeground(Color.red.darker());
-                                    lb114.setBorder(borderO);
-                                    lb124.setForeground(Color.red.darker());
-                                    lb124.setBorder(borderO);
-                                    lb125.setForeground(Color.red.darker());
-                                    lb125.setBorder(borderO);
-                                }
-                            }
-                        } else if (h.get(i).getDia_semana() == 4) {
-                            if (h.get(i).getHora_inicio() == 8) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    P8Qua.setText(h.get(i).getSigla_professor());
-                                    lb17.setText(h.get(i).getSigla_disciplina());
-                                    lb27.setText(h.get(i).getDesignacao());
-                                    lb28.setText(h.get(i).getCodigo_sala());
-                                    P8Qua.setForeground(Color.red.darker());
-                                    P8Qua.setBorder(borderO);
-                                    lb17.setForeground(Color.red.darker());
-                                    lb17.setBorder(borderO);
-                                    lb27.setForeground(Color.red.darker());
-                                    lb27.setBorder(borderO);
-                                    lb28.setForeground(Color.red.darker());
-                                    lb28.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    P8Qua.setText(h.get(i).getSigla_professor());
-                                    lb17.setText(h.get(i).getSigla_disciplina());
-                                    lb27.setText("-");
-                                    lb28.setText("-");
-                                    lb38.setText(h.get(i).getDesignacao());
-                                    lb39.setText(h.get(i).getCodigo_sala());
-                                    P8Qua.setForeground(Color.GRAY);
-                                    P8Qua.setBorder(borderG);
-                                    lb17.setForeground(Color.GRAY);
-                                    lb17.setBorder(borderG);
-                                    lb27.setForeground(Color.GRAY);
-                                    lb27.setBorder(borderG);
-                                    lb28.setForeground(Color.GRAY);
-                                    lb28.setBorder(borderG);
-                                    lb38.setForeground(Color.GRAY);
-                                    lb38.setBorder(borderG);
-                                    lb39.setForeground(Color.GRAY);
-                                    lb39.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 9) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb27.setText(h.get(i).getSigla_professor());
-                                    lb28.setText(h.get(i).getSigla_disciplina());
-                                    lb38.setText(h.get(i).getDesignacao());
-                                    lb39.setText(h.get(i).getCodigo_sala());
-                                    lb27.setForeground(Color.red.darker());
-                                    lb27.setBorder(borderO);
-                                    lb28.setForeground(Color.red.darker());
-                                    lb28.setBorder(borderO);
-                                    lb38.setForeground(Color.red.darker());
-                                    lb38.setBorder(borderO);
-                                    lb39.setForeground(Color.red.darker());
-                                    lb39.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb27.setText(h.get(i).getSigla_professor());
-                                    lb28.setText(h.get(i).getSigla_disciplina());
-                                    lb38.setText("-");
-                                    lb39.setText("-");
-                                    lb49.setText(h.get(i).getDesignacao());
-                                    lb50.setText(h.get(i).getCodigo_sala());
-                                    lb27.setForeground(Color.GRAY);
-                                    lb27.setBorder(borderG);
-                                    lb28.setForeground(Color.GRAY);
-                                    lb28.setBorder(borderG);
-                                    lb38.setForeground(Color.GRAY);
-                                    lb38.setBorder(borderG);
-                                    lb39.setForeground(Color.GRAY);
-                                    lb39.setBorder(borderG);
-                                    lb49.setForeground(Color.GRAY);
-                                    lb49.setBorder(borderG);
-                                    lb50.setForeground(Color.GRAY);
-                                    lb50.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 10) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb38.setText(h.get(i).getSigla_professor());
-                                    lb39.setText(h.get(i).getSigla_disciplina());
-                                    lb49.setText(h.get(i).getDesignacao());
-                                    lb50.setText(h.get(i).getCodigo_sala());
-                                    lb38.setForeground(Color.red.darker());
-                                    lb38.setBorder(borderO);
-                                    lb39.setForeground(Color.red.darker());
-                                    lb39.setBorder(borderO);
-                                    lb49.setForeground(Color.red.darker());
-                                    lb49.setBorder(borderO);
-                                    lb50.setForeground(Color.red.darker());
-                                    lb50.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb38.setText(h.get(i).getSigla_professor());
-                                    lb39.setText(h.get(i).getSigla_disciplina());
-                                    lb49.setText("-");
-                                    lb50.setText("-");
-                                    lb60.setText(h.get(i).getDesignacao());
-                                    lb61.setText(h.get(i).getCodigo_sala());
-                                    lb38.setForeground(Color.GRAY);
-                                    lb38.setBorder(borderG);
-                                    lb39.setForeground(Color.GRAY);
-                                    lb39.setBorder(borderG);
-                                    lb49.setForeground(Color.GRAY);
-                                    lb49.setBorder(borderG);
-                                    lb50.setForeground(Color.GRAY);
-                                    lb50.setBorder(borderG);
-                                    lb60.setForeground(Color.GRAY);
-                                    lb60.setBorder(borderG);
-                                    lb61.setForeground(Color.GRAY);
-                                    lb61.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 11) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb49.setText(h.get(i).getSigla_professor());
-                                    lb50.setText(h.get(i).getSigla_disciplina());
-                                    lb60.setText(h.get(i).getDesignacao());
-                                    lb61.setText(h.get(i).getCodigo_sala());
-                                    lb49.setForeground(Color.red.darker());
-                                    lb49.setBorder(borderO);
-                                    lb50.setForeground(Color.red.darker());
-                                    lb50.setBorder(borderO);
-                                    lb60.setForeground(Color.red.darker());
-                                    lb60.setBorder(borderO);
-                                    lb61.setForeground(Color.red.darker());
-                                    lb61.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb49.setText(h.get(i).getSigla_professor());
-                                    lb50.setText(h.get(i).getSigla_disciplina());
-                                    lb60.setText("-");
-                                    lb61.setText("-");
-                                    lb71.setText(h.get(i).getDesignacao());
-                                    lb72.setText(h.get(i).getCodigo_sala());
-                                    lb49.setForeground(Color.GRAY);
-                                    lb49.setBorder(borderG);
-                                    lb50.setForeground(Color.GRAY);
-                                    lb50.setBorder(borderG);
-                                    lb60.setForeground(Color.GRAY);
-                                    lb60.setBorder(borderG);
-                                    lb61.setForeground(Color.GRAY);
-                                    lb61.setBorder(borderG);
-                                    lb71.setForeground(Color.GRAY);
-                                    lb71.setBorder(borderG);
-                                    lb72.setForeground(Color.GRAY);
-                                    lb72.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 12) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb60.setText(h.get(i).getSigla_professor());
-                                    lb61.setText(h.get(i).getSigla_disciplina());
-                                    lb71.setText(h.get(i).getDesignacao());
-                                    lb72.setText(h.get(i).getCodigo_sala());
-                                    lb60.setForeground(Color.red.darker());
-                                    lb60.setBorder(borderO);
-                                    lb61.setForeground(Color.red.darker());
-                                    lb61.setBorder(borderO);
-                                    lb71.setForeground(Color.red.darker());
-                                    lb71.setBorder(borderO);
-                                    lb72.setForeground(Color.red.darker());
-                                    lb72.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb60.setText(h.get(i).getSigla_professor());
-                                    lb61.setText(h.get(i).getSigla_disciplina());
-                                    lb71.setText("-");
-                                    lb72.setText("-");
-                                    lb82.setText(h.get(i).getDesignacao());
-                                    lb83.setText(h.get(i).getCodigo_sala());
-                                    lb60.setForeground(Color.GRAY);
-                                    lb60.setBorder(borderG);
-                                    lb61.setForeground(Color.GRAY);
-                                    lb61.setBorder(borderG);
-                                    lb71.setForeground(Color.GRAY);
-                                    lb71.setBorder(borderG);
-                                    lb72.setForeground(Color.GRAY);
-                                    lb72.setBorder(borderG);
-                                    lb82.setForeground(Color.GRAY);
-                                    lb82.setBorder(borderG);
-                                    lb83.setForeground(Color.GRAY);
-                                    lb83.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 13) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb71.setText(h.get(i).getSigla_professor());
-                                    lb72.setText(h.get(i).getSigla_disciplina());
-                                    lb82.setText(h.get(i).getDesignacao());
-                                    lb83.setText(h.get(i).getCodigo_sala());
-                                    lb71.setForeground(Color.red.darker());
-                                    lb71.setBorder(borderO);
-                                    lb72.setForeground(Color.red.darker());
-                                    lb72.setBorder(borderO);
-                                    lb82.setForeground(Color.red.darker());
-                                    lb82.setBorder(borderO);
-                                    lb83.setForeground(Color.red.darker());
-                                    lb83.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb71.setText(h.get(i).getSigla_professor());
-                                    lb72.setText(h.get(i).getSigla_disciplina());
-                                    lb82.setText("-");
-                                    lb83.setText("-");
-                                    lb93.setText(h.get(i).getDesignacao());
-                                    lb94.setText(h.get(i).getCodigo_sala());
-                                    lb71.setForeground(Color.GRAY);
-                                    lb71.setBorder(borderG);
-                                    lb72.setForeground(Color.GRAY);
-                                    lb72.setBorder(borderG);
-                                    lb82.setForeground(Color.GRAY);
-                                    lb82.setBorder(borderG);
-                                    lb83.setForeground(Color.GRAY);
-                                    lb83.setBorder(borderG);
-                                    lb93.setForeground(Color.GRAY);
-                                    lb93.setBorder(borderG);
-                                    lb94.setForeground(Color.GRAY);
-                                    lb94.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 14) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb82.setText(h.get(i).getSigla_professor());
-                                    lb83.setText(h.get(i).getSigla_disciplina());
-                                    lb93.setText(h.get(i).getDesignacao());
-                                    lb94.setText(h.get(i).getCodigo_sala());
-                                    lb82.setForeground(Color.red.darker());
-                                    lb82.setBorder(borderO);
-                                    lb83.setForeground(Color.red.darker());
-                                    lb83.setBorder(borderO);
-                                    lb93.setForeground(Color.red.darker());
-                                    lb93.setBorder(borderO);
-                                    lb94.setForeground(Color.red.darker());
-                                    lb94.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb82.setText(h.get(i).getSigla_professor());
-                                    lb83.setText(h.get(i).getSigla_disciplina());
-                                    lb93.setText("-");
-                                    lb94.setText("-");
-                                    lb104.setText(h.get(i).getDesignacao());
-                                    lb105.setText(h.get(i).getCodigo_sala());
-                                    lb82.setForeground(Color.GRAY);
-                                    lb82.setBorder(borderG);
-                                    lb83.setForeground(Color.GRAY);
-                                    lb83.setBorder(borderG);
-                                    lb93.setForeground(Color.GRAY);
-                                    lb93.setBorder(borderG);
-                                    lb94.setForeground(Color.GRAY);
-                                    lb94.setBorder(borderG);
-                                    lb104.setForeground(Color.GRAY);
-                                    lb104.setBorder(borderG);
-                                    lb105.setForeground(Color.GRAY);
-                                    lb105.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 15) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb93.setText(h.get(i).getSigla_professor());
-                                    lb94.setText(h.get(i).getSigla_disciplina());
-                                    lb104.setText(h.get(i).getDesignacao());
-                                    lb105.setText(h.get(i).getCodigo_sala());
-                                    lb93.setForeground(Color.red.darker());
-                                    lb93.setBorder(borderO);
-                                    lb94.setForeground(Color.red.darker());
-                                    lb94.setBorder(borderO);
-                                    lb104.setForeground(Color.red.darker());
-                                    lb104.setBorder(borderO);
-                                    lb105.setForeground(Color.red.darker());
-                                    lb105.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb93.setText(h.get(i).getSigla_professor());
-                                    lb94.setText(h.get(i).getSigla_disciplina());
-                                    lb104.setText("-");
-                                    lb105.setText("-");
-                                    lb115.setText(h.get(i).getDesignacao());
-                                    lb116.setText(h.get(i).getCodigo_sala());
-                                    lb93.setForeground(Color.GRAY);
-                                    lb93.setBorder(borderG);
-                                    lb94.setForeground(Color.GRAY);
-                                    lb94.setBorder(borderG);
-                                    lb104.setForeground(Color.GRAY);
-                                    lb104.setBorder(borderG);
-                                    lb105.setForeground(Color.GRAY);
-                                    lb105.setBorder(borderG);
-                                    lb115.setForeground(Color.GRAY);
-                                    lb115.setBorder(borderG);
-                                    lb116.setForeground(Color.GRAY);
-                                    lb116.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 16) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb104.setText(h.get(i).getSigla_professor());
-                                    lb105.setText(h.get(i).getSigla_disciplina());
-                                    lb115.setText(h.get(i).getDesignacao());
-                                    lb116.setText(h.get(i).getCodigo_sala());
-                                    lb104.setForeground(Color.red.darker());
-                                    lb104.setBorder(borderO);
-                                    lb105.setForeground(Color.red.darker());
-                                    lb105.setBorder(borderO);
-                                    lb115.setForeground(Color.red.darker());
-                                    lb115.setBorder(borderO);
-                                    lb116.setForeground(Color.red.darker());
-                                    lb116.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb104.setText(h.get(i).getSigla_professor());
-                                    lb105.setText(h.get(i).getSigla_disciplina());
-                                    lb115.setText("-");
-                                    lb116.setText("-");
-                                    lb126.setText(h.get(i).getDesignacao());
-                                    lb127.setText(h.get(i).getCodigo_sala());
-                                    lb104.setForeground(Color.GRAY);
-                                    lb104.setBorder(borderG);
-                                    lb105.setForeground(Color.GRAY);
-                                    lb105.setBorder(borderG);
-                                    lb115.setForeground(Color.GRAY);
-                                    lb115.setBorder(borderG);
-                                    lb116.setForeground(Color.GRAY);
-                                    lb116.setBorder(borderG);
-                                    lb126.setForeground(Color.GRAY);
-                                    lb126.setBorder(borderG);
-                                    lb127.setForeground(Color.GRAY);
-                                    lb127.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 17) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb115.setText(h.get(i).getSigla_professor());
-                                    lb116.setText(h.get(i).getSigla_disciplina());
-                                    lb126.setText(h.get(i).getDesignacao());
-                                    lb127.setText(h.get(i).getCodigo_sala());
-                                    lb115.setForeground(Color.red.darker());
-                                    lb115.setBorder(borderO);
-                                    lb116.setForeground(Color.red.darker());
-                                    lb116.setBorder(borderO);
-                                    lb126.setForeground(Color.red.darker());
-                                    lb126.setBorder(borderO);
-                                    lb127.setForeground(Color.red.darker());
-                                    lb127.setBorder(borderO);
-                                }
-                            }
-                        } else if (h.get(i).getDia_semana() == 5) {
-                            if (h.get(i).getHora_inicio() == 8) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    P8Qui.setText(h.get(i).getSigla_professor());
-                                    lb19.setText(h.get(i).getSigla_disciplina());
-                                    lb29.setText(h.get(i).getDesignacao());
-                                    lb30.setText(h.get(i).getCodigo_sala());
-                                    P8Qui.setForeground(Color.red.darker());
-                                    P8Qui.setBorder(borderO);
-                                    lb19.setForeground(Color.red.darker());
-                                    lb19.setBorder(borderO);
-                                    lb29.setForeground(Color.red.darker());
-                                    lb29.setBorder(borderO);
-                                    lb30.setForeground(Color.red.darker());
-                                    lb30.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    P8Qui.setText(h.get(i).getSigla_professor());
-                                    lb19.setText(h.get(i).getSigla_disciplina());
-                                    lb29.setText("-");
-                                    lb30.setText("-");
-                                    lb40.setText(h.get(i).getDesignacao());
-                                    lb41.setText(h.get(i).getCodigo_sala());
-                                    P8Qui.setForeground(Color.GRAY);
-                                    P8Qui.setBorder(borderG);
-                                    lb19.setForeground(Color.GRAY);
-                                    lb19.setBorder(borderG);
-                                    lb29.setForeground(Color.GRAY);
-                                    lb29.setBorder(borderG);
-                                    lb30.setForeground(Color.GRAY);
-                                    lb30.setBorder(borderG);
-                                    lb40.setForeground(Color.GRAY);
-                                    lb40.setBorder(borderG);
-                                    lb41.setForeground(Color.GRAY);
-                                    lb41.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 9) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb29.setText(h.get(i).getSigla_professor());
-                                    lb30.setText(h.get(i).getSigla_disciplina());
-                                    lb40.setText(h.get(i).getDesignacao());
-                                    lb41.setText(h.get(i).getCodigo_sala());
-                                    lb29.setForeground(Color.red.darker());
-                                    lb29.setBorder(borderO);
-                                    lb30.setForeground(Color.red.darker());
-                                    lb30.setBorder(borderO);
-                                    lb40.setForeground(Color.red.darker());
-                                    lb40.setBorder(borderO);
-                                    lb41.setForeground(Color.red.darker());
-                                    lb41.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb29.setText(h.get(i).getSigla_professor());
-                                    lb30.setText(h.get(i).getSigla_disciplina());
-                                    lb40.setText("-");
-                                    lb41.setText("-");
-                                    lb51.setText(h.get(i).getDesignacao());
-                                    lb52.setText(h.get(i).getCodigo_sala());
-                                    lb29.setForeground(Color.GRAY);
-                                    lb29.setBorder(borderG);
-                                    lb30.setForeground(Color.GRAY);
-                                    lb30.setBorder(borderG);
-                                    lb40.setForeground(Color.GRAY);
-                                    lb40.setBorder(borderG);
-                                    lb41.setForeground(Color.GRAY);
-                                    lb41.setBorder(borderG);
-                                    lb51.setForeground(Color.GRAY);
-                                    lb51.setBorder(borderG);
-                                    lb52.setForeground(Color.GRAY);
-                                    lb52.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 10) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb40.setText(h.get(i).getSigla_professor());
-                                    lb41.setText(h.get(i).getSigla_disciplina());
-                                    lb51.setText(h.get(i).getDesignacao());
-                                    lb52.setText(h.get(i).getCodigo_sala());
-                                    lb40.setForeground(Color.red.darker());
-                                    lb40.setBorder(borderO);
-                                    lb41.setForeground(Color.red.darker());
-                                    lb41.setBorder(borderO);
-                                    lb51.setForeground(Color.red.darker());
-                                    lb51.setBorder(borderO);
-                                    lb52.setForeground(Color.red.darker());
-                                    lb52.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb40.setText(h.get(i).getSigla_professor());
-                                    lb41.setText(h.get(i).getSigla_disciplina());
-                                    lb51.setText("-");
-                                    lb52.setText("-");
-                                    lb62.setText(h.get(i).getDesignacao());
-                                    lb63.setText(h.get(i).getCodigo_sala());
-                                    lb40.setForeground(Color.GRAY);
-                                    lb40.setBorder(borderG);
-                                    lb41.setForeground(Color.GRAY);
-                                    lb41.setBorder(borderG);
-                                    lb51.setForeground(Color.GRAY);
-                                    lb51.setBorder(borderG);
-                                    lb52.setForeground(Color.GRAY);
-                                    lb52.setBorder(borderG);
-                                    lb62.setForeground(Color.GRAY);
-                                    lb62.setBorder(borderG);
-                                    lb63.setForeground(Color.GRAY);
-                                    lb63.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 11) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb51.setText(h.get(i).getSigla_professor());
-                                    lb52.setText(h.get(i).getSigla_disciplina());
-                                    lb62.setText(h.get(i).getDesignacao());
-                                    lb63.setText(h.get(i).getCodigo_sala());
-                                    lb51.setForeground(Color.red.darker());
-                                    lb51.setBorder(borderO);
-                                    lb52.setForeground(Color.red.darker());
-                                    lb52.setBorder(borderO);
-                                    lb62.setForeground(Color.red.darker());
-                                    lb62.setBorder(borderO);
-                                    lb63.setForeground(Color.red.darker());
-                                    lb63.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb51.setText(h.get(i).getSigla_professor());
-                                    lb52.setText(h.get(i).getSigla_disciplina());
-                                    lb62.setText("-");
-                                    lb63.setText("-");
-                                    lb73.setText(h.get(i).getDesignacao());
-                                    lb74.setText(h.get(i).getCodigo_sala());
-                                    lb51.setForeground(Color.GRAY);
-                                    lb51.setBorder(borderG);
-                                    lb52.setForeground(Color.GRAY);
-                                    lb52.setBorder(borderG);
-                                    lb62.setForeground(Color.GRAY);
-                                    lb62.setBorder(borderG);
-                                    lb63.setForeground(Color.GRAY);
-                                    lb63.setBorder(borderG);
-                                    lb73.setForeground(Color.GRAY);
-                                    lb73.setBorder(borderG);
-                                    lb74.setForeground(Color.GRAY);
-                                    lb74.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 12) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb62.setText(h.get(i).getSigla_professor());
-                                    lb63.setText(h.get(i).getSigla_disciplina());
-                                    lb73.setText(h.get(i).getDesignacao());
-                                    lb74.setText(h.get(i).getCodigo_sala());
-                                    lb62.setForeground(Color.red.darker());
-                                    lb62.setBorder(borderO);
-                                    lb63.setForeground(Color.red.darker());
-                                    lb63.setBorder(borderO);
-                                    lb73.setForeground(Color.red.darker());
-                                    lb73.setBorder(borderO);
-                                    lb74.setForeground(Color.red.darker());
-                                    lb74.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb62.setText(h.get(i).getSigla_professor());
-                                    lb63.setText(h.get(i).getSigla_disciplina());
-                                    lb73.setText("-");
-                                    lb74.setText("-");
-                                    lb84.setText(h.get(i).getDesignacao());
-                                    lb85.setText(h.get(i).getCodigo_sala());
-                                    lb62.setForeground(Color.GRAY);
-                                    lb62.setBorder(borderG);
-                                    lb63.setForeground(Color.GRAY);
-                                    lb63.setBorder(borderG);
-                                    lb73.setForeground(Color.GRAY);
-                                    lb73.setBorder(borderG);
-                                    lb74.setForeground(Color.GRAY);
-                                    lb74.setBorder(borderG);
-                                    lb84.setForeground(Color.GRAY);
-                                    lb84.setBorder(borderG);
-                                    lb85.setForeground(Color.GRAY);
-                                    lb85.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 13) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb73.setText(h.get(i).getSigla_professor());
-                                    lb74.setText(h.get(i).getSigla_disciplina());
-                                    lb84.setText(h.get(i).getDesignacao());
-                                    lb85.setText(h.get(i).getCodigo_sala());
-                                    lb73.setForeground(Color.red.darker());
-                                    lb73.setBorder(borderO);
-                                    lb74.setForeground(Color.red.darker());
-                                    lb74.setBorder(borderO);
-                                    lb84.setForeground(Color.red.darker());
-                                    lb84.setBorder(borderO);
-                                    lb85.setForeground(Color.red.darker());
-                                    lb85.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb73.setText(h.get(i).getSigla_professor());
-                                    lb74.setText(h.get(i).getSigla_disciplina());
-                                    lb84.setText("-");
-                                    lb85.setText("-");
-                                    lb95.setText(h.get(i).getDesignacao());
-                                    lb96.setText(h.get(i).getCodigo_sala());
-                                    lb73.setForeground(Color.GRAY);
-                                    lb73.setBorder(borderG);
-                                    lb74.setForeground(Color.GRAY);
-                                    lb74.setBorder(borderG);
-                                    lb84.setForeground(Color.GRAY);
-                                    lb84.setBorder(borderG);
-                                    lb85.setForeground(Color.GRAY);
-                                    lb85.setBorder(borderG);
-                                    lb95.setForeground(Color.GRAY);
-                                    lb95.setBorder(borderG);
-                                    lb96.setForeground(Color.GRAY);
-                                    lb96.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 14) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb84.setText(h.get(i).getSigla_professor());
-                                    lb85.setText(h.get(i).getSigla_disciplina());
-                                    lb95.setText(h.get(i).getDesignacao());
-                                    lb96.setText(h.get(i).getCodigo_sala());
-                                    lb84.setForeground(Color.red.darker());
-                                    lb84.setBorder(borderO);
-                                    lb85.setForeground(Color.red.darker());
-                                    lb85.setBorder(borderO);
-                                    lb95.setForeground(Color.red.darker());
-                                    lb95.setBorder(borderO);
-                                    lb96.setForeground(Color.red.darker());
-                                    lb96.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb84.setText(h.get(i).getSigla_professor());
-                                    lb85.setText(h.get(i).getSigla_disciplina());
-                                    lb95.setText("-");
-                                    lb96.setText("-");
-                                    lb106.setText(h.get(i).getDesignacao());
-                                    lb107.setText(h.get(i).getCodigo_sala());
-                                    lb84.setForeground(Color.GRAY);
-                                    lb84.setBorder(borderG);
-                                    lb85.setForeground(Color.GRAY);
-                                    lb85.setBorder(borderG);
-                                    lb95.setForeground(Color.GRAY);
-                                    lb95.setBorder(borderG);
-                                    lb96.setForeground(Color.GRAY);
-                                    lb96.setBorder(borderG);
-                                    lb106.setForeground(Color.GRAY);
-                                    lb106.setBorder(borderG);
-                                    lb107.setForeground(Color.GRAY);
-                                    lb107.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 15) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb95.setText(h.get(i).getSigla_professor());
-                                    lb96.setText(h.get(i).getSigla_disciplina());
-                                    lb106.setText(h.get(i).getDesignacao());
-                                    lb107.setText(h.get(i).getCodigo_sala());
-                                    lb95.setForeground(Color.red.darker());
-                                    lb95.setBorder(borderO);
-                                    lb96.setForeground(Color.red.darker());
-                                    lb96.setBorder(borderO);
-                                    lb106.setForeground(Color.red.darker());
-                                    lb106.setBorder(borderO);
-                                    lb107.setForeground(Color.red.darker());
-                                    lb107.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb95.setText(h.get(i).getSigla_professor());
-                                    lb96.setText(h.get(i).getSigla_disciplina());
-                                    lb106.setText("-");
-                                    lb107.setText("-");
-                                    lb117.setText(h.get(i).getDesignacao());
-                                    lb118.setText(h.get(i).getCodigo_sala());
-                                    lb95.setForeground(Color.GRAY);
-                                    lb95.setBorder(borderG);
-                                    lb96.setForeground(Color.GRAY);
-                                    lb96.setBorder(borderG);
-                                    lb106.setForeground(Color.GRAY);
-                                    lb106.setBorder(borderG);
-                                    lb107.setForeground(Color.GRAY);
-                                    lb107.setBorder(borderG);
-                                    lb117.setForeground(Color.GRAY);
-                                    lb117.setBorder(borderG);
-                                    lb118.setForeground(Color.GRAY);
-                                    lb118.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 16) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb106.setText(h.get(i).getSigla_professor());
-                                    lb107.setText(h.get(i).getSigla_disciplina());
-                                    lb117.setText(h.get(i).getDesignacao());
-                                    lb118.setText(h.get(i).getCodigo_sala());
-                                    lb106.setForeground(Color.red.darker());
-                                    lb106.setBorder(borderO);
-                                    lb107.setForeground(Color.red.darker());
-                                    lb107.setBorder(borderO);
-                                    lb117.setForeground(Color.red.darker());
-                                    lb117.setBorder(borderO);
-                                    lb118.setForeground(Color.red.darker());
-                                    lb118.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb106.setText(h.get(i).getSigla_professor());
-                                    lb107.setText(h.get(i).getSigla_disciplina());
-                                    lb117.setText("-");
-                                    lb118.setText("-");
-                                    lb128.setText(h.get(i).getDesignacao());
-                                    lb129.setText(h.get(i).getCodigo_sala());
-                                    lb106.setForeground(Color.GRAY);
-                                    lb106.setBorder(borderG);
-                                    lb107.setForeground(Color.GRAY);
-                                    lb107.setBorder(borderG);
-                                    lb117.setForeground(Color.GRAY);
-                                    lb117.setBorder(borderG);
-                                    lb118.setForeground(Color.GRAY);
-                                    lb118.setBorder(borderG);
-                                    lb128.setForeground(Color.GRAY);
-                                    lb128.setBorder(borderG);
-                                    lb129.setForeground(Color.GRAY);
-                                    lb129.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 17) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb117.setText(h.get(i).getSigla_professor());
-                                    lb118.setText(h.get(i).getSigla_disciplina());
-                                    lb128.setText(h.get(i).getDesignacao());
-                                    lb129.setText(h.get(i).getCodigo_sala());
-                                    lb117.setForeground(Color.red.darker());
-                                    lb117.setBorder(borderO);
-                                    lb118.setForeground(Color.red.darker());
-                                    lb118.setBorder(borderO);
-                                    lb128.setForeground(Color.red.darker());
-                                    lb128.setBorder(borderO);
-                                    lb129.setForeground(Color.red.darker());
-                                    lb129.setBorder(borderO);
-                                }
-                            }
-                        } else if (h.get(i).getDia_semana() == 6) {
-                            if (h.get(i).getHora_inicio() == 8) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    P8Sex.setText(h.get(i).getSigla_professor());
-                                    lb21.setText(h.get(i).getSigla_disciplina());
-                                    lb31.setText(h.get(i).getDesignacao());
-                                    lb32.setText(h.get(i).getCodigo_sala());
-                                    P8Sex.setForeground(Color.red.darker());
-                                    P8Sex.setBorder(borderO);
-                                    lb21.setForeground(Color.red.darker());
-                                    lb21.setBorder(borderO);
-                                    lb31.setForeground(Color.red.darker());
-                                    lb31.setBorder(borderO);
-                                    lb32.setForeground(Color.red.darker());
-                                    lb32.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    P8Sex.setText(h.get(i).getSigla_professor());
-                                    lb21.setText(h.get(i).getSigla_disciplina());
-                                    lb31.setText("-");
-                                    lb32.setText("-");
-                                    lb42.setText(h.get(i).getDesignacao());
-                                    lb43.setText(h.get(i).getCodigo_sala());
-                                    P8Sex.setForeground(Color.GRAY);
-                                    P8Sex.setBorder(borderG);
-                                    lb21.setForeground(Color.GRAY);
-                                    lb21.setBorder(borderG);
-                                    lb31.setForeground(Color.GRAY);
-                                    lb31.setBorder(borderG);
-                                    lb32.setForeground(Color.GRAY);
-                                    lb32.setBorder(borderG);
-                                    lb42.setForeground(Color.GRAY);
-                                    lb42.setBorder(borderG);
-                                    lb43.setForeground(Color.GRAY);
-                                    lb43.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 9) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb31.setText(h.get(i).getSigla_professor());
-                                    lb32.setText(h.get(i).getSigla_disciplina());
-                                    lb42.setText(h.get(i).getDesignacao());
-                                    lb43.setText(h.get(i).getCodigo_sala());
-                                    lb31.setForeground(Color.red.darker());
-                                    lb31.setBorder(borderO);
-                                    lb32.setForeground(Color.red.darker());
-                                    lb32.setBorder(borderO);
-                                    lb42.setForeground(Color.red.darker());
-                                    lb42.setBorder(borderO);
-                                    lb43.setForeground(Color.red.darker());
-                                    lb43.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb31.setText(h.get(i).getSigla_professor());
-                                    lb32.setText(h.get(i).getSigla_disciplina());
-                                    lb42.setText("-");
-                                    lb43.setText("-");
-                                    lb53.setText(h.get(i).getDesignacao());
-                                    lb54.setText(h.get(i).getCodigo_sala());
-                                    lb31.setForeground(Color.GRAY);
-                                    lb31.setBorder(borderG);
-                                    lb32.setForeground(Color.GRAY);
-                                    lb32.setBorder(borderG);
-                                    lb42.setForeground(Color.GRAY);
-                                    lb42.setBorder(borderG);
-                                    lb43.setForeground(Color.GRAY);
-                                    lb43.setBorder(borderG);
-                                    lb53.setForeground(Color.GRAY);
-                                    lb53.setBorder(borderG);
-                                    lb54.setForeground(Color.GRAY);
-                                    lb54.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 10) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb42.setText(h.get(i).getSigla_professor());
-                                    lb43.setText(h.get(i).getSigla_disciplina());
-                                    lb53.setText(h.get(i).getDesignacao());
-                                    lb54.setText(h.get(i).getCodigo_sala());
-                                    lb42.setForeground(Color.red.darker());
-                                    lb42.setBorder(borderO);
-                                    lb43.setForeground(Color.red.darker());
-                                    lb43.setBorder(borderO);
-                                    lb53.setForeground(Color.red.darker());
-                                    lb53.setBorder(borderO);
-                                    lb54.setForeground(Color.red.darker());
-                                    lb54.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb42.setText(h.get(i).getSigla_professor());
-                                    lb43.setText(h.get(i).getSigla_disciplina());
-                                    lb53.setText("-");
-                                    lb54.setText("-");
-                                    lb64.setText(h.get(i).getDesignacao());
-                                    lb65.setText(h.get(i).getCodigo_sala());
-                                    lb42.setForeground(Color.GRAY);
-                                    lb42.setBorder(borderG);
-                                    lb43.setForeground(Color.GRAY);
-                                    lb43.setBorder(borderG);
-                                    lb53.setForeground(Color.GRAY);
-                                    lb53.setBorder(borderG);
-                                    lb54.setForeground(Color.GRAY);
-                                    lb54.setBorder(borderG);
-                                    lb64.setForeground(Color.GRAY);
-                                    lb64.setBorder(borderG);
-                                    lb65.setForeground(Color.GRAY);
-                                    lb65.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 11) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb53.setText(h.get(i).getSigla_professor());
-                                    lb54.setText(h.get(i).getSigla_disciplina());
-                                    lb64.setText(h.get(i).getDesignacao());
-                                    lb65.setText(h.get(i).getCodigo_sala());
-                                    lb53.setForeground(Color.red.darker());
-                                    lb53.setBorder(borderO);
-                                    lb54.setForeground(Color.red.darker());
-                                    lb54.setBorder(borderO);
-                                    lb64.setForeground(Color.red.darker());
-                                    lb64.setBorder(borderO);
-                                    lb65.setForeground(Color.red.darker());
-                                    lb65.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb53.setText(h.get(i).getSigla_professor());
-                                    lb54.setText(h.get(i).getSigla_disciplina());
-                                    lb64.setText("-");
-                                    lb65.setText("-");
-                                    lb75.setText(h.get(i).getDesignacao());
-                                    lb76.setText(h.get(i).getCodigo_sala());
-                                    lb53.setForeground(Color.GRAY);
-                                    lb53.setBorder(borderG);
-                                    lb54.setForeground(Color.GRAY);
-                                    lb54.setBorder(borderG);
-                                    lb64.setForeground(Color.GRAY);
-                                    lb64.setBorder(borderG);
-                                    lb65.setForeground(Color.GRAY);
-                                    lb65.setBorder(borderG);
-                                    lb75.setForeground(Color.GRAY);
-                                    lb75.setBorder(borderG);
-                                    lb76.setForeground(Color.GRAY);
-                                    lb76.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 12) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb64.setText(h.get(i).getSigla_professor());
-                                    lb65.setText(h.get(i).getSigla_disciplina());
-                                    lb75.setText(h.get(i).getDesignacao());
-                                    lb76.setText(h.get(i).getCodigo_sala());
-                                    lb64.setForeground(Color.red.darker());
-                                    lb64.setBorder(borderO);
-                                    lb65.setForeground(Color.red.darker());
-                                    lb65.setBorder(borderO);
-                                    lb75.setForeground(Color.red.darker());
-                                    lb75.setBorder(borderO);
-                                    lb76.setForeground(Color.red.darker());
-                                    lb76.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb64.setText(h.get(i).getSigla_professor());
-                                    lb65.setText(h.get(i).getSigla_disciplina());
-                                    lb75.setText("-");
-                                    lb76.setText("-");
-                                    lb86.setText(h.get(i).getDesignacao());
-                                    lb87.setText(h.get(i).getCodigo_sala());
-                                    lb64.setForeground(Color.GRAY);
-                                    lb64.setBorder(borderG);
-                                    lb65.setForeground(Color.GRAY);
-                                    lb65.setBorder(borderG);
-                                    lb75.setForeground(Color.GRAY);
-                                    lb75.setBorder(borderG);
-                                    lb76.setForeground(Color.GRAY);
-                                    lb76.setBorder(borderG);
-                                    lb86.setForeground(Color.GRAY);
-                                    lb86.setBorder(borderG);
-                                    lb87.setForeground(Color.GRAY);
-                                    lb87.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 13) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb75.setText(h.get(i).getSigla_professor());
-                                    lb76.setText(h.get(i).getSigla_disciplina());
-                                    lb86.setText(h.get(i).getDesignacao());
-                                    lb87.setText(h.get(i).getCodigo_sala());
-                                    lb75.setForeground(Color.red.darker());
-                                    lb75.setBorder(borderO);
-                                    lb76.setForeground(Color.red.darker());
-                                    lb76.setBorder(borderO);
-                                    lb86.setForeground(Color.red.darker());
-                                    lb86.setBorder(borderO);
-                                    lb87.setForeground(Color.red.darker());
-                                    lb87.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb75.setText(h.get(i).getSigla_professor());
-                                    lb76.setText(h.get(i).getSigla_disciplina());
-                                    lb86.setText("-");
-                                    lb87.setText("-");
-                                    lb97.setText(h.get(i).getDesignacao());
-                                    lb98.setText(h.get(i).getCodigo_sala());
-                                    lb75.setForeground(Color.GRAY);
-                                    lb75.setBorder(borderG);
-                                    lb76.setForeground(Color.GRAY);
-                                    lb76.setBorder(borderG);
-                                    lb86.setForeground(Color.GRAY);
-                                    lb86.setBorder(borderG);
-                                    lb87.setForeground(Color.GRAY);
-                                    lb87.setBorder(borderG);
-                                    lb97.setForeground(Color.GRAY);
-                                    lb97.setBorder(borderG);
-                                    lb98.setForeground(Color.GRAY);
-                                    lb98.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 14) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb86.setText(h.get(i).getSigla_professor());
-                                    lb87.setText(h.get(i).getSigla_disciplina());
-                                    lb97.setText(h.get(i).getDesignacao());
-                                    lb98.setText(h.get(i).getCodigo_sala());
-                                    lb86.setForeground(Color.red.darker());
-                                    lb86.setBorder(borderO);
-                                    lb87.setForeground(Color.red.darker());
-                                    lb87.setBorder(borderO);
-                                    lb97.setForeground(Color.red.darker());
-                                    lb97.setBorder(borderO);
-                                    lb98.setForeground(Color.red.darker());
-                                    lb98.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb86.setText(h.get(i).getSigla_professor());
-                                    lb87.setText(h.get(i).getSigla_disciplina());
-                                    lb97.setText("-");
-                                    lb98.setText("-");
-                                    lb108.setText(h.get(i).getDesignacao());
-                                    lb109.setText(h.get(i).getCodigo_sala());
-                                    lb86.setForeground(Color.GRAY);
-                                    lb86.setBorder(borderG);
-                                    lb87.setForeground(Color.GRAY);
-                                    lb87.setBorder(borderG);
-                                    lb97.setForeground(Color.GRAY);
-                                    lb97.setBorder(borderG);
-                                    lb98.setForeground(Color.GRAY);
-                                    lb98.setBorder(borderG);
-                                    lb108.setForeground(Color.GRAY);
-                                    lb108.setBorder(borderG);
-                                    lb109.setForeground(Color.GRAY);
-                                    lb109.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 15) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb97.setText(h.get(i).getSigla_professor());
-                                    lb98.setText(h.get(i).getSigla_disciplina());
-                                    lb108.setText(h.get(i).getDesignacao());
-                                    lb109.setText(h.get(i).getCodigo_sala());
-                                    lb97.setForeground(Color.red.darker());
-                                    lb97.setBorder(borderO);
-                                    lb98.setForeground(Color.red.darker());
-                                    lb98.setBorder(borderO);
-                                    lb108.setForeground(Color.red.darker());
-                                    lb108.setBorder(borderO);
-                                    lb109.setForeground(Color.red.darker());
-                                    lb109.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb97.setText(h.get(i).getSigla_professor());
-                                    lb98.setText(h.get(i).getSigla_disciplina());
-                                    lb108.setText("-");
-                                    lb109.setText("-");
-                                    lb119.setText(h.get(i).getDesignacao());
-                                    lb120.setText(h.get(i).getCodigo_sala());
-                                    lb97.setForeground(Color.GRAY);
-                                    lb97.setBorder(borderG);
-                                    lb98.setForeground(Color.GRAY);
-                                    lb98.setBorder(borderG);
-                                    lb108.setForeground(Color.GRAY);
-                                    lb108.setBorder(borderG);
-                                    lb109.setForeground(Color.GRAY);
-                                    lb109.setBorder(borderG);
-                                    lb119.setForeground(Color.GRAY);
-                                    lb119.setBorder(borderG);
-                                    lb120.setForeground(Color.GRAY);
-                                    lb120.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 16) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb108.setText(h.get(i).getSigla_professor());
-                                    lb109.setText(h.get(i).getSigla_disciplina());
-                                    lb119.setText(h.get(i).getDesignacao());
-                                    lb120.setText(h.get(i).getCodigo_sala());
-                                    lb108.setForeground(Color.red.darker());
-                                    lb108.setBorder(borderO);
-                                    lb109.setForeground(Color.red.darker());
-                                    lb109.setBorder(borderO);
-                                    lb119.setForeground(Color.red.darker());
-                                    lb119.setBorder(borderO);
-                                    lb120.setForeground(Color.red.darker());
-                                    lb120.setBorder(borderO);
-                                } else if (h.get(i).getDuracaoAula() == 2) {
-                                    lb108.setText(h.get(i).getSigla_professor());
-                                    lb109.setText(h.get(i).getSigla_disciplina());
-                                    lb119.setText("-");
-                                    lb120.setText("-");
-                                    lb130.setText(h.get(i).getDesignacao());
-                                    lb131.setText(h.get(i).getCodigo_sala());
-                                    lb108.setForeground(Color.GRAY);
-                                    lb108.setBorder(borderG);
-                                    lb109.setForeground(Color.GRAY);
-                                    lb109.setBorder(borderG);
-                                    lb119.setForeground(Color.GRAY);
-                                    lb119.setBorder(borderG);
-                                    lb120.setForeground(Color.GRAY);
-                                    lb120.setBorder(borderG);
-                                    lb130.setForeground(Color.GRAY);
-                                    lb130.setBorder(borderG);
-                                    lb131.setForeground(Color.GRAY);
-                                    lb131.setBorder(borderG);
-                                }
-                            } else if (h.get(i).getHora_inicio() == 17) {
-                                if (h.get(i).getDuracaoAula() == 1) {
-                                    lb119.setText(h.get(i).getSigla_professor());
-                                    lb120.setText(h.get(i).getSigla_disciplina());
-                                    lb130.setText(h.get(i).getDesignacao());
-                                    lb131.setText(h.get(i).getCodigo_sala());
-                                    lb119.setForeground(Color.red.darker());
-                                    lb119.setBorder(borderO);
-                                    lb120.setForeground(Color.red.darker());
-                                    lb120.setBorder(borderO);
-                                    lb130.setForeground(Color.red.darker());
-                                    lb130.setBorder(borderO);
-                                    lb131.setForeground(Color.red.darker());
-                                    lb131.setBorder(borderO);
-                                }
-                            }
-                        }
-                    }
-//                    JOptionPane.showMessageDialog(null, m.professores.get(te5.getSelectedIndex() - 1).listarDadosProfessor());
-                }
-            }
-        });
-    }
-
-    public void HorarioVazio() {
+        lb0016.setOpaque(true);
+        lb0016.setBackground(new Color(88, 97, 102));
+        lb0016.setForeground(Color.BLACK);
+        lb0016.setBorder(borderO);
         P8Seg.setText("");
         lb13.setText("");
         P8Ter.setText("");
@@ -2401,127 +9746,126 @@ public class Listar extends JFrame {
         lb129.setText("");
         lb130.setText("");
         lb131.setText("");
-        lb11.setBorder(border);
-        P8Seg.setBorder(border);
-        lb13.setBorder(border);
-        P8Ter.setBorder(border);
-        lb15.setBorder(border);
-        P8Qua.setBorder(border);
-        lb17.setBorder(border);
-        P8Qui.setBorder(border);
-        lb19.setBorder(border);
-        P8Sex.setBorder(border);
-        lb21.setBorder(border);
-        lb22.setBorder(border);
-        lb23.setBorder(border);
-        lb24.setBorder(border);
-        lb25.setBorder(border);
-        lb26.setBorder(border);
-        lb27.setBorder(border);
-        lb28.setBorder(border);
-        lb29.setBorder(border);
-        lb30.setBorder(border);
-        lb31.setBorder(border);
-        lb32.setBorder(border);
-        lb33.setBorder(border);
-        lb34.setBorder(border);
-        lb35.setBorder(border);
-        lb36.setBorder(border);
-        lb37.setBorder(border);
-        lb38.setBorder(border);
-        lb39.setBorder(border);
-        lb40.setBorder(border);
-        lb41.setBorder(border);
-        lb42.setBorder(border);
-        lb43.setBorder(border);
-        lb44.setBorder(border);
-        lb45.setBorder(border);
-        lb46.setBorder(border);
-        lb47.setBorder(border);
-        lb48.setBorder(border);
-        lb49.setBorder(border);
-        lb50.setBorder(border);
-        lb51.setBorder(border);
-        lb52.setBorder(border);
-        lb53.setBorder(border);
-        lb54.setBorder(border);
-        lb55.setBorder(border);
-        lb56.setBorder(border);
-        lb57.setBorder(border);
-        lb58.setBorder(border);
-        lb59.setBorder(border);
-        lb60.setBorder(border);
-        lb61.setBorder(border);
-        lb62.setBorder(border);
-        lb63.setBorder(border);
-        lb64.setBorder(border);
-        lb65.setBorder(border);
-        lb66.setBorder(border);
-        lb67.setBorder(border);
-        lb68.setBorder(border);
-        lb69.setBorder(border);
-        lb70.setBorder(border);
-        lb71.setBorder(border);
-        lb72.setBorder(border);
-        lb73.setBorder(border);
-        lb74.setBorder(border);
-        lb75.setBorder(border);
-        lb76.setBorder(border);
-        lb77.setBorder(border);
-        lb78.setBorder(border);
-        lb79.setBorder(border);
-        lb80.setBorder(border);
-        lb81.setBorder(border);
-        lb82.setBorder(border);
-        lb83.setBorder(border);
-        lb84.setBorder(border);
-        lb85.setBorder(border);
-        lb86.setBorder(border);
-        lb87.setBorder(border);
-        lb88.setBorder(border);
-        lb89.setBorder(border);
-        lb90.setBorder(border);
-        lb91.setBorder(border);
-        lb92.setBorder(border);
-        lb93.setBorder(border);
-        lb94.setBorder(border);
-        lb95.setBorder(border);
-        lb96.setBorder(border);
-        lb97.setBorder(border);
-        lb98.setBorder(border);
-        lb99.setBorder(border);
-        lb100.setBorder(border);
-        lb101.setBorder(border);
-        lb102.setBorder(border);
-        lb103.setBorder(border);
-        lb104.setBorder(border);
-        lb105.setBorder(border);
-        lb106.setBorder(border);
-        lb107.setBorder(border);
-        lb108.setBorder(border);
-        lb109.setBorder(border);
-        lb110.setBorder(border);
-        lb111.setBorder(border);
-        lb112.setBorder(border);
-        lb113.setBorder(border);
-        lb114.setBorder(border);
-        lb115.setBorder(border);
-        lb116.setBorder(border);
-        lb117.setBorder(border);
-        lb118.setBorder(border);
-        lb119.setBorder(border);
-        lb120.setBorder(border);
-        lb121.setBorder(border);
-        lb122.setBorder(border);
-        lb123.setBorder(border);
-        lb124.setBorder(border);
-        lb125.setBorder(border);
-        lb126.setBorder(border);
-        lb127.setBorder(border);
-        lb128.setBorder(border);
-        lb129.setBorder(border);
-        lb130.setBorder(border);
-        lb131.setBorder(border);
+        P8Seg.setOpaque(false);
+        lb13.setOpaque(false);
+        P8Ter.setOpaque(false);
+        lb15.setOpaque(false);
+        P8Qua.setOpaque(false);
+        lb17.setOpaque(false);
+        P8Qui.setOpaque(false);
+        lb19.setOpaque(false);
+        P8Sex.setOpaque(false);
+        lb21.setOpaque(false);
+        lb22.setOpaque(false);
+        lb23.setOpaque(false);
+        lb24.setOpaque(false);
+        lb25.setOpaque(false);
+        lb26.setOpaque(false);
+        lb27.setOpaque(false);
+        lb28.setOpaque(false);
+        lb29.setOpaque(false);
+        lb30.setOpaque(false);
+        lb31.setOpaque(false);
+        lb32.setOpaque(false);
+        lb33.setOpaque(false);
+        lb34.setOpaque(false);
+        lb35.setOpaque(false);
+        lb36.setOpaque(false);
+        lb37.setOpaque(false);
+        lb38.setOpaque(false);
+        lb39.setOpaque(false);
+        lb40.setOpaque(false);
+        lb41.setOpaque(false);
+        lb42.setOpaque(false);
+        lb43.setOpaque(false);
+        lb44.setOpaque(false);
+        lb45.setOpaque(false);
+        lb46.setOpaque(false);
+        lb47.setOpaque(false);
+        lb48.setOpaque(false);
+        lb49.setOpaque(false);
+        lb50.setOpaque(false);
+        lb51.setOpaque(false);
+        lb52.setOpaque(false);
+        lb53.setOpaque(false);
+        lb54.setOpaque(false);
+        lb55.setOpaque(false);
+        lb56.setOpaque(false);
+        lb57.setOpaque(false);
+        lb58.setOpaque(false);
+        lb59.setOpaque(false);
+        lb60.setOpaque(false);
+        lb61.setOpaque(false);
+        lb62.setOpaque(false);
+        lb63.setOpaque(false);
+        lb64.setOpaque(false);
+        lb65.setOpaque(false);
+        lb66.setOpaque(false);
+        lb67.setOpaque(false);
+        lb68.setOpaque(false);
+        lb69.setOpaque(false);
+        lb70.setOpaque(false);
+        lb71.setOpaque(false);
+        lb72.setOpaque(false);
+        lb73.setOpaque(false);
+        lb74.setOpaque(false);
+        lb75.setOpaque(false);
+        lb76.setOpaque(false);
+        lb77.setOpaque(false);
+        lb78.setOpaque(false);
+        lb79.setOpaque(false);
+        lb80.setOpaque(false);
+        lb81.setOpaque(false);
+        lb82.setOpaque(false);
+        lb83.setOpaque(false);
+        lb84.setOpaque(false);
+        lb85.setOpaque(false);
+        lb86.setOpaque(false);
+        lb87.setOpaque(false);
+        lb88.setOpaque(false);
+        lb89.setOpaque(false);
+        lb90.setOpaque(false);
+        lb91.setOpaque(false);
+        lb92.setOpaque(false);
+        lb93.setOpaque(false);
+        lb94.setOpaque(false);
+        lb95.setOpaque(false);
+        lb96.setOpaque(false);
+        lb97.setOpaque(false);
+        lb98.setOpaque(false);
+        lb99.setOpaque(false);
+        lb100.setOpaque(false);
+        lb101.setOpaque(false);
+        lb102.setOpaque(false);
+        lb103.setOpaque(false);
+        lb104.setOpaque(false);
+        lb105.setOpaque(false);
+        lb106.setOpaque(false);
+        lb107.setOpaque(false);
+        lb108.setOpaque(false);
+        lb109.setOpaque(false);
+        lb110.setOpaque(false);
+        lb111.setOpaque(false);
+        lb112.setOpaque(false);
+        lb113.setOpaque(false);
+        lb114.setOpaque(false);
+        lb115.setOpaque(false);
+        lb116.setOpaque(false);
+        lb117.setOpaque(false);
+        lb118.setOpaque(false);
+        lb119.setOpaque(false);
+        lb120.setOpaque(false);
+        lb121.setOpaque(false);
+        lb122.setOpaque(false);
+        lb123.setOpaque(false);
+        lb124.setOpaque(false);
+        lb125.setOpaque(false);
+        lb126.setOpaque(false);
+        lb127.setOpaque(false);
+        lb128.setOpaque(false);
+        lb129.setOpaque(false);
+        lb130.setOpaque(false);
+        lb131.setOpaque(false);
     }
 
     private void setProperties(int w, int h, int opcao, boolean visible) {
@@ -2530,11 +9874,9 @@ public class Listar extends JFrame {
         setVisible(visible);
         setLocationRelativeTo(null);
     }
-    
-    
     Border border = BorderFactory.createLineBorder(Color.BLACK);
-    final Border borderO = BorderFactory.createLineBorder(Color.RED.darker());
-    final Border borderG = BorderFactory.createLineBorder(Color.GRAY);
+    final Border borderO = BorderFactory.createLineBorder(new Color(156, 102, 31));
+    final Border borderG = BorderFactory.createLineBorder(new Color(88, 97, 102));
     JLabel lb = new JLabel("Horario:");
     JLabel lb0 = new JLabel("");
     JLabel lb01 = new JLabel("Segunda-", JLabel.RIGHT);

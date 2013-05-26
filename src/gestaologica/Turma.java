@@ -51,7 +51,7 @@ public class Turma implements Serializable{
                 return p1.getNumeroAluno() - p2.getNumeroAluno();
             }
         });
-        System.out.println(alunos + "\n");
+//        System.out.println(alunos + "\n");
         return alunos;
     }
 
@@ -66,7 +66,7 @@ public class Turma implements Serializable{
                 return p2.getNumeroAluno() - p1.getNumeroAluno();
             }
         });
-        System.out.println(alunos + "\n");
+//        System.out.println(alunos + "\n");
         return alunos;
     }
 
@@ -84,7 +84,7 @@ public class Turma implements Serializable{
                 return p1.getNome().compareToIgnoreCase(p2.getNome());
             }
         });
-        System.out.println(alunos + "\n");
+//        System.out.println(alunos + "\n");
         return alunos;
     }
 
@@ -102,7 +102,7 @@ public class Turma implements Serializable{
                 return p2.getNome().compareToIgnoreCase(p1.getNome());
             }
         });
-        System.out.println(alunos + "\n");
+//        System.out.println(alunos + "\n");
         return alunos;
     }
 
