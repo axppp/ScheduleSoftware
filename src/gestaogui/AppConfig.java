@@ -465,8 +465,7 @@ public class AppConfig extends JFrame {
         
     }
     
-    private void addExports() {
-    }
+    
     
     private void calculoCarga() {
 
