@@ -476,6 +476,7 @@ public class AppConfig extends JFrame {
         gerirHorarios.add(buttons_panel, BorderLayout.SOUTH);
 
     }
+<<<<<<< HEAD
 
     private void ListarAlunos() {
 
@@ -610,6 +611,9 @@ public class AppConfig extends JFrame {
     }
 
 =======
+=======
+    
+>>>>>>> 11b7dc5dee53adbdb2f58f236248d14d0d2ea48f
     
     
     
