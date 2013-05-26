@@ -604,10 +604,16 @@ public class AppConfig extends JFrame {
             }
         });
     }
+<<<<<<< HEAD
 
     private void addExports() {
     }
 
+=======
+    
+    
+    
+>>>>>>> 11b7dc5dee53adbdb2f58f236248d14d0d2ea48f
     private void calculoCarga() {
 
         // Panels
